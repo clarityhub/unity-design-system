@@ -1,0 +1,136 @@
+---
+menu: Components
+name: Buttons
+---
+
+import { Playground, PropsTable } from 'docz';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CheckIcon from '@material-ui/icons/CheckCircle';
+import Button from './index';
+
+# Buttons
+
+## \<Button /\> component
+
+```js
+import Button from '@clarityhub/one/components/Buttons';
+```
+
+## Prop Types
+
+<PropsTable of={Button} />
+
+## Examples
+
+### Buttons
+
+<Playground>
+    <Button>Cancel</Button>
+    {' '}
+    <Button type="primary">Create</Button>
+    {' '}
+    <Button type="success">Success</Button>
+    {' '}
+    <Button type="danger">Delete</Button>
+</Playground>
+
+### States
+
+<Playground>
+    <Button className="focused">Focused</Button>
+    {' '}
+    <Button className="focused" type="primary">Focused</Button>
+    {' '}
+    <Button className="focused" type="success">Focused</Button>
+    {' '}
+    <Button className="focused" type="danger">Focused</Button>
+    <br/>
+    <br/>
+    <Button className="active">Active</Button>
+    {' '}
+    <Button className="active" type="primary">Active</Button>
+    {' '}
+    <Button className="active" type="success">Active</Button>
+    {' '}
+    <Button className="active" type="danger">Active</Button>
+    <br/>
+    <br/>
+    <Button className="disabled">Disabled</Button>
+    {' '}
+    <Button className="disabled" type="primary">Disabled</Button>
+    {' '}
+    <Button className="disabled" type="success">Disabled</Button>
+    {' '}
+    <Button className="disabled" type="danger">Disabled</Button>
+</Playground>
+
+### Sizes
+
+<Playground>
+    <Button size="small">Small</Button>
+    {' '}
+    <Button size="small" type="primary">Small</Button>
+    {' '}
+    <Button size="small" type="success">Small</Button>
+    {' '}
+    <Button size="small" type="danger">Small</Button>
+    <br/>
+    <br/>
+    <Button size="default">Default</Button>
+    {' '}
+    <Button size="default" type="primary">Default</Button>
+    {' '}
+    <Button size="default" type="success">Default</Button>
+    {' '}
+    <Button size="default" type="danger">Default</Button>
+    <br/>
+    <br/>
+    <Button size="large">Large</Button>
+    {' '}
+    <Button size="large" type="primary">Large</Button>
+    {' '}
+    <Button size="large" type="success">Large</Button>
+    {' '}
+    <Button size="large" type="danger">Large</Button>
+</Playground>
+
+
+### Other Variants
+
+<Playground>
+    <Button outline>Outline</Button>
+    {' '}
+    <Button outline type="primary">Outline</Button>
+    {' '}
+    <Button outline type="success">Outline</Button>
+    {' '}
+    <Button outline type="danger">Outline</Button>
+    {' '}
+    <Button disabled outline>Outline</Button>
+    {' '}
+    <Button disabled outline type="primary">Outline</Button>
+    {' '}
+    <Button disabled outline type="success">Outline</Button>
+    {' '}
+    <Button disabled outline type="danger">Outline</Button>
+    <br/>
+    <br/>
+    <Button block>Button Block</Button>
+    {' '}
+    <Button block type="primary">Button Block</Button>
+    {' '}
+    <Button block type="success">Button Block</Button>
+    {' '}
+    <Button block type="danger">Button Block</Button>
+    <br/>
+    <br/>
+    <Button icon={<DeleteIcon />}>With Icon</Button>
+    {' '}
+    <Button icon={<DeleteIcon />} type="primary">With Icon</Button>
+    {' '}
+    <Button icon={() => <CheckIcon />} type="success">With Icon</Button>
+    {' '}
+    <Button icon={<DeleteIcon />} type="danger">With Icon</Button>
+    {' '}
+    <Button size="large" icon={<DeleteIcon />}>With Icon</Button>
+</Playground>
