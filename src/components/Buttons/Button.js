@@ -3,12 +3,12 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { bool, func, oneOf, oneOfType, node } from 'prop-types';
 
+import Loading from '../svgs/Loading';
 import colors from '../../theme/colors';
 import { variants } from '../../theme/fonts';
 import { lighten, darken, desaturate } from '../../utilities/color';
 
 const Button = styled.button`
-    border-radius: 0;
     overflow: visible;
     text-transform: none;
     display: inline-block;
@@ -24,6 +24,7 @@ const Button = styled.button`
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .1rem;
+    position: relative;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: button;
 
@@ -48,7 +49,7 @@ const Button = styled.button`
         cursor: pointer;
     }
 
-    ${({ type, outline }) => {
+    ${({ type, outline, text }) => {
         switch (type) {
             case 'primary':
                 return css`
@@ -62,6 +63,12 @@ const Button = styled.button`
                         color: ${colors.primary};
                     `}
 
+                    ${text && css`
+                        background-color: transparent;
+                        border: 1px solid transparent;
+                        color: ${colors.primary};
+                    `}
+
                     &:hover,
                     &.active {
                         background-color: ${desaturate(darken(colors.primary))};
@@ -71,6 +78,12 @@ const Button = styled.button`
                             background-color: ${colors.primary};
                             border: 1px solid ${colors.primary};
                             color: ${colors.white};
+                        `}
+
+                        ${text && css`
+                            background-color: transparent;
+                            border: 1px solid transparent;
+                            color: ${desaturate(darken(colors.primary))};
                         `}
                     }
 
@@ -84,44 +97,68 @@ const Button = styled.button`
                             border: 1px solid ${colors.primary};
                             color: ${desaturate(lighten(colors.primary))};
                         `}
-                    }
-                `;
-            case 'success':
-                return css`
-                    color: ${colors.white};
-                    background-color: ${colors.success};
-                    border-color: ${colors.success};
 
-                    ${outline && css`
-                        background-color: transparent;
-                        border: 1px solid inherit;
-                        color: ${colors.success};
-                    `}
-
-                    &:hover,
-                    &.active {
-                        background-color: ${desaturate(darken(colors.success))};
-                        border-color: ${desaturate(darken(colors.success))};
-
-                        ${outline && css`
-                            background-color: ${colors.success};
-                            border: 1px solid ${colors.success};
-                            color: ${colors.white};
-                        `}
-                    }
-
-                    &:disabled,
-                    &.disabled {
-                        background-color: ${desaturate(lighten(colors.success, 0.3))};
-                        border-color: ${desaturate(lighten(colors.success, 0.3))};
-
-                        ${outline && css`
+                        ${text && css`
                             background-color: transparent;
-                            border: 1px solid ${colors.success};
-                            color: ${desaturate(lighten(colors.success, 0.3))};
+                            border: 1px solid transparent;
+                            color: ${desaturate(lighten(colors.primary))};
                         `}
                     }
                 `;
+            // case 'success':
+            //     return css`
+            //         color: ${colors.white};
+            //         background-color: ${colors.success};
+            //         border-color: ${colors.success};
+
+            //         ${outline && css`
+            //             background-color: transparent;
+            //             border: 1px solid inherit;
+            //             color: ${colors.success};
+            //         `}
+
+            //         ${text && css`
+            //             background-color: transparent;
+            //             border: 1px solid transparent;
+            //             color: ${colors.success};
+            //         `}
+
+            //         &:hover,
+            //         &.active {
+            //             background-color: ${desaturate(darken(colors.success))};
+            //             border-color: ${desaturate(darken(colors.success))};
+
+            //             ${outline && css`
+            //                 background-color: ${colors.success};
+            //                 border: 1px solid ${colors.success};
+            //                 color: ${colors.white};
+            //             `}
+
+            //             ${text && css`
+            //                 background-color: transparent;
+            //                 border: 1px solid transparent;
+            //                 color: ${desaturate(darken(colors.success, 0.3))};
+            //             `}
+            //         }
+
+            //         &:disabled,
+            //         &.disabled {
+            //             background-color: ${desaturate(lighten(colors.success, 0.3))};
+            //             border-color: ${desaturate(lighten(colors.success, 0.3))};
+
+            //             ${outline && css`
+            //                 background-color: transparent;
+            //                 border: 1px solid ${colors.success};
+            //                 color: ${desaturate(lighten(colors.success, 0.3))};
+            //             `}
+
+            //             ${text && css`
+            //                 background-color: transparent;
+            //                 border: 1px solid transparent;
+            //                 color: ${desaturate(lighten(colors.success, 0.3))};
+            //             `}
+            //         }
+            //     `;
             case 'danger':
                 return css`
                     color: ${colors.white};
@@ -131,6 +168,12 @@ const Button = styled.button`
                     ${outline && css`
                         background-color: transparent;
                         border: 1px solid inherit;
+                        color: ${colors.danger};
+                    `}
+
+                    ${text && css`
+                        background-color: transparent;
+                        border: 1px solid transparent;
                         color: ${colors.danger};
                     `}
 
@@ -144,6 +187,12 @@ const Button = styled.button`
                             border: 1px solid ${colors.danger};
                             color: ${colors.white};
                         `}
+
+                        ${text && css`
+                            background-color: transparent;
+                            border: 1px solid transparent;
+                            color: ${desaturate(darken(colors.danger))};
+                        `}
                     }
 
                     &:disabled,
@@ -154,6 +203,12 @@ const Button = styled.button`
                         ${outline && css`
                             background-color: transparent;
                             border: 1px solid ${colors.danger};
+                            color: ${desaturate(lighten(colors.danger, 0.3))};
+                        `}
+
+                        ${text && css`
+                            background-color: transparent;
+                            border: 1px solid transparent;
                             color: ${desaturate(lighten(colors.danger, 0.3))};
                         `}
                     }
@@ -171,6 +226,12 @@ const Button = styled.button`
                         color: ${colors.black};
                     `}
 
+                    ${text && css`
+                        background-color: transparent;
+                        border: 1px solid transparent;
+                        color: ${colors.black};
+                    `}
+
                     &:hover,
                     &.active {
                         background-color: ${desaturate(darken(colors.muted))};
@@ -180,6 +241,12 @@ const Button = styled.button`
                             background-color: ${colors.muted};
                             border: 1px solid ${colors.muted};
                             color: ${colors.black};
+                        `}
+
+                        ${text && css`
+                            background-color: transparent;
+                            border: 1px solid transparent;
+                            color: ${desaturate(darken(colors.black))};
                         `}
                     }
 
@@ -193,6 +260,12 @@ const Button = styled.button`
                             background-color: transparent;
                             border: 1px solid ${colors.gray};
                             color: ${lighten(colors.gray, 0.01)};
+                        `}
+
+                        ${text && css`
+                            background-color: transparent;
+                            border: 1px solid transparent;
+                            color: ${desaturate(lighten(colors.black))};
                         `}
                     }
                 `;
@@ -226,6 +299,14 @@ const Button = styled.button`
         display: block;
         width: 100%;
     `}
+
+    ${({ loading }) => loading && css`
+        color: transparent !important;
+
+        &:hover {
+            color: transparent !important;
+        }
+    `}
 `;
 
 const IconWrapper = styled.span`
@@ -257,6 +338,151 @@ const IconWrapper = styled.span`
     }
 `;
 
+const LoadingWrapper = styled.div`
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+
+    svg {
+        height: 1.4rem;
+        width: 1.4rem;
+
+        ${({ size }) => {
+            switch (size) {
+                case 'small':
+                    return css`
+                            height: 1.2rem;
+                            width: 1.2rem;
+                        `;
+                case 'large':
+                    return css`
+                            height: 2.4rem;
+                            width: 2.4rem;
+                        `;
+                case 'default':
+                default:
+                    return '';
+            }
+        }}
+
+        path {
+            ${({ type, outline, text }) => {
+                switch (type) {
+                    case 'primary':
+                        return css`
+                            fill: ${colors.white};
+
+                            ${outline && css`
+                                fill: ${colors.primary};
+                            `}
+
+                            ${text && css`
+                                fill: ${colors.primary};
+                            `}
+
+                            &:hover,
+                            &.active {
+                                ${outline && css`
+                                    fill: ${colors.white};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(darken(colors.primary))};
+                                `}
+                            }
+
+                            &:disabled,
+                            &.disabled {
+                                ${outline && css`
+                                    fill: ${desaturate(lighten(colors.primary))};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(lighten(colors.primary))};
+                                `}
+                            }
+                        `;
+                    case 'danger':
+                        return css`
+                            fill: ${colors.white};
+
+                            ${outline && css`
+                                fill: ${colors.danger};
+                            `}
+
+                            ${text && css`
+                                fill: ${colors.danger};
+                            `}
+
+                            &:hover,
+                            &.active {
+                                ${outline && css`
+                                    fill: ${colors.white};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(darken(colors.danger))};
+                                `}
+                            }
+
+                            &:disabled,
+                            &.disabled {
+                                ${outline && css`
+                                    fill: ${desaturate(lighten(colors.danger, 0.3))};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(lighten(colors.danger, 0.3))};
+                                `}
+                            }
+                        `;
+                    case 'default':
+                    default:
+                        return css`
+                            fill: ${colors.black};
+
+                            ${outline && css`
+                                fill: ${colors.black};
+                            `}
+
+                            ${text && css`
+                                fill: ${colors.black};
+                            `}
+
+                            &:hover,
+                            &.active {
+                                ${outline && css`
+                                    fill: ${colors.black};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(darken(colors.black))};
+                                `}
+                            }
+
+                            &:disabled,
+                            &.disabled {
+                                fill: ${darken(colors.gray, 0.1)};
+
+                                ${outline && css`
+                                    fill: ${lighten(colors.gray, 0.01)};
+                                `}
+
+                                ${text && css`
+                                    fill: ${desaturate(lighten(colors.black))};
+                                `}
+                            }
+                        `;
+                }}
+        }
+        }
+    }
+`;
+
 const renderIcon = (Icon) => {
     if (typeof Icon === 'function') {
         return <Icon />;
@@ -265,11 +491,16 @@ const renderIcon = (Icon) => {
     return Icon;
 }
 
-const ButtonWrapper = ({ icon, children, size, ...rest }) => (
-    <Button size={size} {...rest}>
+const ButtonWrapper = ({ icon, children, size, loading, ...rest }) => (
+    <Button size={size} loading={loading} {...rest}>
         {
             icon && (
                 <IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
+            )
+        }
+        {
+            loading && (
+                <LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
             )
         }
         {children}
@@ -279,7 +510,9 @@ const ButtonWrapper = ({ icon, children, size, ...rest }) => (
 ButtonWrapper.propTypes = {
     block: bool,
     icon: oneOfType([node, func]),
+    loading: bool,
     outline: bool,
+    text: bool,
     size: oneOf(['small', 'default', 'large']),
     type: oneOf(['default', 'primary', 'danger', 'success']),
 };

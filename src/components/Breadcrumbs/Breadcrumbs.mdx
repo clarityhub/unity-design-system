@@ -1,0 +1,58 @@
+---
+menu: Components
+name: Breadcrumbs
+---
+
+import { Playground, PropsTable } from 'docz';
+import Breadcrumbs, { BreadcrumbsPropTypes } from './Breadcrumbs';
+
+# Breadcrumbs
+
+## \<Breadcrumbs /\> component
+
+```js
+import Breadcrumbs from '@clarityhub/one/components/Breadcrumbs';
+```
+
+## Prop Types
+
+<PropsTable of={BreadcrumbsPropTypes} />
+
+## Examples
+
+<Playground>
+    <Breadcrumbs
+        crumbs={[
+            {
+                title: 'Home'
+            }
+        ]}
+    />
+    <Breadcrumbs
+        crumbs={[
+            {
+                title: 'Home',
+                path: '/',
+            },
+            {
+                title: 'Admin',
+            },
+        ]}
+    />
+    <Breadcrumbs
+        crumbs={[
+            {
+                title: 'Home',
+                path: '/',
+            },
+            {
+                title: 'Admin',
+                path: '/admin',
+            },
+            {
+                title: 'Users',
+                // no path
+            }
+        ]}
+    />
+</Playground>

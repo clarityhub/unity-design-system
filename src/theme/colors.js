@@ -1,8 +1,9 @@
 export default {
-    primary: '#FF6A5C',
-    danger: '#dc3545',
+    primary: '#45b4bf',
+    danger: '#DA2B3C',
     success: '#28a745',
     highlight: 'rgba(0, 123, 255, .25)',
+    notification: '#FF6A5C',
 
     white: '#FFF',
     dove: '#FDFDFD',

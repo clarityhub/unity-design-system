@@ -1,0 +1,52 @@
+---
+menu: Components
+name: Badges
+---
+
+import { Playground, PropsTable } from 'docz';
+import Badge, { BadgePropTypes } from './Badge';
+
+# Badges
+
+## \<Badge /\> component
+
+```js
+import Badge from '@clarityhub/one/components/Badge';
+```
+
+## Prop Types
+
+<PropsTable of={BadgePropTypes} />
+
+## Examples
+
+### Sizes
+
+<Playground>
+    <Badge>1</Badge>
+    <br />
+    <br />
+    <Badge>new</Badge>
+    <br />
+    <br />
+    <Badge>1 new</Badge>
+</Playground>
+
+### Colors
+<Playground>
+    <Badge type="default">10</Badge>
+    <br />
+    <br />
+    <Badge type="primary">10</Badge>
+    <br />
+    <br />
+    <Badge type="success">10</Badge>
+    <br />
+    <br />
+    <Badge type="danger">10</Badge>
+    <br />
+    <br />
+    <Badge type="notification">10</Badge>
+    <br />
+    <br />
+</Playground>

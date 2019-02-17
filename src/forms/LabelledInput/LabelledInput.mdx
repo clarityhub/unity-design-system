@@ -1,0 +1,90 @@
+---
+name: LabelledInput
+menu: Forms
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import LabelledInput from './LabelledInput';
+import InputGroup from '../InputGroup';
+
+# LabelledInput
+
+The `LabelledInput` component is a controlled input. You <b>must</b> provide a
+`value` and `onInput`.
+
+## \<LabelledInput /\> component
+
+```js
+import LabelledInput from '@clarityhub/one/forms/LabelledInput';
+```
+
+## Prop Types
+
+<PropsTable of={LabelledInput} />
+
+## Examples
+
+### Basic
+
+The following are basic examples of the `LabelledInput` which incorrectly do
+not have values or listeners.
+
+<Playground>
+    <InputGroup>
+        <LabelledInput
+            label="State, Province, or Region"
+            type="text"
+            name="test"
+        />
+    </InputGroup>
+    <InputGroup>
+        <LabelledInput
+            defaultValue="Arizona"
+            label="State, Province, or Region"
+            type="text"
+            name="test"
+        />
+    </InputGroup>
+    <InputGroup>
+        <LabelledInput label="Name" value="Hello World" />
+    </InputGroup>
+</Playground>
+
+### Controlled
+<Playground>
+    {() => {
+        class Example extends Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    value: '',
+                };
+            }
+
+            render() {
+                return (
+                    <div>
+                        <InputGroup>
+                            <LabelledInput
+                                label="Name"
+                                onInput={e => this.setState({ value: e.target.value })}
+                                value={this.state.value}
+                            />
+                        </InputGroup>
+                        <InputGroup>
+                            <LabelledInput
+                                label="Name"
+                                placeholder="Hello World"
+                                onInput={e => this.setState({ value: e.target.value })}
+                                value={this.state.value}
+                            />
+                        </InputGroup>
+                    </div>
+                )
+            }
+        };
+
+        return <Example />;
+    }}
+</Playground>
