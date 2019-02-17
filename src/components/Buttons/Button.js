@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { bool, func, oneOf, oneOfType, node } from 'prop-types';
 
 import Loading from '../svgs/Loading';
+import borders from '../../theme/borders';
 import colors from '../../theme/colors';
 import { variants } from '../../theme/fonts';
 import { lighten, darken, desaturate } from '../../utilities/color';
@@ -23,7 +24,7 @@ const Button = styled.button`
     padding: .375rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .1rem;
+    border-radius: ${borders.borderRadius};
     position: relative;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: button;

@@ -21,7 +21,7 @@ const noMarginCss = `
 `;
 
 const Typography = ({
-    type = 'p',
+    type = 'text',
     variant,
     color = 'black',
     children,

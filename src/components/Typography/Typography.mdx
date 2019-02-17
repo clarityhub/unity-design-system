@@ -20,6 +20,17 @@ import Typography from '@clarityhub/one/components/Typography';
 
 ## Examples
 
+### Text versus Paragraph
+
+By default, if no `type` is provided to `Typography`, then `text` is used.
+
+If you want to have multiple paragraphs of readable text, use `type="p"`.
+
+<Playground>
+    <Typography>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>. Donec odio ipsum, <strong>sodales et ligula sed</strong>, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
+    <Typography type="p">Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>. Donec odio ipsum, <strong>sodales et ligula sed</strong>, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
+</Playground>
+
 ### Headings
 
 <Playground>
@@ -43,8 +54,8 @@ Without padding:
 ### Text
 
 <Playground>
-    <Typography>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>. Donec odio ipsum, <em>sodales et ligula sed</em>, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
-    <Typography>Vestibulum quis facilisis dolor, <strong>a faucibus urna</strong>. Vestibulum lobortis massa in <b>lacus semper</b>, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
+    <Typography type="p">Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>. Donec odio ipsum, <em>sodales et ligula sed</em>, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
+    <Typography type="p">Vestibulum quis facilisis dolor, <strong>a faucibus urna</strong>. Vestibulum lobortis massa in <b>lacus semper</b>, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
     <Typography type="subtext">This is a set of subtext</Typography>
 </Playground>
 
@@ -52,14 +63,14 @@ Without padding:
 
 <Playground>
     <Typography type="h1">H1. The quick brown fox</Typography>
-    <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio ipsum, sodales et ligula sed, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
-    <Typography>Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
+    <Typography type="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio ipsum, sodales et ligula sed, venenatis cursus libero. Suspendisse sit amet tempus tortor, tincidunt egestas tortor. In hac habitasse platea dictumst. Sed consectetur nulla eget diam tincidunt eleifend.</Typography>
+    <Typography type="p">Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
 
     <Typography type="h2">H2. The quick brown fox</Typography>
 
-    <Typography>Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
+    <Typography type="p">Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
 
     <Typography type="h2">H2. The quick brown fox</Typography>
 
-    <Typography>Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
+    <Typography type="p">Vestibulum quis facilisis dolor, a faucibus urna. Vestibulum lobortis massa in lacus semper, sit amet ultrices eros lacinia. Aenean consectetur luctus est, ut tincidunt arcu hendrerit eu. Aliquam orci dui, iaculis vitae vestibulum sed, ullamcorper ut odio. Maecenas ut mattis nisi. Fusce in ante sit amet magna ullamcorper euismod id ut lacus. Duis eget auctor velit.</Typography>
 </Playground>

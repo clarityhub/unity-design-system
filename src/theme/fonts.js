@@ -5,8 +5,8 @@ import { darken } from '../utilities/color';
  * List of Google Fonts that must be loaded
  */
 export const families = [
-    'Crimson Text',
-    'Roboto',
+    'Crimson Text:300,400,600,700',
+    'Roboto:400,800',
     'Open Sans:300,400,600,700',
 ];
 
@@ -33,6 +33,9 @@ export const variants = {
         -webkit-font-smoothing: auto;
         -moz-osx-font-smoothing: auto;
         letter-spacing: 0.2px;
+    `,
+    readable: `
+        font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     `,
     button: `
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -98,9 +101,29 @@ export const types = {
         line-height: 1.2;
     `,
     p: `
-        font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        ${variants.readable}
 
         font-size: ${21 / 16}rem;
+        line-height: 1.6;
+
+        & + & {
+            margin-top: 1.6rem;
+        }
+
+        strong,
+        b {
+            font-weight: 800;
+        }
+
+        i,
+        em {
+            font-style: italic;
+        }
+    `,
+    text: `
+        ${variants.text}
+
+        font-size: 1.1rem;
         line-height: 1.6;
 
         & + & {
