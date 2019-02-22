@@ -1,0 +1,38 @@
+---
+name: Avatar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Avatar from './Avatar';
+
+# Avatar
+
+## \<Avatar /\> component
+
+```js
+import Avatar from '@clarityhub/one/components/Avatar';
+```
+
+## Prop Types
+
+<PropsTable of={Avatar} />
+
+
+## Examples
+
+<Playground>
+    <Avatar
+        url="/public/ivan-avatar.png"
+        fallbackUrl="/public/avatar-placeholder.png"
+        alt="Ivan's Avatar"
+    />
+</Playground>
+
+<Playground>
+    <Avatar
+        url="/public/invalid-url.png"
+        fallbackUrl="/public/avatar-placeholder.png"
+        alt="Ivan's Avatar"
+    />
+</Playground>

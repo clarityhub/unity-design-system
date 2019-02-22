@@ -58,13 +58,13 @@ const Button = styled.button`
                     background-color: ${colors.primary};
                     border-color: ${colors.primary};
 
-                    ${outline && css`
+                    ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
                         color: ${colors.primary};
                     `}
 
-                    ${text && css`
+                    ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
                         color: ${colors.primary};
@@ -75,13 +75,13 @@ const Button = styled.button`
                         background-color: ${desaturate(darken(colors.primary))};
                         border-color: ${desaturate(darken(colors.primary))};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: ${colors.primary};
                             border: 1px solid ${colors.primary};
                             color: ${colors.white};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
                             color: ${desaturate(darken(colors.primary))};
@@ -93,86 +93,32 @@ const Button = styled.button`
                         background-color: ${desaturate(lighten(colors.primary))};
                         border-color: ${desaturate(lighten(colors.primary))};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: transparent;
                             border: 1px solid ${colors.primary};
                             color: ${desaturate(lighten(colors.primary))};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
                             color: ${desaturate(lighten(colors.primary))};
                         `}
                     }
                 `;
-            // case 'success':
-            //     return css`
-            //         color: ${colors.white};
-            //         background-color: ${colors.success};
-            //         border-color: ${colors.success};
-
-            //         ${outline && css`
-            //             background-color: transparent;
-            //             border: 1px solid inherit;
-            //             color: ${colors.success};
-            //         `}
-
-            //         ${text && css`
-            //             background-color: transparent;
-            //             border: 1px solid transparent;
-            //             color: ${colors.success};
-            //         `}
-
-            //         &:hover,
-            //         &.active {
-            //             background-color: ${desaturate(darken(colors.success))};
-            //             border-color: ${desaturate(darken(colors.success))};
-
-            //             ${outline && css`
-            //                 background-color: ${colors.success};
-            //                 border: 1px solid ${colors.success};
-            //                 color: ${colors.white};
-            //             `}
-
-            //             ${text && css`
-            //                 background-color: transparent;
-            //                 border: 1px solid transparent;
-            //                 color: ${desaturate(darken(colors.success, 0.3))};
-            //             `}
-            //         }
-
-            //         &:disabled,
-            //         &.disabled {
-            //             background-color: ${desaturate(lighten(colors.success, 0.3))};
-            //             border-color: ${desaturate(lighten(colors.success, 0.3))};
-
-            //             ${outline && css`
-            //                 background-color: transparent;
-            //                 border: 1px solid ${colors.success};
-            //                 color: ${desaturate(lighten(colors.success, 0.3))};
-            //             `}
-
-            //             ${text && css`
-            //                 background-color: transparent;
-            //                 border: 1px solid transparent;
-            //                 color: ${desaturate(lighten(colors.success, 0.3))};
-            //             `}
-            //         }
-            //     `;
             case 'danger':
                 return css`
                     color: ${colors.white};
                     background-color: ${colors.danger};
                     border-color: ${colors.danger};
 
-                    ${outline && css`
+                    ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
                         color: ${colors.danger};
                     `}
 
-                    ${text && css`
+                    ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
                         color: ${colors.danger};
@@ -183,13 +129,13 @@ const Button = styled.button`
                         background-color: ${desaturate(darken(colors.danger))};
                         border-color: ${desaturate(darken(colors.danger))};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: ${colors.danger};
                             border: 1px solid ${colors.danger};
                             color: ${colors.white};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
                             color: ${desaturate(darken(colors.danger))};
@@ -201,13 +147,13 @@ const Button = styled.button`
                         background-color: ${lighten(colors.danger, 0.3)};
                         border-color: ${lighten(colors.danger, 0.3)};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: transparent;
                             border: 1px solid ${colors.danger};
                             color: ${desaturate(lighten(colors.danger, 0.3))};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
                             color: ${desaturate(lighten(colors.danger, 0.3))};
@@ -221,13 +167,13 @@ const Button = styled.button`
                     background-color: ${colors.muted};
                     border-color: ${colors.gray};
 
-                    ${outline && css`
+                    ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
                         color: ${colors.black};
                     `}
 
-                    ${text && css`
+                    ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
                         color: ${colors.black};
@@ -238,16 +184,16 @@ const Button = styled.button`
                         background-color: ${desaturate(darken(colors.muted))};
                         border-color: ${colors.gray};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: ${colors.muted};
                             border: 1px solid ${colors.muted};
                             color: ${colors.black};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(darken(colors.black))};
+                            color: ${desaturate(lighten(colors.black, 0.5))};
                         `}
                     }
 
@@ -257,13 +203,13 @@ const Button = styled.button`
                         background-color: ${lighten(colors.muted, 0.01)};
                         border-color: ${colors.gray};
 
-                        ${outline && css`
+                        ${outline && `
                             background-color: transparent;
                             border: 1px solid ${colors.gray};
                             color: ${lighten(colors.gray, 0.01)};
                         `}
 
-                        ${text && css`
+                        ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
                             color: ${desaturate(lighten(colors.black))};
@@ -308,6 +254,7 @@ const Button = styled.button`
             color: transparent !important;
         }
     `}
+
 `;
 
 const IconWrapper = styled.span`

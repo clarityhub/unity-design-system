@@ -1,0 +1,36 @@
+---
+name: UserProfile
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import UserProfile from './UserProfile';
+import { MenuItem, MenuItemDivider } from '../Menu';
+
+# UserProfile
+
+## \<UserProfile /\> component
+
+```js
+import UserProfile from '@clarityhub/one/components/UserProfile';
+```
+
+## Prop Types
+
+<PropsTable of={UserProfile} />
+
+
+## Examples
+
+<Playground>
+    <UserProfile
+        avatarUrl="/public/ivan-avatar.png"
+        avatarFallbackUrl="/public/avatar-placeholder.png"
+        menuItems={[
+            <MenuItem>Profile</MenuItem>,
+            <MenuItem>Account</MenuItem>,
+            <MenuItemDivider />,
+            <MenuItem>Logout</MenuItem>,
+        ]}
+    />
+</Playground>

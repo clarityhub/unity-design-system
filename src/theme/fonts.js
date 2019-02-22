@@ -183,7 +183,7 @@ export const types = {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-touch-callout: none;
         border: 0 !important;
-        color: ${colors.wash};
+        color: ${colors.dove};
         cursor: pointer;
         display: block;
         font-size: ${14 / 16}rem;
@@ -193,14 +193,15 @@ export const types = {
         text-decoration: none;
         transition: color 0.3s;
         transition-property: color;
+        letter-spacing: 0.8px !important;
 
         &:visited {
-            color: ${colors.light} !important;
+            color: ${colors.dove} !important;
         }
 
         &::before {
-            background: ${colors.wash};
-            bottom: -2px;
+            background: ${colors.dove};
+            bottom: -6px;
             content: '';
             height: 2px;
             left: 0;
@@ -210,10 +211,11 @@ export const types = {
             width: 100%;
         }
 
+        &.active,
         &:hover,
         &:focus {
             &::before {
-                transform: scale3d(0.5, 0.4, 1);
+                transform: scale3d(0.8, 0.4, 1);
                 transition-duration: 0.3s;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
