@@ -7,6 +7,7 @@ import { Component } from 'react';
 import { Playground, PropsTable } from 'docz';
 import LabelledInput from './LabelledInput';
 import InputGroup from '../InputGroup';
+import Input from '../Input';
 
 # LabelledInput
 
@@ -31,6 +32,14 @@ The following are basic examples of the `LabelledInput` which incorrectly do
 not have values or listeners.
 
 <Playground>
+    <p>
+        Normal Input:
+    </p>
+    <Input value="Normal text input for comparison" />
+
+    <p>
+        LabelledInputs:
+    </p>
     <InputGroup>
         <LabelledInput
             label="State, Province, or Region"
@@ -44,10 +53,11 @@ not have values or listeners.
             label="State, Province, or Region"
             type="text"
             name="test"
+            error
         />
     </InputGroup>
     <InputGroup>
-        <LabelledInput label="Name" value="Hello World" />
+        <LabelledInput label="Name" value="Hello World" disabled />
     </InputGroup>
 </Playground>
 
@@ -87,4 +97,25 @@ not have values or listeners.
 
         return <Example />;
     }}
+</Playground>
+
+
+### Types
+
+<Playground>
+    <InputGroup>
+        <LabelledInput
+            label="Your Email"
+            type="email"
+            name="email"
+        />
+    </InputGroup>
+
+    <InputGroup>
+        <LabelledInput
+            label="Select an amount"
+            type="number"
+            name="number"
+        />
+    </InputGroup>
 </Playground>

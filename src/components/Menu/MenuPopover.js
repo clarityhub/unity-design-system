@@ -2,25 +2,12 @@
 
 import React, { Component } from 'react';
 import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled';
+import { arrayOf, node } from 'prop-types';
 
 import borders from '../../theme/borders';
 import { variants } from '../../theme/fonts';
 import colors from '../../theme/colors';
-
-function noOverflow(position, el) {
-    const w = window.innerWidth;
-    const rect = el.getBoundingClientRect();
-    const newPosition = { ...position };
-
-    // TODO remove mutation
-    if (position.left + rect.width > w) {
-        // snap to right
-        newPosition.left = position.right - rect.width;
-    }
-
-    return newPosition;
-}
+import { noOverflow } from '../../utilities/position';
 
 const menuPopoverWrapper = () => css`
     background-color: ${colors.white};
@@ -46,6 +33,10 @@ const menuPopoverWrapper = () => css`
 `;
 
 class MenuPopover extends Component {
+    static propTypes = {
+        items: arrayOf(node).isRequired,
+    }
+
     state = {
         position: {},
     }

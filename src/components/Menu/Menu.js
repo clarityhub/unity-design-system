@@ -1,30 +1,13 @@
 /** @jsx jsx */
 
 import { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { func } from 'prop-types';
+import { func, node, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 import MenuPopover from './MenuPopover';
-import colors from '../../theme/colors';
-import Button from '../Buttons';
-
-// XXX move to utilities
-function offset(el) {
-    var rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return {
-        top: rect.top + scrollTop,
-        left: rect.left + scrollLeft,
-        height: rect.height,
-        width: rect.width,
-        bottom: rect.top + scrollTop + rect.height,
-        right: rect.left + scrollLeft + rect.width,
-    };
-}
-
+import MenuPortal from './MenuPortal';
+import { offset } from '../../utilities/position';
 
 const MenuWrapper = styled.div`
     position: relative;
@@ -32,51 +15,6 @@ const MenuWrapper = styled.div`
 
 const MenuTarget = styled.div`
     position: relative;
-`;
-
-let menuPortalId = 0;
-
-class MenuPortal extends Component {
-    constructor(props) {
-        super(props);
-
-        this.el = document.createElement('div');
-        this.el.id = `menu-portal-${menuPortalId++}`;
-        document.body.appendChild(this.el);
-    }
-
-    componentWillUnmount() {
-        document.body.removeChild(this.el);
-    }
-
-    render() {
-        return ReactDOM.createPortal(
-            this.props.children,
-            this.el
-        );
-    }
-}
-
-export const MenuItem = props => (
-    <Button
-        text
-        css={css`
-            text-align: left;
-            min-width: 150px;
-            width: 100%;
-
-            &:hover {
-                background-color: ${colors.muted};
-            }
-        `}
-        {...props}
-    />
-);
-
-export const MenuItemDivider = styled.hr`
-    width: 100%;
-    height: 0;
-    border-top: 1px solid ${colors.gray};
 `;
 
 /**
@@ -87,9 +25,10 @@ export const MenuItemDivider = styled.hr`
  * 
  * The menu will close when you click outside of the menu
  */
-export class Menu extends Component {
+export default class Menu extends Component {
     static propTypes = {
         children: func.isRequired,
+        items: arrayOf(node).isRequired,
     }
 
     state = {

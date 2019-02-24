@@ -6,21 +6,7 @@ import Label from '../Label';
 import styled from '@emotion/styled';
 
 const ControlledInput = styled.div`
-    label {
-        font-size: 1rem;
-        pointer-events: none;
-        text-align: initial;
-        top: 1.4rem;
-    }
-
-    input:placeholder-shown,
-    input[data-not-empty],
-    input:focus {
-        & ~ label {
-            font-size: 0.8rem;
-            top: 0;
-        }
-    }
+    width: 100%;
 `;
 
 let inputCount = 0;
@@ -65,12 +51,15 @@ export default class LabelledInput extends Component {
                     value={value}
 
                     {...optionalAttributes}
-                />
-                <Label
-                    htmlFor={this.inputId}
+
+                    label={label}
                 >
-                    {label}
-                </Label>
+                    <Label
+                        htmlFor={this.inputId}
+                    >
+                        {label}
+                    </Label>
+                </Input>
             </ControlledInput>
         );
     }

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
+import { bool, func, node, number, string, oneOfType } from 'prop-types';
 
 import colors from '../../theme/colors';
 import Link from '../Link';
@@ -132,5 +133,14 @@ const Navbar = ({
         </NavbarContent>
     </NavbarContainer>
 );
+
+Navbar.propTypes = {
+    children: node,
+    maxWidth: oneOfType([number, bool]),
+    navBrandText: string,
+    navBrandLogo: node.isRequired,
+    navBrandPath: string,
+    navBrandRenderer: func,
+};
 
 export default Navbar;

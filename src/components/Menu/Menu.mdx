@@ -4,10 +4,17 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
-import { Menu, MenuItem, MenuItemDivider } from './Menu';
+import { Menu, MenuItem, MenuItemDivider } from './';
 import Button from '../Buttons';
 
 # Menu
+
+Show a pop-up menu in navigation or when there are many options
+a user can select.
+
+Menus will always appear fixed to the bottom-left of the child
+element, but will fix to the bottom-right if the window width
+would be less than the width of the popover.
 
 ## \<Menu /\> component
 
@@ -30,8 +37,6 @@ All `Button` props can also be passed to the `MenuItem`.
 ### MenuItemDivider Props
 
 <PropsTable of={MenuItemDivider} />
-
-
 
 ## Examples
 

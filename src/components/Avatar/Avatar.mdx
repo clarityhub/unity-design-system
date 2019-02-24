@@ -8,6 +8,11 @@ import Avatar from './Avatar';
 
 # Avatar
 
+Use avatars to present user photographs.
+
+You should always provide a `fallbackUrl` so that there is always
+a preloaded image shown.
+
 ## \<Avatar /\> component
 
 ```js
@@ -18,8 +23,9 @@ import Avatar from '@clarityhub/one/components/Avatar';
 
 <PropsTable of={Avatar} />
 
-
 ## Examples
+
+Image with a fallback:
 
 <Playground>
     <Avatar
@@ -28,6 +34,8 @@ import Avatar from '@clarityhub/one/components/Avatar';
         alt="Ivan's Avatar"
     />
 </Playground>
+
+Image fails to load:
 
 <Playground>
     <Avatar

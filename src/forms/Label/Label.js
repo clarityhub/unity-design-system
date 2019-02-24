@@ -5,7 +5,7 @@ import colors from '../../theme/colors';
 import { variants } from '../../theme/fonts';
 
 const Label = styled.label`
-    color: ${colors.gray};
+    color: ${colors.darkGray};
     cursor: text;
     display: block;
     font-size: 0.9rem;

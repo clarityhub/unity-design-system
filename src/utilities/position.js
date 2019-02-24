@@ -1,0 +1,35 @@
+/**
+ * Given an element, get the top, left, bottom, right, height, and width.
+ */
+export const offset = (el) => {
+    const rect = el.getBoundingClientRect();
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft,
+        height: rect.height,
+        width: rect.width,
+        bottom: rect.top + scrollTop + rect.height,
+        right: rect.left + scrollLeft + rect.width,
+    };
+};
+
+/**
+ * Given a position, and an element, make sure that
+ * the element at that position will not overflow with
+ * the window.
+ */
+export const noOverflow = (position, el) => {
+    const w = window.innerWidth;
+    const rect = el.getBoundingClientRect();
+    const newPosition = { ...position };
+
+    if (position.left + rect.width > w) {
+        // snap to right
+        newPosition.left = position.right - rect.width;
+    }
+
+    return newPosition;
+}

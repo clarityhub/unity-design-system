@@ -32,6 +32,6 @@ Avatar.propTypes = {
     alt: string,
     url: string,
     fallbackUrl: string.isRequired,
-}
+};
 
 export default Avatar;

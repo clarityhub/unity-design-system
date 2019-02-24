@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { string, arrayOf, node } from 'prop-types';
 
 import Avatar from '../Avatar';
 import { Menu } from '../Menu';
@@ -20,5 +21,11 @@ const UserProfile = ({ avatarUrl, avatarFallbackUrl, menuItems }) => (
         )}
     </Menu>
 );
+
+UserProfile.propTypes = {
+    avatarUrl: string.isRequired,
+    avatarFallbackUrl: string.isRequired,
+    menuItems: arrayOf(node),
+};
 
 export default UserProfile;

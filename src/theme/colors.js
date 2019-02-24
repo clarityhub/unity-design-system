@@ -9,6 +9,7 @@ export default {
     dove: '#FDFDFD',
     muted: '#F1F1F1',
     gray: '#C2C2C2',
+    darkGray: '#999',
     dark: '#322439',
     black: '#333',
 };
