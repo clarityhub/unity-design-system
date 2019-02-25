@@ -1,54 +1,49 @@
 ---
-name: LabelledInput
+name: LabelledTextarea
 menu: Forms
 ---
 
 import { Component } from 'react';
 import { Playground, PropsTable } from 'docz';
-import LabelledInput from './LabelledInput';
+import LabelledTextarea from './LabelledTextarea';
 import InputGroup from '../InputGroup';
 import Input from '../Input';
 
-# LabelledInput
+# LabelledTextarea
 
-The `LabelledInput` component is a controlled input. You <b>must</b> provide a
+The `LabelledTextarea` component is a controlled input. You <b>must</b> provide a
 `value` and `onInput`.
 
-## \<LabelledInput /\> component
+## \<LabelledTextarea /\> component
 
 ```js
-import LabelledInput from '@clarityhub/one/forms/LabelledInput';
+import LabelledTextarea from '@clarityhub/one/forms/LabelledTextarea';
 ```
 
 ## Prop Types
 
-<PropsTable of={LabelledInput} />
+<PropsTable of={LabelledTextarea} />
 
 ## Examples
 
 ### Basic
 
-The following are basic examples of the `LabelledInput` which incorrectly do
+The following are basic examples of the `LabelledTextarea` which incorrectly do
 not have values or listeners.
 
 <Playground>
     <p>
-        Normal Input:
-    </p>
-    <Input value="Normal text input for comparison" />
-
-    <p>
-        LabelledInputs:
+        LabelledTextareas:
     </p>
     <InputGroup>
-        <LabelledInput
+        <LabelledTextarea
             label="State, Province, or Region"
             type="text"
             name="test"
         />
     </InputGroup>
     <InputGroup>
-        <LabelledInput
+        <LabelledTextarea
             defaultValue="Arizona"
             label="State, Province, or Region"
             type="text"
@@ -57,11 +52,12 @@ not have values or listeners.
         />
     </InputGroup>
     <InputGroup>
-        <LabelledInput label="Name" value="Hello World" disabled />
+        <LabelledTextarea label="Name" value="Hello World" disabled />
     </InputGroup>
 </Playground>
 
 ### Controlled
+
 <Playground>
     {() => {
         class Example extends Component {
@@ -76,14 +72,14 @@ not have values or listeners.
                 return (
                     <div>
                         <InputGroup>
-                            <LabelledInput
+                            <LabelledTextarea
                                 label="Name"
                                 onInput={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}
                             />
                         </InputGroup>
                         <InputGroup>
-                            <LabelledInput
+                            <LabelledTextarea
                                 label="Name"
                                 placeholder="Hello World"
                                 onInput={e => this.setState({ value: e.target.value })}
@@ -97,32 +93,4 @@ not have values or listeners.
 
         return <Example />;
     }}
-</Playground>
-
-
-### Types
-
-<Playground>
-    <InputGroup>
-        <LabelledInput
-            label="Your Email"
-            type="email"
-            name="email"
-        />
-    </InputGroup>
-
-    <InputGroup>
-        <LabelledInput
-            label="Select an amount"
-            type="number"
-            name="number"
-        />
-    </InputGroup>
-
-    <InputGroup>
-        <LabelledInput
-            label="This is a textarea"
-            name="textarea"
-        />
-    </InputGroup>
 </Playground>

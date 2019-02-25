@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
@@ -17,10 +17,12 @@ const baseInput = ({ error }) => css`
     font-size: 1rem;
     margin-bottom: 0;
     min-width: 250px;
+    min-height: ${inputHeight}rem;
     padding: 0.6rem 1rem;
     transition: all 0.2s ease-in;
-    transition-property: border-bottom-width, border-bottom-color, margin-bottom;
+    transition-property: border-bottom-width, border-bottom-color, color, margin-bottom;
     width: 100%;
+    resize: vertical;
 
     ${variants.text}
 
@@ -59,7 +61,7 @@ const baseInput = ({ error }) => css`
 const Input = styled.input`
     border: 1px solid ${colors.gray};
     border-radius: ${borders.borderRadius};
-   
+
     ${({ error }) => baseInput({ error })}
 
     &:disabled {
@@ -80,30 +82,30 @@ const BorderStart = styled.div`
     border-bottom: 1px solid ${colors.gray};
     border-top: 1px solid ${colors.gray};
     border-left: 1px solid ${colors.gray};
-    border-radius: ${borders.borderRadius} 0 0 ${borders.borderRadius}; 
+    border-radius: ${borders.borderRadius} 0 0 ${borders.borderRadius};
 
     width: ${paddingLeft}rem;
-    height: ${inputHeight}rem;
+    min-height: 100%;
 `;
 
 const BorderLabel = styled.div`
     border-bottom: 1px solid ${colors.gray};
     border-top: 1px solid transparent !important;
-    height: ${inputHeight}rem;
+    min-height: 100%;
     width: 0;
 
     > span {
-      color: transparent;  
+      color: transparent;
     }
 `;
 const BorderEnd = styled.div`
     border-bottom: 1px solid ${colors.gray};
     border-top: 1px solid ${colors.gray};
     border-right: 1px solid ${colors.gray};
-    border-radius: 0 ${borders.borderRadius} ${borders.borderRadius} 0; 
+    border-radius: 0 ${borders.borderRadius} ${borders.borderRadius} 0;
 
     flex: 1;
-    height: ${inputHeight}rem;
+    min-height: 100%;
 `;
 
 const FakeLabel = styled.span`
@@ -115,7 +117,7 @@ const FakeLabel = styled.span`
 const BorderWrapper = styled.div`
     display: flex;
     position: relative;
-    height: ${inputHeight}rem;
+    height: 100%;
 
     ${({ error }) => error && css`
         ${BorderStart},
@@ -136,6 +138,7 @@ const BorderWrapper = styled.div`
         left: ${paddingLeft}rem;
     }
 
+    textarea:disabled,
     input:disabled {
         & ~ ${BorderStart},
         & ~ ${BorderLabel},
@@ -144,6 +147,8 @@ const BorderWrapper = styled.div`
         }
     }
 
+    textarea:focus,
+    textarea:active,
     input:focus,
     input:active {
         & ~ ${BorderStart},
@@ -153,6 +158,9 @@ const BorderWrapper = styled.div`
         }
     }
 
+    textarea:placeholder-shown,
+    textarea[data-not-empty],
+    textarea:focus,
     input:placeholder-shown,
     input[data-not-empty],
     input:focus {
@@ -162,6 +170,7 @@ const BorderWrapper = styled.div`
 
         & ~ label,
         & ~ * label {
+            color: ${colors.darkGray};
             font-size: 0.8rem;
             top: -0.5rem;
         }
@@ -175,29 +184,31 @@ const BorderWrapper = styled.div`
 const FloatingInput = styled.input`
     border: 1px solid transparent;
     position: absolute;
-    
+
     ${({ error }) => baseInput({ error })}
 
     background-color: transparent;
     /* padding-left: ${labelPadding + 0.7}rem; */
 `;
 
-const StyledInput = ({ children, error = false, label, ...rest }) => {
+const StyledInput = ({ children, error = false, height, targetRef, label, ...rest }) => {
     if (!children) {
-        return <Input error={error} {...rest} />;
+        return <Input error={error} {...rest} ref={targetRef} />;
     }
 
     return (
-        <BorderWrapper error={error}>
-            <FloatingInput {...rest} />
-            <BorderStart />
-            <BorderLabel>
-                <FakeLabel>{label}</FakeLabel>
-                {children}
-            </BorderLabel>
-            <BorderEnd />
-        </BorderWrapper>
-    )
+        <div style={{ height: `${height || `${inputHeight}rem`}`}}>
+            <BorderWrapper error={error}>
+                <FloatingInput {...rest} ref={targetRef} />
+                <BorderStart />
+                <BorderLabel>
+                    <FakeLabel>{label}</FakeLabel>
+                    {children}
+                </BorderLabel>
+                <BorderEnd />
+            </BorderWrapper>
+        </div>
+    );
 };
 
 export default StyledInput;

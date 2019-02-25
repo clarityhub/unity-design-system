@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
+import styled from '@emotion/styled';
 
 import Input from '../Input';
 import Label from '../Label';
-import styled from '@emotion/styled';
 
 const ControlledInput = styled.div`
     width: 100%;
