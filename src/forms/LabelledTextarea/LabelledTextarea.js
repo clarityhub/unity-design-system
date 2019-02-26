@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import Textarea from '../Textarea';
 import Label from '../Label';
 import { offset } from '../../utilities/position';
-import { animation } from 'polished';
 
 const ControlledTextarea = styled.div`
     width: 100%;

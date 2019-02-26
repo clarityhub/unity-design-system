@@ -1,0 +1,35 @@
+---
+name: Forms
+menu: Forms
+---
+
+import { Playground, PropsTable } from 'docz';
+import InputGroup from './InputGroup';
+import LabelledInput from './LabelledInput';
+import LabelledTextarea from './LabelledTextarea';
+import Typography from '../components/Typography';
+
+# Forms
+
+Forms are a standard way for users to provide, submit,
+and edit data.
+
+* Use labelled form fields to provide accessibile ways
+for users to enter data.
+* Use input groups to space out fields correctly.
+
+## Examples
+
+
+<Playground>
+    <Typography>Tell us about yourself:</Typography>
+    <InputGroup>
+        <LabelledInput label="First Name" />
+    </InputGroup>
+    <InputGroup>
+        <LabelledInput label="Last Name" />
+    </InputGroup>
+    <InputGroup>
+        <LabelledTextarea label="Short bio" />
+    </InputGroup>
+</Playground>
