@@ -28,7 +28,9 @@ const Typography = ({
     component: suggestedComponent = 'p',
     noMargin = false,
     noPadding = false,
+    inline = false,
     css: userCss,
+    center = false,
     ...rest,
 }) => {
     let style = `
@@ -38,6 +40,12 @@ const Typography = ({
         ${Boolean(noPadding) ? noPaddingCss : ''}
         ${Boolean(noMargin) ? noMarginCss : ''}
         ${Boolean(userCss) ? userCss : ''}
+        ${Boolean(inline) ? `
+            display: inline-block;
+        ` : ''}
+        ${Boolean(center) ? `
+            text-align: center;
+        ` : ''}
     `;
 
     if (typeof suggestedComponent === 'string') {
@@ -60,9 +68,11 @@ Typography.propTypes = {
     color: oneOf(Object.keys(colorStyles)),
     children: node,
     component: node,
+    center: bool,
     noMargin: bool,
     noPadding: bool,
     css: string,
+    inline: bool,
 };
 
 export default Typography;

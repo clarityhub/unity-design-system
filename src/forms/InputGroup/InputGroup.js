@@ -5,7 +5,7 @@ const InputGroup = styled.div`
     position: relative;
 
     & + & {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 `;
 

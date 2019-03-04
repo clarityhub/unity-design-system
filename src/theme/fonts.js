@@ -63,6 +63,9 @@ export const colorStyles = {
     black: `
         color: ${colors.black};
     `,
+    primary: `
+        color: ${colors.primary};
+    `,
 };
 
 export const types = {

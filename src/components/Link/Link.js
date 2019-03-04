@@ -3,7 +3,7 @@ import { func, oneOfType, node, string } from 'prop-types';
 
 import Typography from '../Typography';
 
-const Link = ({ component = 'a', children, variant = 'text', color, type, ...props }) => (
+const Link = ({ component = 'a', children, variant = 'text', color = 'primary', type, ...props }) => (
     <Typography
         type={type ? type : 'link'}
         variant={variant}

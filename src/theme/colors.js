@@ -12,4 +12,6 @@ export default {
     darkGray: '#999',
     dark: '#322439',
     black: '#333',
+
+    gradient: 'linear-gradient(-104deg,#dd2476 16%,#ff512f 95%)',
 };
