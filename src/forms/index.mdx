@@ -7,6 +7,8 @@ import { Playground, PropsTable } from 'docz';
 import InputGroup from './InputGroup';
 import LabelledInput from './LabelledInput';
 import LabelledTextarea from './LabelledTextarea';
+import RadioGroup from './RadioGroup';
+import LabelledRadio from './LabelledRadio';
 import Typography from '../components/Typography';
 
 # Forms
@@ -20,6 +22,7 @@ for users to enter data.
 
 ## Examples
 
+### Simple (Uncontrolled) Form
 
 <Playground>
     <Typography>Tell us about yourself:</Typography>
@@ -31,5 +34,47 @@ for users to enter data.
     </InputGroup>
     <InputGroup>
         <LabelledTextarea label="Short bio" />
+    </InputGroup>
+    <InputGroup>
+        <Typography type="sectionLabel">What gender do you identify with?</Typography>
+        <RadioGroup defaultSelected="noselection">
+            <LabelledRadio value="male" label="Male" />
+            <LabelledRadio value="female" label="Female" />
+            <LabelledRadio value="other" label="Other" />
+            <LabelledRadio value="noselection" label="Choose not to disclose" />
+        </RadioGroup>
+    </InputGroup>
+</Playground>
+
+
+### Error states
+
+
+<Playground>
+    <Notification type="error" variant="block">
+        There were problems with processing your
+        request. We encountered the following issues:
+        <ul>
+            <li>Our servers are offline</li>
+        </ul>
+    </Notification>
+    <Typography>Tell us about yourself:</Typography>
+    <InputGroup>
+        <LabelledInput label="First Name" />
+    </InputGroup>
+    <InputGroup>
+        <LabelledInput label="Last Name" />
+    </InputGroup>
+    <InputGroup>
+        <LabelledTextarea label="Short bio" />
+    </InputGroup>
+    <InputGroup>
+        <Typography type="sectionLabel">What gender do you identify with?</Typography>
+        <RadioGroup defaultSelected="noselection">
+            <LabelledRadio value="male" label="Male" />
+            <LabelledRadio value="female" label="Female" />
+            <LabelledRadio value="other" label="Other" />
+            <LabelledRadio value="noselection" label="Choose not to disclose" />
+        </RadioGroup>
     </InputGroup>
 </Playground>

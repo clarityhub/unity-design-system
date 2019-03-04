@@ -140,10 +140,38 @@ export const types = {
             font-style: italic;
         }
     `,
+    text2: `
+        ${variants.text}
+
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+
+        & + & {
+            margin-top: 1.6rem;
+        }
+
+        strong,
+        b {
+            font-weight: 800;
+        }
+
+        i,
+        em {
+            font-style: italic;
+        }
+    `,
+    sectionLabel: `
+        ${variants.text}
+
+        color: ${colors.smoke};
+        font-size: 1rem;
+        line-height: 1.4;
+    `,
     subtext: `
         font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-        font-size: ${16 / 16}rem;
+        font-size: 0.9rem;
         line-height: 1.4;
         color: ${colors.smoke};
         font-style: italic;
