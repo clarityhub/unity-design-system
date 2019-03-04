@@ -1,7 +1,7 @@
 {
-  "name": "@clarityhub/one",
+  "name": "@clarityhub/unity",
   "version": "1.0.0",
-  "description": "One Design System for Clarity Hub",
+  "description": "Unity Design System for Clarity Hub",
   "main": "dist/index.js",
   "scripts": {
     "docz:dev": "docz dev",
@@ -30,6 +30,7 @@
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^0.13.7",
     "eslint": "^5.14.0",
+    "formik": "^1.5.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",

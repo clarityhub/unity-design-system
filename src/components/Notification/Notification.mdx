@@ -1,0 +1,62 @@
+---
+name: Notification
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Notification from './Notification';
+import Dismissable from '../../interactions/Dismissable';
+
+# Notification
+
+## \<Notification /\> component
+
+```js
+import Notification from '@clarityhub/one/components/Notification';
+```
+
+## Prop Types
+
+<PropsTable of={Notification} />
+
+## Examples
+
+<Playground>
+  <Notification type="danger" variant="block">
+      There were problems with processing your
+      request. We encountered the following issues:
+      <ul>
+          <li>Our servers are offline</li>
+      </ul>
+  </Notification>
+  <br />
+  <Notification type="primary" variant="thin">
+      Welcome to Clarity Hub, we've updated our Terms and Conditions
+  </Notification>
+  <br />
+  <Notification type="success" variant="block">
+      Congratulations, you've enabled your first integration!
+  </Notification>
+</Playground>
+
+### Dismissable
+
+<Playground>
+  <Dismissable>
+    {({ Dismiss }) => (
+      <Notification
+        type="danger"
+        variant="block"
+      >
+        <Dismiss />
+        There were problems with processing your
+        request. We encountered the following issues:
+        <ul>
+            <li>Our servers are offline</li>
+        </ul>
+      </Notification>
+    )}
+  </Dismissable>
+</Playground>
+
+### Autodismiss
