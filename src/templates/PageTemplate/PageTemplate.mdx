@@ -1,6 +1,59 @@
 ---
 name: PageTemplate
 menu: Templates
+fullpage: true
 ---
 
 # PageTemplate
+
+import { Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Link from '../../components/Link';
+import PageTemplate from './PageTemplate';
+import { NavItem } from '../../components/Navbar';
+import UserProfile from '../../components/UserProfile';
+import { MenuItem, MenuItemDivider } from '../../components/Menu';
+
+## \<PageTemplate /\>
+
+```js
+import PageTemplate from '@clarityhub/one/templates/PageTemplate';
+```
+
+## Prop Types
+
+<PropsTable of={PageTemplate} />
+
+## Examples
+
+<Playground>
+    <PageTemplate
+        navItems={[
+            <NavItem selected>
+                <Link type="blockLink" href="#">Dashboard</Link>
+            </NavItem>,
+            <NavItem>
+                <Link type="blockLink" href="#">Integrations</Link>
+            </NavItem>,
+            <NavItem>
+                <UserProfile
+                    avatarUrl="/public/ivan-avatar.png"
+                    avatarFallbackUrl="/public/avatar-placeholder.png"
+
+                    menuItems={[
+                        <MenuItem>Profile</MenuItem>,
+                        <MenuItem>Account</MenuItem>,
+                        <MenuItemDivider />,
+                        <MenuItem>Logout</MenuItem>,
+                    ]}
+                />
+            </NavItem>,
+        ]}
+    >
+        <ul>
+            {(new Array(1000)).fill(0).map((_, i) => (
+                <li key={i}>List Item {i}</li>
+            ))}
+        </ul>
+    </PageTemplate>
+</Playground>

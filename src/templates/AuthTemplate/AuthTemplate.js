@@ -12,6 +12,7 @@ import Typography from '../../components/Typography';
 import Button from '../../components/Buttons';
 
 import colors from '../../theme/colors';
+import breakpoints from '../../theme/breakpoints';
 
 const Section = styled.div`
     flex: 1;
@@ -25,9 +26,13 @@ const Section = styled.div`
 
 const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
     <Layout>
-        <FlexGrid>
-            <FlexColumn css={css`
+        <FlexGrid center>
+            <FlexColumn center css={css`
                 background: ${colors.gradient};
+
+                @media(max-width: ${breakpoints.smartphone}) {
+                    display: none;
+                }
             `}>
                 <Section css={css`
                     margin-left: auto;
@@ -44,9 +49,14 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
                     ))}
                 </Section>
             </FlexColumn>
-            <FlexColumn>
+            <FlexColumn center>
                 <Section css={css`
                     background-color: ${colors.dove};
+
+                    @media(max-width: ${breakpoints.smartphone}) {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                 `}>
                     <Typography
                         center

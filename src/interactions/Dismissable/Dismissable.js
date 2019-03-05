@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { node, func } from 'prop-types';
 import styled from '@emotion/styled';
 
-import { noop } from '../../utilities/noop';
+import noop from '../../utilities/noop';
 
 const ANIMATION_LENGTH = 300;
 

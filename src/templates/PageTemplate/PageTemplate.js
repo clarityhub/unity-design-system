@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 
-import Header from '../../components/Header';
-import Sidenav from '../../components/Sidenav';
-import Footer from '../../components/Footer';
+import Layout from '../../scaffolding/Layout';
+import { FlexGrid } from '../../scaffolding/FlexGrid';
+import Navbar from '../../components/Navbar';
+import Logo from '../../components/svgs/Logo';
 
-const Layout = styled.div`
+const SideNav = styled.div`
+
 `;
 
+// max width
+// overflow
 const Content = styled.div`
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    max-height: 100%;
 `;
 
-// XXX mobile
-
-const Page = ({ sidenavProps, headerProps, children }) => (
+const Page = ({ children, navItems }) => (
     <Layout>
-        <Header {...headerProps} />
-        <Sidenav {...sidenavProps} />
-        <Content>
-            {children}
-        </Content>
-        <Footer />
+        <Navbar
+            navBrandLogo={Logo}
+        >
+            {navItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
+        </Navbar>
+        <FlexGrid>
+            <SideNav
+            />
+
+            <Content>
+                {children}
+            </Content>
+        </FlexGrid>
     </Layout>  
 );
 

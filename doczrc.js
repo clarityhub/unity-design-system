@@ -11,4 +11,14 @@ export default {
 					cssmodules: true,
 			}),
 	],
+
+	menu: [
+		'Getting Started',
+		'Theme',
+		'Scaffolding',
+		'Components',
+		'Forms',
+		'Templates',
+		'Utilities',
+	]
 };
