@@ -12,16 +12,10 @@ const Card = styled.div`
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: ${colors.dove};
+    background-color: ${colors.white};
     background-clip: border-box;
-    border: 1px solid ${colors.gray};
     border-radius: ${borders.borderRadius};
-
-    ${({ noBorder }) => noBorder ? css`
-        border: 1px solid transparent;
-    ` : css`
-        border: 1px solid ${colors.gray};
-    `}
+    box-shadow: ${colors.shadow};
 
     > :not(${CardHeaderWrapper}) {
         h3 {

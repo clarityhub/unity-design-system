@@ -38,7 +38,7 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
                     margin-left: auto;
                 `}>
                     {newsFeed.map((item, i) => (
-                        <Card key={i} noBorder>
+                        <Card key={i}>
                             <CardBody>
                                 <Typography type="h3">{item.title}</Typography>
                                 <Typography type="text">

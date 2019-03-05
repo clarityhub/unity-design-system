@@ -10,8 +10,7 @@ const CardFooter = styled.div`
     color: ${colors.dark};
 
     padding: .75rem 1.25rem;
-    background-color: ${colors.dove};
-    border-top: 1px solid ${colors.gray};
+    border-top: 1px solid ${colors.muted};
 
     &:last-child {
         border-radius: 0 0 calc(${borders.borderRadius} - 1px) calc(${borders.borderRadius} - 1px);

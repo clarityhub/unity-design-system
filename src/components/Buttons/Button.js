@@ -16,16 +16,18 @@ const Button = styled.button`
 
     ${variants.button}
 
+    box-shadow: ${colors.shadow};
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    padding: .375rem 1rem;
+    padding: .5rem 1.25rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: ${borders.borderRadius};
     position: relative;
+    text-transform: uppercase;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: button;
 
@@ -164,8 +166,9 @@ const Button = styled.button`
             default:
                 return css`
                     color: ${colors.black};
-                    background-color: ${colors.muted};
-                    border-color: ${colors.gray};
+                    background-color: rgba(255, 255, 255, 0);
+                    border-color: transparent;
+                    color: ${colors.primary};
 
                     ${outline && `
                         background-color: transparent;
@@ -181,8 +184,9 @@ const Button = styled.button`
 
                     &:hover,
                     &.active {
-                        background-color: ${desaturate(darken(colors.muted))};
-                        border-color: ${colors.gray};
+                        background-color: ${colors.dove};
+                        border-color: transparent;
+                        color: ${colors.dark};
 
                         ${outline && `
                             background-color: ${colors.muted};
@@ -201,7 +205,7 @@ const Button = styled.button`
                     &.disabled {
                         color: ${darken(colors.gray, 0.1)};
                         background-color: ${lighten(colors.muted, 0.01)};
-                        border-color: ${colors.gray};
+                        border-color: transparent;
 
                         ${outline && `
                             background-color: transparent;
@@ -222,6 +226,11 @@ const Button = styled.button`
     ${({ outline }) => outline && css`
         background-color: transparent;
         border: 1px solid inherit;
+        box-shadow: none;
+    `}
+
+    ${({ text }) => text && css`
+        box-shadow: none;
     `}
 
     ${({ size }) => {

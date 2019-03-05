@@ -20,27 +20,20 @@ export const variants = {
         font-weight: 400;
     `,
     text: `
-        font-family: 'Helvetica Neue', Arial, sand-serif;
-        font-weight: 300;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 400;
         line-height: 1rem;
-
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            letter-spacing: 0.1px;
-        }
 
         -webkit-font-smoothing: auto;
         -moz-osx-font-smoothing: auto;
-        letter-spacing: 0.2px;
     `,
     readable: `
         font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     `,
     button: `
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-weight: 400;
-        letter-spacing: 0.2px;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.35px;
     `
 };
 
@@ -126,8 +119,8 @@ export const types = {
     text: `
         ${variants.text}
 
-        font-size: 1.1rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.5;
 
         & + & {
             margin-top: 1.6rem;
