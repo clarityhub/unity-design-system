@@ -12,7 +12,7 @@ const NavItem = styled.div`
         `}
     }
 
-    &:not(:first-child) {
+    &:not(:first-of-type) {
         margin-left: 3rem;
     }
 

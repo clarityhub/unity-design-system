@@ -9,10 +9,10 @@ const ButtonGroup = styled.div`
     ${EmotionButton} + ${EmotionButton} {
         border-left-width: 0;
     }
-    ${EmotionButton}:not(:last-child):not(:first-child) {
+    ${EmotionButton}:not(:last-child):not(:first-of-type) {
         border-radius: 0;
     }
-    ${EmotionButton}:first-child {
+    ${EmotionButton}:first-of-type {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }

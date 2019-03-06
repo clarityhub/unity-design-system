@@ -160,21 +160,14 @@ For accessibility purposes, certain color combinations should be used.
         <Row>
             <Col>
                 <Swatch color={colors.primary} wide>
-                    <b style={{ color: colors.black }}>The fix boxing wizards jump quickly</b>
-                </Swatch>
-            </Col>
-            <Col>
-                <span><pre>{'{colors.black}'}</pre> on <pre>{'{colors.primary}'}</pre></span>
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                <Swatch color={colors.primary} wide>
                     <b style={{ color: colors.white }}>The fix boxing wizards jump quickly</b>
                 </Swatch>
             </Col>
             <Col>
-                <span><pre>{'{colors.white}'}</pre> on <pre>{'{colors.primary}'}</pre> only if bold text</span>
+                <pre>{'{colors.white}'}</pre>
+            </Col>
+            <Col>
+                <pre>{'{colors.primary}'}</pre>
             </Col>
         </Row>
         <Row>
@@ -184,7 +177,10 @@ For accessibility purposes, certain color combinations should be used.
                 </Swatch>
             </Col>
             <Col>
-                <span><pre>{'{colors.black}'}</pre> on <pre>{'{colors.success}'}</pre></span>
+                <pre>{'{colors.black}'}</pre>
+            </Col>
+            <Col>
+                <pre>{'{colors.success}'}</pre>
             </Col>
         </Row>
         <Row>
@@ -194,7 +190,13 @@ For accessibility purposes, certain color combinations should be used.
                 </Swatch>
             </Col>
             <Col>
-                <span><pre>{'{colors.white}'}</pre> on <pre>{'{colors.success}'}</pre> only if bold</span>
+                <pre>{'{colors.white}'}</pre>
+            </Col>
+            <Col>
+                <pre>{'{colors.success}'}</pre>
+            </Col>
+            <Col>
+                (When text does not matter)
             </Col>
         </Row>
         <Row>
@@ -204,7 +206,10 @@ For accessibility purposes, certain color combinations should be used.
                 </Swatch>
             </Col>
             <Col>
-                <span><pre>{'{colors.black}'}</pre> on <pre>{'{colors.danger}'}</pre></span>
+                <pre>{'{colors.white}'}</pre>
+            </Col>
+            <Col>
+                <pre>{'{colors.danger}'}</pre>
             </Col>
         </Row>
         <Row>
@@ -214,7 +219,13 @@ For accessibility purposes, certain color combinations should be used.
                 </Swatch>
             </Col>
             <Col>
-                <span><pre>{'{colors.white}'}</pre> on <pre>{'{colors.danger}'}</pre></span>
+                <pre>{'{colors.white}'}</pre>
+            </Col>
+            <Col>
+                <pre>{'{colors.success}'}</pre>
+            </Col>
+            <Col>
+                (When text does not matter)
             </Col>
         </Row>
     </Body>

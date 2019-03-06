@@ -1,50 +1,88 @@
-import React, { Fragment } from 'react';
+/* @jsx jsx */
+import { Fragment } from 'react';
+import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import colors from '../../theme/colors';
 import Layout from '../../scaffolding/Layout';
-import { FlexGrid } from '../../scaffolding/FlexGrid';
+import { FlexGrid, FlexGridContainer } from '../../scaffolding/FlexGrid';
 import Navbar from '../../components/Navbar';
-import { Card } from '../../components/Card';
+import SideNav from '../../components/SideNav';
 import Logo from '../../components/svgs/Logo';
+import breakpoints from '../../theme/breakpoints';
+import Typography from '../../components/Typography';
 
-const SideNav = styled.div`
+const sideNavWidth = 14; // TODO refactor sidenav width
+const navbarHeight = 5.3; // TODO refactor with navbar
+const mobileGutter = 2; // TODO refactor with flex grid container
 
+const NavbarWrapper = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
 `;
 
-// max width
-// overflow
-const Content = styled.div`
-    background-color: ${colors.muted};
-    flex: 1;
-    overflow: auto;
-    max-height: 100%;
+const SideNavWrapper = styled.div`
+    position: fixed;
+    left: calc(50vw - ${breakpoints.maxWidth}px / 2);
+    top: ${navbarHeight}rem;
+    bottom: 0;
+    width: ${sideNavWidth}rem;
+    z-index: 1;
 
-    ${Card} {
-        margin: 2rem auto 0;
-        max-width: 820px;
-        width: 100%;
+    @media (max-width: ${breakpoints.maxWidth + (mobileGutter * 16)}px) {
+        left: ${mobileGutter}rem;
     }
 `;
 
-const Page = ({ children, navItems }) => (
-    <Layout>
-        <Navbar
-            navBrandLogo={Logo}
-        >
-            {navItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
-        </Navbar>
-        <FlexGrid>
-            <SideNav
-            />
+const Wrapper = styled.div`
+    overflow: auto;
+    height: calc(100vh - ${navbarHeight}rem);
+    width: 100%;
+`;
 
-            <Content>
-                <Card>
-                    {children}
-                </Card>
-            </Content>
-        </FlexGrid>
-    </Layout>  
+const Content = styled.div`
+    flex: 1;
+    padding: 3rem 0;
+    width: 100%;
+`;
+
+const Page = ({ children, navItems, sideNavItems, title, breadcrumb }) => (
+    <Layout css={css`
+        padding-top: ${navbarHeight}rem;
+    `}>
+        <NavbarWrapper>
+            <Navbar
+                maxWidth={breakpoints.maxWidth}
+                navBrandLogo={Logo}
+            >
+                {navItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
+            </Navbar>
+        </NavbarWrapper>
+        <SideNavWrapper>
+            <SideNav>
+                {sideNavItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
+            </SideNav>
+        </SideNavWrapper>
+        <Wrapper>
+            <FlexGridContainer>
+                <FlexGrid>
+                    <SideNav />
+                    <Content>
+                        {breadcrumb}
+                        <Typography type="h1">
+                            {title}
+                        </Typography>
+                        {children}
+                    </Content>
+                </FlexGrid>
+            </FlexGridContainer>
+        </Wrapper>
+    </Layout>
 );
+
+// XXX prop types
 
 export default Page;

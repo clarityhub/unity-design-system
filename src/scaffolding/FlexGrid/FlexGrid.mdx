@@ -12,10 +12,14 @@ import FlexColumn from './FlexColumn';
 ## \<FlexGrid /\> component
 
 ```js
-import { FlexGrid, FlexColumn } from '@clarityhub/one/scaffolding/FlexGrid';
+import { FlexGridContainer, FlexGrid, FlexColumn } from '@clarityhub/one/scaffolding/FlexGrid';
 ```
 
 ## Prop Types
+
+### FlexGridContainer
+
+<PropsTable of={FlexGridContainer} />
 
 ### FlexGrid
 
@@ -28,15 +32,17 @@ import { FlexGrid, FlexColumn } from '@clarityhub/one/scaffolding/FlexGrid';
 ## Examples
 
 <Playground>
-	<FlexGrid style={{ border: '1px solid red' }}>
-        <FlexColumn style={{ border: '1px solid blue' }}>
-            Col 1
-        </FlexColumn>
-        <FlexColumn style={{ border: '1px solid blue' }}>
-            Col 2
-        </FlexColumn>
-        <FlexColumn style={{ border: '1px solid blue' }}>
-            Col 3
-        </FlexColumn>
-	</FlexGrid>
+    <FlexGridContainer>
+        <FlexGrid style={{ border: '1px solid red' }}>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 1
+            </FlexColumn>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 2
+            </FlexColumn>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 3
+            </FlexColumn>
+        </FlexGrid>
+    </FlexGridContainer>
 </Playground>

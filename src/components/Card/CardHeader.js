@@ -10,7 +10,7 @@ const CardHeaderWrapper = styled.div`
     margin-bottom: 0;
     border-bottom: 1px solid ${colors.muted};
 
-    &:first-child {
+    &:first-of-type {
         border-radius: calc(${borders.borderRadius} - 1px) calc(${borders.borderRadius} - 1px) 0 0;
     }
 `;

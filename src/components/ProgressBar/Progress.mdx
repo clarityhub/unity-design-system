@@ -1,0 +1,41 @@
+---
+menu: Components
+name: ProgressBar
+---
+
+import { Playground, PropsTable } from 'docz';
+import ProgressBar from './ProgressBar';
+
+# ProgressBar
+
+## \<ProgressBar /\> component
+
+```js
+import ProgressBar from '@clarityhub/one/components/ProgressBar';
+```
+
+## Prop Types
+
+<PropsTable of={ProgressBar} />
+
+## Examples
+
+### Colors and Percentages
+
+<Playground>
+    <ProgressBar progress={10} type="default" />
+    <br />
+    <br />
+    <ProgressBar progress={30} type="primary" />
+    <br />
+    <br />
+    <ProgressBar progress={60} type="success" />
+    <br />
+    <br />
+    <ProgressBar progress={80} type="danger" />
+    <br />
+    <br />
+    <ProgressBar progress={100} type="notification" />
+    <br />
+    <br />
+</Playground>

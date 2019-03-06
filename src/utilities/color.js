@@ -28,3 +28,19 @@ export const desaturate = (color, percentage = 0.1) => {
     return perform('desaturate', color, percentage);
 };
 
+export const opacify = (color, percentage = 0.1) => {
+    const key = `opacify:${color}:${percentage}`;
+
+    if (cache[key]) {
+        return cache[key];
+    }
+
+    const arr = Color(color).rgb().array();
+    arr.push(percentage);
+    const c = `rgba(${arr.join(',')})`;
+
+    cache[key] = c;
+
+    return c;
+};
+

@@ -1,0 +1,42 @@
+---
+name: SideNav
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import SideNav from './SideNav';
+import SideNavItem from './SideNavItem';
+import Link from '../Link';
+
+# SideNav
+
+The `SideNav` (aka Sidebar) of the application
+
+## \<SideNav /\> component
+
+```js
+import SideNav, { SideNavItem } from '@clarityhub/one/components/SideNav';
+```
+
+## Prop Types
+
+<PropsTable of={SideNav} />
+
+## Examples
+
+<Playground>
+    <SideNav>
+        <SideNavItem selected>
+            <Link href="#">Account</Link>
+        </SideNavItem>
+        <SideNavItem>
+            <Link href="#">Users</Link>
+        </SideNavItem>
+        <SideNavItem>
+            <Link href="#">Billing</Link>
+        </SideNavItem>
+        <SideNavItem>
+            <Link href="#">Usage</Link>
+        </SideNavItem>
+    </SideNav>
+</Playground>
