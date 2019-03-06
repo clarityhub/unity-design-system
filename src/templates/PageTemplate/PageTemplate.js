@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 import Layout from '../../scaffolding/Layout';
 import { FlexGrid, FlexGridContainer } from '../../scaffolding/FlexGrid';
 import Navbar from '../../components/Navbar';
+import Card from '../../components/Card';
 import SideNav from '../../components/SideNav';
 import Logo from '../../components/svgs/Logo';
 import breakpoints from '../../theme/breakpoints';
@@ -39,7 +40,7 @@ const SideNavWrapper = styled.div`
 
 const Wrapper = styled.div`
     overflow: auto;
-    height: calc(100vh - ${navbarHeight}rem);
+    max-height: calc(100vh - ${navbarHeight}rem);
     width: 100%;
 `;
 
@@ -47,11 +48,16 @@ const Content = styled.div`
     flex: 1;
     padding: 3rem 0;
     width: 100%;
+
+    ${Card} + ${Card} {
+        margin-top: 1rem;
+    }
 `;
 
 const Page = ({ children, navItems, sideNavItems, title, breadcrumb }) => (
     <Layout css={css`
         padding-top: ${navbarHeight}rem;
+        box-sizing: border-box;
     `}>
         <NavbarWrapper>
             <Navbar
