@@ -3,9 +3,11 @@ name: SideNav
 menu: Components
 ---
 
+import { Component } from 'react';
 import { Playground, PropsTable } from 'docz';
 import SideNav from './SideNav';
 import SideNavItem from './SideNavItem';
+import SideNavGroup from './SideNavGroup';
 import Link from '../Link';
 
 # SideNav
@@ -15,7 +17,7 @@ The `SideNav` (aka Sidebar) of the application
 ## \<SideNav /\> component
 
 ```js
-import SideNav, { SideNavItem } from '@clarityhub/one/components/SideNav';
+import SideNav, { SideNavItem, SideNavGroup } from '@clarityhub/one/components/SideNav';
 ```
 
 ## Prop Types
@@ -25,18 +27,72 @@ import SideNav, { SideNavItem } from '@clarityhub/one/components/SideNav';
 ## Examples
 
 <Playground>
-    <SideNav>
-        <SideNavItem selected>
-            <Link href="#">Account</Link>
-        </SideNavItem>
-        <SideNavItem>
-            <Link href="#">Users</Link>
-        </SideNavItem>
-        <SideNavItem>
-            <Link href="#">Billing</Link>
-        </SideNavItem>
-        <SideNavItem>
-            <Link href="#">Usage</Link>
-        </SideNavItem>
-    </SideNav>
+    {() => {
+        class ControlledSideNav extends Component {
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    selected: 0,
+                }
+
+                this.onSelect = this.onSelect.bind(this);
+            }
+
+            onSelect(i) {
+                const doChange = function (e) {
+                    e.preventDefault();
+
+                    this.setState({
+                        selected: i,
+                    });
+                };
+
+                return doChange.bind(this);
+            }
+
+            render() {
+                const { selected } = this.state;
+                return (
+                    <SideNav>
+                        <SideNavItem selected={selected === 0}>
+                            <Link href="#" onClick={this.onSelect(0)}>Home</Link>
+                        </SideNavItem>
+                        <SideNavItem selected={selected === 1}>
+                            <Link href="#" onClick={this.onSelect(1)}>Insights</Link>
+                        </SideNavItem>
+                        <SideNavItem selected={selected === 2}>
+                            <Link href="#" onClick={this.onSelect(2)}>Integrations</Link>
+                        </SideNavItem>
+                        <SideNavItem selected={selected === 3}>
+                            <Link href="#" onClick={this.onSelect(3)}>Apps</Link>
+                        </SideNavItem>
+                        <SideNavItem selected={selected === 4}>
+                            <Link href="#" onClick={this.onSelect(4)}>Account</Link>
+                        </SideNavItem>
+                        <SideNavItem selected={selected === 5}>
+                            <Link href="#" onClick={this.onSelect(5)}>Developers</Link>
+
+                            <SideNavGroup>
+                                <SideNavItem>
+                                    <Link href="#">API Keys</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Web Console</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Webhooks</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Logs</Link>
+                                </SideNavItem>
+                            </SideNavGroup>
+                        </SideNavItem>
+                    </SideNav>
+                );
+            }
+        }
+
+        return <ControlledSideNav />
+    }}
 </Playground>

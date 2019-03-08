@@ -194,8 +194,12 @@ const FloatingInput = styled.input`
 
     ${({ error }) => baseInput({ error })}
 
+
     background-color: transparent;
     /* padding-left: ${labelPadding + 0.7}rem; */
+    margin: 0.625rem 0;
+    padding-bottom: 0;
+    padding-top: 0;
 `;
 
 const StyledInput = ({ children, error = false, height, targetRef, label, ...rest }) => {

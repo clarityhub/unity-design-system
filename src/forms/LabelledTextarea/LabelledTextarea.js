@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 import styled from '@emotion/styled';
 
 import Textarea from '../Textarea';
@@ -17,12 +17,13 @@ export default class LabelledTextarea extends Component {
         label: string.isRequired,
         value: string,
         defaultValue: string,
+        maxLines: number,
     }
 
     static defaultProps = {
+        maxLines: 3,
         type: 'text',
     }
-
 
     constructor(props) {
         super(props);
@@ -34,6 +35,8 @@ export default class LabelledTextarea extends Component {
         this.state = {
             height: 0,
         };
+
+        this._onMouseUp = this.onMouseUp.bind(this);
     }
 
 
@@ -49,10 +52,10 @@ export default class LabelledTextarea extends Component {
 
     calcSize = () => {
         if (this.textarea) {
-            const { height } = offset(this.textarea);
+            const { outerHeight } = offset(this.textarea);
 
             this.setState({
-                height,
+                height: outerHeight,
             });
         }
     }
@@ -68,12 +71,12 @@ export default class LabelledTextarea extends Component {
     onMouseDown = () => {
         this.stop = false;
         window.requestAnimationFrame(this.animationFrameCb)
-        window.addEventListener('onMouseUp', this.onMouseUp);
+        window.addEventListener('mouseup', this._onMouseUp);
     }
 
     onMouseUp = () => {
         this.stop = true;
-        window.removeEventListener('onMouseUp', this.onMouseUp);
+        window.removeEventListener('mouseup', this._onMouseUp);
     }
 
     render() {
