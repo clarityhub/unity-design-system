@@ -17,11 +17,11 @@ export default class LabelledTextarea extends Component {
         label: string.isRequired,
         value: string,
         defaultValue: string,
-        maxLines: number,
+        grow: number,
     }
 
     static defaultProps = {
-        maxLines: 3,
+        grow: 5,
         type: 'text',
     }
 
@@ -53,6 +53,9 @@ export default class LabelledTextarea extends Component {
     calcSize = () => {
         if (this.textarea) {
             const { outerHeight } = offset(this.textarea);
+            
+
+            // if grow, auto resize height
 
             this.setState({
                 height: outerHeight,

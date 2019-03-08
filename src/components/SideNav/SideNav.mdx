@@ -69,6 +69,21 @@ import SideNav, { SideNavItem, SideNavGroup } from '@clarityhub/one/components/S
                         </SideNavItem>
                         <SideNavItem selected={selected === 4}>
                             <Link href="#" onClick={this.onSelect(4)}>Account</Link>
+
+                            <SideNavGroup>
+                                <SideNavItem>
+                                    <Link href="#">Profile</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Billing</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Usage</Link>
+                                </SideNavItem>
+                                <SideNavItem>
+                                    <Link href="#">Users</Link>
+                                </SideNavItem>
+                            </SideNavGroup>
                         </SideNavItem>
                         <SideNavItem selected={selected === 5}>
                             <Link href="#" onClick={this.onSelect(5)}>Developers</Link>

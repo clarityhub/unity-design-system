@@ -31,17 +31,17 @@ const Badge = styled.div`
             case 'primary':
                 return css`
                     color: ${colors.primary};
-                    background-color: ${opacify(colors.primary, 0.3)};
+                    background-color: ${opacify(colors.primary, 0.25)};
                 `;
             case 'success':
                 return css`
                     color: ${colors.success};
-                    background-color: ${opacify(colors.success, 0.3)};
+                    background-color: ${opacify(colors.success, 0.25)};
                 `;
             case 'danger':
                 return css`
                     color: ${colors.danger};
-                    background-color: ${opacify(colors.danger, 0.3)};
+                    background-color: ${opacify(colors.danger, 0.25)};
                 `;
             case 'notification':
                 return css`

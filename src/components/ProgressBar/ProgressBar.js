@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { number, string } from 'prop-types';
 
 import borders from '../../theme/borders';
@@ -18,6 +19,7 @@ const ProgressInfo = styled.div`
 `;
 
 const ProgressCore = styled.div`
+    display: flex;
     overflow: hidden;
     height: 0.8rem;
     margin-bottom: 1rem;
@@ -36,15 +38,37 @@ const ProgressBar = styled.div`
     text-align: center;
     white-space: nowrap;
     color: #fff;
-    background-color: #5e72e4;
+    background-color: ${colors.primary};
     justify-content: center;
+
+    ${({ type }) => {
+        switch (type) {
+            case 'notification':
+                return css`
+                    background-color: ${colors.notification};
+                `;
+            case 'danger':
+                return css`
+                    background-color: ${colors.danger};
+                `;
+            case 'success':
+                return css`
+                    background-color: ${colors.success};
+                `;
+            case 'primary':
+            default:
+                return css`
+                    background-color: ${colors.primary};
+                `;
+        }
+    }}
 `;
 
-const Progress = ({ progress = 0, type = 'default' }) => (
+const Progress = ({ children, progress = 0, type = 'default' }) => (
     <ProgressWrapper>
         <ProgressInfo class="progress-info">
             <div class="progress-label">
-                <span>Task completed</span>
+                {children}
             </div>
             <div class="progress-percentage">
                 <span>{progress}%</span>
@@ -52,7 +76,7 @@ const Progress = ({ progress = 0, type = 'default' }) => (
         </ProgressInfo>
         <ProgressCore>
             <ProgressBar
-                class="progress-bar bg-default"
+                type={type}
                 role="progressbar"
                 aria-valuenow={progress}
                 aria-valuemin="0"
