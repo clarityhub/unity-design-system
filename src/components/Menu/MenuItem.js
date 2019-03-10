@@ -6,9 +6,9 @@ import Button from '../Buttons';
 import colors from '../../theme/colors';
 
 const MenuItem = props => (
-    <Button
-        text
-        css={css`
+	<Button
+		text
+		css={css`
             border-radius: 0;
             text-align: left;
             text-transform: none;
@@ -19,8 +19,8 @@ const MenuItem = props => (
                 background-color: ${colors.muted};
             }
         `}
-        {...props}
-    />
+		{...props}
+	/>
 );
 
 export default MenuItem;

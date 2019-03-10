@@ -1,23 +1,22 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
+import css from '@emotion/css';
 import { bool, func, node, number, string, oneOfType, element } from 'prop-types';
 
 import colors from '../../theme/colors';
 import Link from '../Link';
 import Typography from '../Typography';
-import css from '@emotion/css';
-
-const height = 5.3;
+import { NAVBAR_HEIGHT } from './config';
 
 const NavbarContainer = styled.nav`
     background: ${colors.notification};
     color: ${colors.white};
-    height: ${height}rem;
+    height: ${NAVBAR_HEIGHT}rem;
     padding-top: 0;
 `;
 
 const NavbarContent = styled.div`
-    height: ${height}rem;
+    height: ${NAVBAR_HEIGHT}rem;
     display: flex;
     line-height: 1;
     margin: 0 auto;
@@ -87,62 +86,62 @@ const NavbarItems = styled.div`
 `;
 
 const defaultNavBrandRenderer = ({ path, children }) => (
-    <Link href={path}>{children}</Link>
+	<Link href={path}>{children}</Link>
 );
 
 const NavbarBrand = ({
-    navBrandPath,
-    navBrandRenderer,
-    navBrandText,
-    navBrandLogo: Logo,
+	navBrandPath,
+	navBrandRenderer,
+	navBrandText,
+	navBrandLogo: Logo,
 }) => (
-    <NavbarBrandWrapper>
-        {navBrandRenderer({
-            path: navBrandPath,
-            children: (
-                <Fragment>
-                    <Logo />
-                    <Typography variant="heading" color="white" component="span">
-                        {navBrandText}
-                    </Typography>
-                </Fragment>
-            ),
-        })}
-    </NavbarBrandWrapper>
+	<NavbarBrandWrapper>
+		{navBrandRenderer({
+			path: navBrandPath,
+			children: (
+				<Fragment>
+					<Logo />
+					<Typography variant="heading" color="white" component="span">
+						{navBrandText}
+					</Typography>
+				</Fragment>
+			),
+		})}
+	</NavbarBrandWrapper>
 );
 
 const Navbar = ({
-    children,
-    maxWidth = false,
-    navBrandText = 'Clarity Hub',
-    navBrandLogo,
-    navBrandPath = '/',
-    navBrandRenderer = defaultNavBrandRenderer,
+	children,
+	maxWidth = false,
+	navBrandText = 'Clarity Hub',
+	navBrandLogo,
+	navBrandPath = '/',
+	navBrandRenderer = defaultNavBrandRenderer,
 }) => (
-    <NavbarContainer>
-        <NavbarContent maxWidth={maxWidth}>
-            <NavbarBrand
-                navBrandLogo={navBrandLogo}
-                navBrandPath={navBrandPath}
-                navBrandRenderer={navBrandRenderer}
-                navBrandText={navBrandText}
-            />
-            <Gutter />
+	<NavbarContainer>
+		<NavbarContent maxWidth={maxWidth}>
+			<NavbarBrand
+				navBrandLogo={navBrandLogo}
+				navBrandPath={navBrandPath}
+				navBrandRenderer={navBrandRenderer}
+				navBrandText={navBrandText}
+			/>
+			<Gutter />
 
-            <NavbarItems>
-                {children}
-            </NavbarItems>
-        </NavbarContent>
-    </NavbarContainer>
+			<NavbarItems>
+				{children}
+			</NavbarItems>
+		</NavbarContent>
+	</NavbarContainer>
 );
 
 Navbar.propTypes = {
-    children: node,
-    maxWidth: oneOfType([number, bool]),
-    navBrandText: string,
-    navBrandLogo: oneOfType([node, func, element]).isRequired,
-    navBrandPath: string,
-    navBrandRenderer: func,
+	children: node,
+	maxWidth: oneOfType([number, bool]),
+	navBrandLogo: oneOfType([node, func, element]).isRequired,
+	navBrandPath: string,
+	navBrandRenderer: func,
+	navBrandText: string,
 };
 
 export default Navbar;

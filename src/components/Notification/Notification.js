@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx, css } from '@emotion/core';
 
 import Typography from '../Typography';
-import { lighten } from '../../utilities/color';
 import borders from '../../theme/borders';
 import colors from '../../theme/colors';
 
@@ -13,32 +12,32 @@ const base = css`
 `;
 
 const types = {
-  danger: css`
+	danger: css`
     background-color: ${colors.danger};
     color: ${colors.white};
   `,
-  primary: css`
+	primary: css`
     background-color: ${colors.primary};
     color: ${colors.white};
   `,
-  success: css`
+	success: css`
     background-color: ${colors.success};
     color: ${colors.white};
   `,
-}
+};
 
 const variants = {
-  block: css`
+	block: css`
     padding: 2rem;
   `,
-  thin: css`
+	thin: css`
     padding: 0.6rem 2rem;
   `,
-}
+};
 
 const notificationStyles = ({
-  type = 'danger',
-  variant = 'block',
+	type = 'danger',
+	variant = 'block',
 }) => css`
   ${base}
   ${types[type]}
@@ -46,20 +45,20 @@ const notificationStyles = ({
 `;
 
 const Notification = ({ children,  ...props }) => (
-  <div
-    css={notificationStyles(props)}
-    role="alert"
-    {...props}
-  >
-    <Typography
-      color="white"
-      type="text2"
-      noMargin
-      noPadding
-    >
-      {children}
-    </Typography>
-  </div>
+	<div
+		css={notificationStyles(props)}
+		role="alert"
+		{...props}
+	>
+		<Typography
+			color="white"
+			type="text2"
+			noMargin
+			noPadding
+		>
+			{children}
+		</Typography>
+	</div>
 );
 
 export default Notification;

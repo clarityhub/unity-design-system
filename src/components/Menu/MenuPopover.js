@@ -49,91 +49,91 @@ const Arrow = styled.div`
 
 class MenuPopover extends Component {
     static propTypes = {
-        items: arrayOf(node).isRequired,
-        target: node,
+    	items: arrayOf(node).isRequired,
+    	target: node,
     }
 
     state = {
-        position: {},
-        arrow: {},
+    	position: {},
+    	arrow: {},
     }
 
     componentDidMount() {
-        const position = this.getPosition(this.props, this.popover);
-        this.setState({
-            position,
-            arrow: this.getArrowPosition(this.props, position),
-        });
+    	const position = this.getPosition(this.props, this.popover);
+    	this.setState({
+    		position,
+    		arrow: this.getArrowPosition(this.props, position),
+    	});
     }
 
     componentWillUpdate(nextProps) {
-        if (nextProps.left !== this.props.left ||
+    	if (nextProps.left !== this.props.left ||
             nextProps.target !== this.props.target) {
             
-            const position = this.getPosition(nextProps, this.popover);
-            this.setState({
-                position,
-                arrow: this.getArrowPosition(nextProps, position),
-            });
-        }
+    		const position = this.getPosition(nextProps, this.popover);
+    		this.setState({
+    			position,
+    			arrow: this.getArrowPosition(nextProps, position),
+    		});
+    	}
     }
 
     getPosition = (props, el) => {
-        let pos = { ...props.position };
-        if (el) {
-            // Try to center
-            pos.left = pos.left - (offset(el).width / 2) + (offset(props.target).width / 2);
-        }
+    	let pos = { ...props.position };
+    	if (el) {
+    		// Try to center
+    		pos.left = pos.left - (offset(el).width / 2) + (offset(props.target).width / 2);
+    	}
 
-        // Push over if it would go off the page
-        return noOverflow(pos, el);
+    	// Push over if it would go off the page
+    	return noOverflow(pos, el);
     }
 
     getArrowPosition = (props, menuPosition) => {
-        if (props.target) {
-            const targetPos = offset(props.target);
+    	if (props.target) {
+    		const targetPos = offset(props.target);
 
-            const left = targetPos.left - menuPosition.left + (targetPos.width / 2);
+    		const left = targetPos.left - menuPosition.left + (targetPos.width / 2);
 
-            return {
-                top: 0,
-                left,
-            };
-        } else {
-            return {
-                top: 0,
-                left: 0,
-            };
-        }
+    		return {
+    			top: 0,
+    			left,
+    		};
+    	} else {
+    		return {
+    			top: 0,
+    			left: 0,
+    		};
+    	}
     }
 
     render() {
-        const { position, arrow } = this.state;
-        const { items, innerRef } = this.props;
+    	const { position, arrow } = this.state;
+    	const { items, innerRef } = this.props;
 
-        return (
-            <div
-                ref={(ref) => { this.popover = ref; innerRef(ref)}}
-                css={menuPopoverWrapper}
-                style={{
-                    top: `${position.bottom || 0}px`,
-                    left: `${position.left || 0}px`,
-                }}
-            >
-                <Arrow
-                    style={{
-                        left: `${arrow.left || 0}px`,
-                    }}
-                />
-                <ul>
-                    {items.map((item, i) => (
-                        <li key={i}>
-                            {item}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        )
+    	return (
+    		<div
+    			ref={(ref) => { this.popover = ref; innerRef(ref);}}
+    			css={menuPopoverWrapper}
+    			style={{
+    				top: `${position.bottom || 0}px`,
+    				left: `${position.left || 0}px`,
+    			}}
+    		>
+    			<Arrow
+    				style={{
+    					left: `${arrow.left || 0}px`,
+    				}}
+    			/>
+    			<ul>
+    				{items.map((item, i) => (
+    					<li key={i}>
+    						{item}
+    					</li>
+    				))}
+    			</ul>
+    		</div>
+    	);
     }
 }
 

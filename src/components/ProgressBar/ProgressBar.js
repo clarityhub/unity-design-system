@@ -42,54 +42,54 @@ const ProgressBar = styled.div`
     justify-content: center;
 
     ${({ type }) => {
-        switch (type) {
-            case 'notification':
-                return css`
+		switch (type) {
+		case 'notification':
+			return css`
                     background-color: ${colors.notification};
                 `;
-            case 'danger':
-                return css`
+		case 'danger':
+			return css`
                     background-color: ${colors.danger};
                 `;
-            case 'success':
-                return css`
+		case 'success':
+			return css`
                     background-color: ${colors.success};
                 `;
-            case 'primary':
-            default:
-                return css`
+		case 'primary':
+		default:
+			return css`
                     background-color: ${colors.primary};
                 `;
-        }
-    }}
+		}
+	}}
 `;
 
 const Progress = ({ children, progress = 0, type = 'default' }) => (
-    <ProgressWrapper>
-        <ProgressInfo class="progress-info">
-            <div class="progress-label">
-                {children}
-            </div>
-            <div class="progress-percentage">
-                <span>{progress}%</span>
-            </div>
-        </ProgressInfo>
-        <ProgressCore>
-            <ProgressBar
-                type={type}
-                role="progressbar"
-                aria-valuenow={progress}
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style={{ width: `${progress}%` }}
-            />
-        </ProgressCore>
-    </ProgressWrapper>
+	<ProgressWrapper>
+		<ProgressInfo class="progress-info">
+			<div class="progress-label">
+				{children}
+			</div>
+			<div class="progress-percentage">
+				<span>{progress}%</span>
+			</div>
+		</ProgressInfo>
+		<ProgressCore>
+			<ProgressBar
+				type={type}
+				role="progressbar"
+				aria-valuenow={progress}
+				aria-valuemin="0"
+				aria-valuemax="100"
+				style={{ width: `${progress}%` }}
+			/>
+		</ProgressCore>
+	</ProgressWrapper>
 );
 
 Progress.propTypes = {
-    progress: number,
-    type: string,
+	progress: number,
+	type: string,
 };
 
 export default Progress;

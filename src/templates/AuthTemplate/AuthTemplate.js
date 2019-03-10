@@ -1,4 +1,4 @@
-/* @jsx jsx */
+/** @jsx jsx */
 
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
@@ -25,77 +25,77 @@ const Section = styled.div`
 `;
 
 const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
-    <Layout css={css`
+	<Layout css={css`
         background-color: ${colors.dove};
     `}>
-        <FlexGrid center>
-            <FlexColumn center css={css`
+		<FlexGrid center>
+			<FlexColumn center css={css`
                 background: ${colors.gradient};
 
                 @media(max-width: ${breakpoints.smartphone}) {
                     display: none;
                 }
             `}>
-                <Section css={css`
+				<Section css={css`
                     margin-left: auto;
                 `}>
-                    {newsFeed.map((item, i) => (
-                        <Card key={i}>
-                            <CardBody>
-                                <Typography type="h3">{item.title}</Typography>
-                                <Typography type="text">
-                                    {item.content}
-                                </Typography>
-                            </CardBody>
-                        </Card>
-                    ))}
-                </Section>
-            </FlexColumn>
-            <FlexColumn center>
-                <Section css={css`
+					{newsFeed.map((item, i) => (
+						<Card key={i}>
+							<CardBody>
+								<Typography type="h3">{item.title}</Typography>
+								<Typography type="text">
+									{item.content}
+								</Typography>
+							</CardBody>
+						</Card>
+					))}
+				</Section>
+			</FlexColumn>
+			<FlexColumn center>
+				<Section css={css`
                     @media(max-width: ${breakpoints.smartphone}) {
                         margin-left: auto;
                         margin-right: auto;
                     }
                 `}>
-                    <Typography
-                        center
-                        noMargin
-                        noPadding
-                        type="h2"
-                    >
+					<Typography
+						center
+						noMargin
+						noPadding
+						type="h2"
+					>
                         Welcome to Clarity Hub
-                    </Typography>
+					</Typography>
                     
-                    <Box withGutterTop>
-                        <Button type="primary" block onClick={onSignUp}>
+					<Box withGutterTop>
+						<Button type="primary" block onClick={onSignUp}>
                             Sign Up
-                        </Button>
+						</Button>
 
-                        <Typography center css={css`
+						<Typography center css={css`
                             margin-top: 3rem;
                             margin-bottom: 1rem;
                         `}>
                             Already have an account?
-                        </Typography>
+						</Typography>
 
-                        <Button type="primary" outline block onClick={onLogin}>
+						<Button type="primary" outline block onClick={onLogin}>
                             Login
-                        </Button>
-                    </Box>
-                </Section>
-            </FlexColumn>
-        </FlexGrid>
-    </Layout>
+						</Button>
+					</Box>
+				</Section>
+			</FlexColumn>
+		</FlexGrid>
+	</Layout>
 );
 
 AuthTemplate.propTypes = {
-    newsFeed: arrayOf(shape({
-        title: node,
-        content: node,
-    })).isRequired,
-    onSignUp: func.isRequired,
-    onLogin: func.isRequired,
+	newsFeed: arrayOf(shape({
+		title: node,
+		content: node,
+	})).isRequired,
+	onLogin: func.isRequired,
+	onSignUp: func.isRequired,
 };
 
 export default AuthTemplate;

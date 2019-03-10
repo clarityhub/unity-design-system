@@ -5,21 +5,21 @@ import { darken } from '../utilities/color';
  * List of Google Fonts that must be loaded
  */
 export const families = [
-    'Crimson Text:300,400,600,700',
-    'Roboto:400,800',
-    'Open Sans:300,400,600,700',
+	'Crimson Text:300,400,600,700',
+	'Roboto:400,800',
+	'Open Sans:300,400,600,700',
 ];
 
 export const variants = {
-    heading: `
+	heading: `
         font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
         font-weight: 400;
     `,
-    secondary: `
+	secondary: `
         font-family 'Roboto', Arial, sans-serif;
         font-weight: 400;
     `,
-    text: `
+	text: `
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 400;
         line-height: 1rem;
@@ -27,48 +27,48 @@ export const variants = {
         -webkit-font-smoothing: auto;
         -moz-osx-font-smoothing: auto;
     `,
-    readable: `
+	readable: `
         font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     `,
-    button: `
+	button: `
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 600;
         letter-spacing: 0.35px;
-    `
+    `,
 };
 
 export const colorStyles = {
-    white: `
+	white: `
         color: ${colors.white};
     `,
-    dove: `
+	dove: `
         color: ${colors.dove};
     `,
-    muted: `
+	muted: `
         color: ${colors.muted};
     `,
-    gray: `
+	gray: `
         color: ${colors.gray};
     `,
-    dark: `
+	dark: `
         color: ${colors.dark};
     `,
-    black: `
+	black: `
         color: ${colors.black};
     `,
-    primary: `
+	primary: `
         color: ${colors.primary};
     `,
 };
 
 export const types = {
-    h1: `
+	h1: `
         ${variants.heading}
 
         font-size: ${32 / 16}rem;
         line-height: 1.4;
     `,
-    h2: `
+	h2: `
         ${variants.heading}
 
         font-size: ${26 / 16}rem;
@@ -76,7 +76,7 @@ export const types = {
         padding-bottom: 1rem;
         padding-top: 3rem;
     `,
-    h3: `
+	h3: `
         ${variants.heading}
 
         font-size: ${21 / 16}rem;
@@ -84,19 +84,19 @@ export const types = {
         padding-bottom: 1rem;
         padding-top: 3rem;
     `,
-    h4: `
+	h4: `
         ${variants.secondary}
 
         font-size: ${19 / 16}rem;
         line-height: 1.2;
     `,
-    h5: `
+	h5: `
         ${variants.secondary}
 
         font-size: ${16 / 16}rem;
         line-height: 1.2;
     `,
-    p: `
+	p: `
         ${variants.readable}
 
         font-size: ${21 / 16}rem;
@@ -116,7 +116,7 @@ export const types = {
             font-style: italic;
         }
     `,
-    text: `
+	text: `
         ${variants.text}
 
         font-size: 1rem;
@@ -136,7 +136,7 @@ export const types = {
             font-style: italic;
         }
     `,
-    text2: `
+	text2: `
         ${variants.text}
 
         font-size: 1rem;
@@ -157,14 +157,14 @@ export const types = {
             font-style: italic;
         }
     `,
-    sectionLabel: `
+	sectionLabel: `
         ${variants.text}
 
         color: ${colors.smoke};
         font-size: 1rem;
         line-height: 1.4;
     `,
-    subtext: `
+	subtext: `
         font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
         font-size: 0.9rem;
@@ -176,7 +176,7 @@ export const types = {
             margin-top: 1.6rem;
         }
     `,
-    link: `
+	link: `
         border-bottom: 1px solid ${colors.primary};
         color: ${colors.primary};
         display: inline-block;
@@ -202,7 +202,7 @@ export const types = {
             }
         }
     `,
-    blockLink: `
+	blockLink: `
         -khtml-user-select: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-touch-callout: none;
@@ -244,5 +244,5 @@ export const types = {
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
         }
-    `
+    `,
 };

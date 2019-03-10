@@ -27,37 +27,37 @@ const Badge = styled.div`
     text-transform: uppercase;
 
     ${({ type }) => {
-        switch (type) {
-            case 'primary':
-                return css`
+		switch (type) {
+		case 'primary':
+			return css`
                     color: ${colors.primary};
                     background-color: ${opacify(colors.primary, 0.25)};
                 `;
-            case 'success':
-                return css`
+		case 'success':
+			return css`
                     color: ${colors.success};
                     background-color: ${opacify(colors.success, 0.25)};
                 `;
-            case 'danger':
-                return css`
+		case 'danger':
+			return css`
                     color: ${colors.danger};
                     background-color: ${opacify(colors.danger, 0.25)};
                 `;
-            case 'notification':
-                return css`
+		case 'notification':
+			return css`
                     color: ${colors.white};
                     background-color: ${colors.notification};
                     border-color: ${colors.notification};
                 `;
-            case 'default':
-            default:
-                return css`
+		case 'default':
+		default:
+			return css`
                     color: ${colors.black};
                     background-color: ${colors.muted};
                     border-color: ${colors.muted};
                 `;
-        }
-    }}
+		}
+	}}
 `;
 
 /**
@@ -65,7 +65,7 @@ const Badge = styled.div`
  */
 const BadgePropTypes = () => <div />;
 BadgePropTypes.propTypes = {
-    type: oneOf(['primary', 'success', 'danger', 'notification', 'default']),
+	type: oneOf(['primary', 'success', 'danger', 'notification', 'default']),
 };
 Badge.propTypes = BadgePropTypes;
 export { BadgePropTypes };

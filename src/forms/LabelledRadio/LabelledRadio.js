@@ -13,53 +13,53 @@ let radioCount = 0;
 
 export default class LabelledRadio extends Component {
     static propTypes = {
-        label: string.isRequired,
-        value: string,
-        defaultValue: string,
+    	defaultValue: string,
+    	label: string.isRequired,
+    	value: string,
     }
 
     static defaultProps = {
-        type: 'text',
+    	type: 'text',
     }
 
 
     constructor(props) {
-        super(props);
+    	super(props);
 
-        this.radioId = `Radio-${String(radioCount)}`;
+    	this.radioId = `Radio-${String(radioCount)}`;
 
-        radioCount++;
+    	radioCount++;
     }
 
     render() {
-        const { label, value, defaultValue, ...rest } = this.props;
+    	const { label, value, defaultValue, ...rest } = this.props;
 
-        const optionalAttributes = {};
+    	const optionalAttributes = {};
 
-        if (defaultValue || value) {
-            optionalAttributes['data-not-empty'] = true;
-        }
+    	if (defaultValue || value) {
+    		optionalAttributes['data-not-empty'] = true;
+    	}
 
-        return (
-            <ControlledRadio>
-                <Radio
-                    {...rest}
+    	return (
+    		<ControlledRadio>
+    			<Radio
+    				{...rest}
 
-                    id={this.radioId}
-                    defaultValue={defaultValue}
-                    value={value}
+    				id={this.radioId}
+    				defaultValue={defaultValue}
+    				value={value}
 
-                    {...optionalAttributes}
+    				{...optionalAttributes}
 
-                    label={label}
-                >
-                    <Label
-                        htmlFor={this.radioId}
-                    >
-                        {label}
-                    </Label>
-                </Radio>
-            </ControlledRadio>
-        );
+    				label={label}
+    			>
+    				<Label
+    					htmlFor={this.radioId}
+    				>
+    					{label}
+    				</Label>
+    			</Radio>
+    		</ControlledRadio>
+    	);
     }
 }

@@ -16,22 +16,22 @@ const AvatarWrapper = styled.span`
 `;
 
 const Avatar = ({ alt = 'Avatar', url, fallbackUrl }) => (
-    <AvatarWrapper>
-        <Img
-            src={[
-                url,
-                fallbackUrl,
-            ].filter(Boolean)}
-            loader={fallbackUrl && <img src={fallbackUrl} />}
-            alt={alt}
-        />
-    </AvatarWrapper>
+	<AvatarWrapper>
+		<Img
+			src={[
+				url,
+				fallbackUrl,
+			].filter(Boolean)}
+			loader={fallbackUrl && <img alt={alt} src={fallbackUrl} />}
+			alt={alt}
+		/>
+	</AvatarWrapper>
 );
 
 Avatar.propTypes = {
-    alt: string,
-    url: string,
-    fallbackUrl: string.isRequired,
+	alt: string,
+	fallbackUrl: string.isRequired,
+	url: string,
 };
 
 export default Avatar;

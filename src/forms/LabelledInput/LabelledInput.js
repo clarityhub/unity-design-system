@@ -13,54 +13,54 @@ let inputCount = 0;
 
 export default class LabelledInput extends Component {
     static propTypes = {
-        label: string.isRequired,
-        value: string,
-        defaultValue: string,
+    	defaultValue: string,
+    	label: string.isRequired,
+    	value: string,
     }
 
     static defaultProps = {
-        type: 'text',
+    	type: 'text',
     }
 
 
     constructor(props) {
-        super(props);
+    	super(props);
 
-        this.inputId = `input-${String(inputCount)}`;
+    	this.inputId = `input-${String(inputCount)}`;
 
-        inputCount++;
+    	inputCount++;
     }
 
 
     render() {
-        const { label, value, defaultValue, ...rest } = this.props;
+    	const { label, value, defaultValue, ...rest } = this.props;
 
-        const optionalAttributes = {};
+    	const optionalAttributes = {};
 
-        if (defaultValue || value) {
-            optionalAttributes['data-not-empty'] = true;
-        }
+    	if (defaultValue || value) {
+    		optionalAttributes['data-not-empty'] = true;
+    	}
 
-        return (
-            <ControlledInput>
-                <Input
-                    {...rest}
+    	return (
+    		<ControlledInput>
+    			<Input
+    				{...rest}
 
-                    id={this.inputId}
-                    defaultValue={defaultValue}
-                    value={value}
+    				id={this.inputId}
+    				defaultValue={defaultValue}
+    				value={value}
 
-                    {...optionalAttributes}
+    				{...optionalAttributes}
 
-                    label={label}
-                >
-                    <Label
-                        htmlFor={this.inputId}
-                    >
-                        {label}
-                    </Label>
-                </Input>
-            </ControlledInput>
-        );
+    				label={label}
+    			>
+    				<Label
+    					htmlFor={this.inputId}
+    				>
+    					{label}
+    				</Label>
+    			</Input>
+    		</ControlledInput>
+    	);
     }
 }

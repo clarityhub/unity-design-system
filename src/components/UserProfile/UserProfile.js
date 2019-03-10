@@ -13,19 +13,19 @@ const NoStyleButton = styled.button`
 `;
 
 const UserProfile = ({ avatarUrl, avatarFallbackUrl, menuItems }) => (
-    <Menu items={menuItems}>
-        {({ open }) => (
-            <NoStyleButton onClick={open}>
-                <Avatar url={avatarUrl} fallbackUrl={avatarFallbackUrl} />
-            </NoStyleButton>
-        )}
-    </Menu>
+	<Menu items={menuItems}>
+		{({ open }) => (
+			<NoStyleButton onClick={open}>
+				<Avatar url={avatarUrl} fallbackUrl={avatarFallbackUrl} />
+			</NoStyleButton>
+		)}
+	</Menu>
 );
 
 UserProfile.propTypes = {
-    avatarUrl: string.isRequired,
-    avatarFallbackUrl: string.isRequired,
-    menuItems: arrayOf(node),
+	avatarFallbackUrl: string.isRequired,
+	avatarUrl: string.isRequired,
+	menuItems: arrayOf(node),
 };
 
 export default UserProfile;

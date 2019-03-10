@@ -13,14 +13,14 @@ const boxSize = 1.4;
 const paddingSize = 0.25;
 
 const getBorderRadius = (type) => {
-  switch (type) {
-    case 'checkbox':
-      return `${borders.borderRadius}`;
-    case 'radio':
-    default:
-      return `50%`;
-    }
-}
+	switch (type) {
+	case 'checkbox':
+		return `${borders.borderRadius}`;
+	case 'radio':
+	default:
+		return `50%`;
+	}
+};
 
 const SelectionWrapper = styled.button`
     border: 0;
@@ -87,54 +87,54 @@ const Box = styled.div`
 `;
 
 export default (type = 'radio') => {
-  return class Selection extends Component {
+	return class Selection extends Component {
     static propTypes = {
-      selected: bool,
-      disabled: bool,
-      onChange: func,
+    	disabled: bool,
+    	onChange: func,
+    	selected: bool,
     }
 
     static defaultProps = {
-      selected: false,
-      disabled: false,
-      onChange: noop,
+    	selected: false,
+    	disabled: false,
+    	onChange: noop,
     }
 
     onChange = (e) => {
-      const { onChange } = this.props;
+    	const { onChange } = this.props;
 
-      onChange(e, this.input);
+    	onChange(e, this.input);
     }
 
-    render () {
-      const { children, selected = false, disabled = false, ...rest } = this.props;
+    render() {
+    	const { children, selected = false, disabled = false, ...rest } = this.props;
 
-      return (
-        <SelectionWrapper
-          onClick={this.onChange}
-          selected={selected}
-          role="Selection"
-          aria-checked={Boolean(selected).toString()}
-        >
-          <Input
-            ref={ref => this.input = ref}
-            type="Selection"
-            selected={selected}
-            disabled={disabled}
-            onChange={this.onChange}
-            tabIndex="-1"
-            {...rest}
-          />
+    	return (
+    		<SelectionWrapper
+    			onClick={this.onChange}
+    			selected={selected}
+    			role="option"
+    			aria-checked={Boolean(selected).toString()}
+    		>
+    			<Input
+    				ref={ref => this.input = ref}
+    				type="option"
+    				selected={selected}
+    				disabled={disabled}
+    				onChange={this.onChange}
+    				tabIndex="-1"
+    				{...rest}
+    			/>
 
-          <Box
-            selected={selected}
-            disabled={disabled}
-            type={type}
-          />
+    			<Box
+    				selected={selected}
+    				disabled={disabled}
+    				type={type}
+    			/>
 
-          {children}
-        </SelectionWrapper>
-      );
+    			{children}
+    		</SelectionWrapper>
+    	);
     }
-  }
-}
+	};
+};

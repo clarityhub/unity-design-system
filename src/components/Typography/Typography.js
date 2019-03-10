@@ -21,19 +21,19 @@ const noMarginCss = `
 `;
 
 const Typography = ({
-    type = 'text',
-    variant,
-    color = 'dark',
-    children,
-    component: suggestedComponent = 'p',
-    noMargin = false,
-    noPadding = false,
-    inline = false,
-    css: userCss,
-    center = false,
-    ...rest,
+	type = 'text',
+	variant,
+	color = 'dark',
+	children,
+	component: suggestedComponent = 'p',
+	noMargin = false,
+	noPadding = false,
+	inline = false,
+	css: userCss,
+	center = false,
+	...rest
 }) => {
-    let style = `
+	let style = `
         ${Boolean(type) ? types[type] : ''}
         ${Boolean(variant) ? variants[variant] : ''}
         ${Boolean(color) ? colorStyles[color] : ''}
@@ -48,31 +48,31 @@ const Typography = ({
         ` : ''}
     `;
 
-    if (typeof suggestedComponent === 'string') {
-        let component = suggestedComponent;
-        if (suggestedComponent === 'p' && ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(type) !== -1) {
-            component = type;
-        }
+	if (typeof suggestedComponent === 'string') {
+		let component = suggestedComponent;
+		if (suggestedComponent === 'p' && ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(type) !== -1) {
+			component = type;
+		}
 
-        const Comp = styled[component](css`${style}`);
-        return <Comp {...rest}>{children}</Comp>
-    } else {
-        const Comp = suggestedComponent;
-        return <Comp {...rest} css={css`${style}`}>{children}</Comp>
-    }
+		const Comp = styled[component](css`${style}`);
+		return <Comp {...rest}>{children}</Comp>;
+	} else {
+		const Comp = suggestedComponent;
+		return <Comp {...rest} css={css`${style}`}>{children}</Comp>;
+	}
 };
 
 Typography.propTypes = {
-    type: oneOf(Object.keys(types)),
-    variant: oneOf(Object.keys(variants)),
-    color: oneOf(Object.keys(colorStyles)),
-    children: node,
-    component: node,
-    center: bool,
-    noMargin: bool,
-    noPadding: bool,
-    css: string,
-    inline: bool,
+	center: bool,
+	children: node,
+	color: oneOf(Object.keys(colorStyles)),
+	component: node,
+	css: string,
+	inline: bool,
+	noMargin: bool,
+	noPadding: bool,
+	type: oneOf(Object.keys(types)),
+	variant: oneOf(Object.keys(variants)),
 };
 
 export default Typography;

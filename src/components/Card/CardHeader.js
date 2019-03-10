@@ -16,11 +16,11 @@ const CardHeaderWrapper = styled.div`
 `;
 
 const CardHeader = ({ children, ...rest }) => (
-    <CardHeaderWrapper {...rest}>
-        <Typography noMargin noPadding type="h3">
-            {children}
-        </Typography>
-    </CardHeaderWrapper>
+	<CardHeaderWrapper {...rest}>
+		<Typography noMargin noPadding type="h3">
+			{children}
+		</Typography>
+	</CardHeaderWrapper>
 );
 
 export { CardHeaderWrapper };

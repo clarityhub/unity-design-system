@@ -4,15 +4,15 @@ import { func, oneOfType, node, string } from 'prop-types';
 import Typography from '../Typography';
 
 const Link = ({ component = 'a', children, variant = 'text', color = 'primary', type, ...props }) => (
-    <Typography
-        type={type ? type : 'link'}
-        variant={variant}
-        color={color}
-        component={component}
-        {...props}
-    >
-        {children}
-    </Typography>
+	<Typography
+		type={type ? type : 'link'}
+		variant={variant}
+		color={color}
+		component={component}
+		{...props}
+	>
+		{children}
+	</Typography>
 );
 
 /**
@@ -20,11 +20,11 @@ const Link = ({ component = 'a', children, variant = 'text', color = 'primary', 
  */
 const LinkPropTypes = () => <div />;
 LinkPropTypes.propTypes = {
-    component: oneOfType([string, func]),
-    children: node,
-    variant: string,
-    color: string,
-    type: string,
+	children: node,
+	color: string,
+	component: oneOfType([string, func]),
+	type: string,
+	variant: string,
 };
 Link.propTypes = LinkPropTypes.propTypes;
 export { LinkPropTypes };

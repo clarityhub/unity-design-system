@@ -203,23 +203,23 @@ const FloatingInput = styled.input`
 `;
 
 const StyledInput = ({ children, error = false, height, targetRef, label, ...rest }) => {
-    if (!children) {
-        return <Input error={error} {...rest} ref={targetRef} />;
-    }
+	if (!children) {
+		return <Input error={error} {...rest} ref={targetRef} />;
+	}
 
-    return (
-        <div style={{ height: `${height || `${inputHeight}rem`}`}}>
-            <BorderWrapper error={error}>
-                <FloatingInput {...rest} ref={targetRef} />
-                <BorderStart />
-                <BorderLabel>
-                    <FakeLabel>{label}</FakeLabel>
-                    {children}
-                </BorderLabel>
-                <BorderEnd />
-            </BorderWrapper>
-        </div>
-    );
+	return (
+		<div style={{ height: `${height || `${inputHeight}rem`}`}}>
+			<BorderWrapper error={error}>
+				<FloatingInput {...rest} ref={targetRef} />
+				<BorderStart />
+				<BorderLabel>
+					<FakeLabel>{label}</FakeLabel>
+					{children}
+				</BorderLabel>
+				<BorderEnd />
+			</BorderWrapper>
+		</div>
+	);
 };
 
 export default StyledInput;

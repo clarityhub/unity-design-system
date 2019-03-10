@@ -53,9 +53,9 @@ const Button = styled.button`
     }
 
     ${({ type, outline, text }) => {
-        switch (type) {
-            case 'primary':
-                return css`
+		switch (type) {
+		case 'primary':
+			return css`
                     color: ${colors.white};
                     background-color: ${colors.primary};
                     border-color: ${colors.primary};
@@ -108,8 +108,8 @@ const Button = styled.button`
                         `}
                     }
                 `;
-            case 'danger':
-                return css`
+		case 'danger':
+			return css`
                     color: ${colors.white};
                     background-color: ${colors.danger};
                     border-color: ${colors.danger};
@@ -162,9 +162,9 @@ const Button = styled.button`
                         `}
                     }
                 `;
-            case 'default':
-            default:
-                return css`
+		case 'default':
+		default:
+			return css`
                     color: ${colors.black};
                     background-color: rgba(255, 255, 255, 0);
                     border-color: transparent;
@@ -220,8 +220,8 @@ const Button = styled.button`
                         `}
                     }
                 `;
-        }
-    }}
+		}
+	}}
 
     ${({ outline }) => outline && css`
         background-color: transparent;
@@ -234,22 +234,22 @@ const Button = styled.button`
     `}
 
     ${({ size }) => {
-        switch (size) {
-            case 'small':
-                return css`
+		switch (size) {
+		case 'small':
+			return css`
                     font-size: 0.9rem;
                     padding: .2rem 1rem;
                 `;
-            case 'large':
-                return css`
+		case 'large':
+			return css`
                     font-size: 1.2rem;
                     padding: 0.8rem 1.4rem;
                 `;
-            case 'default':
-            default:
-                return '';
-        }
-    }}
+		case 'default':
+		default:
+			return '';
+		}
+	}}
 
     ${({ block }) => block && css`
         display: block;
@@ -276,22 +276,22 @@ const IconWrapper = styled.span`
         width: 1rem;
 
         ${({ size }) => {
-            switch (size) {
-                case 'small':
-                    return css`
+		switch (size) {
+		case 'small':
+			return css`
                         height: 0.9rem;
                         width: 0.9rem;
                     `;
-                case 'large':
-                    return css`
+		case 'large':
+			return css`
                         height: 1.2rem;
                         width: 1.2rem;
                     `;
-                case 'default':
-                default:
-                    return '';
-            }
-        }}
+		case 'default':
+		default:
+			return '';
+		}
+	}}
     }
 `;
 
@@ -309,28 +309,28 @@ const LoadingWrapper = styled.div`
         width: 1.4rem;
 
         ${({ size }) => {
-            switch (size) {
-                case 'small':
-                    return css`
+		switch (size) {
+		case 'small':
+			return css`
                             height: 1.2rem;
                             width: 1.2rem;
                         `;
-                case 'large':
-                    return css`
+		case 'large':
+			return css`
                             height: 2.4rem;
                             width: 2.4rem;
                         `;
-                case 'default':
-                default:
-                    return '';
-            }
-        }}
+		case 'default':
+		default:
+			return '';
+		}
+	}}
 
         path {
             ${({ type, outline, text }) => {
-                switch (type) {
-                    case 'primary':
-                        return css`
+		switch (type) {
+		case 'primary':
+			return css`
                             fill: ${colors.white};
 
                             ${outline && css`
@@ -363,8 +363,8 @@ const LoadingWrapper = styled.div`
                                 `}
                             }
                         `;
-                    case 'danger':
-                        return css`
+		case 'danger':
+			return css`
                             fill: ${colors.white};
 
                             ${outline && css`
@@ -397,9 +397,9 @@ const LoadingWrapper = styled.div`
                                 `}
                             }
                         `;
-                    case 'default':
-                    default:
-                        return css`
+		case 'default':
+		default:
+			return css`
                             fill: ${colors.black};
 
                             ${outline && css`
@@ -434,44 +434,44 @@ const LoadingWrapper = styled.div`
                                 `}
                             }
                         `;
-                }}
-        }
+		}}
+}
         }
     }
 `;
 
 const renderIcon = (Icon) => {
-    if (typeof Icon === 'function') {
-        return <Icon />;
-    }
+	if (typeof Icon === 'function') {
+		return <Icon />;
+	}
 
-    return Icon;
-}
+	return Icon;
+};
 
 const ButtonWrapper = ({ icon, children, size, loading, ...rest }) => (
-    <Button size={size} loading={loading} {...rest}>
-        {
-            icon && (
-                <IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
-            )
-        }
-        {
-            loading && (
-                <LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
-            )
-        }
-        {children}
-    </Button>
+	<Button size={size} loading={loading} {...rest}>
+		{
+			icon && (
+				<IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
+			)
+		}
+		{
+			loading && (
+				<LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
+			)
+		}
+		{children}
+	</Button>
 );
 
 ButtonWrapper.propTypes = {
-    block: bool,
-    icon: oneOfType([node, func]),
-    loading: bool,
-    outline: bool,
-    text: bool,
-    size: oneOf(['small', 'default', 'large']),
-    type: oneOf(['default', 'primary', 'danger', 'success']),
+	block: bool,
+	icon: oneOfType([node, func]),
+	loading: bool,
+	outline: bool,
+	size: oneOf(['small', 'default', 'large']),
+	text: bool,
+	type: oneOf(['default', 'primary', 'danger', 'success']),
 };
 
 export { Button as EmotionButton };

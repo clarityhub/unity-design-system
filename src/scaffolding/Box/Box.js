@@ -12,10 +12,10 @@ const Box = styled.div`
 Box.propTypes = {
 	pull: oneOf(['left', 'right']),
 	withGutter: bool,
-	withGutterTop: bool,
 	withGutterBottom: bool,
 	withGutterLeft: bool,
 	withGutterRight: bool,
+	withGutterTop: bool,
 };
 
 Box.defaultProps = {

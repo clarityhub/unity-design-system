@@ -20,18 +20,18 @@ const ImageWrapper = styled.div`
     `}
 `;
 
-const Image = ({ withSpacing, center, wrapperProps = {}, ...rest }) => (
-    <ImageWrapper {...wrapperProps} withSpacing={withSpacing} center={center}>
-        <img {...rest} />
-    </ImageWrapper>
+const Image = ({ alt, withSpacing, center, wrapperProps = {}, ...rest }) => (
+	<ImageWrapper {...wrapperProps} withSpacing={withSpacing} center={center}>
+		<img alt={alt} {...rest} />
+	</ImageWrapper>
 );
 
 Image.propTypes = {
-    center: bool,
-    withSpacing: bool,
-    src: string.isRequired,
-    alt: string.isRequired,
-    wrapperProps: object,
+	alt: string.isRequired,
+	center: bool,
+	src: string.isRequired,
+	withSpacing: bool,
+	wrapperProps: object,
 };
 
 export default Image;

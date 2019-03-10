@@ -31,64 +31,64 @@ const DismissButton = styled.button`
 
 export default class Dismissable extends Component {
   static propTypes = {
-    children: node.isRequired,
-    onDismiss: func,
+  	children: node.isRequired,
+  	onDismiss: func,
   }
 
   static defaultProps = {
-    onDismiss: noop,
+  	onDismiss: noop,
   }
 
   state = {
-    status: 'show',
+  	status: 'show',
   }
 
   componentWillUnmount() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-    }
+  	if (this.timer) {
+  		clearTimeout(this.timer);
+  	}
   }
 
   onDismiss = (e) => {
-    this.setState({
-      status: 'hiding',
-    }, () => {
-      this.timer = setTimeout(() => {
-        const { onDismiss } = this.props;
-        this.setState({
-          status: 'hidden',
-        }, onDismiss);
-      }, ANIMATION_LENGTH);
-    });
+  	this.setState({
+  		status: 'hiding',
+  	}, () => {
+  		this.timer = setTimeout(() => {
+  			const { onDismiss } = this.props;
+  			this.setState({
+  				status: 'hidden',
+  			}, onDismiss);
+  		}, ANIMATION_LENGTH);
+  	});
   }
 
   reset = () => {
-    this.setState({
-      status: 'show',
-    });
+  	this.setState({
+  		status: 'show',
+  	});
   }
 
   render() {
-    const { children } = this.props;
-    const { status } = this.state;
+  	const { children } = this.props;
+  	const { status } = this.state;
 
-    const Dismiss = () => (
-      <DismissButton
-        onClick={this.onDismiss}
-        type="button"
-        aria-label="Dismiss"
-      >
-        <span aria-hidden="true">×</span>
-      </DismissButton>
-    );
+  	const Dismiss = () => (
+  		<DismissButton
+  			onClick={this.onDismiss}
+  			type="button"
+  			aria-label="Dismiss"
+  		>
+  			<span aria-hidden="true">×</span>
+  		</DismissButton>
+  	);
 
-    if (status === 'hidden') {
-      return null;
-    }
+  	if (status === 'hidden') {
+  		return null;
+  	}
 
-    return children({
-      onDismiss: this.onDismiss,
-      Dismiss,
-    });
+  	return children({
+  		onDismiss: this.onDismiss,
+  		Dismiss,
+  	});
   }
 }

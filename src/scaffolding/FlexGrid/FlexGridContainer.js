@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
 import breakpoints from '../../theme/breakpoints';
-
-const mobileGutter = 2;
+import { FLEX_MOBILE_GUTTER } from './config';
 
 const FlexGridContainer = styled.div`
     box-sizing: border-box;
@@ -10,8 +9,8 @@ const FlexGridContainer = styled.div`
     margin: auto;
     max-width: ${breakpoints.maxWidth}px;
 
-    @media (max-width: ${breakpoints.maxWidth + (mobileGutter * 16)}px) {
-        padding: 0 ${mobileGutter}rem;
+    @media (max-width: ${breakpoints.maxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
+        padding: 0 ${FLEX_MOBILE_GUTTER}rem;
         width: 100%;
     }
 `;

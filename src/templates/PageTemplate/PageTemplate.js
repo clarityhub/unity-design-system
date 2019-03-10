@@ -1,20 +1,20 @@
-/* @jsx jsx */
+/** @jsx jsx */
 import { Fragment } from 'react';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import Layout from '../../scaffolding/Layout';
 import { FlexGrid, FlexGridContainer } from '../../scaffolding/FlexGrid';
+import { FLEX_MOBILE_GUTTER } from '../../scaffolding/FlexGrid/config';
 import Navbar from '../../components/Navbar';
+import { NAVBAR_HEIGHT } from '../../components/Navbar/config';
 import Card from '../../components/Card';
 import SideNav from '../../components/SideNav';
+import { SIDENAV_WIDTH } from '../../components/SideNav/config';
 import Logo from '../../components/svgs/Logo';
 import breakpoints from '../../theme/breakpoints';
 import Typography from '../../components/Typography';
-
-const sideNavWidth = 14; // TODO refactor sidenav width
-const navbarHeight = 5.3; // TODO refactor with navbar
-const mobileGutter = 2; // TODO refactor with flex grid container
+import { arrayOf, node } from 'prop-types';
 
 const NavbarWrapper = styled.div`
     position: fixed;
@@ -28,19 +28,19 @@ const NavbarWrapper = styled.div`
 const SideNavWrapper = styled.div`
     position: fixed;
     left: calc(50vw - ${breakpoints.maxWidth}px / 2);
-    top: ${navbarHeight}rem;
+    top: ${NAVBAR_HEIGHT}rem;
     bottom: 0;
-    width: ${sideNavWidth}rem;
+    width: ${SIDENAV_WIDTH}rem;
     z-index: 1;
 
-    @media (max-width: ${breakpoints.maxWidth + (mobileGutter * 16)}px) {
-        left: ${mobileGutter}rem;
+    @media (max-width: ${breakpoints.maxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
+        left: ${FLEX_MOBILE_GUTTER}rem;
     }
 `;
 
 const Wrapper = styled.div`
     overflow: auto;
-    max-height: calc(100vh - ${navbarHeight}rem);
+    max-height: calc(100vh - ${NAVBAR_HEIGHT}rem);
     width: 100%;
 `;
 
@@ -55,40 +55,46 @@ const Content = styled.div`
 `;
 
 const Page = ({ children, navItems, sideNavItems, title, breadcrumb }) => (
-    <Layout css={css`
-        padding-top: ${navbarHeight}rem;
+	<Layout css={css`
+        padding-top: ${NAVBAR_HEIGHT}rem;
         box-sizing: border-box;
     `}>
-        <NavbarWrapper>
-            <Navbar
-                maxWidth={breakpoints.maxWidth}
-                navBrandLogo={Logo}
-            >
-                {navItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
-            </Navbar>
-        </NavbarWrapper>
-        <SideNavWrapper>
-            <SideNav>
-                {sideNavItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
-            </SideNav>
-        </SideNavWrapper>
-        <Wrapper>
-            <FlexGridContainer>
-                <FlexGrid>
-                    <SideNav />
-                    <Content>
-                        {breadcrumb}
-                        <Typography type="h1">
-                            {title}
-                        </Typography>
-                        {children}
-                    </Content>
-                </FlexGrid>
-            </FlexGridContainer>
-        </Wrapper>
-    </Layout>
+		<NavbarWrapper>
+			<Navbar
+				maxWidth={breakpoints.maxWidth}
+				navBrandLogo={Logo}
+			>
+				{navItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
+			</Navbar>
+		</NavbarWrapper>
+		<SideNavWrapper>
+			<SideNav>
+				{sideNavItems.map((n, i) => <Fragment key={i}>{n}</Fragment>)}   
+			</SideNav>
+		</SideNavWrapper>
+		<Wrapper>
+			<FlexGridContainer>
+				<FlexGrid>
+					<SideNav />
+					<Content>
+						{breadcrumb}
+						<Typography type="h1">
+							{title}
+						</Typography>
+						{children}
+					</Content>
+				</FlexGrid>
+			</FlexGridContainer>
+		</Wrapper>
+	</Layout>
 );
 
-// XXX prop types
+Page.propTypes = {
+	breadcrumb: node,
+	children: node.isRequired,
+	navItems: arrayOf(node),
+	sideNavItems: arrayOf(node),
+	title: node,
+};
 
 export default Page;

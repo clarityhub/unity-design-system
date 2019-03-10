@@ -36,28 +36,28 @@ const Breadcrumb = styled.li`
 `;
 
 const defaultLinkRenderer = ({ path, children }) => (
-    <Link href={path}>{children}</Link>
+	<Link href={path}>{children}</Link>
 );
 
 const Breadcrumbs = ({ crumbs, linkRenderer = defaultLinkRenderer }) => {
-    return (
-        <BreadcrumbsWrapper ariaLabel="breadcrumb">
-            <BreadcrumbList>
-                {crumbs.map((crumb, i) => {
-                    const isCurrent = i === (crumbs.length - 1);
+	return (
+		<BreadcrumbsWrapper ariaLabel="breadcrumb">
+			<BreadcrumbList>
+				{crumbs.map((crumb, i) => {
+					const isCurrent = i === (crumbs.length - 1);
             
-                    return (
-                        <Breadcrumb key={i} ariaCurrent={isCurrent ? 'page' : false}>
-                            {crumb.path ? linkRenderer({
-                                path: crumb.path,
-                                children: crumb.title
-                            }) : crumb.title}
-                        </Breadcrumb>
-                    );
-                })}
-            </BreadcrumbList>
-        </BreadcrumbsWrapper>
-    );
+					return (
+						<Breadcrumb key={i} ariaCurrent={isCurrent ? 'page' : false}>
+							{crumb.path ? linkRenderer({
+								path: crumb.path,
+								children: crumb.title,
+							}) : crumb.title}
+						</Breadcrumb>
+					);
+				})}
+			</BreadcrumbList>
+		</BreadcrumbsWrapper>
+	);
 };
 
 /**
@@ -65,11 +65,11 @@ const Breadcrumbs = ({ crumbs, linkRenderer = defaultLinkRenderer }) => {
  */
 const BreadcrumbsPropTypes = () => <div />;
 BreadcrumbsPropTypes.propTypes = {
-    crumbs: arrayOf(shape({
-        title: string.isRequired,
-        path: string,
-    })),
-    linkRenderer: func,
+	crumbs: arrayOf(shape({
+		title: string.isRequired,
+		path: string,
+	})),
+	linkRenderer: func,
 };
 Breadcrumbs.propTypes = BreadcrumbsPropTypes.propTypes;
 export { BreadcrumbsPropTypes };
