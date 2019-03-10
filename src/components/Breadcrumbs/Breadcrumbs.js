@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { arrayOf, shape, func, string } from 'prop-types';
 
 import Link from '../Link';
 import { variants } from '../../theme/fonts';
 import colors from '../../theme/colors';
-import { arrayOf, shape, func, string } from 'prop-types';
 
 const BreadcrumbsWrapper = styled.nav`
     ${variants.text}

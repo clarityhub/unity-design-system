@@ -2,6 +2,7 @@
 import { Fragment } from 'react';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { arrayOf, node } from 'prop-types';
 
 import Layout from '../../scaffolding/Layout';
 import { FlexGrid, FlexGridContainer } from '../../scaffolding/FlexGrid';
@@ -14,7 +15,6 @@ import { SIDENAV_WIDTH } from '../../components/SideNav/config';
 import Logo from '../../components/svgs/Logo';
 import breakpoints from '../../theme/breakpoints';
 import Typography from '../../components/Typography';
-import { arrayOf, node } from 'prop-types';
 
 const NavbarWrapper = styled.div`
     position: fixed;

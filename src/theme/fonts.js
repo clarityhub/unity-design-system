@@ -1,5 +1,5 @@
-import colors from './colors';
 import { darken } from '../utilities/color';
+import colors from './colors';
 
 /**
  * List of Google Fonts that must be loaded

@@ -5,9 +5,9 @@ import { func, node, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 
+import { offset } from '../../utilities/position';
 import MenuPopover from './MenuPopover';
 import MenuPortal from './MenuPortal';
-import { offset } from '../../utilities/position';
 
 const MenuWrapper = styled.div`
     position: relative;
