@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { oneOf } from 'prop-types';
 
 import colors from '../../theme/colors';
+import { opacify } from '../../utilities/color';
 import { variants } from '../../theme/fonts';
 
 const Badge = styled.div`
@@ -17,32 +18,30 @@ const Badge = styled.div`
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    border: 1px solid transparent;
+    border: 0 solid transparent;
     padding: 0.1rem 0.4rem;
     font-size: 0.8rem;
     line-height: 1.2;
     border-radius: 2rem;
     position: relative;
+    text-transform: uppercase;
 
     ${({ type }) => {
         switch (type) {
             case 'primary':
                 return css`
-                    color: ${colors.white};
-                    background-color: ${colors.primary};
-                    border-color: ${colors.primary};
+                    color: ${colors.primary};
+                    background-color: ${opacify(colors.primary, 0.25)};
                 `;
             case 'success':
                 return css`
-                    color: ${colors.white};
-                    background-color: ${colors.success};
-                    border-color: ${colors.success};
+                    color: ${colors.success};
+                    background-color: ${opacify(colors.success, 0.25)};
                 `;
             case 'danger':
                 return css`
-                    color: ${colors.white};
-                    background-color: ${colors.danger};
-                    border-color: ${colors.danger};
+                    color: ${colors.danger};
+                    background-color: ${opacify(colors.danger, 0.25)};
                 `;
             case 'notification':
                 return css`

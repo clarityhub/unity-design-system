@@ -1,0 +1,115 @@
+---
+name: Analyze Example
+menu: Templates
+fullpage: true
+---
+
+import { Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import Card, {
+    CardHeader,
+    CardImage,
+    CardBody,
+    CardActions,
+} from '../../components/Card';
+import Typography from '../../components/Typography';
+import Button from '../../components/Buttons';
+import Image from '../../components/Image';
+
+import Link from '../../components/Link';
+import PageTemplate from './PageTemplate';
+import { NavItem } from '../../components/Navbar';
+import { SideNavItem, SideNavGroup } from '../../components/SideNav';
+import UserProfile from '../../components/UserProfile';
+import { MenuItem, MenuItemDivider } from '../../components/Menu';
+import InputGroup from '../../forms/InputGroup';
+import LabelledTextarea from '../../forms/LabelledTextarea';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+
+<Fragment>
+    <PageTemplate
+        title="Analyze"
+
+        navItems={[
+            <NavItem>
+                <Link type="blockLink" href="#">
+                    <NotificationsIcon />
+                </Link>
+            </NavItem>,
+            <NavItem>
+                <UserProfile
+                    avatarUrl="/public/ivan-avatar.png"
+                    avatarFallbackUrl="/public/avatar-placeholder.png"
+
+                    menuItems={[
+                        <MenuItem>Profile</MenuItem>,
+                        <MenuItem>Account</MenuItem>,
+                        <MenuItem>Admin</MenuItem>,
+                        <MenuItemDivider />,
+                        <MenuItem>Logout</MenuItem>,
+                    ]}
+                />
+            </NavItem>,
+        ]}
+        sideNavItems={[
+            <SideNavItem selected>
+                <Link href="#">Home</Link>
+            </SideNavItem>,
+            <SideNavItem>
+                <Link href="#">Insights</Link>
+            </SideNavItem>,
+            <SideNavItem>
+                <Link href="#">Integrations</Link>
+            </SideNavItem>,
+            <SideNavItem>
+                <Link href="#">Apps</Link>
+            </SideNavItem>,
+            <SideNavItem>
+                <Link href="#">Account</Link>
+            </SideNavItem>,
+            <SideNavItem selected>
+                <Link href="#">Developers</Link>
+
+                <SideNavGroup>
+                    <SideNavItem selected>
+                        <Link href="#">API Keys</Link>
+                    </SideNavItem>
+                    <SideNavItem>
+                        <Link href="#">Web Console</Link>
+                    </SideNavItem>
+                    <SideNavItem>
+                        <Link href="#">Webhooks</Link>
+                    </SideNavItem>
+                    <SideNavItem>
+                        <Link href="#">Logs</Link>
+                    </SideNavItem>
+                </SideNavGroup>
+            </SideNavItem>
+        ]}
+    >
+        <Card>
+            <CardHeader>Get Started</CardHeader>
+            <CardBody>
+                <Typography>Analyze the conversations you have with your customers</Typography>
+                <Typography>Get your API Keys</Typography>
+                <Typography>Read our documentation</Typography>
+            </CardBody>
+        </Card>
+        <Card>
+            <CardHeader>Quick Start</CardHeader>
+            <CardBody>
+                <form>
+                    <Typography>Try out our API through your web browser.</Typography>
+                    <Typography>Provide some conversation text for us to analyze:</Typography>
+                    <InputGroup>
+                        <LabelledTextarea label="Your conversation message…" />
+                    </InputGroup>
+                    <Button type="primary">
+                        Analyze
+                    </Button>
+                </form>
+            </CardBody>
+        </Card>
+    </PageTemplate>
+</Fragment>

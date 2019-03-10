@@ -9,7 +9,9 @@ const MenuItem = props => (
     <Button
         text
         css={css`
+            border-radius: 0;
             text-align: left;
+            text-transform: none;
             min-width: 150px;
             width: 100%;
 

@@ -8,10 +8,9 @@ import Typography from '../Typography';
 const CardHeaderWrapper = styled.div`
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: ${colors.dove};
-    border-bottom: 1px solid ${colors.gray};
+    border-bottom: 1px solid ${colors.muted};
 
-    &:first-child {
+    &:first-of-type {
         border-radius: calc(${borders.borderRadius} - 1px) calc(${borders.borderRadius} - 1px) 0 0;
     }
 `;

@@ -1,25 +1,27 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
-import { bool, func, node, number, string, oneOfType } from 'prop-types';
+import { bool, func, node, number, string, oneOfType, element } from 'prop-types';
 
 import colors from '../../theme/colors';
 import Link from '../Link';
 import Typography from '../Typography';
 import css from '@emotion/css';
 
+const height = 5.3;
+
 const NavbarContainer = styled.nav`
     background: ${colors.notification};
     color: ${colors.white};
-    height: 3rem;
+    height: ${height}rem;
     padding-top: 0;
 `;
 
 const NavbarContent = styled.div`
-    height: 3rem;
+    height: ${height}rem;
     display: flex;
     line-height: 1;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 3rem;
     justify-items: center;
     align-items: center;
 
@@ -138,7 +140,7 @@ Navbar.propTypes = {
     children: node,
     maxWidth: oneOfType([number, bool]),
     navBrandText: string,
-    navBrandLogo: node.isRequired,
+    navBrandLogo: oneOfType([node, func, element]).isRequired,
     navBrandPath: string,
     navBrandRenderer: func,
 };

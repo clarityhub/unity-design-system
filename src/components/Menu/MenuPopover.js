@@ -2,19 +2,23 @@
 
 import React, { Component } from 'react';
 import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { arrayOf, node } from 'prop-types';
 
 import borders from '../../theme/borders';
 import { variants } from '../../theme/fonts';
 import colors from '../../theme/colors';
-import { noOverflow } from '../../utilities/position';
+import { offset, noOverflow } from '../../utilities/position';
 
 const menuPopoverWrapper = () => css`
     background-color: ${colors.white};
-    border: 1px solid ${colors.gray};
     border-radius: ${borders.borderRadius};
+    box-shadow: ${colors.shadow};
     position: absolute;
     z-index: 99999999;
+    margin-top: 1rem;
+    min-width: 13rem;
+    padding: 0.4rem 0;
 
     ${variants.button}
 
@@ -32,35 +36,79 @@ const menuPopoverWrapper = () => css`
     }
 `;
 
+const Arrow = styled.div`
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid ${colors.white};
+    top: -0.5rem;
+    transform: translateX(-50%);
+`;
+
 class MenuPopover extends Component {
     static propTypes = {
         items: arrayOf(node).isRequired,
+        target: node,
     }
 
     state = {
         position: {},
+        arrow: {},
     }
 
     componentDidMount() {
+        const position = this.getPosition(this.props, this.popover);
         this.setState({
-            position: this.getPosition(this.props, this.popover),
+            position,
+            arrow: this.getArrowPosition(this.props, position),
         });
     }
 
     componentWillUpdate(nextProps) {
-        if (nextProps.left !== this.props.left) {
+        if (nextProps.left !== this.props.left ||
+            nextProps.target !== this.props.target) {
+            
+            const position = this.getPosition(nextProps, this.popover);
             this.setState({
-                position: this.getPosition(nextProps, this.popover),
+                position,
+                arrow: this.getArrowPosition(nextProps, position),
             });
         }
     }
 
     getPosition = (props, el) => {
-        return noOverflow(props.position, el);
+        let pos = { ...props.position };
+        if (el) {
+            // Try to center
+            pos.left = pos.left - (offset(el).width / 2) + (offset(props.target).width / 2);
+        }
+
+        // Push over if it would go off the page
+        return noOverflow(pos, el);
+    }
+
+    getArrowPosition = (props, menuPosition) => {
+        if (props.target) {
+            const targetPos = offset(props.target);
+
+            const left = targetPos.left - menuPosition.left + (targetPos.width / 2);
+
+            return {
+                top: 0,
+                left,
+            };
+        } else {
+            return {
+                top: 0,
+                left: 0,
+            };
+        }
     }
 
     render() {
-        const { position } = this.state;
+        const { position, arrow } = this.state;
         const { items, innerRef } = this.props;
 
         return (
@@ -72,6 +120,11 @@ class MenuPopover extends Component {
                     left: `${position.left || 0}px`,
                 }}
             >
+                <Arrow
+                    style={{
+                        left: `${arrow.left || 0}px`,
+                    }}
+                />
                 <ul>
                     {items.map((item, i) => (
                         <li key={i}>

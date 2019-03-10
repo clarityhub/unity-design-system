@@ -8,8 +8,9 @@ import { variants } from '../../theme/fonts';
 import { lighten, desaturate } from '../../utilities/color';
 
 const labelPadding = 0.3;
-const inputHeight = 2.32;
-const paddingLeft = 0.8;
+const inputHeight = 2.670;
+const paddingLeft = 0.79;
+const paddingTop = 0.85;
 
 const baseInput = ({ error }) => css`
     box-sizing: border-box;
@@ -18,7 +19,7 @@ const baseInput = ({ error }) => css`
     margin-bottom: 0;
     min-width: 250px;
     min-height: ${inputHeight}rem;
-    padding: 0.6rem 1rem;
+    padding: 0.625rem 1rem;
     transition: all 0.2s ease-in;
     transition-property: border-bottom-width, border-bottom-color, color, margin-bottom;
     width: 100%;
@@ -115,6 +116,12 @@ const FakeLabel = styled.span`
 `;
 
 const BorderWrapper = styled.div`
+    box-sizing: border-box;
+
+    & * {
+        box-sizing: border-box;
+    }
+
     display: flex;
     position: relative;
     height: 100%;
@@ -134,7 +141,7 @@ const BorderWrapper = styled.div`
         pointer-events: none;
         text-align: initial;
         padding: 0 ${labelPadding}rem;
-        top: .7rem;
+        top: ${paddingTop}rem;
         left: ${paddingLeft}rem;
     }
 
@@ -187,8 +194,12 @@ const FloatingInput = styled.input`
 
     ${({ error }) => baseInput({ error })}
 
+
     background-color: transparent;
     /* padding-left: ${labelPadding + 0.7}rem; */
+    margin: 0.625rem 0;
+    padding-bottom: 0;
+    padding-top: 0;
 `;
 
 const StyledInput = ({ children, error = false, height, targetRef, label, ...rest }) => {

@@ -12,8 +12,8 @@ const NavItem = styled.div`
         `}
     }
 
-    &:not(:first-child) {
-        margin-left: 1rem;
+    &:not(:first-of-type) {
+        margin-left: 3rem;
     }
 
     /* Used for avatars in the navbar */

@@ -23,7 +23,7 @@ const noMarginCss = `
 const Typography = ({
     type = 'text',
     variant,
-    color = 'black',
+    color = 'dark',
     children,
     component: suggestedComponent = 'p',
     noMargin = false,

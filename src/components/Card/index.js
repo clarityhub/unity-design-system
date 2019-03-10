@@ -1,4 +1,4 @@
-export { default as Card } from './Card';
+export { default } from './Card';
 export { default as CardActions } from './CardActions';
 export { default as CardBody } from './CardBody';
 export { default as CardFooter } from './CardFooter';

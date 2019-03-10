@@ -7,7 +7,7 @@ import { arrayOf, node, shape, func } from 'prop-types';
 import Box from '../../scaffolding/Box';
 import Layout from '../../scaffolding/Layout';
 import { FlexGrid, FlexColumn } from '../../scaffolding/FlexGrid';
-import { Card, CardBody } from '../../components/Card';
+import Card, { CardBody } from '../../components/Card';
 import Typography from '../../components/Typography';
 import Button from '../../components/Buttons';
 
@@ -25,7 +25,9 @@ const Section = styled.div`
 `;
 
 const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
-    <Layout>
+    <Layout css={css`
+        background-color: ${colors.dove};
+    `}>
         <FlexGrid center>
             <FlexColumn center css={css`
                 background: ${colors.gradient};
@@ -38,7 +40,7 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
                     margin-left: auto;
                 `}>
                     {newsFeed.map((item, i) => (
-                        <Card key={i} noBorder>
+                        <Card key={i}>
                             <CardBody>
                                 <Typography type="h3">{item.title}</Typography>
                                 <Typography type="text">
@@ -51,8 +53,6 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
             </FlexColumn>
             <FlexColumn center>
                 <Section css={css`
-                    background-color: ${colors.dove};
-
                     @media(max-width: ${breakpoints.smartphone}) {
                         margin-left: auto;
                         margin-right: auto;

@@ -109,6 +109,7 @@ export default class Menu extends Component {
                             ref={ref => this.menu = ref}
                             items={items}
                             position={position}
+                            target={this.target}
                         />
                     </MenuPortal>
                 )}
