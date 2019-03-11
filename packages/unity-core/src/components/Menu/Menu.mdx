@@ -1,0 +1,57 @@
+---
+name: Menu
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Menu, MenuItem, MenuItemDivider } from './';
+import Button from '../Buttons';
+
+# Menu
+
+Show a pop-up menu in navigation or when there are many options
+a user can select.
+
+Menus will always appear fixed to the bottom-left of the child
+element, but will fix to the bottom-right if the window width
+would be less than the width of the popover.
+
+## \<Menu /\> component
+
+```js
+import { Menu, MenuItem, MenuItemDivider } from '@clarityhub/unity-core/components/Menu';
+```
+
+## Prop Types
+
+### Menu Props
+
+<PropsTable of={Menu} />
+
+### MenuItem Props
+
+All `Button` props can also be passed to the `MenuItem`.
+
+<PropsTable of={MenuItem} />
+
+### MenuItemDivider Props
+
+<PropsTable of={MenuItemDivider} />
+
+## Examples
+
+<Playground>
+    <Menu
+        items={[
+            <MenuItem>Item 1</MenuItem>,
+            <MenuItem>Item 2</MenuItem>,
+            <MenuItem>Item 3</MenuItem>,
+            <MenuItemDivider />,
+            <MenuItem>Long Item 4</MenuItem>,
+        ]}
+    >
+        {({ open }) => (
+            <Button onClick={open}>Open Menu</Button>
+        )}
+    </Menu>
+</Playground>

@@ -1,0 +1,46 @@
+---
+name: Avatar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Avatar from './Avatar';
+
+# Avatar
+
+Use avatars to present user photographs.
+
+You should always provide a `fallbackUrl` so that there is always
+a preloaded image shown.
+
+## \<Avatar /\> component
+
+```js
+import Avatar from '@clarityhub/unity-core/components/Avatar';
+```
+
+## Prop Types
+
+<PropsTable of={Avatar} />
+
+## Examples
+
+Image with a fallback:
+
+<Playground>
+    <Avatar
+        url="/public/ivan-avatar.png"
+        fallbackUrl="/public/avatar-placeholder.png"
+        alt="Ivan's Avatar"
+    />
+</Playground>
+
+Image fails to load:
+
+<Playground>
+    <Avatar
+        url="/public/invalid-url.png"
+        fallbackUrl="/public/avatar-placeholder.png"
+        alt="Ivan's Avatar"
+    />
+</Playground>

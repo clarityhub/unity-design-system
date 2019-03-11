@@ -1,0 +1,29 @@
+---
+name: Box
+menu: Scaffolding
+---
+
+import { Playground, PropsTable } from 'docz';
+import Box from './Box';
+
+# Box
+
+Box is a primitive that you can use to space out elements on a page.
+
+## \<Box /\> component
+
+```js
+import Box from '@clarityhub/unity-core/scaffolding/Box';
+```
+
+## Prop Types
+
+<PropsTable of={Box} />
+
+## Examples
+
+<Playground>
+	<Box withGutter style={{ border: '1px solid red' }}>
+		<div style={{ backgroundColor: 'blue', color: 'white' }}>withGutter</div>
+	</Box>
+</Playground>

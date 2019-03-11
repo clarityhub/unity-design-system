@@ -1,0 +1,38 @@
+---
+name: UserProfile
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import UserProfile from './UserProfile';
+import { MenuItem, MenuItemDivider } from '../Menu';
+
+# UserProfile
+
+A `UserProfile` component is a short-hand way of creating an
+`Avatar` with a `Menu`.
+
+## \<UserProfile /\> component
+
+```js
+import UserProfile from '@clarityhub/unity-core/components/UserProfile';
+```
+
+## Prop Types
+
+<PropsTable of={UserProfile} />
+
+## Examples
+
+<Playground>
+    <UserProfile
+        avatarUrl="/public/ivan-avatar.png"
+        avatarFallbackUrl="/public/avatar-placeholder.png"
+        menuItems={[
+            <MenuItem>Profile</MenuItem>,
+            <MenuItem>Account</MenuItem>,
+            <MenuItemDivider />,
+            <MenuItem>Logout</MenuItem>,
+        ]}
+    />
+</Playground>

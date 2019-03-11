@@ -1,0 +1,83 @@
+---
+name: Navbar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Navbar from './Navbar';
+import NavItem from './NavItem';
+import UserProfile from '../UserProfile';
+import Link from '../Link';
+import Logo from '../svgs/Logo';
+import { MenuItem, MenuItemDivider } from '../Menu';
+
+# Navbar
+
+The `Navbar` (aka Header or App Bar) is the header of the app.
+
+## \<Navbar /\> component
+
+```js
+import Navbar, { NavItem } from '@clarityhub/unity-core/components/Navbar';
+```
+
+## Prop Types
+
+<PropsTable of={Navbar} />
+
+## Links
+
+The `Link` component used is agnostic of any router that you may use in your project.
+
+Because of this, you will need to supply a `profileMenuItemRenderer` and `brandRenderer`
+that returns the `react-router-dom` or `@reach/router` link you may want to use.
+
+## Examples
+
+<Playground>
+    <Navbar
+        navBrandLogo={Logo}
+    >
+        <NavItem>
+            <UserProfile
+                avatarUrl="/public/ivan-avatar.png"
+                avatarFallbackUrl="/public/avatar-placeholder.png"
+
+                menuItems={[
+                    <MenuItem>Profile</MenuItem>,
+                    <MenuItem>Account</MenuItem>,
+                    <MenuItemDivider />,
+                    <MenuItem>Logout</MenuItem>,
+                ]}
+            />
+        </NavItem>
+    </Navbar>
+</Playground>
+
+<Playground>
+    <Navbar
+        navBrandText="Dashboard"
+        navBrandLogo={Logo}
+        maxWidth={500}
+    >
+        <NavItem selected>
+            <Link type="blockLink" href="#">Dashboard</Link>
+        </NavItem>
+        <NavItem>
+            <Link type="blockLink" href="#">Integrations</Link>
+        </NavItem>
+        <NavItem>
+            <UserProfile
+                avatarUrl="/public/ivan-avatar.png"
+                avatarFallbackUrl="/public/avatar-placeholder.png"
+
+                menuItems={[
+                    <MenuItem>Profile</MenuItem>,
+                    <MenuItem>Account</MenuItem>,
+                    <MenuItemDivider />,
+                    <MenuItem>Logout</MenuItem>,
+                ]}
+            />
+        </NavItem>
+    </Navbar>
+</Playground>

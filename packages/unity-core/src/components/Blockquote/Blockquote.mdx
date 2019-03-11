@@ -1,0 +1,33 @@
+---
+name: Blockquote
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Blockquote from './Blockquote';
+import Typography from '../Typography';
+
+# Blockquote
+
+## \<Blockquote /\> component
+
+```js
+import Blockquote from '@clarityhub/unity-core/components/Blockquote';
+```
+
+## Prop Types
+
+<PropsTable of={Blockquote} />
+
+## Examples
+
+<Playground>
+    <Typography>
+        Normal paragraph text. Notice the alignment of the blockquote is
+        to the left of the paragraph.
+    </Typography>
+    <Blockquote>
+        <Typography>This is a block quote with some text</Typography>
+        <Typography>There can be multiple paragraphs</Typography>
+    </Blockquote>
+</Playground>

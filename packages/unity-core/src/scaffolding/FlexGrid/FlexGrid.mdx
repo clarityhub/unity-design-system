@@ -1,0 +1,48 @@
+---
+name: FlexGrid
+menu: Scaffolding
+---
+
+import { Playground, PropsTable } from 'docz';
+import FlexGrid from './FlexGrid';
+import FlexColumn from './FlexColumn';
+
+# FlexGrid
+
+## \<FlexGrid /\> component
+
+```js
+import { FlexGridContainer, FlexGrid, FlexColumn } from '@clarityhub/unity-core/scaffolding/FlexGrid';
+```
+
+## Prop Types
+
+### FlexGridContainer
+
+<PropsTable of={FlexGridContainer} />
+
+### FlexGrid
+
+<PropsTable of={FlexGrid} />
+
+### FlexColumn
+
+<PropsTable of={FlexColumn} />
+
+## Examples
+
+<Playground>
+    <FlexGridContainer>
+        <FlexGrid style={{ border: '1px solid red' }}>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 1
+            </FlexColumn>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 2
+            </FlexColumn>
+            <FlexColumn style={{ border: '1px solid blue' }}>
+                Col 3
+            </FlexColumn>
+        </FlexGrid>
+    </FlexGridContainer>
+</Playground>

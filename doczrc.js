@@ -6,10 +6,10 @@ export default {
 	wrapper: 'src/private/DoczWrapper',
 
 	plugins: [
-			css({
-					preprocessor: 'postcss',
-					cssmodules: true,
-			}),
+		css({
+			preprocessor: 'postcss',
+			cssmodules: true,
+		}),
 	],
 
 	menu: [
@@ -20,5 +20,5 @@ export default {
 		'Forms',
 		'Templates',
 		'Utilities',
-	]
+	],
 };

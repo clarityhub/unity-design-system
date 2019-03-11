@@ -1,0 +1,55 @@
+---
+name: AuthTemplate
+menu: Templates
+fullpage: true
+---
+
+# AuthTemplate
+
+Use this template for the login page of Clarity Hub apps.
+
+import { Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Link from '../../components/Link';
+import AuthTemplate from './AuthTemplate';
+
+## \<AuthTemplate /\>
+
+```js
+import AuthTemplate from '@clarityhub/unity-core/templates/AuthTemplate';
+```
+
+## Prop Types
+
+<PropsTable of={AuthTemplate} />
+
+## Examples
+
+
+<Playground>
+    <AuthTemplate
+        onSignUp={() => {}}
+        onLogin={() => {}}
+        newsFeed={[
+            {
+                title: 'What\'s new',
+                content: (
+                    <Fragment>
+                        Integrate with new services, get analytics, and 
+                        enhance your customer service.
+                        <br/>
+                        <Link href="#">Check out our release notes</Link>
+                    </Fragment>
+                ),
+            }, {
+                title: 'Smart Compose',
+                content: (
+                    <Fragment>
+                        Download our Google Chrome extension
+                        to enable Smart Compose for Intercom.
+                    </Fragment>
+                ),
+            }
+        ]}
+    />
+</Playground>

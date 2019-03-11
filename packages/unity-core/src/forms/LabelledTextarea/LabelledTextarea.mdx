@@ -1,0 +1,96 @@
+---
+name: LabelledTextarea
+menu: Forms
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import LabelledTextarea from './LabelledTextarea';
+import InputGroup from '../InputGroup';
+import Input from '../Input';
+
+# LabelledTextarea
+
+The `LabelledTextarea` component is a controlled input. You <b>must</b> provide a
+`value` and `onInput`.
+
+## \<LabelledTextarea /\> component
+
+```js
+import LabelledTextarea from '@clarityhub/unity-core/forms/LabelledTextarea';
+```
+
+## Prop Types
+
+<PropsTable of={LabelledTextarea} />
+
+## Examples
+
+### Basic
+
+The following are basic examples of the `LabelledTextarea` which incorrectly do
+not have values or listeners.
+
+<Playground>
+    <p>
+        LabelledTextareas:
+    </p>
+    <InputGroup>
+        <LabelledTextarea
+            label="State, Province, or Region"
+            type="text"
+            name="test"
+        />
+    </InputGroup>
+    <InputGroup>
+        <LabelledTextarea
+            defaultValue="Arizona"
+            label="State, Province, or Region"
+            type="text"
+            name="test"
+            error
+        />
+    </InputGroup>
+    <InputGroup>
+        <LabelledTextarea label="Name" value="Hello World" disabled />
+    </InputGroup>
+</Playground>
+
+### Controlled
+
+<Playground>
+    {() => {
+        class Example extends Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    value: '',
+                };
+            }
+
+            render() {
+                return (
+                    <div>
+                        <InputGroup>
+                            <LabelledTextarea
+                                label="Name"
+                                onInput={e => this.setState({ value: e.target.value })}
+                                value={this.state.value}
+                            />
+                        </InputGroup>
+                        <InputGroup>
+                            <LabelledTextarea
+                                label="Name"
+                                placeholder="Hello World"
+                                onInput={e => this.setState({ value: e.target.value })}
+                                value={this.state.value}
+                            />
+                        </InputGroup>
+                    </div>
+                )
+            }
+        };
+
+        return <Example />;
+    }}
+</Playground>

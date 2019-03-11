@@ -1,0 +1,27 @@
+---
+menu: Components
+name: Link
+---
+
+import { Playground, PropsTable } from 'docz';
+import Link, { LinkPropTypes } from './Link';
+
+# Link
+
+## \<Link /\> component
+
+```js
+import Link from '@clarityhub/unity-core/components/Link';
+```
+
+## Prop Types
+
+<PropsTable of={LinkPropTypes} />
+
+## Examples
+
+<Playground>
+    <Link href="#">Link</Link>
+    <Link type="blockLink" href="#">Block Link</Link>
+    <Link href="#" component='div'>Custom Component</Link>
+</Playground>
