@@ -1,6 +1,7 @@
 .docz
 node_modules
 dist
+lib
 
 package.json.lerna_backup
 lerna-debug.log

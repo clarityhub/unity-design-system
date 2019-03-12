@@ -79,9 +79,7 @@ const { html } = renderer.render(
 			</Column>
 		</WhiteSection>
 
-		<Footer>
-			TODO
-		</Footer>
+		<Footer />
 	</EmailTemplate>
 );
 

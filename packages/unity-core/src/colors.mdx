@@ -1,0 +1,231 @@
+---
+name: Colors
+menu: Theme
+---
+
+import colors from './colors';
+import Swatch from '../private/Swatch';
+
+# Colors
+
+## Colors utility
+
+```js
+import colors from '@clarityhub/unity-core/lib/colors';
+```
+
+## Palette
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <Swatch color={colors.primary} />
+            </td>
+            <td>
+                <pre>{'{colors.primary}'}</pre>
+            </td>
+            <td>
+                For buttons and other action items
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.success} />
+            </td>
+            <td>
+                <pre>{'{colors.success}'}</pre>
+            </td>
+            <td>
+                For successful actions and confirmations
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.danger} />
+            </td>
+            <td>
+                <pre>{'{colors.danger}'}</pre>
+            </td>
+            <td>
+                For deleting and destructive actions
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.notification} />
+            </td>
+            <td>
+                <pre>{'{colors.notification}'}</pre>
+            </td>
+            <td>
+                For notifying the user
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Grays
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <Swatch color={colors.white} />
+            </td>
+            <td>
+                <pre>{'{colors.white}'}</pre>
+            </td>
+            <td>
+                For use with text
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.dove} />
+            </td>
+            <td>
+                <pre>{'{colors.dove}'}</pre>
+            </td>
+            <td>
+                For document body background
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.muted} />
+            </td>
+            <td>
+                <pre>{'{colors.muted}'}</pre>
+            </td>
+            <td>
+                For chat bubbles, subtle borders, etc
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.gray} />
+            </td>
+            <td>
+                <pre>{'{colors.gray}'}</pre>
+            </td>
+            <td>
+                For dividers, borders, etc
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.darkGray} />
+            </td>
+            <td>
+                <pre>{'{colors.darkGray}'}</pre>
+            </td>
+            <td>
+                For placeholders and labels
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.dark} />
+            </td>
+            <td>
+                <pre>{'{colors.dark}'}</pre>
+            </td>
+            <td>
+                For the sidenavs and footers
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.black} />
+            </td>
+            <td>
+                <pre>{'{colors.black}'}</pre>
+            </td>
+            <td>
+                For text
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Accessibility
+
+For accessibility purposes, certain color combinations should be used.
+
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <Swatch color={colors.primary} wide>
+                    <b style={{ color: colors.white }}>The fix boxing wizards jump quickly</b>
+                </Swatch>
+            </td>
+            <td>
+                <pre>{'{colors.white}'}</pre>
+            </td>
+            <td>
+                <pre>{'{colors.primary}'}</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.success} wide>
+                    <b style={{ color: colors.black }}>The fix boxing wizards jump quickly</b>
+                </Swatch>
+            </td>
+            <td>
+                <pre>{'{colors.black}'}</pre>
+            </td>
+            <td>
+                <pre>{'{colors.success}'}</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.success} wide>
+                    <b style={{ color: colors.white }}>The fix boxing wizards jump quickly</b>
+                </Swatch>
+            </td>
+            <td>
+                <pre>{'{colors.white}'}</pre>
+            </td>
+            <td>
+                <pre>{'{colors.success}'}</pre>
+            </td>
+            <td>
+                (When text does not matter)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.danger} wide>
+                    <b style={{ color: colors.black }}>The fix boxing wizards jump quickly</b>
+                </Swatch>
+            </td>
+            <td>
+                <pre>{'{colors.white}'}</pre>
+            </td>
+            <td>
+                <pre>{'{colors.danger}'}</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Swatch color={colors.danger} wide>
+                    <b style={{ color: colors.white }}>The fix boxing wizards jump quickly</b>
+                </Swatch>
+            </td>
+            <td>
+                <pre>{'{colors.white}'}</pre>
+            </td>
+            <td>
+                <pre>{'{colors.success}'}</pre>
+            </td>
+            <td>
+                (When text does not matter)
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -6,11 +6,13 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "bootstrap": "lerna exec npm install"
+    "bootstrap": "lerna exec npm install",
+    "clean": "lerna clean -y"
   },
   "dependencies": {
     "@clarityhub/unity-core": "file:packages/unity-core",
-    "@clarityhub/unity-email": "file:packages/unity-email"
+    "@clarityhub/unity-email": "file:packages/unity-email",
+    "@clarityhub/unity-web": "file:packages/unity-web"
   },
   "peerDependencies": {
     "react": ">=16",

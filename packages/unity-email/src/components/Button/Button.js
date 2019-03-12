@@ -3,9 +3,8 @@ import {
 	MjmlButton,
 } from 'mjml-react';
 import { node } from 'prop-types';
-import colors from '@clarityhub/unity-core/dist/theme/colors';
-
-import { variants } from '../../theme/fonts';
+import colors from '@clarityhub/unity-core/lib/colors';
+import { variants } from '@clarityhub/unity-core/lib/typography';
 
 const { letterSpacing, ...validButtonOptions } = variants.button;
 
@@ -26,19 +25,19 @@ const determineColors = (type) => {
 	switch (type) {
 	case 'primary':
 		return {
-			color: colors.white,
-			backgroundColor: colors.primary,
+			color: colors.white.default,
+			backgroundColor: colors.primary.default,
 		};
 	case 'danger':
 		return {
-			color: colors.white,
-			backgroundColor: colors.danger,
+			color: colors.white.default,
+			backgroundColor: colors.danger.default,
 		};
 	case 'default':
 	default:
 		return {
-			color: colors.primary,
-			backgroundColor: 'rgba(255, 255, 255, 0)',
+			color: colors.primary.default,
+			backgroundColor: 'rgba(255, 255, 255, 0)', // XXX core transparent color
 		};
 	}
 };

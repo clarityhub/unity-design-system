@@ -1,93 +1,76 @@
-// XXX merge with fonts from core
-export const variants = {
-	heading: {
-		fontFamily: "Futura, 'Trebuchet MS', Arial, sans-serif",
-		fontWeight: 400,
-	},
-	secondary: {
-		fontFamily: "'Roboto', Arial, sans-serif",
-		fontWeight: 400,
-	},
-	text: {
-		fontFamily: "'Open Sans', Arial, sans-serif",
-		fontWeight: 400,
-		lineHeight: '16px',
-	},
-	readable: {
-		fontFamily: `'Crimson Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-		fontWeight: 400,
-		lineHeight: '16px',
-	},
-	button: {
-		fontFamily: "'Open Sans', Arial, sans-serif",
-		fontWeight: 600,
-		letterSpacing: '0.35px',
-	},
-};
+import { variants, sizes } from '@clarityhub/unity-core/lib/typography';
 
 export const types = {
 	h1: Object.assign(
 		{},
 		variants.heading,
 		{
-			fontSize: '32px',
-			lineHeight: '44.8px',
+			fontSize: `${sizes.h1.px}px`,
+			lineHeight: `${sizes.h1.lineHeight.px}px`,
 		}
 	),
 	h2: Object.assign(
 		{},
 		variants.heading,
 		{
-			fontSize: '26px',
-			lineHeight: '36.4px',
+			fontSize: `${sizes.h2.px}px`,
+			lineHeight: `${sizes.h2.lineHeight.px}px`,
 		}
 	),
 	h3: Object.assign(
 		{},
 		variants.heading,
 		{
-			fontSize: '21px',
-			lineHeight: '25.2px',
+			fontSize: `${sizes.h3.px}px`,
+			lineHeight: `${sizes.h3.lineHeight.px}px`,
 		}
 	),
 	h4: Object.assign(
 		{},
 		variants.secondary,
 		{
-			fontSize: '19px',
-			lineHeight: '22.8px',
+			fontSize: `${sizes.h4.px}px`,
+			lineHeight: `${sizes.h4.lineHeight.px}px`,
 		}
 	),
 	h5: Object.assign(
 		{},
 		variants.secondary,
 		{
-			fontSize: '16px',
-			lineHeight: '19.2px',
+			fontSize: `${sizes.h5.px}px`,
+			lineHeight: `${sizes.h5.lineHeight.px}px`,
+		}
+	),
+	h6: Object.assign(
+		{},
+		variants.secondary,
+		{
+			fontSize: `${sizes.h6.px}px`,
+			lineHeight: `${sizes.h6.lineHeight.px}px`,
 		}
 	),
 	p: Object.assign(
 		{},
-		variants.readable,
+		variants.secondary,
 		{
-			fontSize: '21px',
-			lineHeight: '33.6px',
+			fontSize: `${sizes.p.px}px`,
+			lineHeight: `${sizes.p.lineHeight.px}px`,
 		}
 	),
 	text: Object.assign(
 		{},
 		variants.text,
 		{
-			fontSize: '16px',
-			lineHeight: '24px',
+			fontSize: `${sizes.text.px}px`,
+			lineHeight: `${sizes.text.lineHeight.px}px`,
 		}
 	),
 	text2: Object.assign(
 		{},
 		variants.text,
 		{
-			fontSize: '12px',
-			lineHeight: '25.6px',
+			fontSize: `${sizes.text2.px}px`,
+			lineHeight: `${sizes.text2.lineHeight.px}px`,
 			fontWeight: 400,
 		}
 	),
@@ -95,8 +78,8 @@ export const types = {
 		{},
 		variants.readable,
 		{
-			fontSize: '14px',
-			lineHeight: '19.6px',
+			fontSize: `${sizes.subtext.px}px`,
+			lineHeight: `${sizes.subtext.lineHeight.px}px`,
 			fontStyle: 'italic',
 		}
 	),
