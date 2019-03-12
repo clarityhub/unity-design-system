@@ -39,7 +39,7 @@ const Button = styled.button`
     &:focus,
     &.focused {
         outline: 0;
-        box-shadow: 0 0 0 .2rem ${colors.highlight};
+        box-shadow: 0 0 0 .2rem ${colors.highlight.default};
     }
 
     &:disabled,
@@ -56,109 +56,109 @@ const Button = styled.button`
 		switch (type) {
 		case 'primary':
 			return css`
-                    color: ${colors.white};
-                    background-color: ${colors.primary};
-                    border-color: ${colors.primary};
+                    color: ${colors.white.default};
+                    background-color: ${colors.primary.default};
+                    border-color: ${colors.primary.default};
 
                     ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
-                        color: ${colors.primary};
+                        color: ${colors.primary.default};
                     `}
 
                     ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
-                        color: ${colors.primary};
+                        color: ${colors.primary.default};
                     `}
 
                     &:hover,
                     &.active {
-                        background-color: ${desaturate(darken(colors.primary))};
-                        border-color: ${desaturate(darken(colors.primary))};
+                        background-color: ${desaturate(darken(colors.primary.default))};
+                        border-color: ${desaturate(darken(colors.primary.default))};
 
                         ${outline && `
-                            background-color: ${colors.primary};
-                            border: 1px solid ${colors.primary};
-                            color: ${colors.white};
+                            background-color: ${colors.primary.default};
+                            border: 1px solid ${colors.primary.default};
+                            color: ${colors.white.default};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(darken(colors.primary))};
+                            color: ${desaturate(darken(colors.primary.default))};
                         `}
                     }
 
                     &:disabled,
                     &.disabled {
-                        background-color: ${desaturate(lighten(colors.primary))};
-                        border-color: ${desaturate(lighten(colors.primary))};
+                        background-color: ${desaturate(lighten(colors.primary.default))};
+                        border-color: ${desaturate(lighten(colors.primary.default))};
 
                         ${outline && `
                             background-color: transparent;
-                            border: 1px solid ${colors.primary};
-                            color: ${desaturate(lighten(colors.primary))};
+                            border: 1px solid ${colors.primary.default};
+                            color: ${desaturate(lighten(colors.primary.default))};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.primary))};
+                            color: ${desaturate(lighten(colors.primary.default))};
                         `}
                     }
                 `;
 		case 'danger':
 			return css`
-                    color: ${colors.white};
-                    background-color: ${colors.danger};
-                    border-color: ${colors.danger};
+                    color: ${colors.white.default};
+                    background-color: ${colors.danger.default};
+                    border-color: ${colors.danger.default};
 
                     ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
-                        color: ${colors.danger};
+                        color: ${colors.danger.default};
                     `}
 
                     ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
-                        color: ${colors.danger};
+                        color: ${colors.danger.default};
                     `}
 
                     &:hover,
                     &.active {
-                        background-color: ${desaturate(darken(colors.danger))};
-                        border-color: ${desaturate(darken(colors.danger))};
+                        background-color: ${desaturate(darken(colors.danger.default))};
+                        border-color: ${desaturate(darken(colors.danger.default))};
 
                         ${outline && `
-                            background-color: ${colors.danger};
-                            border: 1px solid ${colors.danger};
-                            color: ${colors.white};
+                            background-color: ${colors.danger.default};
+                            border: 1px solid ${colors.danger.default};
+                            color: ${colors.white.default};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(darken(colors.danger))};
+                            color: ${desaturate(darken(colors.danger.default))};
                         `}
                     }
 
                     &:disabled,
                     &.disabled {
-                        background-color: ${lighten(colors.danger, 0.3)};
-                        border-color: ${lighten(colors.danger, 0.3)};
+                        background-color: ${lighten(colors.danger.default, 0.3)};
+                        border-color: ${lighten(colors.danger.default, 0.3)};
 
                         ${outline && `
                             background-color: transparent;
-                            border: 1px solid ${colors.danger};
-                            color: ${desaturate(lighten(colors.danger, 0.3))};
+                            border: 1px solid ${colors.danger.default};
+                            color: ${desaturate(lighten(colors.danger.default, 0.3))};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.danger, 0.3))};
+                            color: ${desaturate(lighten(colors.danger.default, 0.3))};
                         `}
                     }
                 `;
@@ -167,55 +167,55 @@ const Button = styled.button`
 			return css`
                     background-color: rgba(255, 255, 255, 0);
                     border-color: transparent;
-                    color: ${colors.primary};
+                    color: ${colors.primary.default};
 
                     ${outline && `
                         background-color: transparent;
                         border: 1px solid inherit;
-                        color: ${colors.black};
+                        color: ${colors.black.default};
                     `}
 
                     ${text && `
                         background-color: transparent;
                         border: 1px solid transparent;
-                        color: ${colors.black};
+                        color: ${colors.black.default};
                     `}
 
                     &:hover,
                     &.active {
-                        background-color: ${colors.dove};
+                        background-color: ${colors.dove.default};
                         border-color: transparent;
-                        color: ${colors.dark};
+                        color: ${colors.dark.default};
 
                         ${outline && `
-                            background-color: ${colors.muted};
-                            border: 1px solid ${colors.muted};
-                            color: ${colors.black};
+                            background-color: ${colors.muted.default};
+                            border: 1px solid ${colors.muted.default};
+                            color: ${colors.black.default};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.black, 0.5))};
+                            color: ${desaturate(lighten(colors.black.default, 0.5))};
                         `}
                     }
 
                     &:disabled,
                     &.disabled {
-                        color: ${darken(colors.gray, 0.1)};
-                        background-color: ${lighten(colors.muted, 0.01)};
+                        color: ${darken(colors.gray.default, 0.1)};
+                        background-color: ${lighten(colors.muted.default, 0.01)};
                         border-color: transparent;
 
                         ${outline && `
                             background-color: transparent;
-                            border: 1px solid ${colors.gray};
-                            color: ${lighten(colors.gray, 0.01)};
+                            border: 1px solid ${colors.gray.default};
+                            color: ${lighten(colors.gray.default, 0.01)};
                         `}
 
                         ${text && `
                             background-color: transparent;
                             border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.black))};
+                            color: ${desaturate(lighten(colors.black.default))};
                         `}
                     }
                 `;
@@ -330,106 +330,106 @@ const LoadingWrapper = styled.div`
 		switch (type) {
 		case 'primary':
 			return css`
-                            fill: ${colors.white};
+                            fill: ${colors.white.default};
 
                             ${outline && css`
-                                fill: ${colors.primary};
+                                fill: ${colors.primary.default};
                             `}
 
                             ${text && css`
-                                fill: ${colors.primary};
+                                fill: ${colors.primary.default};
                             `}
 
                             &:hover,
                             &.active {
                                 ${outline && css`
-                                    fill: ${colors.white};
+                                    fill: ${colors.white.default};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(darken(colors.primary))};
+                                    fill: ${desaturate(darken(colors.primary.default))};
                                 `}
                             }
 
                             &:disabled,
                             &.disabled {
                                 ${outline && css`
-                                    fill: ${desaturate(lighten(colors.primary))};
+                                    fill: ${desaturate(lighten(colors.primary.default))};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(lighten(colors.primary))};
+                                    fill: ${desaturate(lighten(colors.primary.default))};
                                 `}
                             }
                         `;
 		case 'danger':
 			return css`
-                            fill: ${colors.white};
+                            fill: ${colors.white.default};
 
                             ${outline && css`
-                                fill: ${colors.danger};
+                                fill: ${colors.danger.default};
                             `}
 
                             ${text && css`
-                                fill: ${colors.danger};
+                                fill: ${colors.danger.default};
                             `}
 
                             &:hover,
                             &.active {
                                 ${outline && css`
-                                    fill: ${colors.white};
+                                    fill: ${colors.white.default};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(darken(colors.danger))};
+                                    fill: ${desaturate(darken(colors.danger.default))};
                                 `}
                             }
 
                             &:disabled,
                             &.disabled {
                                 ${outline && css`
-                                    fill: ${desaturate(lighten(colors.danger, 0.3))};
+                                    fill: ${desaturate(lighten(colors.danger.default, 0.3))};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(lighten(colors.danger, 0.3))};
+                                    fill: ${desaturate(lighten(colors.danger.default, 0.3))};
                                 `}
                             }
                         `;
 		case 'default':
 		default:
 			return css`
-                            fill: ${colors.black};
+                            fill: ${colors.black.default};
 
                             ${outline && css`
-                                fill: ${colors.black};
+                                fill: ${colors.black.default};
                             `}
 
                             ${text && css`
-                                fill: ${colors.black};
+                                fill: ${colors.black.default};
                             `}
 
                             &:hover,
                             &.active {
                                 ${outline && css`
-                                    fill: ${colors.black};
+                                    fill: ${colors.black.default};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(darken(colors.black))};
+                                    fill: ${desaturate(darken(colors.black.default))};
                                 `}
                             }
 
                             &:disabled,
                             &.disabled {
-                                fill: ${darken(colors.gray, 0.1)};
+                                fill: ${darken(colors.gray.default, 0.1)};
 
                                 ${outline && css`
-                                    fill: ${lighten(colors.gray, 0.01)};
+                                    fill: ${lighten(colors.gray.default, 0.01)};
                                 `}
 
                                 ${text && css`
-                                    fill: ${desaturate(lighten(colors.black))};
+                                    fill: ${desaturate(lighten(colors.black.default))};
                                 `}
                             }
                         `;
