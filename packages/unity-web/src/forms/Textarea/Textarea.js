@@ -5,6 +5,7 @@ import Input from '../Input';
 const Textarea = ({ ...rest }) => (
 	<Input
 		{...rest}
+		inputType="textarea"
 		as="textarea"
 	/>
 );

@@ -9,7 +9,7 @@ import { lighten, desaturate } from '@clarityhub/unity-core/lib/utilities/color'
 const labelPadding = 0.3;
 const inputHeight = 2.670;
 const paddingLeft = 0.79;
-const paddingTop = 0.85;
+const paddingTop = 0.65;
 
 const baseInput = ({ error }) => css`
     box-sizing: border-box;
@@ -193,15 +193,32 @@ const FloatingInput = styled.input`
 
     ${({ error }) => baseInput({ error })}
 
-
     background-color: transparent;
-    /* padding-left: ${labelPadding + 0.7}rem; */
-    margin: 0.625rem 0;
     padding-bottom: 0;
     padding-top: 0;
+
+    ${({ inputType }) => {
+		if (inputType === 'textarea') {
+			return css`
+                margin: 0.625rem 0;
+            `;
+		} else {
+			return css`
+                margin: 0;
+            `;
+		}
+	}}
 `;
 
-const StyledInput = ({ children, error = false, height, targetRef, label, ...rest }) => {
+const StyledInput = ({
+	children, 
+	error = false,
+	height,
+	targetRef,
+	label,
+	inputType = 'input',
+	...rest
+}) => {
 	if (!children) {
 		return <Input error={error} {...rest} ref={targetRef} />;
 	}
@@ -209,7 +226,7 @@ const StyledInput = ({ children, error = false, height, targetRef, label, ...res
 	return (
 		<div style={{ height: `${height || `${inputHeight}rem`}`}}>
 			<BorderWrapper error={error}>
-				<FloatingInput {...rest} ref={targetRef} />
+				<FloatingInput inputType={inputType} {...rest} ref={targetRef} />
 				<BorderStart />
 				<BorderLabel>
 					<FakeLabel>{label}</FakeLabel>
