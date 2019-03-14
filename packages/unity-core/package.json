@@ -1,6 +1,6 @@
 {
     "name": "@clarityhub/unity-core",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Unity Design System for Clarity Hub",
     "main": "lib/index.js",
     "files": [
@@ -15,5 +15,6 @@
     "license": "MIT",
     "dependencies": {
         "color": "^3.1.0"
-    }
+    },
+    "gitHead": "170b3b6d164cfccc8daf2ce9fa16eeeea16167d3"
 }

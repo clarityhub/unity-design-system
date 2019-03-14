@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-email",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -19,10 +19,11 @@
     "examples:dev": "npm run build:examples -- --watch & npm run build:src -- --watch & nodemon ./dist/examples/build.js --watch ./dist"
   },
   "dependencies": {
-    "@clarityhub/unity-core": "file:../unity-core",
+    "@clarityhub/unity-core": "^1.0.1",
     "lodash.omit": "^4.5.0",
     "mjml": "^4.4.0-beta.1",
     "mjml-react": "^1.0.51",
     "node-emoji": "^1.10.0"
-  }
+  },
+  "gitHead": "170b3b6d164cfccc8daf2ce9fa16eeeea16167d3"
 }
