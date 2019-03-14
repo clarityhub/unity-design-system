@@ -3,8 +3,10 @@ import {
 	MjmlText,
 } from 'mjml-react';
 import colors from '@clarityhub/unity-core/lib/colors';
+import { variants } from '@clarityhub/unity-core/lib/typography';
+import omit from 'lodash.omit';
 
-import { types, variants } from '../../theme/fonts';
+import { types } from '../../theme/fonts';
 
 const Typography = ({
 	type = 'text',
@@ -22,7 +24,7 @@ const Typography = ({
 	const props = Object.assign(
 		{},
 		Boolean(type) ? types[type] : {},
-		Boolean(variant) ? variants[variant] : {},
+		Boolean(variant) ? omit(variants[variant], ['string']) : {},
 		Boolean(color) ? { color: colors[color].default } : {},
 		center ? { align: 'center' } : { align: 'left' },
 	);

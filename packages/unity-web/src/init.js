@@ -1,7 +1,10 @@
 import 'normalize.css';
 import WebFont from 'webfontloader';
+import { fontFamilies } from '@clarityhub/unity-core/lib/typography';
 
-import { families } from './theme/fonts';
+const families = Object.keys(fontFamilies).map(k => {
+	return `${k}:${fontFamilies[k]}`;
+});
 
 WebFont.load({
 	google: {

@@ -1,4 +1,4 @@
-import '../init';
+import '../packages/unity-web/src/init';
 
 const Wrapper = ({ children }) => (
 	children

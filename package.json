@@ -6,8 +6,16 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "bootstrap": "lerna exec npm install",
-    "clean": "lerna clean -y"
+    "bootstrap": "lerna bootstrap",
+    "lerna-clean": "lerna clean -y",
+    "lint": "lerna exec --parallel 'eslint src'",
+    "build": "lerna exec --parallel 'babel src --out-dir lib'",
+    "emails:watch": "lerna exec --scope=@clarityhub/unity-email 'babel examples --out-dir dist/examples'",
+    "clean": "lerna exec --parallel 'rimraf lib'",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "test": "echo \"Error no tests specified\" && exit 0",
+    "prerelease": "npm run lint && npm run test && npm run clean && npm run build"
   },
   "dependencies": {
     "@clarityhub/unity-core": "file:packages/unity-core",
@@ -18,5 +26,42 @@
     "react": ">=16",
     "react-dom": ">=16"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-destructuring": "^7.3.2",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "acorn": "^6.1.1",
+    "acorn-dynamic-import": "^4.0.0",
+    "acorn-jsx": "^5.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-emotion": "^10.0.7",
+    "docz": "^0.13.7",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^0.13.7",
+    "eslint": "^5.15.1",
+    "eslint-config-clarity-hub": "^2.0.2",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-emotion": "^10.0.7",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "formik": "^1.5.1",
+    "lerna": "^2.9.0",
+    "nodemon": "^1.18.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.3333",
+    "webpack": "4.28.4"
+  }
 }

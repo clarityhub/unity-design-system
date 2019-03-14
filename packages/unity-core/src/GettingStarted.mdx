@@ -6,13 +6,27 @@ name: Getting Started
 
 ## Installation
 
-The One Design System by Clarity Hub uses React and Emotion to render components
+### unity-core
+
+```
+npm i --save @clarityhub/unity-core
+```
+
+### unity-web
+
+The Unity Design System by Clarity Hub uses React and Emotion to render components
 and CSS. These are peer dependencies, so you will need to install them seperately
 from the design system:
 
 ```
-npm i --save @clarityhub/unity-core
+npm i --save @clarityhub/unity-web
 npm i --save react react-dom prop-types @emotion/core @emotion/styled
+```
+
+### unity-email
+
+```
+npm i --save @clarityhub/unity-email
 ```
 
 ## Initialize Styleguide
@@ -20,7 +34,7 @@ npm i --save react react-dom prop-types @emotion/core @emotion/styled
 This will normalize your css and load in webfonts from Google.
 
 ```js
-import '@clarityhub/unity-core/init';
+import '@clarityhub/unity-web/lib/init';
 ```
 
 Simply use the above line in your entrypoint of your application (usually `index.js`).

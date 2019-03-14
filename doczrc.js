@@ -3,7 +3,9 @@ const { css } = require('docz-plugin-css');
 export default {
 	codeSandbox: false,
 	public: 'docz/public',
-	wrapper: 'src/private/DoczWrapper',
+	wrapper: 'docz/DoczWrapper',
+
+	files: 'packages/{unity-core,unity-web}/**/*.mdx', // TODO support unity-core
 
 	plugins: [
 		css({

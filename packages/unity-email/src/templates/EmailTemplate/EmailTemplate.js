@@ -10,10 +10,8 @@ import {
 	MjmlAttributes,
 	MjmlAll,
 	MjmlText,
-	MjmlColumn,
 	MjmlStyle,
 } from 'mjml-react';
-import { GraySection } from '../../components/Sections';
 import { EMAIL_WIDTH } from './config';
 
 // XXX

@@ -23,8 +23,8 @@ const ProgressCore = styled.div`
     height: 0.8rem;
     margin-bottom: 1rem;
     border-radius: ${borders.borderRadius.rem}rem;
-    background-color: #e9ecef;
-    box-shadow: inset ${colors.boxShadow.default};
+    background-color: ${colors.muted.default};
+    box-shadow: inset ${colors.outlineShadow.default};
 `;
 
 const ProgressBar = styled.div`
@@ -36,7 +36,7 @@ const ProgressBar = styled.div`
     transition: width .6s ease;
     text-align: center;
     white-space: nowrap;
-    color: #fff;
+    color: ${colors.white.default};
     background-color: ${colors.primary.default};
     justify-content: center;
 

@@ -9,4 +9,3 @@ if (!fs.existsSync(ROOT_PATH)) {
 }
 
 fs.writeFileSync(path.join(ROOT_PATH, 'newsletter.html'), newsletter);
-
