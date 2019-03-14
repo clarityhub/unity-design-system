@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-email",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -13,13 +13,16 @@
     "url": "git@github.com:clarityhub/one-design-system.git"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:src": "babel src --out-dir dist/src",
     "build:examples": "babel examples --out-dir dist/examples",
     "examples:dev": "npm run build:examples -- --watch & npm run build:src -- --watch & nodemon ./dist/examples/build.js --watch ./dist"
   },
   "dependencies": {
-    "@clarityhub/unity-core": "^1.0.1",
+    "@clarityhub/unity-core": "^1.0.2",
     "lodash.omit": "^4.5.0",
     "mjml": "^4.4.0-beta.1",
     "mjml-react": "^1.0.51",
