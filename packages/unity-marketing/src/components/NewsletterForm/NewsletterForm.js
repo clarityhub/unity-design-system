@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import styled from '@emotion/styled';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
 import Dismissable from '@clarityhub/unity-web/lib/interactions/Dismissable';
 import Notification from '@clarityhub/unity-web/lib/components/Notification';
@@ -9,6 +10,11 @@ import LabelledInput from '@clarityhub/unity-web/lib/forms/LabelledInput';
 import LabelledCheckbox from '@clarityhub/unity-web/lib/forms/LabelledCheckbox';
 
 import { GDPR_NAME, URL } from './config';
+
+const FormWrapper = styled.div`
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+`;
 
 class NewsletterForm extends Component {
     state = {
@@ -20,7 +26,7 @@ class NewsletterForm extends Component {
     		<MailchimpSubscribe
     			url={URL}
     			render={({ subscribe, status, message }) => (
-    				<div>
+    				<FormWrapper>
     					<form onSubmit={e => {
     						e.preventDefault();
     						const form = e.target;
@@ -32,7 +38,7 @@ class NewsletterForm extends Component {
 
     						subscribe(formData);
     					}}>
-    						<Typography center type="h2">
+    						<Typography center type="h2" noMargin noPadding>
                                 Interesting Issues, Straight to Your Inbox
     						</Typography>
     						<Typography center type="text">
@@ -73,16 +79,6 @@ class NewsletterForm extends Component {
     							/>
     						</InputGroup>
     						<InputGroup>
-    							<Button
-    								block
-    								type="primary"
-    								loading={status === "sending"}
-    								disabled={status === "sending"}
-    							>
-                                    Sign Up
-    							</Button>
-    						</InputGroup>
-    						<InputGroup>
     							<LabelledCheckbox
     								id="gdpr_37317"
     								name={GDPR_NAME}
@@ -94,8 +90,18 @@ class NewsletterForm extends Component {
                                     `}
     							/>
     						</InputGroup>
+    						<InputGroup>
+    							<Button
+    								block
+    								type="primary"
+    								loading={status === "sending"}
+    								disabled={status === "sending"}
+    							>
+                                    Sign Up
+    							</Button>
+    						</InputGroup>
     					</form>
-    				</div>
+    				</FormWrapper>
     			)}
     		/>
     	);

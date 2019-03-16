@@ -10,6 +10,15 @@ const FlexGridContainer = styled.div`
 
     ${({ size }) => {
 		switch(size) {
+		case 'xsmall':
+			return `
+                max-width: ${breakpoints.xsmallMaxWidth}px;
+
+                @media (max-width: ${breakpoints.xsmallMaxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
+                    padding: 0 ${FLEX_MOBILE_GUTTER}rem;
+                    width: 100%;
+                }
+            `;
 		case 'small':
 			return `
                 max-width: ${breakpoints.smallMaxWidth}px;
