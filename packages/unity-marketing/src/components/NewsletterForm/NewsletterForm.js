@@ -6,7 +6,7 @@ import Notification from '@clarityhub/unity-web/lib/components/Notification';
 import Typography from '@clarityhub/unity-web/lib/components/Typography';
 import InputGroup from '@clarityhub/unity-web/lib/forms/InputGroup';
 import LabelledInput from '@clarityhub/unity-web/lib/forms/LabelledInput';
-import LabelledCheckbox from '@clarityhub/unity-web/src/forms/LabelledCheckbox';
+import LabelledCheckbox from '@clarityhub/unity-web/lib/forms/LabelledCheckbox';
 
 import { GDPR_NAME, URL } from './config';
 
