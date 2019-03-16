@@ -1,0 +1,75 @@
+---
+menu: Components
+name: Pagination
+---
+
+import { Playground, PropsTable } from 'docz';
+import Pagination from './Pagination';
+import Link from '../Link';
+
+# Pagination
+
+## \<Pagination /\> component
+
+```js
+import Pagination from '@clarityhub/unity-web/lib/components/Pagination';
+```
+
+## Prop Types
+
+<PropsTable of={Pagination} />
+
+## Examples
+
+<Playground>
+   <Pagination
+        index={4}
+        first={1}
+        last={120}
+        pageCount={120}
+    />
+
+    <Pagination
+        index={1}
+        first={1}
+        last={120}
+        pageCount={120}
+    />
+</Playground>
+
+### Override the link renderers
+
+<Playground>
+    <Pagination
+        index={1}
+        pageCount={120}
+
+        nextRenderer={({ index, disabled }) => {
+            const nextUrl = (index + 1).toString();
+
+            return (
+                <Link href={`#/${nextUrl}`}>
+                    Next &raquo;
+                </Link>
+            );
+        }}
+        previousRenderer={({ index, disabled }) => {
+            const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
+
+            return (
+                <Link href={`#/${previousUrl}`}>
+                    &laquo; Previous
+                </Link>
+            );
+        }}
+        pageRenderer={({ page }) => {
+            const url = page === 1 ? '' : page;
+
+            return (
+                <Link href={`#/${url}`}>
+                    {page}
+                </Link>
+            );
+        }}
+    />
+</Playground>

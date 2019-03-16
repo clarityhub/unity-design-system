@@ -52,7 +52,7 @@ const Typography = ({
 
 	if (typeof suggestedComponent === 'string') {
 		let component = suggestedComponent;
-		if (suggestedComponent === 'p' && ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(type) !== -1) {
+		if (suggestedComponent === 'p' && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].indexOf(type) !== -1) {
 			component = type;
 		}
 

@@ -58,7 +58,6 @@ const FooterGrid = styled.div`
             border: 0 !important;
             color: inherit !important;
             transition: none !important;
-            font-weight: 300;
 
             &:hover,
             &:focus {
