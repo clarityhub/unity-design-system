@@ -1,0 +1,46 @@
+---
+name: LabelledCheckbox
+menu: Forms
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import LabelledCheckbox from './LabelledCheckbox';
+import InputGroup from '../InputGroup';
+
+# LabelledCheckbox
+
+The `LabelledCheckbox` component is a controlled input. You <b>must</b> provide a
+`selected` and `onChange`.
+
+## \<LabelledCheckbox /\> component
+
+```js
+import LabelledCheckbox from '@clarityhub/unity-web/lib/forms/LabelledCheckbox';
+```
+
+## Prop Types
+
+<PropsTable of={LabelledCheckbox} />
+
+## Examples
+
+### Controlled Radio Group
+
+<Playground>
+    <InputGroup>
+          <LabelledCheckbox
+              label="Kittens"
+              value="kittens"
+              name="test"
+              selected
+          />
+          <LabelledCheckbox
+              label="Puppies"
+              value="puppies"
+              name="test"
+              error
+          />
+          <LabelledCheckbox label="Name" value="Monkeys" disabled />
+    </InputGroup>
+</Playground>

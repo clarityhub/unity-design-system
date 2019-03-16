@@ -24,7 +24,7 @@ const SelectionWrapper = styled.button`
     border: 0;
     box-sizing: border-box;
     cursor: pointer;
-    height: ${boxSize * 1.3}rem;
+    display: flex;
     position: relative;
 
     label {
@@ -32,10 +32,6 @@ const SelectionWrapper = styled.button`
         display: inline-block;
         position: relative !important;
         vertical-align: middle;
-
-        ${({ selected }) => selected && css`
-            font-weight: bold;
-        `}
     }
 `;
 

@@ -7,10 +7,13 @@ const Label = styled.label`
     color: ${colors.darkGray.default};
     cursor: text;
     display: block;
+    flex: 1;
     font-size: 0.9rem;
+    line-height: 1.2rem;
     left: 0;
     padding: 0 0.4rem;
     position: absolute;
+    text-align: left;
     top: 0;
     transition: 0.2s ease-out;
 

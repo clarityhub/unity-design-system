@@ -15,6 +15,7 @@ const baseInput = ({ error }) => css`
     box-sizing: border-box;
     display: inline-block;
     font-size: 1rem;
+    line-height: 1.2rem;
     margin-bottom: 0;
     min-width: 250px;
     min-height: ${inputHeight}rem;

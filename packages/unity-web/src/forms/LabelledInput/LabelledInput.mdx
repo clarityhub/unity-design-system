@@ -12,12 +12,12 @@ import Input from '../Input';
 # LabelledInput
 
 The `LabelledInput` component is a controlled input. You <b>must</b> provide a
-`value` and `onInput`.
+`value` and `onChange`.
 
 ## \<LabelledInput /\> component
 
 ```js
-import LabelledInput from '@clarityhub/unity-web/libforms/LabelledInput';
+import LabelledInput from '@clarityhub/unity-web/lib/forms/LabelledInput';
 ```
 
 ## Prop Types
@@ -78,7 +78,7 @@ not have values or listeners.
                         <InputGroup>
                             <LabelledInput
                                 label="Name"
-                                onInput={e => this.setState({ value: e.target.value })}
+                                onChange={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}
                             />
                         </InputGroup>
@@ -86,7 +86,7 @@ not have values or listeners.
                             <LabelledInput
                                 label="Name"
                                 placeholder="Hello World"
-                                onInput={e => this.setState({ value: e.target.value })}
+                                onChange={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}
                             />
                         </InputGroup>

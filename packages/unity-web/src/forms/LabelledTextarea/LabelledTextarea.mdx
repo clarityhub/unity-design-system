@@ -12,12 +12,12 @@ import Input from '../Input';
 # LabelledTextarea
 
 The `LabelledTextarea` component is a controlled input. You <b>must</b> provide a
-`value` and `onInput`.
+`value` and `onChange`.
 
 ## \<LabelledTextarea /\> component
 
 ```js
-import LabelledTextarea from '@clarityhub/unity-web/libforms/LabelledTextarea';
+import LabelledTextarea from '@clarityhub/unity-web/lib/forms/LabelledTextarea';
 ```
 
 ## Prop Types
@@ -74,7 +74,7 @@ not have values or listeners.
                         <InputGroup>
                             <LabelledTextarea
                                 label="Name"
-                                onInput={e => this.setState({ value: e.target.value })}
+                                onChange={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}
                             />
                         </InputGroup>
@@ -82,7 +82,7 @@ not have values or listeners.
                             <LabelledTextarea
                                 label="Name"
                                 placeholder="Hello World"
-                                onInput={e => this.setState({ value: e.target.value })}
+                                onChange={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}
                             />
                         </InputGroup>
