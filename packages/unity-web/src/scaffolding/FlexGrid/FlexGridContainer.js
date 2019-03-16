@@ -5,14 +5,33 @@ import { FLEX_MOBILE_GUTTER } from './config';
 
 const FlexGridContainer = styled.div`
     box-sizing: border-box;
+    margin: 0 auto;
     width: 100%;
-    margin: auto;
-    max-width: ${breakpoints.maxWidth}px;
 
-    @media (max-width: ${breakpoints.maxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
-        padding: 0 ${FLEX_MOBILE_GUTTER}rem;
-        width: 100%;
-    }
+    ${({ size }) => {
+		switch(size) {
+		case 'small':
+			return `
+                max-width: ${breakpoints.smallMaxWidth}px;
+
+                @media (max-width: ${breakpoints.smallMaxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
+                    padding: 0 ${FLEX_MOBILE_GUTTER}rem;
+                    width: 100%;
+                }
+            `;
+		default:
+			return `
+                max-width: ${breakpoints.maxWidth}px;
+
+                @media (max-width: ${breakpoints.maxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
+                    padding: 0 ${FLEX_MOBILE_GUTTER}rem;
+                    width: 100%;
+                }
+            `;
+		}
+	}}
 `;
+
+// XXX proptypes
 
 export default FlexGridContainer;

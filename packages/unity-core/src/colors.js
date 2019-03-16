@@ -14,6 +14,9 @@ export default {
 	notification: {
 		default: '#FF6A5C',
 	},
+	brand: {
+		default: '#FF6A5C',
+	},
 
 	white: {
 		default: '#FFF',

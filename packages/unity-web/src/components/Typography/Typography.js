@@ -35,8 +35,7 @@ const Typography = ({
 	center = false,
 	...rest
 }) => {
-	let style = Object.assign(
-		{},
+	let styles = [
 		Boolean(type) ? types[type]: {},
 		Boolean(variant) ? variants[variant]: {},
 		Boolean(color) ? { color: colors[color].default }: {},
@@ -49,7 +48,7 @@ const Typography = ({
 		Boolean(center) ? {
 			textAlign: 'center',
 		} : {},
-	);
+	];
 
 	if (typeof suggestedComponent === 'string') {
 		let component = suggestedComponent;
@@ -57,11 +56,11 @@ const Typography = ({
 			component = type;
 		}
 
-		const Comp = styled[component](style);
+		const Comp = styled[component](styles);
 		return <Comp {...rest}>{children}</Comp>;
 	} else {
 		const Comp = suggestedComponent;
-		return <Comp {...rest} css={style}>{children}</Comp>;
+		return <Comp {...rest} css={styles}>{children}</Comp>;
 	}
 };
 

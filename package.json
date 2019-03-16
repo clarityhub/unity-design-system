@@ -15,7 +15,8 @@
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "test": "echo \"Error no tests specified\" && exit 0",
-    "prerelease": "npm run lint && npm run test && npm run clean && npm run build"
+    "prerelease": "npm run lint && npm run test && npm run clean && npm run build",
+    "release": "lerna publish"
   },
   "dependencies": {
     "@clarityhub/unity-core": "file:packages/unity-core",

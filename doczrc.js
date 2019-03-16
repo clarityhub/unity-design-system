@@ -5,7 +5,7 @@ export default {
 	public: 'docz/public',
 	wrapper: 'docz/DoczWrapper',
 
-	files: 'packages/{unity-core,unity-web}/**/*.mdx', // TODO support unity-email
+	files: 'packages/{unity-core,unity-web,unity-marketing}/**/*.mdx', // TODO support unity-email
 
 	plugins: [
 		css({

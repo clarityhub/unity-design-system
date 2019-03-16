@@ -1,0 +1,43 @@
+---
+name: Footer
+menu: Marketing
+---
+
+import { Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Link from '@clarityhub/unity-web/lib/components/Link';
+import Typography from '@clarityhub/unity-web/lib/components/Typography';
+import Footer from './Footer';
+
+# Footer
+
+## \<Footer /\> component
+
+```js
+import Footer from '@clarityhub/unity-marketing/lib/components/Footer';
+```
+
+## Prop Types
+
+<PropsTable of={Footer} />
+
+## Examples
+
+<Playground>
+    <Footer title="Clarity Hub" />
+</Playground>
+
+<Playground>
+    <Footer
+        title="Clarity Hub"
+        extraColumns={[
+            <Fragment>
+                <Typography noPadding type="h3" color="white">About</Typography>
+
+                <ul>
+                    <li><Link href="/about">About Us</Link></li>
+                </ul>
+            </Fragment>
+        ]}
+    />
+</Playground>
