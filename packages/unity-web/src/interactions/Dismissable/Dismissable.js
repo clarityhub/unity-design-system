@@ -49,6 +49,9 @@ export default class Dismissable extends Component {
   }
 
   onDismiss = (e) => {
+  	e.preventDefault();
+  	e.stopPropagation();
+
   	this.setState({
   		status: 'hiding',
   	}, () => {

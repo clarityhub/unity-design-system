@@ -1,0 +1,150 @@
+---
+name: Modal
+menu: Components
+---
+
+import { Component, Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Modal from './Modal';
+import Button, { ButtonSet } from '../Buttons';
+import Typography from '../Typography';
+import { CardHeader, CardBody, CardActions, CardFooter } from '../Card';
+
+# Modal
+
+Modals use cards to display their content, so check out the Card component
+for what is allowed in Card content.
+
+You can make a modal not respond to clicks ourside the modal or ESC keys
+by not handling the `onClose` prop.
+
+## \<Modal /\> component
+
+```js
+import Modal from '@clarityhub/unity-web/lib/components/Modal';
+```
+
+## Prop Types
+
+### Modal
+
+<PropsTable of={Modal} />
+
+## Examples
+
+### Simple Modal
+
+<Playground>
+    {() => {
+        class ModalExample extends Component {
+            constructor(props) {
+                super(props);
+
+                this.state = { open: false };
+            }
+            render() {
+                const { open } = this.state;
+
+                return (
+                    <Fragment>
+                        <Button onClick={() => this.setState({ open: true })}>
+                            Open Modal
+                        </Button>
+
+                        <Modal open={open} onClose={() => this.setState({ open: false })}>
+                            <CardBody>
+                                <Typography type="h3">Card title</Typography>
+                                <Typography type="h4">Card subtitle</Typography>
+                                <Typography type="text">
+                                    Meow Mix
+                                </Typography>
+
+                                <CardActions>
+                                    <ButtonSet>
+                                        <Button
+                                            text
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            Close
+                                        </Button>
+                                        <Button
+                                            type="danger"
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </ButtonSet>
+                                </CardActions>
+                            </CardBody>
+                        </Modal>
+                    </Fragment>
+                );
+            }
+        }
+
+
+        return <ModalExample />;
+    }}
+</Playground>
+
+### Notification Modal
+
+<Playground>
+    {() => {
+        class ModalExample extends Component {
+            constructor(props) {
+                super(props);
+
+                this.state = { open: false };
+            }
+            render() {
+                const { open } = this.state;
+
+                return (
+                    <Fragment>
+                        <Button onClick={() => this.setState({ open: true })}>
+                            Open Modal
+                        </Button>
+
+                        <Modal
+                            open={open}
+                            onClose={() => this.setState({ open: false })}
+                            type="notification"
+                            center
+                        >
+                            <CardBody>
+                                <Typography noMargin noPadding center color="white" type="h2">
+                                    Join our newsletter
+                                </Typography>
+                                <Typography center color="white" type="text">
+                                    Get updates on Clarity Hub, open source,
+                                    and more by signing up for our newsletter.
+                                </Typography>
+                                <CardActions>
+                                    <ButtonSet spread>
+                                        <Button
+                                            text
+                                            type="white"
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            No Thanks
+                                        </Button>
+                                        <Button
+                                            type="white"
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            Sign Up
+                                        </Button>
+                                    </ButtonSet>
+                                </CardActions>
+                            </CardBody>
+                        </Modal>
+                    </Fragment>
+                );
+            }
+        }
+
+
+        return <ModalExample />;
+    }}
+</Playground>

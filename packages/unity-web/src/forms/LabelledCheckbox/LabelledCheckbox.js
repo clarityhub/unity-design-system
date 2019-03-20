@@ -16,6 +16,7 @@ export default class LabelledCheckbox extends Component {
     	defaultValue: string,
     	label: string.isRequired,
     	value: string,
+    	variant: string,
     }
 
     static defaultProps = {
@@ -52,7 +53,7 @@ export default class LabelledCheckbox extends Component {
 
 	render() {
     	const { selected } = this.state;
-    	const { label, value, defaultValue, ...rest } = this.props;
+    	const { label, value, defaultValue, variant, ...rest } = this.props;
 
     	const optionalAttributes = {};
 
@@ -70,12 +71,14 @@ export default class LabelledCheckbox extends Component {
     				value={value}
     				selected={selected}
 					onChange={this.onChange}
+					variant={variant}
 
 					{...optionalAttributes}
 
     				label={label}
     			>
     				<Label
+						variant={variant}
     					htmlFor={this.checkboxId}
     				>
     					{label}

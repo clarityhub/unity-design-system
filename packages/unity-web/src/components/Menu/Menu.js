@@ -37,15 +37,15 @@ export default class Menu extends Component {
 
     componentDidMount() {
     	this._onClickOutside = this.onClickOutside.bind(this);
-    	this._onKeyPress = this.onKeyPress.bind(this);
+    	this._onKeyUp = this.onKeyUp.bind(this);
 
     	document.addEventListener('click', this._onClickOutside);
-    	document.addEventListener('keypress', this._onKeyPress);
+    	document.addEventListener('keyup', this._onKeyUp);
     }
 
     componentWillUnmount() {
     	document.removeEventListener('click', this._onClickOutside);
-    	document.removeEventListener('keypress', this._onKeyPress);
+    	document.removeEventListener('keyup', this._onKeyUp);
     }
 
     onClickOutside = (e) => {
@@ -61,7 +61,7 @@ export default class Menu extends Component {
     	}
     }
 
-    onKeyPress = (e) => {
+    onKeyUp = (e) => {
     	if (this.state.open) {
     		if (e.key === 'Escape') {
     			this.close();

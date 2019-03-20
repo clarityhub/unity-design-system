@@ -4,6 +4,7 @@ import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 import { CardHeaderWrapper } from './CardHeader';
+import CardBody from './CardBody';
 
 const Card = styled.div`
     position: relative;
@@ -11,10 +12,27 @@ const Card = styled.div`
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: ${colors.white.default};
     background-clip: border-box;
     border-radius: ${borders.borderRadius.rem}rem;
     box-shadow: ${colors.shadow.default};
+
+    ${({ type }) => {
+		switch (type) {
+		case 'notification':
+			return `
+                background: ${colors.gradient.default};
+
+                ${CardBody} {
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                }
+            `;
+		default:
+			return `
+                background-color: ${colors.white.default};
+            `;
+		}
+	}}
 
     > :not(${CardHeaderWrapper}) {
         h3 {
@@ -35,5 +53,7 @@ const Card = styled.div`
         text-align: center;
     `}
 `;
+
+// XXX prop types
 
 export default Card;

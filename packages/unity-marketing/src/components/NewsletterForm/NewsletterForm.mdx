@@ -3,7 +3,9 @@ name: NewsletterForm
 menu: Marketing
 ---
 
+import { Fragment } from 'react';
 import { Playground, PropsTable } from 'docz';
+import Button from '@clarityhub/unity-web/lib/components/Buttons';
 import NewsletterForm from './NewsletterForm';
 
 # NewsletterForm
@@ -16,10 +18,42 @@ import NewsletterForm from '@clarityhub/unity-marketing/lib/components/Newslette
 
 ## Prop Types
 
+## NewsletterForm
+
 <PropsTable of={NewsletterForm} />
+
+## Form
+
+If you provide a render callback to `NewsletterForm`, one of the props given to 
+you via the render prop is a `Form` component that you can render and provide
+additional properties to, such as the `white` prop to render white text fields
 
 ## Examples
 
+## Default Form
+
 <Playground>
     <NewsletterForm />
+</Playground>
+
+### Simple
+
+Use the simple version of the NewsletterForm to remove text and buttons. It will
+still handle sending the Mailchimp sign up for you.
+
+<Playground>
+    <NewsletterForm simple>
+        {({ status, Form }) => (
+            <Form>
+                <Button
+                    type="danger"
+                    buttonType="submit"
+                    loading={status === "sending"}
+                    disabled={status === "sending"}
+                >
+                    Custom Button
+                </Button>
+            </Form>
+        )}
+    </NewsletterForm>
 </Playground>

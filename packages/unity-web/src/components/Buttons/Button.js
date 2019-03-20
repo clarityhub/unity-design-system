@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { bool, func, oneOf, oneOfType, node } from 'prop-types';
+import { bool, func, oneOf, oneOfType, node, string } from 'prop-types';
 import { variants } from '@clarityhub/unity-core/lib/typography';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -162,6 +162,62 @@ const Button = styled.button`
                         `}
                     }
                 `;
+		case 'white':
+			return css`
+                background-color: ${colors.white.default};
+                border-color: transparent;
+                color: ${colors.primary.default};
+
+                ${outline && `
+                    background-color: transparent;
+                    border: 1px solid inherit;
+                    color: ${colors.white.default};
+                `}
+
+                ${text && `
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    color: ${colors.white.default};
+                `}
+
+                &:hover,
+                &.active {
+                    background-color: ${colors.dove.default};
+                    border-color: transparent;
+                    color: ${colors.dark.default};
+
+                    ${outline && `
+                        background-color: ${colors.dove.default};
+                        border: 1px solid ${colors.dove.default};
+                        color: ${colors.black.default};
+                    `}
+
+                    ${text && `
+                        background-color: transparent;
+                        border: 1px solid transparent;
+                        color: ${colors.dove.default};
+                    `}
+                }
+
+                &:disabled,
+                &.disabled {
+                    color: ${darken(colors.gray.default, 0.1)};
+                    background-color: ${lighten(colors.muted.default, 0.01)};
+                    border-color: transparent;
+
+                    ${outline && `
+                        background-color: transparent;
+                        border: 1px solid ${colors.gray.default};
+                        color: ${lighten(colors.gray.default, 0.01)};
+                    `}
+
+                    ${text && `
+                        background-color: transparent;
+                        border: 1px solid transparent;
+                        color: ${desaturate(lighten(colors.black.default))};
+                    `}
+                }
+            `;
 		case 'default':
 		default:
 			return css`
@@ -447,7 +503,7 @@ const renderIcon = (Icon) => {
 	return Icon;
 };
 
-const ButtonWrapper = ({ icon, children, size, loading, ...rest }) => (
+const ButtonWrapper = ({ icon, children, size, loading, buttonType = 'button', ...rest }) => (
 	<Button size={size} loading={loading} {...rest}>
 		{
 			icon && (
@@ -465,12 +521,13 @@ const ButtonWrapper = ({ icon, children, size, loading, ...rest }) => (
 
 ButtonWrapper.propTypes = {
 	block: bool,
+	buttonType: string,
 	icon: oneOfType([node, func]),
 	loading: bool,
 	outline: bool,
 	size: oneOf(['small', 'default', 'large']),
 	text: bool,
-	type: oneOf(['default', 'primary', 'danger', 'success']),
+	type: oneOf(['default', 'white', 'primary', 'danger', 'success']),
 };
 
 export { Button as EmotionButton };

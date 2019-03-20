@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
 
@@ -31,26 +32,41 @@ const Container = styled.div`
 `;
 
 const Item = styled.div`
-    a {
-        border: 0;
+	a {
+        border: 1px solid ${colors.gray.default};
+		border-radius: 50%;
         color: ${colors.primary.default};
+		font-size: 0.9rem;
         text-align: center;
-        padding: 0.5rem;
+		height: 2.25rem;
+		width: 2.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
         &:hover {
-            border: 0;
+			background-color: ${colors.muted.default};
+			border: 1px solid ${colors.gray.default};
         }
 
         &:visited {
+			border: 1px solid ${colors.gray.default};
             color: ${colors.primary.default};
         }
 
-        ${({ selected }) => selected && `
+        ${({ selected }) => selected && css`
             background-color: ${colors.primary.default};
-            color: ${colors.white.default};
+			color: ${colors.white.default} !important;
+			border: 1px solid ${colors.primary.default};
+			box-shadow: ${colors.shadow.default};
+
+			&:hover {
+				background-color: ${colors.primary.default};
+				border: 1px solid ${colors.primary.default};
+			}
 
             &:visited {
-                color: ${colors.white.default};
+                color: ${colors.white.default} !important;
             }
         `}
     }
@@ -64,7 +80,7 @@ const Pagination = ({
 
 		return (
 			<Link href={`/${nextUrl}`}>
-                Next &raquo;
+				&gt;
 			</Link>
 		);
 	},
@@ -73,7 +89,7 @@ const Pagination = ({
 
 		return (
 			<Link href={`/${previousUrl}`}>
-                &laquo; Previous
+                &lt;
 			</Link>
 		);
 	},

@@ -8,6 +8,7 @@ import { Playground, PropsTable } from 'docz';
 import LabelledInput from './LabelledInput';
 import InputGroup from '../InputGroup';
 import Input from '../Input';
+import Box from '../../scaffolding/Box';
 
 # LabelledInput
 
@@ -125,4 +126,33 @@ not have values or listeners.
             name="textarea"
         />
     </InputGroup>
+</Playground>
+
+
+### White Variant
+
+<Playground>
+    <Box style={{ backgroundColor: 'red', padding: '20px' }}>
+        <InputGroup>
+            <LabelledInput
+                variant="white"
+                label="State, Province, or Region"
+                type="text"
+                name="test"
+            />
+        </InputGroup>
+        <InputGroup>
+            <LabelledInput
+                variant="white"
+                defaultValue="Arizona"
+                label="State, Province, or Region"
+                type="text"
+                name="test"
+                error
+            />
+        </InputGroup>
+        <InputGroup>
+            <LabelledInput variant="white" label="Name" value="Hello World" disabled />
+        </InputGroup>
+    </Box>
 </Playground>

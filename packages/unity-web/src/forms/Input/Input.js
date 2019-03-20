@@ -65,6 +65,19 @@ const Input = styled.input`
 
     ${({ error }) => baseInput({ error })}
 
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                    background-color: ${colors.white.default};
+                    border: 1px solid ${colors.white.default};
+                `;
+		default:
+			return `
+                `;
+		}
+	}} 
+
     &:disabled {
         background-color: ${colors.muted.default};
     }
@@ -91,9 +104,23 @@ const BorderStart = styled.div`
 
 const BorderLabel = styled.div`
     border-bottom: 1px solid ${colors.gray.default};
-    border-top: 1px solid transparent !important;
+    
     min-height: 100%;
     width: 0;
+
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                    border-top: 1px solid ${colors.white.default};
+                    border-bottom: 1px solid ${colors.white.default};
+                `;
+		default:
+			return `
+                    border-top: 1px solid transparent !important;
+                `;
+		}
+	}} 
 
     > span {
       color: transparent;
@@ -186,6 +213,38 @@ const BorderWrapper = styled.div`
             font-size: 0.8rem;
         }
     }
+
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                    ${BorderStart},
+                    ${BorderLabel},
+                    ${BorderEnd} {
+                        border-color: ${colors.white.default};
+                        background-color: ${colors.white.default};
+                        outline: 0;
+                    }
+
+                    textarea:placeholder-shown,
+                    textarea[data-not-empty],
+                    textarea:focus,
+                    input:placeholder-shown,
+                    input[data-not-empty],
+                    input:focus {
+                        & ~ label,
+                        & ~ * label {
+                            color: ${colors.white.default};
+                            top: -1.2rem;
+                            left: 0.5rem;
+                        }
+                    }
+                `;
+		default:
+			return `
+                `;
+		}
+	}} 
 `;
 
 const FloatingInput = styled.input`
@@ -193,6 +252,17 @@ const FloatingInput = styled.input`
     position: absolute;
 
     ${({ error }) => baseInput({ error })}
+
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                background-color: ${colors.white.default};
+            `;
+		default:
+			return ``;
+		}
+	}}
 
     background-color: transparent;
     padding-bottom: 0;
@@ -218,18 +288,19 @@ const StyledInput = ({
 	targetRef,
 	label,
 	inputType = 'input',
+	variant,
 	...rest
 }) => {
 	if (!children) {
-		return <Input error={error} {...rest} ref={targetRef} />;
+		return <Input variant={variant} error={error} {...rest} ref={targetRef} />;
 	}
 
 	return (
 		<div style={{ height: `${height || `${inputHeight}rem`}`}}>
-			<BorderWrapper error={error}>
-				<FloatingInput inputType={inputType} {...rest} ref={targetRef} />
+			<BorderWrapper error={error} variant={variant}>
+				<FloatingInput variant={variant} inputType={inputType} {...rest} ref={targetRef} />
 				<BorderStart />
-				<BorderLabel>
+				<BorderLabel variant={variant}>
 					<FakeLabel>{label}</FakeLabel>
 					{children}
 				</BorderLabel>

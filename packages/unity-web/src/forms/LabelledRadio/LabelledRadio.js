@@ -16,6 +16,7 @@ export default class LabelledRadio extends Component {
     	defaultValue: string,
     	label: string.isRequired,
     	value: string,
+    	variant: string,
     }
 
     static defaultProps = {
@@ -32,7 +33,7 @@ export default class LabelledRadio extends Component {
     }
 
     render() {
-    	const { label, value, defaultValue, ...rest } = this.props;
+    	const { label, value, defaultValue, variant, ...rest } = this.props;
 
     	const optionalAttributes = {};
 
@@ -48,6 +49,7 @@ export default class LabelledRadio extends Component {
     				id={this.radioId}
     				defaultValue={defaultValue}
     				value={value}
+    				variant={variant}
 
     				{...optionalAttributes}
 
@@ -55,6 +57,7 @@ export default class LabelledRadio extends Component {
     			>
     				<Label
     					htmlFor={this.radioId}
+    					variant={variant}
     				>
     					{label}
     				</Label>

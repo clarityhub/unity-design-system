@@ -6,6 +6,7 @@ name: Pagination
 import { Playground, PropsTable } from 'docz';
 import Pagination from './Pagination';
 import Link from '../Link';
+import Button from '../Buttons';
 
 # Pagination
 
@@ -48,18 +49,18 @@ import Pagination from '@clarityhub/unity-web/lib/components/Pagination';
             const nextUrl = (index + 1).toString();
 
             return (
-                <Link href={`#/${nextUrl}`}>
+                <Button>
                     Next &raquo;
-                </Link>
+                </Button>
             );
         }}
         previousRenderer={({ index, disabled }) => {
             const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
 
             return (
-                <Link href={`#/${previousUrl}`}>
+                <Button>
                     &laquo; Previous
-                </Link>
+                </Button>
             );
         }}
         pageRenderer={({ page }) => {

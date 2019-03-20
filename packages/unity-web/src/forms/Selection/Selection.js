@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { bool, func } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { lighten, desaturate } from '@clarityhub/unity-core/lib/utilities/color';
 import noop from '@clarityhub/unity-core/lib/utilities/noop';
+import { opacify } from '@clarityhub/unity-core/lib/utilities/color';
 
 const boxSize = 1.4;
 const paddingSize = 0.25;
@@ -21,6 +22,7 @@ const getBorderRadius = (type) => {
 };
 
 const SelectionWrapper = styled.button`
+    background: transparent;
     border: 0;
     box-sizing: border-box;
     cursor: pointer;
@@ -44,7 +46,7 @@ const Input = styled.input`
 
 const Box = styled.div`
     border: 1px solid ${colors.gray.default};
-    background: transparent;
+    background-color: transparent;
     box-sizing: border-box;
     display: inline-block;
     height: ${boxSize}rem;
@@ -53,12 +55,25 @@ const Box = styled.div`
     width: ${boxSize}rem;
 
     ${({ type }) => css`
-      border-radius: ${getBorderRadius(type)};
+        border-radius: ${getBorderRadius(type)};
     `}
 
     ${({ disabled }) => disabled && css`
         background-color: ${colors.muted.default};
     `}
+
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                border: 1px solid ${colors.white.default};
+                background-color: ${opacify(colors.white.default, 0.1)};
+            `;
+		default:
+			return `
+            `;
+		}
+	}}
 
     ${({ selected, disabled, type }) => selected && css`
         &:after {
@@ -86,6 +101,7 @@ export default (type = 'radio') => {
     	disabled: bool,
     	onChange: func,
     	selected: bool,
+    	variant: string,
     }
 
     static defaultProps = {
@@ -101,7 +117,7 @@ export default (type = 'radio') => {
     }
 
     render() {
-    	const { children, selected = false, disabled = false, ...rest } = this.props;
+    	const { children, selected = false, disabled = false, variant, ...rest } = this.props;
 
     	return (
     		<SelectionWrapper
@@ -109,6 +125,7 @@ export default (type = 'radio') => {
     			selected={selected}
     			role="option"
     			aria-checked={Boolean(selected).toString()}
+    			type="button"
     		>
     			<Input
     				ref={ref => this.input = ref}
@@ -124,6 +141,7 @@ export default (type = 'radio') => {
     				selected={selected}
     				disabled={disabled}
     				type={type}
+    				variant={variant}
     			/>
 
     			{children}

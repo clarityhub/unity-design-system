@@ -5,6 +5,7 @@ menu: Forms
 
 import { Playground, PropsTable } from 'docz';
 import Input from './Input';
+import Box from '../../scaffolding/Box';
 
 # Input
 
@@ -31,4 +32,21 @@ import Input from '@clarityhub/unity-web/lib/forms/Input';
     <br/>
     <br/>
     <Input placeholder="Hello world placeholder" disabled />
+</Playground>
+
+## White Variant
+
+<Playground>
+    <Box style={{ backgroundColor: 'red', padding: '20px' }}>
+        <Input variant="white" value="Hello world" />
+        <br/>
+        <br/>
+        <Input variant="white" placeholder="Hello world placeholder" />
+        <br/>
+        <br/>
+        <Input variant="white" placeholder="Hello world placeholder" error />
+        <br/>
+        <br/>
+        <Input variant="white" placeholder="Hello world placeholder" disabled />
+    </Box>
 </Playground>

@@ -19,9 +19,21 @@ const Label = styled.label`
 
     ${variants.text.string}
 
+    ${({ variant }) => {
+		switch (variant) {
+		case 'white':
+			return `
+                color: ${colors.white.default};
+                `;
+		default:
+			return ``;
+		}
+	}}
+
     ${({ error }) => error && css`
         color ${colors.danger.default};
     `}
+
 `;
 
 export default Label;
