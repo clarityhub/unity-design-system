@@ -31,9 +31,8 @@ export default class LabelledInput extends Component {
     	inputCount++;
     }
 
-
     render() {
-    	const { label, value, defaultValue, ...rest } = this.props;
+    	const { label, error, value, defaultValue, ...rest } = this.props;
 
     	const optionalAttributes = {};
 
@@ -48,6 +47,7 @@ export default class LabelledInput extends Component {
 
     				id={this.inputId}
     				defaultValue={defaultValue}
+    				error={error}
     				value={value}
 
     				{...optionalAttributes}
@@ -56,6 +56,7 @@ export default class LabelledInput extends Component {
     			>
     				<Label
     					htmlFor={this.inputId}
+    					error={error}
     				>
     					{label}
     				</Label>

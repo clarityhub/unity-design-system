@@ -13,17 +13,12 @@ const Typography = ({
 	variant,
 	color = 'dark',
 	children,
-	component: suggestedComponent = 'p',
-	noMargin = false,
-	noPadding = false,
-	inline = false,
-	css: userCss,
 	center = false,
 	...rest
 }) => {
 	const props = Object.assign(
 		{},
-		Boolean(type) ? types[type] : {},
+		Boolean(type) ? omit(types[type], ['string']) : {},
 		Boolean(variant) ? omit(variants[variant], ['string']) : {},
 		Boolean(color) ? { color: colors[color].default } : {},
 		center ? { align: 'center' } : { align: 'left' },
