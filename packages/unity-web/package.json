@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-web",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Unity Design System for Clarity Hub",
   "main": "lib/index.js",
   "files": [
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@clarityhub/unity-core": "^1.0.4",
+    "@clarityhub/unity-core": "^1.1.1",
     "color": "^3.1.0",
     "normalize.css": "^8.0.1",
     "react-image": "^2.0.0",
