@@ -6,7 +6,7 @@ import { node } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { variants } from '@clarityhub/unity-core/lib/typography';
 
-const { letterSpacing, ...validButtonOptions } = variants.button;
+const { letterSpacing, string, ...validButtonOptions } = variants.button;
 
 const buttonBase = Object.assign(
 	{},
