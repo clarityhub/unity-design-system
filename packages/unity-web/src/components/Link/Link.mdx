@@ -5,13 +5,14 @@ name: Link
 
 import { Playground, PropsTable } from 'docz';
 import Link, { LinkPropTypes } from './Link';
+import LinkButton from './LinkButton';
 
 # Link
 
 ## \<Link /\> component
 
 ```js
-import Link from '@clarityhub/unity-web/lib/components/Link';
+import Link, { LinkButton } from '@clarityhub/unity-web/lib/components/Link';
 ```
 
 ## Prop Types
@@ -24,4 +25,28 @@ import Link from '@clarityhub/unity-web/lib/components/Link';
     <Link href="#">Link</Link>
     <Link type="blockLink" href="#">Block Link</Link>
     <Link href="#" component='div'>Custom Component</Link>
+</Playground>
+
+## LinkButton Examples
+
+You can use a Link as a Button by using the `LinkButton` component and passing
+through the `history` prop.
+
+```jsx
+import React from 'react';
+import { withRouter } from 'react-router';
+import { LinkButton } from '@clarityhub/unity-web/lib/components/Link';
+
+const Wrapper = ({ history }) => (
+    <LinkButton type="danger" history={history} to="my/href">
+        Danger
+    </LinkButton>
+);
+
+export default withRouter(Wrapper);
+```
+
+<Playground>
+    <LinkButton history={{ push: function() {} }} to="#">Link</LinkButton>
+    <LinkButton type="danger" history={{ push: function() {} }} to="#">Link</LinkButton>
 </Playground>
