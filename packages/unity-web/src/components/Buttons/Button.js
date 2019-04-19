@@ -9,50 +9,50 @@ import { lighten, darken, desaturate } from '@clarityhub/unity-core/lib/utilitie
 
 import Loading from '../svgs/Loading';
 
-const Button = styled.button`
-    overflow: visible;
-    text-transform: none;
-    display: inline-block;
+const Button = styled.button(
+	css`
+        overflow: visible;
+        display: inline-block;
 
-    ${variants.button.string}
+        ${variants.button.string}
 
-    box-shadow: ${colors.shadow.default};
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .5rem 1.25rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: ${borders.borderRadius.rem}rem;
-    position: relative;
-    text-transform: uppercase;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    -webkit-appearance: button;
-
-    &:focus,
-    &:hover {
+        box-shadow: ${colors.shadow.default};
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .5rem 1.25rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: ${borders.borderRadius.rem}rem;
+        position: relative;
         text-decoration: none;
-    }
+        text-transform: uppercase;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-    &:focus,
-    &.focused {
-        outline: 0;
-        box-shadow: 0 0 0 .2rem ${colors.highlight.default};
-    }
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
 
-    &:disabled,
-    &.disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-    }
+        &:focus,
+        &.focused {
+            outline: 0;
+            box-shadow: 0 0 0 .2rem ${colors.highlight.default};
+        }
 
-    &:not(:disabled):not(.disabled) {
-        cursor: pointer;
-    }
+        &:disabled,
+        &.disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
 
-    ${({ type, outline, text }) => {
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+    `,
+	({ type, outline, text }) => {
 		switch (type) {
 		case 'primary':
 			return css`
@@ -276,19 +276,19 @@ const Button = styled.button`
                     }
                 `;
 		}
-	}}
+	},
 
-    ${({ outline }) => outline && css`
+	({ outline }) => outline && css`
         background-color: transparent;
         border: 1px solid inherit;
         box-shadow: none;
-    `}
+    `,
 
-    ${({ text }) => text && css`
+	({ text }) => text && css`
         box-shadow: none;
-    `}
+    `,
 
-    ${({ size }) => {
+	({ size }) => {
 		switch (size) {
 		case 'small':
 			return css`
@@ -304,22 +304,21 @@ const Button = styled.button`
 		default:
 			return '';
 		}
-	}}
+	},
 
-    ${({ block }) => block && css`
+	({ block }) => block && css`
         display: block;
         width: 100%;
-    `}
+    `,
 
-    ${({ loading }) => loading && css`
+	({ loading }) => loading && css`
         color: transparent !important;
 
         &:hover {
             color: transparent !important;
         }
-    `}
-
-`;
+    `,
+);
 
 const IconWrapper = styled.span`
     font-size: inherit;
@@ -503,25 +502,34 @@ const renderIcon = (Icon) => {
 	return Icon;
 };
 
-const ButtonWrapper = ({ icon, children, size, loading, buttonType = 'button', ...rest }) => (
-	<Button size={size} loading={loading} {...rest}>
-		{
-			icon && (
-				<IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
-			)
-		}
-		{
-			loading && (
-				<LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
-			)
-		}
-		{children}
-	</Button>
-);
+const ButtonWrapper = ({ icon, children, component, size, loading, buttonType = 'button', ...rest }) => {
+	let Component = Button;
+
+	if (component) {
+		Component = Button.withComponent(component);
+	}
+
+	return (
+		<Component size={size} loading={loading} {...rest}>
+			{
+				icon && (
+					<IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
+				)
+			}
+			{
+				loading && (
+					<LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
+				)
+			}
+			{children}
+		</Component>
+	);
+};
 
 ButtonWrapper.propTypes = {
 	block: bool,
 	buttonType: string,
+	component: oneOfType([string, func]),
 	icon: oneOfType([node, func]),
 	loading: bool,
 	outline: bool,
