@@ -60,11 +60,11 @@ export default class LabelledTextarea extends Component {
     			this.setState({
     				height: predictedCap,
     			});
+    		} else {
+    			this.setState({
+    				height: this.textarea.scrollHeight + 20,
+    			});
     		}
-
-    		this.setState({
-    			height: this.textarea.scrollHeight + 20,
-    		});
     	}
     }
 
