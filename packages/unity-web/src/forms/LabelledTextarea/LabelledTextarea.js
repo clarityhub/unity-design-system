@@ -57,7 +57,9 @@ export default class LabelledTextarea extends Component {
     		const predictedCap = (maxLines * 20) + 20;
 	
     		if (maxLines && predictedHeight > predictedCap) {
-    			return;
+    			this.setState({
+    				height: predictedCap,
+    			});
     		}
 
     		this.setState({
