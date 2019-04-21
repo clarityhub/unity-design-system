@@ -16,7 +16,10 @@ const ButtonSet = styled.div`
         }
     `}
 
-    ${EmotionButton} + ${EmotionButton} {
+    button + button,
+    a + a,
+    a + button,
+    button + a {
         margin-left: 0.4rem;
     }
 `;

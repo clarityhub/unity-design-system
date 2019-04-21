@@ -15,13 +15,13 @@ let textareaCount = 0;
 export default class LabelledTextarea extends Component {
     static propTypes = {
     	defaultValue: string,
-    	grow: number,
     	label: string.isRequired,
+    	maxLines: number,
     	value: string,
     }
 
     static defaultProps = {
-    	grow: 5,
+    	maxLines: 5,
     	type: 'text',
     }
 
@@ -51,14 +51,18 @@ export default class LabelledTextarea extends Component {
     }
 
     calcSize = () => {
-    	if (this.textarea) {
-    		const { outerHeight } = offset(this.textarea);
-            
+    	const { maxLines } = this.props;
 
-    		// if grow, auto resize height
+    	if (this.textarea) {
+    		const predictedHeight = this.textarea.scrollHeight + 20;
+    		const predictedCap = (maxLines * 20) + 20;
+	
+    		if (maxLines && predictedHeight > predictedCap) {
+    			return;
+    		}
 
     		this.setState({
-    			height: outerHeight,
+    			height: this.textarea.scrollHeight + 20,
     		});
     	}
     }

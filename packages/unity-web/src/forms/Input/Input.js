@@ -267,6 +267,7 @@ const FloatingInput = styled.input`
     background-color: transparent;
     padding-bottom: 0;
     padding-top: 0;
+    height: calc(100% - 1.25rem);
 
     ${({ inputType }) => {
 		if (inputType === 'textarea') {
