@@ -1,5 +1,6 @@
 {
   "name": "unity-design-system",
+  "homepage": "https://clarityhub.github.io/unity-design-system",
   "private": true,
   "version": "1.0.0-monorepo",
   "engines": {
@@ -17,12 +18,15 @@
     "docz:build": "docz build",
     "test": "echo \"Error no tests specified\" && exit 0",
     "prerelease": "npm run lint && npm run test && npm run clean && npm run build",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "predeploy": "npm run docz:build",
+    "deploy": "gh-pages -d .docz/dist"
   },
   "dependencies": {
     "@clarityhub/unity-core": "file:packages/unity-core",
     "@clarityhub/unity-email": "file:packages/unity-email",
-    "@clarityhub/unity-web": "file:packages/unity-web"
+    "@clarityhub/unity-web": "file:packages/unity-web",
+    "gh-pages": "^2.0.1"
   },
   "peerDependencies": {
     "react": ">=16",
