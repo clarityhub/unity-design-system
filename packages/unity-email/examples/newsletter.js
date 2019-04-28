@@ -1,18 +1,18 @@
 import React from 'react';
 
-import MJMLRenderer from '../src/renderers/MJMLRenderer';
-import EmailTemplate from '../src/templates/EmailTemplate';
+import MJMLRenderer from '../renderers/MJMLRenderer';
+import EmailTemplate from '../templates/EmailTemplate';
 
-import { GraySection, WhiteSection } from '../src/components/Sections';
-import Box from '../src/components/Box';
-import Column from '../src/components/Column';
-import Divider from '../src/components/Divider';
-import ClarityHubLogo from '../src/components/ClarityHubLogo';
-import Typography from '../src/components/Typography';
-import Link from '../src/components/Link';
-import Button from '../src/components/Button';
-import Footer from '../src/components/Footer';
-import Emojify from '../src/components/Emojify';
+import { GraySection, WhiteSection } from '../components/Sections';
+import Box from '../components/Box';
+import Column from '../components/Column';
+import Divider from '../components/Divider';
+import ClarityHubLogo from '../components/ClarityHubLogo';
+import Typography from '../components/Typography';
+import Link from '../components/Link';
+import Button from '../components/Button';
+import Footer from '../components/Footer';
+import Emojify from '../components/Emojify';
 
 const renderer = new MJMLRenderer();
 
@@ -29,7 +29,7 @@ const { html } = renderer.render(
 					</Box>
 					<Box>
 						<Typography center type="h1">
-							Clarity Hub Weekly
+							Example Newsletter
 						</Typography>
 
 						<Typography center type="text">

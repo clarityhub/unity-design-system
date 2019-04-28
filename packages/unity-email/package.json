@@ -17,9 +17,6 @@
     "access": "public"
   },
   "scripts": {
-    "build:src": "babel src --out-dir dist/src",
-    "build:examples": "babel examples --out-dir dist/examples",
-    "examples:dev": "npm run build:examples -- --watch & npm run build:src -- --watch & nodemon ./dist/examples/build.js --watch ./dist"
   },
   "dependencies": {
     "@clarityhub/unity-core": "^1.1.1",

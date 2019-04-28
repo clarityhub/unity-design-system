@@ -14,8 +14,10 @@ You can now develop on each package. Run `npm run docz:dev` to generate the Desi
 
 The unity-email package has a special build that you can run to generate example HTML files:
 
-1. `npm run examples:dev`
-2. Open the `/dist` folder
+1. `npm run build`
+1. `npm run emails:watch`
+1. `npm run emails:run`
+2. Open the `/lib` folder
 3. You can open any generated .html file to preview what emails will look like
 
 ## Contributing
