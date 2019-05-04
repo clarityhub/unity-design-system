@@ -11,13 +11,14 @@ import Card, {
     CardBody,
     CardActions,
 } from './index';
+import { CardPropTypes } from './Card';
 import Typography from '../Typography';
 import Button, { ButtonSet } from '../Buttons';
 import Image from '../Image';
 
 # Card
 
-## \<Card /\> component
+Cards provide a content container that you can use to display grouped content.
 
 ```js
 import Card, {
@@ -29,29 +30,28 @@ import Card, {
 } from '@clarityhub/unity-web/lib/components/Card';
 ```
 
-## Prop Types
-
-### Card
-
-<PropsTable of={Card} />
-
-## Examples
+## Simple Card
 
 In all examples, the headings and text use the `Typography` components.
-
-### Simple Card
 
 <Playground>
     <Card>
         <CardBody>
             <Typography type="text">
-                Meow Mix
+                Default
+            </Typography>
+        </CardBody>
+    </Card>
+    <Card type="notification" style={{ marginTop: '1rem'}}>
+        <CardBody>
+            <Typography type="text" color="white">
+                Notification
             </Typography>
         </CardBody>
     </Card>
 </Playground>
 
-### Card with Image
+## Card with Image
 
 <Playground>
     <Card style={{ width: '16rem' }}>
@@ -65,7 +65,7 @@ In all examples, the headings and text use the `Typography` components.
     </Card>
 </Playground>
 
-### Card with Actions
+## Card with Actions
 
 <Playground>
     <Card>
@@ -86,7 +86,7 @@ In all examples, the headings and text use the `Typography` components.
     </Card>
 </Playground>
 
-### Card with Header and Footer
+## Card with Header and Footer
 
 <Playground>
     <Card>
@@ -113,7 +113,7 @@ In all examples, the headings and text use the `Typography` components.
     </Card>
 </Playground>
 
-### Example Cards
+## Example Cards
 
 <Playground>
     <Card center>
@@ -154,3 +154,9 @@ In all examples, the headings and text use the `Typography` components.
         </CardBody>
     </Card>
 </Playground>
+
+## Prop Types
+
+The following prop types are available for the Card component.
+
+<PropsTable of={CardPropTypes} />

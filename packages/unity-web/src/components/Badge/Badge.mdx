@@ -9,64 +9,45 @@ import Link from '../Link';
 
 # Badges
 
-## \<Badge /\> component
+Badges are great to display informational labels and numeric values.
 
 ```js
 import Badge from '@clarityhub/unity-web/lib/components/Badge';
 ```
 
-## Prop Types
-
-<PropsTable of={BadgePropTypes} />
-
-## Examples
-
-### Sizes
+## Basic Badges
 
 <Playground>
-    <Badge>1</Badge>
-    <br />
-    <br />
-    <Badge>new</Badge>
-    <br />
-    <br />
-    <Badge>1 new</Badge>
+    <Badge type="default">Default</Badge>
+    {' '}
+    <Badge type="primary">Primary</Badge>
+    {' '}
+    <Badge type="success">Success</Badge>
+    {' '}
+    <Badge type="danger">Danger</Badge>
+    {' '}
+    <Badge type="notification">Notification</Badge>
 </Playground>
 
-### Colors
-<Playground>
-    <Badge type="default">10</Badge>
-    <br />
-    <br />
-    <Badge type="primary">10</Badge>
-    <br />
-    <br />
-    <Badge type="success">10</Badge>
-    <br />
-    <br />
-    <Badge type="danger">10</Badge>
-    <br />
-    <br />
-    <Badge type="notification">10</Badge>
-    <br />
-    <br />
-</Playground>
 
-### As Links
+### Link Badges
+
+Use the `Link` component to wrap a badge and turn it into a clickable badge.
+
 <Playground>
     <Link type="text" href="#"><Badge type="default">10</Badge></Link>
-    <br />
-    <br />
+    {' '}
     <Link type="text" href="#"><Badge type="primary">10</Badge></Link>
-    <br />
-    <br />
+    {' '}
     <Link type="text" href="#"><Badge type="success">10</Badge></Link>
-    <br />
-    <br />
+    {' '}
     <Link type="text" href="#"><Badge type="danger">10</Badge></Link>
-    <br />
-    <br />
+    {' '}
     <Link type="text" href="#"><Badge type="notification">10</Badge></Link>
-    <br />
-    <br />
 </Playground>
+
+## Prop Types
+
+The following props are available for the Badge component.
+
+<PropsTable of={BadgePropTypes} />

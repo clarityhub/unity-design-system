@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { node, func } from 'prop-types';
+import { func } from 'prop-types';
 import styled from '@emotion/styled';
 import noop from '@clarityhub/unity-core/lib/utilities/noop';
 
@@ -30,7 +30,7 @@ const DismissButton = styled.button`
 
 export default class Dismissable extends Component {
   static propTypes = {
-  	children: node.isRequired,
+  	children: func.isRequired,
   	onDismiss: func,
   }
 

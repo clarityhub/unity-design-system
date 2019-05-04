@@ -221,7 +221,7 @@ const Button = styled.button(
 		case 'default':
 		default:
 			return css`
-                    background-color: rgba(255, 255, 255, 0);
+                    background-color: rgba(255, 255, 255, 1);
                     border-color: transparent;
                     color: ${colors.primary.default};
 

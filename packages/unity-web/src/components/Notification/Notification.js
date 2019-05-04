@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { node, oneOf, oneOfType, func, string } from 'prop-types';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
 
@@ -44,9 +45,15 @@ const notificationStyles = ({
   ${variants[variant]}
 `;
 
-const Notification = ({ children,  ...props }) => (
-	<div
-		css={notificationStyles(props)}
+const Notification = ({
+	children,
+	component: Component = 'div',
+	type = 'danger',
+	variant = 'block',
+	...props
+}) => (
+	<Component
+		css={notificationStyles({ type, variant })}
 		role="alert"
 		{...props}
 	>
@@ -55,10 +62,25 @@ const Notification = ({ children,  ...props }) => (
 			type="text2"
 			noMargin
 			noPadding
+			component="div"
 		>
 			{children}
 		</Typography>
-	</div>
+	</Component>
 );
+
+Notification.propTypes = {
+	children: node,
+	component: oneOfType([func, string]),
+	type: oneOf([
+		'danger',
+		'primary',
+		'success',
+	]),
+	variant: oneOf([
+		'block',
+		'thin',
+	]),
+};
 
 export default Notification;

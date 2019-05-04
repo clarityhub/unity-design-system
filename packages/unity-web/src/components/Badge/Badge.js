@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { oneOf } from 'prop-types';
+import { node, oneOf } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { opacify } from '@clarityhub/unity-core/lib/utilities/color';
 import { variants } from '@clarityhub/unity-core/lib/typography';
@@ -64,6 +64,7 @@ const Badge = styled.div`
  */
 const BadgePropTypes = () => <div />;
 BadgePropTypes.propTypes = {
+	children: node,
 	type: oneOf(['primary', 'success', 'danger', 'notification', 'default']),
 };
 Badge.propTypes = BadgePropTypes.propTypes;

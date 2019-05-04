@@ -8,17 +8,13 @@ import Breadcrumbs, { BreadcrumbsPropTypes } from './Breadcrumbs';
 
 # Breadcrumbs
 
-## \<Breadcrumbs /\> component
+Use breadcrumbs to show a user where they are in the sitemap.
 
 ```js
 import Breadcrumbs from '@clarityhub/unity-web/lib/components/Breadcrumbs';
 ```
 
-## Prop Types
-
-<PropsTable of={BreadcrumbsPropTypes} />
-
-## Examples
+## Example
 
 <Playground>
     <Breadcrumbs
@@ -56,3 +52,23 @@ import Breadcrumbs from '@clarityhub/unity-web/lib/components/Breadcrumbs';
         ]}
     />
 </Playground>
+
+## Link Renderer
+
+By default, the breadcrumbs will use a Link to render the given path.
+
+You can override how breadcrumbs are rendered (so you can use React Router Links for example) by providing a `linkRenderer`.
+
+The default renderer looks like:
+
+```js
+const defaultLinkRenderer = ({ path, children }) => (
+	<Link href={path}>{children}</Link>
+);
+```
+
+## Prop Types
+
+The following prop types are available for the Breadcrumbs component.
+
+<PropsTable of={BreadcrumbsPropTypes} />

@@ -5,7 +5,7 @@ name: ButtonSets
 
 import { Playground, PropsTable } from 'docz';
 import Button from './Button';
-import ButtonSet from './ButtonSet';
+import ButtonSet, { ButtonSetPropTypes } from './ButtonSet';
 import Typography from '../Typography';
 
 # ButtonSets
@@ -14,19 +14,11 @@ A `ButtonSet` is used to group a set of action buttons together
 and provide the appropriate spacing between them to make each button distinct, but
 still visually grouped together.
 
-## \<ButtonSet /\> component
-
 ```js
 import { ButtonSet } from '@clarityhub/unity-web/lib/components/Buttons';
 ```
 
-## Prop Types
-
-<PropsTable of={ButtonSet} />
-
-## Examples
-
-### ButtonSet
+## Wrapping Buttons
 
 <Playground>
     <Typography>Use Profile</Typography>
@@ -50,3 +42,29 @@ import { ButtonSet } from '@clarityhub/unity-web/lib/components/Buttons';
         <Button type="danger">Delete</Button>
     </ButtonSet>
 </Playground>
+
+## Spreading Buttons
+
+<Playground>
+    <ButtonSet spread>
+        <Button text>Back</Button>
+        <Button type="primary">Edit</Button>
+        <Button outline type="danger">Delete</Button>
+    </ButtonSet>
+    <br />
+    <br />
+    <ButtonSet spread>
+        <Button>Cancel</Button>
+        <Button type="primary">Create</Button>
+    </ButtonSet>
+    <br />
+    <br />
+    <ButtonSet spread>
+        <Button>Cancel</Button>
+        <Button type="danger">Delete</Button>
+    </ButtonSet>
+</Playground>
+
+## Prop Types
+
+<PropsTable of={ButtonSetPropTypes} />

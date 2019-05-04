@@ -1,6 +1,6 @@
 ---
-name: Notification
 menu: Components
+name: Notification
 ---
 
 import { Playground, PropsTable } from 'docz';
@@ -9,20 +9,18 @@ import Dismissable from '../../interactions/Dismissable';
 
 # Notification
 
-## \<Notification /\> component
+The notification component can be used to display contextual user messages.
 
 ```js
 import Notification from '@clarityhub/unity-web/lib/components/Notification';
 ```
 
-## Prop Types
+## Basic Notifications
 
-<PropsTable of={Notification} />
-
-## Examples
+Notifications come in various theme colors
 
 <Playground>
-  <Notification type="danger" variant="block">
+  <Notification type="danger">
       There were problems with processing your
       request. We encountered the following issues:
       <ul>
@@ -30,16 +28,40 @@ import Notification from '@clarityhub/unity-web/lib/components/Notification';
       </ul>
   </Notification>
   <br />
-  <Notification type="primary" variant="thin">
+  <Notification type="primary">
       Welcome to Clarity Hub, we've updated our Terms and Conditions
   </Notification>
   <br />
-  <Notification type="success" variant="block">
+  <Notification type="success">
       Congratulations, you've enabled your first integration!
   </Notification>
 </Playground>
 
-### Dismissable
+## Thin Notifications
+
+The padding on notifications can be reduced to create thin notifications.
+
+<Playground>
+  <Notification variant="thin" type="danger">
+      There were problems with processing your
+      request. We encountered the following issues:
+      <ul>
+          <li>Our servers are offline</li>
+      </ul>
+  </Notification>
+  <br />
+  <Notification variant="thin" type="primary">
+      Welcome to Clarity Hub, we've updated our Terms and Conditions
+  </Notification>
+  <br />
+  <Notification variant="thin" type="success">
+      Congratulations, you've enabled your first integration!
+  </Notification>
+</Playground>
+
+### Dismissable Notifications
+
+You can use the Dismissiable interaction to create dismissable notifications.
 
 <Playground>
   <Dismissable>
@@ -59,4 +81,8 @@ import Notification from '@clarityhub/unity-web/lib/components/Notification';
   </Dismissable>
 </Playground>
 
-### Autodismiss
+## Prop Types
+
+The following props are available for the Notification component. Any props not specified here will be passed through to the wrapping div.
+
+<PropsTable of={Notification} />

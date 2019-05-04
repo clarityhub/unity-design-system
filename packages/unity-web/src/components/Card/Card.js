@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
+import { bool, oneOf } from 'prop-types';
 
 import { CardHeaderWrapper } from './CardHeader';
 import CardBody from './CardBody';
@@ -54,6 +55,16 @@ const Card = styled.div`
     `}
 `;
 
-// XXX prop types
+
+/**
+ * Hack for docz and react-docgen
+ */
+const CardPropTypes = () => <div />;
+CardPropTypes.propTypes = {
+	center: bool,
+	type: oneOf(['notification']),
+};
+Card.propTypes = CardPropTypes.propTypes;
+export { CardPropTypes };
 
 export default Card;

@@ -24,9 +24,15 @@ const ButtonSet = styled.div`
     }
 `;
 
-ButtonSet.propTypes = {
+/**
+ * Hack for docz and react-docgen
+ */
+const ButtonSetPropTypes = () => <div />;
+ButtonSetPropTypes.propTypes = {
 	spread: bool,
 };
+ButtonSet.propTypes = ButtonSetPropTypes.propTypes;
+export { ButtonSetPropTypes };
 
 export default ButtonSet;
 

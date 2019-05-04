@@ -1,31 +1,38 @@
 ---
 name: Getting Started
+route: /
 ---
 
 # Getting Started
+
+The **Unity Design System** is broken into multiple packages to make it easier to work with depending on your use-case.
 
 ## Installation
 
 ### unity-core
 
-```
+The unity-core packages contains colors, typography, spacing, and other utilities that can be used in any JavaScript environment.
+
+```bash
 npm i --save @clarityhub/unity-core
 ```
 
 ### unity-web
 
-The Unity Design System by Clarity Hub uses React and Emotion to render components
+The unity-core package uses React and Emotion to render components
 and CSS. These are peer dependencies, so you will need to install them seperately
 from the design system:
 
-```
+```bash
 npm i --save @clarityhub/unity-web
 npm i --save react react-dom prop-types @emotion/core @emotion/styled
 ```
 
 ### unity-email
 
-```
+The unity-email package is for generating HTML emails from React.
+
+```bash
 npm i --save @clarityhub/unity-email
 ```
 
@@ -43,7 +50,7 @@ Simply use the above line in your entrypoint of your application (usually `index
 
 The prefered icon set to use is the one provided by Material UI:
 
-```
+```bash
 npm i --save @material-ui/core @material-ui/icons
 ```
 

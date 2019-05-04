@@ -10,33 +10,36 @@ import Button from './index';
 
 # Buttons
 
-## \<Button /\> component
+Buttons are used for triggering various actions.
 
 ```js
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
 ```
 
-## Prop Types
+## Button Types
 
-<PropsTable of={Button} />
+There are 4 main button types: default, white, primary, and danger.
 
-## Examples
-
-### Buttons
+* **Default buttons** should be used for actions that will not cause any changes to happen. For example, a Cancel button may close a modal, but it will not cause any changes to happen.
+* **White buttons** are used when you have a non-white background color and you need to use a default button that may have variants. A white button should normally be used the same way a default button would be used.
+* **Primary buttons** are for the primary action you would like a user to take. These buttons should not have any destructive consequence to clicking them.
+* **Danger buttons** are for actions that would cause destructive consequences to occur; like deleting an item or unscheduling a campaign.
 
 <Playground>
-    <Button>Cancel</Button>
+    <Button>Default</Button>
     {' '}
-    <Button type="white">Cancel</Button>
+    <Button type="white">White</Button>
     {' '}
-    <Button type="primary">Create</Button>
+    <Button type="primary">Primary</Button>
     {' '}
-    <Button type="danger">Delete</Button>
+    <Button type="danger">Danger</Button>
 </Playground>
 
-### As a Link
+## As a Link
 
-If you need a React Router Link, use LinkButton.
+If you need a React Router Link, use [LinkButton](./packages-unity-web-src-components-link-linkbutton).
+
+Otherwise, you can have buttons become anchor tags.
 
 <Playground>
     <Button component="a" href="#">Cancel</Button>
@@ -48,10 +51,12 @@ If you need a React Router Link, use LinkButton.
     <Button component="a" href="#" type="danger">Delete</Button>
 </Playground>
 
-### States
+## States
 
 <Playground>
     <Button className="focused">Focused</Button>
+    {' '}
+    <Button className="focused" type="white">Focused</Button>
     {' '}
     <Button className="focused" type="primary">Focused</Button>
     {' '}
@@ -60,6 +65,8 @@ If you need a React Router Link, use LinkButton.
     <br/>
     <Button className="active">Active</Button>
     {' '}
+    <Button className="active" type="white">Active</Button>
+    {' '}
     <Button className="active" type="primary">Active</Button>
     {' '}
     <Button className="active" type="danger">Active</Button>
@@ -67,12 +74,14 @@ If you need a React Router Link, use LinkButton.
     <br/>
     <Button className="disabled">Disabled</Button>
     {' '}
+    <Button className="disabled" type="white">Disabled</Button>
+    {' '}
     <Button className="disabled" type="primary">Disabled</Button>
     {' '}
     <Button className="disabled" type="danger">Disabled</Button>
 </Playground>
 
-### Loading
+## Loading
 
 The `loading` property should be used with the `disabled` property.
 
@@ -119,7 +128,13 @@ The `loading` property should be used with the `disabled` property.
     <Button size="large" outline loading disabled type="danger">Text that is pretty long</Button>
 </Playground>
 
-### Sizes
+## Sizes
+
+You can change the size of buttons for use in different contexts.
+
+* Small buttons may be used in table views
+* The default size of buttons should be used in most cases
+* Large buttons can be used for calls to action
 
 <Playground>
     <Button size="small">Small</Button>
@@ -143,8 +158,26 @@ The `loading` property should be used with the `disabled` property.
     <Button size="large" type="danger">Large</Button>
 </Playground>
 
+## Icon Buttons
 
-### Other Variants
+Specifying the icon prop will space out the icon appropriately when used with text.
+
+<Playground>
+    <Button icon={DeleteIcon}>With Icon</Button>
+    {' '}
+    <Button icon={<DeleteIcon />} type="primary">With Icon</Button>
+    {' '}
+    <Button icon={<DeleteIcon />} type="danger">With Icon</Button>
+    {' '}
+    <Button size="large" icon={<DeleteIcon />}>With Icon</Button>
+</Playground>
+
+## Other Variants
+
+There are outline and text variants that can be used in different scenarios.
+
+* Outline buttons should only be used for secondary actions
+* Text buttons can be used to de-emphasis an action
 
 <Playground>
     <Button outline>Outline</Button>
@@ -178,23 +211,11 @@ The `loading` property should be used with the `disabled` property.
     <Button block type="primary">Button Block</Button>
     {' '}
     <Button block type="danger">Button Block</Button>
-    <br/>
-    <br/>
-    <Button icon={DeleteIcon}>With Icon</Button>
-    {' '}
-    <Button icon={<DeleteIcon />} type="primary">With Icon</Button>
-    {' '}
-    <Button icon={<DeleteIcon />} type="danger">With Icon</Button>
-    {' '}
-    <Button size="large" icon={<DeleteIcon />}>With Icon</Button>
 </Playground>
 
-### Override classNames
+## Prop Types
 
-<Playground>
-    <Button css={`background-color: red;`}>Cancel</Button>
-    {' '}
-    <Button type="primary">Create</Button>
-    {' '}
-    <Button type="danger">Delete</Button>
-</Playground>
+The following prop types are available for Buttons.
+
+<PropsTable of={Button} />
+
