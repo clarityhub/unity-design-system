@@ -4,9 +4,10 @@
 
 ## Getting Started
 
-1. Install yarn
+1. Install npm: `npm i`
 2. Install lerna
-3. Run `lerna bootstrap`
+3. Run `npm run bootstrap`
+4. Build packages - `npm run build`
 
 You can now develop on each package. Run `npm run docz:dev` to generate the Design System docs.
 
