@@ -68,7 +68,7 @@ export default class Modal extends Component {
 		 */
     	children: node,
     	onClose: func,
-    	open: bool,
+    	open: bool.isRequired,
     	type: string,
     }
 

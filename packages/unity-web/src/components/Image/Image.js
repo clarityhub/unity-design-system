@@ -26,12 +26,18 @@ const Image = ({ alt, withSpacing, center, wrapperProps = {}, ...rest }) => (
 	</ImageWrapper>
 );
 
-Image.propTypes = {
-	alt: string.isRequired,
-	center: bool,
-	src: string.isRequired,
-	withSpacing: bool,
-	wrapperProps: object,
+/**
+ * Hack for docz and react-docgen
+ */
+const ImagePropTypes = () => <div />;
+ImagePropTypes.propTypes = {
+    alt: string.isRequired,
+    center: bool,
+    src: string.isRequired,
+    withSpacing: bool,
+    wrapperProps: object,
 };
+Image.propTypes = ImagePropTypes.propTypes;
+export { ImagePropTypes };
 
 export default Image;

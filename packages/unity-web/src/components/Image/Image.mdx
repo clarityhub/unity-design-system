@@ -4,19 +4,15 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
-import Image from './Image';
+import Image, { ImagePropTypes } from './Image';
 
 # Image
 
-## \<Image /\> component
+This Image component is used for displaying images.
 
 ```js
 import Image from '@clarityhub/unity-web/lib/components/Image';
 ```
-
-## Prop Types
-
-<PropsTable of={Image} />
 
 ## Examples
 
@@ -26,3 +22,9 @@ import Image from '@clarityhub/unity-web/lib/components/Image';
     <Image style={{ width: '20rem' }} center src="/public/get-started.png" alt="Get Started" />
     <Image style={{ width: '20rem' }} center withSpacing src="/public/get-started.png" alt="Get Started" />
 </Playground>
+
+## Prop Types
+
+The following prop types are available for the Card component.
+
+<PropsTable of={ImagePropTypes} />
