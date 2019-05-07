@@ -5,14 +5,15 @@ menu: Components
 
 import { Component } from 'react';
 import { Playground, PropsTable } from 'docz';
-import SideNav from './SideNav';
-import SideNavItem from './SideNavItem';
-import SideNavGroup from './SideNavGroup';
+import SideNav, { SideNavProps} from './SideNav';
+import SideNavItem, { SideNavItemProps} from './SideNavItem';
+import SideNavGroup, { SideNavGroupProps } from './SideNavGroup';
 import Link from '../Link';
 
 # SideNav
 
-The `SideNav` (aka Sidebar) of the application
+The `SideNav` (aka Sidebar) of the application.
+`SideNavGroup` components will expand when selected.
 
 ## \<SideNav /\> component
 
@@ -22,7 +23,14 @@ import SideNav, { SideNavItem, SideNavGroup } from '@clarityhub/unity-web/lib/co
 
 ## Prop Types
 
-<PropsTable of={SideNav} />
+### SideNav
+<PropsTable of={SideNavProps} />
+
+### SideNavGroup
+<PropsTable of={SideNavGroupProps} />
+
+### SideNavItem
+<PropsTable of={SideNavItemProps} />
 
 ## Examples
 
