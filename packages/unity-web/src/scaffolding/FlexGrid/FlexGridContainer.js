@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { string } from 'prop-types';
 
 import breakpoints from '../../theme/breakpoints';
 import { FLEX_MOBILE_GUTTER } from './config';
@@ -41,6 +42,15 @@ const FlexGridContainer = styled.div`
 	}}
 `;
 
-// XXX proptypes
+/**
+ * Hack for docz and react-docgen
+ */
+const FlexGridContainerProps = () => <div />;
+FlexGridContainerProps.propTypes = {
+    size: string
+};
+
+FlexGridContainer.propTypes = FlexGridContainerProps.propTypes;
+export { FlexGridContainerProps };
 
 export default FlexGridContainer;

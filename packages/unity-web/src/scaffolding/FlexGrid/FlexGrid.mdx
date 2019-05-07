@@ -4,9 +4,9 @@ menu: Scaffolding
 ---
 
 import { Playground, PropsTable } from 'docz';
-import FlexGrid from './FlexGrid';
-import FlexColumn from './FlexColumn';
-import FlexGridContainer from './FlexGridContainer';
+import FlexGrid, { FlexGridProps} from './FlexGrid';
+import FlexColumn, { FlexColumnProps} from './FlexColumn';
+import FlexGridContainer, { FlexGridContainerProps } from './FlexGridContainer';
 
 # FlexGrid
 
@@ -20,15 +20,15 @@ import { FlexGridContainer, FlexGrid, FlexColumn } from '@clarityhub/unity-web/l
 
 ### FlexGridContainer
 
-<PropsTable of={FlexGridContainer} />
+<PropsTable of={FlexGridContainerProps} />
 
 ### FlexGrid
 
-<PropsTable of={FlexGrid} />
+<PropsTable of={FlexGridProps} />
 
 ### FlexColumn
 
-<PropsTable of={FlexColumn} />
+<PropsTable of={FlexColumnProps} />
 
 ## Examples
 
