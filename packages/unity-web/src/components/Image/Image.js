@@ -31,11 +31,11 @@ const Image = ({ alt, withSpacing, center, wrapperProps = {}, ...rest }) => (
  */
 const ImagePropTypes = () => <div />;
 ImagePropTypes.propTypes = {
-    alt: string.isRequired,
-    center: bool,
-    src: string.isRequired,
-    withSpacing: bool,
-    wrapperProps: object,
+	alt: string.isRequired,
+	center: bool,
+	src: string.isRequired,
+	withSpacing: bool,
+	wrapperProps: object,
 };
 Image.propTypes = ImagePropTypes.propTypes;
 export { ImagePropTypes };

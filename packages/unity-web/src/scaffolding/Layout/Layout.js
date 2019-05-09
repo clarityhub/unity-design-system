@@ -18,7 +18,7 @@ const Layout = styled.div`
  */
 const LayoutProps = () => <div />;
 LayoutProps.propTypes = {
-    children: node
+	children: node,
 };
 
 Layout.propTypes = LayoutProps.propTypes;

@@ -18,7 +18,7 @@ const FlexGrid = styled.div`
  */
 const FlexGridProps = () => <div />;
 FlexGridProps.propTypes = {
-    center: bool
+	center: bool,
 };
 
 FlexGrid.propTypes = FlexGridProps.propTypes;

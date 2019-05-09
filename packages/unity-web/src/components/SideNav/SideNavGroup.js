@@ -15,7 +15,7 @@ const SideNavGroup = styled.div`
  */
 const SideNavGroupProps = () => <div />;
 SideNavGroupProps.propTypes = {
-    children: node,
+	children: node,
 };
 
 SideNavGroup.propTypes = SideNavGroupProps.propTypes;

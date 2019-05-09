@@ -87,9 +87,9 @@ const Progress = ({ children, progress = 0, type = 'default' }) => (
 );
 
 Progress.propTypes = {
+	children: node,
 	progress: number.isRequired,
 	type: string,
-	children: node
 };
 
 export default Progress;

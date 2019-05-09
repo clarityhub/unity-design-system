@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
+import { bool, node } from 'prop-types';
 import { css } from '@emotion/core';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 import SideNavGroup from './SideNavGroup';
-import { bool, node } from 'prop-types';
 
 const SideNavItem = styled.div`
     width: 100%;
@@ -49,8 +49,8 @@ const SideNavItem = styled.div`
  */
 const SideNavItemProps = () => <div />;
 SideNavItemProps.propTypes = {
-    children: node,
-    selected: bool.isRequired,
+	children: node,
+	selected: bool.isRequired,
 };
 
 SideNavItem.propTypes = SideNavItemProps.propTypes;

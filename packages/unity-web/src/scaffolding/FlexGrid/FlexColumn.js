@@ -17,7 +17,7 @@ const FlexColumn = styled.div`
  */
 const FlexColumnProps = () => <div />;
 FlexColumnProps.propTypes = {
-    center: bool
+	center: bool,
 };
 
 FlexColumn.propTypes = FlexColumnProps.propTypes;

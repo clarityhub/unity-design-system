@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { oneOf } from 'prop-types';
+
 import { SIDENAV_WIDTH } from './config';
-import { node, oneOf } from 'prop-types';
 
 const SideNav = styled.div`
     box-sizing: border-box;
@@ -13,7 +14,7 @@ const SideNav = styled.div`
  */
 const SideNavProps = () => <div />;
 SideNavProps.propTypes = {
-    children: oneOf(['SideNavGroup', 'SideNavItem']),
+	children: oneOf(['SideNavGroup', 'SideNavItem']),
 };
 
 SideNav.propTypes = SideNavProps.propTypes;

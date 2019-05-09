@@ -1,11 +1,11 @@
 import React from 'react';
+import { number, func } from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 import Link from '../Link';
 import Paginate from './PaginateBoxView';
-import { number, func } from 'prop-types';
 
 // XXX need a Link renderer (with on clicks and stuff)
 
@@ -142,13 +142,13 @@ const Pagination = ({
 };
 
 Pagination.propTypes = {
-	index: number.isRequired,
 	first: number,
+	index: number.isRequired,
 	last: number,
-	pageCount: number.isRequired,
 	nextRenderer: func,
-	previousRenderer: func,
+	pageCount: number.isRequired,
 	pageRenderer: func,
-}
+	previousRenderer: func,
+};
 
 export default Pagination;

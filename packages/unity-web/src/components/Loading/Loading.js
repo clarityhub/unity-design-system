@@ -42,8 +42,8 @@ const Loading = ({ flex, size }) => (
 );
 
 Loading.propTypes = {
-    size: number,
-    flex: bool,
-}
+	flex: bool,
+	size: number,
+};
 
 export default Loading; 

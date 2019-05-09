@@ -47,7 +47,7 @@ const FlexGridContainer = styled.div`
  */
 const FlexGridContainerProps = () => <div />;
 FlexGridContainerProps.propTypes = {
-    size: string
+	size: string,
 };
 
 FlexGridContainer.propTypes = FlexGridContainerProps.propTypes;
