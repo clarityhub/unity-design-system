@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { number, string } from 'prop-types';
+import { number, string, node } from 'prop-types';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
 
@@ -87,8 +87,9 @@ const Progress = ({ children, progress = 0, type = 'default' }) => (
 );
 
 Progress.propTypes = {
-	progress: number,
+	progress: number.isRequired,
 	type: string,
+	children: node
 };
 
 export default Progress;

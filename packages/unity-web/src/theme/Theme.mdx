@@ -1,0 +1,91 @@
+---
+name: Utilities
+menu: Theme
+---
+import fonts from './fonts';
+
+# Utilities
+
+## Breakpoints
+To keep responsive design and behavior consistent, use the theme breakpoints to style to different viewports
+
+```js
+import breakpoints from '@clarityhub/unity-web/lib/theme/breakpoints';
+
+```
+### Examples
+
+```js
+
+switch(size) {
+    case 'xsmall':
+        return `max-width: ${breakpoints.xsmallMaxWidth}px;`;
+    case 'small':
+        return `max-width: ${breakpoints.smallMaxWidth}px;`;
+    default:
+        return `max-width: ${breakpoints.maxWidth}px;`;
+}
+```
+
+```js
+@media (max-width: ${mobile}px) {
+    flex-direction: column;
+}
+@media(max-width: ${breakpoints.smartphone}) {
+    display: none;
+}
+@media(max-width: ${breakpoints.tablet}) {
+    flex-wrap: wrap;
+}
+```
+
+
+## Fonts
+To keep behavior and design consistent, use the theme fonts to style components
+
+```js
+import { types } from '@clarityhub/unity-web/lib/theme/fonts';
+```
+
+### List of types
+* h1, h2, h3, h4, h5, h6
+* p
+* text
+* text2
+* sectionLabel
+* subText
+* link
+* blockLink
+
+
+### Example
+```js
+import { types } from '@clarityhub/unity-web/lib/theme/fonts';
+import { variants, sizes } from '@clarityhub/unity-core/lib/typography';
+
+let styles = [
+    Boolean(type) ? types[type]: {},    
+    Boolean(variant) ? variants[variant]: {},
+    Boolean(color) ? { color: colors[color].default }: {},
+];
+```
+
+## Z-Indexes
+Used for being able to do simple math for z-index-based styling
+
+```js
+import zIndexes from '@clarityhub/unity-web/lib/theme/zIndexes';
+```
+
+### Available z-indexes
+* base
+* modal
+
+### Example
+```js
+import zIndexes from '@clarityhub/unity-web/lib/theme/zIndexes';
+
+const Div = styled.div`
+    z-index: ${zIndexes.base + 10}
+`
+```

@@ -5,6 +5,7 @@ import colors from '@clarityhub/unity-core/lib/colors';
 
 import Link from '../Link';
 import Paginate from './PaginateBoxView';
+import { number, func } from 'prop-types';
 
 // XXX need a Link renderer (with on clicks and stuff)
 
@@ -139,5 +140,15 @@ const Pagination = ({
 		</Container>
 	);
 };
+
+Pagination.propTypes = {
+	index: number.isRequired,
+	first: number,
+	last: number,
+	pageCount: number.isRequired,
+	nextRenderer: func,
+	previousRenderer: func,
+	pageRenderer: func,
+}
 
 export default Pagination;

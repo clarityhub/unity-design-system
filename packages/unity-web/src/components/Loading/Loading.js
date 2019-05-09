@@ -1,4 +1,5 @@
 import React from 'react';
+import { number, bool } from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -39,5 +40,10 @@ const Loading = ({ flex, size }) => (
 		<LoadingSvg />
 	</LoadingWrapper>
 );
+
+Loading.propTypes = {
+    size: number,
+    flex: bool,
+}
 
 export default Loading; 

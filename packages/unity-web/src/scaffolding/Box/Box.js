@@ -9,7 +9,11 @@ const Box = styled.div`
 	float: ${({ pull }) => pull ? pull : 'inherit'};
 `;
 
-Box.propTypes = {
+/**
+ * Hack for docz and react-docgen
+ */
+const BoxProps = () => <div />;
+BoxProps.propTypes = {
 	pull: oneOf(['left', 'right']),
 	withGutter: bool,
 	withGutterBottom: bool,
@@ -18,13 +22,17 @@ Box.propTypes = {
 	withGutterTop: bool,
 };
 
-Box.defaultProps = {
+BoxProps.defaultProps = {
 	withGutter: false,
 	withGutterTop: false,
 	withGutterBottom: false,
 	withGutterLeft: false,
 	withGutterRight: false,
 };
+
+Box.propTypes = BoxProps.propTypes;
+Box.defaultProps = BoxProps.defaultProps;
+export { BoxProps };
 
 export default Box;
 
