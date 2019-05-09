@@ -141,7 +141,9 @@ export default function ouibounce(customConfig) {
 			cookieName = options.cookieName;
 		}
 
-		document.cookie = cookieName + '=true' + cookieExpire + cookieDomain + sitewide;
+		if (typeof window !== 'undefined') {
+			window.document.cookie = cookieName + '=true' + cookieExpire + cookieDomain + sitewide;
+		}
 
 		teardown();
 	}

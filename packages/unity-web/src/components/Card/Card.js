@@ -55,7 +55,6 @@ const Card = styled.div`
     `}
 `;
 
-
 /**
  * Hack for docz and react-docgen
  */
