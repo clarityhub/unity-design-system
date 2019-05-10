@@ -2,20 +2,18 @@ import { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 export default class ModalPortal extends Component {
-	constructor(props) {
-		super(props);
-
-		if (typeof window !== 'undefined') {
-			this.el = document.createElement('div');
-		}
+	state = {
+		ready: false,
 	}
 
 	componentDidMount() {
 		// Append the element into the DOM on mount. We'll render
 		// into the modal container element (see the HTML tab).
-		if (this.el) {
-			document.body.appendChild(this.el);
-		}
+		this.el = document.createElement('div');
+		document.body.appendChild(this.el);
+		this.setState({
+			ready: true,
+		});
 	}
 
 	componentWillUnmount() {
@@ -26,7 +24,9 @@ export default class ModalPortal extends Component {
 	}
 
 	render() {
-		if (this.el) {
+		const { ready } = this.state;
+
+		if (ready) {
 			// Use a portal to render the children into the element
 			return ReactDOM.createPortal(
 				// Any valid React child: JSX, strings, arrays, etc.
