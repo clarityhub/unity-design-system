@@ -94,7 +94,7 @@ class Form extends Component {
 							name={GDPR_NAME}
 							value="Y"
 							label={`
-									If you are okay with us sending you updated
+									If you are okay with us sending you updates
 									via email, please check the box. Unsubscribe
 									whenever you want!
 								`}

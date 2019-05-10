@@ -20,7 +20,7 @@ const Card = styled.div`
     ${({ type }) => {
 		switch (type) {
 		case 'notification':
-			return `
+			return css`
                 background: ${colors.gradient.default};
 
                 ${CardBody} {
@@ -29,7 +29,7 @@ const Card = styled.div`
                 }
             `;
 		default:
-			return `
+			return css`
                 background-color: ${colors.white.default};
             `;
 		}
