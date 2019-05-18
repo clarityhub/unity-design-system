@@ -11,34 +11,34 @@ import { ObjectFieldTemplate } from './ObjectFieldTemplate';
 import { ArrayFieldTemplate } from './ArrayFieldTemplate';
 
 const widgets = {
-    BaseInput: WrappedLabelledInput,
-    TextareaWidget: WrappedLabelledTextarea,
+	BaseInput: WrappedLabelledInput,
+	TextareaWidget: WrappedLabelledTextarea,
 };
 
 const fields = {
-    TitleField: Title,
-    DescriptionField: Description,
+	TitleField: Title,
+	DescriptionField: Description,
 };
 
 const FormFromSchema = ({ submitting, schema, uiSchema, onSubmit, formData, submitText="Submit" }) => (
-    <Form
-        schema={schema}
-        fields={fields}
-        uiSchema={uiSchema}
-        FieldTemplate={FieldTemplate}
-        ErrorList={FormErrorList}
-        ObjectFieldTemplate={ObjectFieldTemplate}
-        ArrayFieldTemplate={ArrayFieldTemplate}
-        widgets={widgets}
-        formData={formData}
-        onSubmit={({ formData }) => onSubmit(formData)}
-    >
-        <InputGroup>
-            <Button type="primary" buttonType="submit" disabled={submitting} loading={submitting}>
-                {submitText}
-            </Button>
-        </InputGroup>
-    </Form>
+	<Form
+		schema={schema}
+		fields={fields}
+		uiSchema={uiSchema}
+		FieldTemplate={FieldTemplate}
+		ErrorList={FormErrorList}
+		ObjectFieldTemplate={ObjectFieldTemplate}
+		ArrayFieldTemplate={ArrayFieldTemplate}
+		widgets={widgets}
+		formData={formData}
+		onSubmit={({ formData }) => onSubmit(formData)}
+	>
+		<InputGroup>
+			<Button type="primary" buttonType="submit" disabled={submitting} loading={submitting}>
+				{submitText}
+			</Button>
+		</InputGroup>
+	</Form>
 );
 
 export default FormFromSchema;
