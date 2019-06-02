@@ -17,6 +17,7 @@ const Button = styled.button(
         ${variants.button.string}
 
         box-shadow: ${colors.shadow.default};
+        cursor: pointer;
         text-align: center;
         white-space: nowrap;
         vertical-align: middle;
@@ -510,7 +511,7 @@ const ButtonWrapper = ({ icon, children, component, size, loading, buttonType = 
 	}
 
 	return (
-		<Component size={size} loading={loading} {...rest}>
+		<Component size={size} loading={loading} type={buttonType} {...rest}>
 			{
 				icon && (
 					<IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>

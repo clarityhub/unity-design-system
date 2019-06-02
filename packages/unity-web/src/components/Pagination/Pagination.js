@@ -4,12 +4,12 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
 
+import { smallMaxWidth } from '../../theme/breakpoints';
 import Link from '../Link';
 import Paginate from './PaginateBoxView';
 
 // XXX need a Link renderer (with on clicks and stuff)
 
-// TODO max-width
 const Container = styled.div`
     margin: 3rem 1rem;
     text-align: center;
@@ -23,7 +23,7 @@ const Container = styled.div`
         margin-left: 1rem;
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: ${smallMaxWidth}px) {
         li:first-child,
         li:last-child {
             display: block;

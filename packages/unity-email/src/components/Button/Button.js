@@ -5,6 +5,7 @@ import {
 import { node } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { variants } from '@clarityhub/unity-core/lib/typography';
+import borders from '@clarityhub/unity-core/lib/borders';
 
 const { letterSpacing, string, ...validButtonOptions } = variants.button;
 
@@ -13,7 +14,7 @@ const buttonBase = Object.assign(
 	validButtonOptions,
 	{
 		fontSize: '16px',
-		borderRadius: '4px', // TODO merge with borders.borderRadius
+		borderRadius: `${borders.borderRadius.default}px`,
 		paddingTop: '8px',
 		paddingBottom: '8px',
 		paddingLeft: '20px',
