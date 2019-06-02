@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-jsonschema-form';
+import { bool, func, object, string } from 'prop-types';
 import InputGroup from '@clarityhub/unity-web/lib/forms/InputGroup';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
 
@@ -52,5 +53,15 @@ const FormFromSchema = ({
 		)}
 	</Form>
 );
+
+FormFromSchema.propTypes = {
+	children: func,
+	formData: object,
+	onSubmit: func,
+	schema: object,
+	submitText: string,
+	submitting: bool,
+	uiSchema: object,
+};
 
 export default FormFromSchema;

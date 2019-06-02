@@ -4,8 +4,9 @@ export default {
 	codeSandbox: false,
 	public: 'docz/public',
 	wrapper: 'docz/DoczWrapper',
+	hashRouter: true,
 
-	files: 'packages/{unity-core,unity-web,unity-marketing}/**/*.mdx', // TODO support unity-email
+	files: 'packages/{unity-core,unity-web,unity-marketing,unity-forms}/**/*.mdx', // TODO support unity-email
 
 	plugins: [
 		css({
