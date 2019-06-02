@@ -5,7 +5,7 @@ import colors from '@clarityhub/unity-core/lib/colors';
 import Typography from '@clarityhub/unity-web/lib/components/Typography';
 import Link from '@clarityhub/unity-web/lib/components/Link';
 import Logo from '@clarityhub/unity-web/lib/components/svgs/Logo';
-import { xsmallMaxWidth, smallMaxWidth } from '@clarityhub/unity-web/lib/theme/breakpoints';
+import breakpoints from '@clarityhub/unity-web/lib/theme/breakpoints';
 
 import {
 	FacebookLogo,
@@ -22,7 +22,7 @@ const FooterWrapper = styled.footer`
     position: relative;
     z-index: 1;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         padding-bottom: 10px;
     }
 `;
@@ -64,13 +64,13 @@ const FooterGrid = styled.div`
         }
     }
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         flex-wrap: wrap;
 
         text-align: center;
     }
 
-    @media (max-width: ${xsmallMaxWidth}px) {
+    @media (max-width: ${breakpoints.xsmallMaxWidth}px) {
         flex-direction: column;
         text-align: center;
     }
@@ -79,14 +79,14 @@ const FooterGrid = styled.div`
 const FooterColumn = styled.div`
     flex: 1;
 
-    @media (max-width: ${xsmallMaxWidth}px) {
+    @media (max-width: ${breakpoints.xsmallMaxWidth}px) {
         display: block;
     }
 
     & + & {
         padding-left: 20px;
 
-        @media (max-width: ${xsmallMaxWidth}px) {
+        @media (max-width: ${breakpoints.xsmallMaxWidth}px) {
             padding-left: 0;
             padding-top: 2rem;
         }
@@ -95,7 +95,7 @@ const FooterColumn = styled.div`
     ${({ size2x }) => size2x && `
       flex: 2;
 
-      @media (max-width: ${smallMaxWidth}px) {
+      @media (max-width: ${breakpoints.smallMaxWidth}px) {
         flex: initial;
         width: 100%;
 
@@ -108,7 +108,7 @@ const FooterColumn = styled.div`
     `}
 
     ${({ info }) => info && `
-        @media (max-width: ${smallMaxWidth}px) {
+        @media (max-width: ${breakpoints.smallMaxWidth}px) {
             margin-bottom: 35px;
         }
 
@@ -147,7 +147,7 @@ const FooterAdditional = styled.div`
     padding-top: 51px;
     text-align: center;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         padding-top: 20px;
     }
 
@@ -175,7 +175,7 @@ const FooterAdditionalContainer = styled.div`
     max-width: 1000px;
     padding: 0 2rem;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         flex-direction: column-reverse;
     }
 `;
@@ -184,7 +184,7 @@ const FooterAdditionalContainer = styled.div`
 const FooterAdditionalCopy = styled.div`
     flex: 1;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         margin-bottom: 20px;
     }
 `;
@@ -192,7 +192,7 @@ const FooterAdditionalCopy = styled.div`
 const FooterAdditionalLinks = styled.div`
     flex: 1;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         margin-bottom: 20px;
     }
 
@@ -204,7 +204,7 @@ const FooterAdditionalLinks = styled.div`
 const FooterAdditionalSocial = styled.div`
     flex: 1;
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         margin-bottom: 20px;
     }
 

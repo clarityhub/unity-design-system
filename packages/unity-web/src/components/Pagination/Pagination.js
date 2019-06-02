@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
 
-import { smallMaxWidth } from '../../theme/breakpoints';
+import breakpoints from '../../theme/breakpoints';
 import Link from '../Link';
 import Paginate from './PaginateBoxView';
 
@@ -23,7 +23,7 @@ const Container = styled.div`
         margin-left: 1rem;
     }
 
-    @media (max-width: ${smallMaxWidth}px) {
+    @media (max-width: ${breakpoints.smallMaxWidth}px) {
         li:first-child,
         li:last-child {
             display: block;

@@ -3,7 +3,7 @@ import { ADDITIONAL_PROPERTY_FLAG } from "react-jsonschema-form/lib/utils";
 import Label from '@clarityhub/unity-web/lib/forms/Label';
 import InputGroup from '@clarityhub/unity-web/lib/forms/InputGroup';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
-import ErrorList from '../ErrorLists';
+import { ErrorList } from '../ErrorLists';
 
 import LabelInput from './LabelInput';
 

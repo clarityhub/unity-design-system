@@ -4,52 +4,198 @@ name: FormFromSchema
 ---
 
 import { Playground, PropsTable } from 'docz';
+import GoogleMapReact, { GoogleMapMarkers } from 'google-map-react';
 import FormFromSchema from './index';
 
 # FormFromSchema
 
 You can use FormFromSchema to automatically generate forms from JSON Schemas.
 
+For more information on how to write and use the FormFromSchema component, see
+[mozilla-services/react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form).
+
+Check out [JSONschema.net](https://jsonschema.net/) to create schemas easily.
+
 ```js
 import FormFromSchema from '@clarityhub/unity-forms/lib/FormFromSchema';
 ```
 
-## Simple FormBuilders
+## Simple Form
 
 <Playground>
     <FormFromSchema
+        onSubmit={data => alert(JSON.stringify(data))}
         schema={{
             "definitions": {},
             "$schema": "http://json-schema.org/draft-07/schema#",
             "$id": "http://example.com/root.json",
             "type": "object",
-            "title": "The Root Schema",
+            "title": "Organization",
             "required": [
-                "name",
-                "description"
+                "name"
             ],
             "properties": {
                 "name": {
-                "$id": "#/properties/name",
-                "type": "string",
-                "title": "The Name Schema",
-                "default": "",
-                "examples": [
-                    "A green door"
-                ],
-                "pattern": "^(.*)$"
+                    "$id": "#/properties/name",
+                    "type": "string",
+                    "title": "Name",
+                    "default": "",
+                    "examples": [
+                        "Clarity Hub"
+                    ],
+                    "pattern": "^(.*)$"
                 },
                 "description": {
-                "$id": "#/properties/description",
-                "type": "string",
-                "title": "The Description Schema",
-                "default": "",
-                "examples": [
-                    ""
-                ],
-                "pattern": "^(.*)$"
+                    "$id": "#/properties/description",
+                    "type": "string",
+                    "title": "Description",
+                    "default": "",
+                    "pattern": "^(.*)$"
                 }
             }
         }}
     />
 </Playground>
+
+## Prefilled Form
+
+You can pass in `formData` to prefill out the form
+
+<Playground>
+    <FormFromSchema
+        onSubmit={data => alert(JSON.stringify(data))}
+        formData={{
+            name: "Clarity Hub",
+            description: "Conversational APIs to power your business"
+        }}
+        schema={{
+            "definitions": {},
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "$id": "http://example.com/root.json",
+            "type": "object",
+            "title": "Organization",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "$id": "#/properties/name",
+                    "type": "string",
+                    "title": "Name",
+                    "default": "",
+                    "examples": [
+                        "Clarity Hub"
+                    ],
+                    "pattern": "^(.*)$"
+                },
+                "description": {
+                    "$id": "#/properties/description",
+                    "type": "string",
+                    "title": "Description",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                }
+            }
+        }}
+    />
+</Playground>
+
+## Custom Form Fields
+
+Sometimes you may want to change how a form field is presented. You can use the `uiSchema` to change
+fields.
+
+In this example, we use [google-map-react/google-map-react](https://github.com/google-map-react/google-map-react)
+as an example of a non-standard form component that the UI may want to render when given location objects with lat and lng
+properties. 
+
+For more information on how to use the `uiSchema` property, see [react-jsonschema-form](https://react-jsonschema-form.readthedocs.io/en/latest/advanced-customization/#custom-widget-options)
+
+<Playground>
+    <FormFromSchema
+        onSubmit={data => alert(JSON.stringify(data))}
+        formData={{
+            name: "Clarity Hub",
+            description: "Conversational APIs to power your business",
+            location: { lat: -34.397, lng: 150.644 }
+        }}
+        uiSchema={{
+            location: {
+                "ui:field": (props) => {
+                    return (
+                        <div style={{ height: '300px', width: '100%' }}>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{ key: 'AIzaSyDYNOZYEqYnkX2jyfpnIfJgmiLvuCViULo' }}
+                                defaultCenter={props.formData}
+                                defaultZoom={8}
+                            />
+                        </div>
+                    );
+                },
+                "lat": {
+                    "ui:widget": "hidden"
+                },
+                "lng": {
+                    "ui:widget": "hidden"
+                }
+            }
+        }}
+        schema={{
+            "definitions": {},
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "$id": "http://example.com/root.json",
+            "type": "object",
+            "title": "Organization",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "$id": "#/properties/name",
+                    "type": "string",
+                    "title": "Name",
+                    "default": "",
+                    "examples": [
+                        "Clarity Hub"
+                    ],
+                    "pattern": "^(.*)$"
+                },
+                "description": {
+                    "$id": "#/properties/description",
+                    "type": "string",
+                    "title": "Description",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                },
+                "location": {
+                    "$id": "#/properties/location",
+                    "type": "object",
+                    "title": "Location",
+                    "default": "",
+                    "properties": {
+                        "lat": {
+                            "$id": "#/properties/location/latitude",
+                            "type": "number",
+                            "title": "Latitude",
+                            "default": ""
+                        },
+                        "lng": {
+                            "$id": "#/properties/location/longitude",
+                            "type": "number",
+                            "title": "Longitude",
+                            "default": ""
+                        }
+                    }
+                }
+            }
+        }}
+    />
+</Playground>
+
+
+## Prop Types
+
+The following prop types are available for FormFromSchema.
+
+<PropsTable of={FormFromSchema} />
+

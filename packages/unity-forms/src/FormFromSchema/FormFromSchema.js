@@ -57,7 +57,7 @@ const FormFromSchema = ({
 FormFromSchema.propTypes = {
 	children: func,
 	formData: object,
-	onSubmit: func,
+	onSubmit: func.isRequired,
 	schema: object,
 	submitText: string,
 	submitting: bool,
