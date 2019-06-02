@@ -6,7 +6,7 @@ const SideNavGroup = styled.div`
 
     a,
     a:visited {
-        padding-left: 1rem;
+        padding-left: 1rem !important;
     }
 `;
 
