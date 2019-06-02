@@ -71,7 +71,7 @@ function WrapIfAdditional(props) {
 	);
 }
 
-function FieldTemplate(props) {
+export function FieldTemplate(props) {
 	const {
 		children,
 		rawErrors,
@@ -95,4 +95,3 @@ function FieldTemplate(props) {
 	);
 }
 
-export default { FieldTemplate };

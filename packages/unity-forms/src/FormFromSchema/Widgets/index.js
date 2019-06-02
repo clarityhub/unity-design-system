@@ -2,7 +2,7 @@ import React from 'react';
 import LabelledInput from '@clarityhub/unity-web/lib/forms/LabelledInput';
 import LabelledTextarea from '@clarityhub/unity-web/lib/forms/LabelledTextarea';
 
-const WrappedLabelledInput = ({ onChange, rawErrors, ...rest }) => {
+export const WrappedLabelledInput = ({ onChange, rawErrors, ...rest }) => {
 	const _onChange = (e) => {
 		onChange(e.target.value || '');
 	};
@@ -18,7 +18,7 @@ const WrappedLabelledInput = ({ onChange, rawErrors, ...rest }) => {
 	);
 };
 
-const WrappedLabelledTextarea = ({ onChange, rawErrors, ...rest }) => {
+export const WrappedLabelledTextarea = ({ onChange, rawErrors, ...rest }) => {
 	const _onChange = (e) => {
 		onChange(e.target.value || '');
 	};
@@ -33,4 +33,3 @@ const WrappedLabelledTextarea = ({ onChange, rawErrors, ...rest }) => {
 	);
 };
 
-export default { WrappedLabelledInput, WrappedLabelledTextarea }; 
