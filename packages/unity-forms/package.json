@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-forms",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "Unity Design System for Clarity Hub",
   "main": "lib/index.js",
   "files": [
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@clarityhub/unity-web": "^1.2.14",
+    "@clarityhub/unity-web": "^1.2.15",
     "react-jsonschema-form": "^1.5.0"
   },
   "peerDependencies": {
