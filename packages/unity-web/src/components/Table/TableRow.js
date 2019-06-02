@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 const TableRow = styled.tr`
