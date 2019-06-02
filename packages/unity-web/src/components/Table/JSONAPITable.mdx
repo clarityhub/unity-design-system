@@ -1,0 +1,151 @@
+---
+name: Table from JSON API
+menu: Components
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import JSONAPITable from './JSONAPITable';
+import Badge from '../Badge';
+import Button from '../Buttons';
+
+# JSONAPITable
+
+The JSONAPITable component allows you to create tables from JSON API style data.
+
+## \<JSONAPITable /\> component
+
+```js
+import { JSONAPITable } from '@clarityhub/unity-web/lib/components/Table';
+```
+
+## Simple Example
+
+<Playground>
+    <JSONAPITable
+        columns={[
+            ['Name', 'name'],
+            ['Description', 'description'],
+        ]}
+        data={{
+            data: [{
+                name: 'Clarity Hub', 
+                description: 'Wow',
+            }, {
+                name: 'Mantaray AR',
+                description: 'AR',
+            }]
+        }}
+    />
+</Playground>
+
+## Kitchen Sink Example
+
+<Playground>
+    <JSONAPITable
+        columns={[
+            ['Title', 'title'],
+            ['Subject Line', 'subjectLine'],
+            ['Preview Text', 'previewText'],
+            ['Status', (data) => {
+                if (data.mailchimpId) {
+                    return (
+                        <Badge type="success">
+                            Scheduled
+                        </Badge>
+                    );
+                } else {
+                    return (
+                        <Badge>
+                            Unscheduled
+                        </Badge>
+                    );
+                }
+            }],
+        ]}
+        data={{
+    "links": {
+        "self": "http://localhost:4000/campaigns"
+    },
+    "data": [
+        {
+            "title": "2019-03-24-newsletter",
+            "subjectLine": "Clarity Hub Weekly",
+            "previewText": "Clarity Hub Weekly | Weekly Open Source Issues straight to your inbox",
+            "greeting": "",
+            "mailchimpId": null,
+            "mailchimpUrl": null
+        },
+        {
+            "title": "2019-04-23-newsletter",
+            "subjectLine": "Stellar Newsletter by Clarity Hub",
+            "previewText": "Your weekly does of Open Source Issues and programming blog posts",
+            "greeting": "",
+        },
+        {
+            "title": "2019-04-25-newsletter",
+            "subjectLine": "Stellar Newsletter by Clarity Hub",
+            "previewText": "Your weekly does of Open Source Issues and programming blog posts",
+            "greeting": "",
+            "mailchimpId": "297691dd04",
+            "mailchimpUrl": "https://us18.admin.mailchimp.com/campaigns/show/?id=317045"
+        },
+        {
+            "title": "2019-05-02-newsletter",
+            "subjectLine": "Stellar Weekly",
+            "previewText": "Learn about design systems, Facebook's new website, React gotchas, and hot open source issues!",
+            "greeting": "This week, learn about design systems, Facebook's new website, and React gotchas.",
+            "mailchimpId": "5abbd11863",
+            "mailchimpUrl": "https://us18.admin.mailchimp.com/campaigns/show/?id=321993"
+        },
+        {
+            "title": "2019-05-09-newsletter",
+            "subjectLine": "Stellar Weekly",
+            "previewText": "Learn about skeleton loading pages, hooks, and affordances in this issue of Stellar Weekly.",
+            "greeting": "",
+            "mailchimpId": "92823e319e",
+            "mailchimpUrl": "https://us18.admin.mailchimp.com/campaigns/show/?id=327265"
+        },
+        {
+            "title": "2019-05-16-newsletter",
+            "subjectLine": "Stellar Newsletter by Clarity Hub",
+            "previewText": "Your weekly does of Open Source Issues and programming blog posts",
+            "greeting": "",
+            "mailchimpId": "d094958ae6",
+            "mailchimpUrl": "https://us18.admin.mailchimp.com/campaigns/show/?id=331649"
+        },
+        {
+            "title": "2019-05-23-newsletter",
+            "subjectLine": "Stellar Newsletter by Clarity Hub",
+            "previewText": "Your weekly does of Open Source Issues and programming blog posts",
+            "greeting": "School's out! Kick off the summer with some hot open source issues!",
+            "mailchimpId": "656535fb6b",
+            "mailchimpUrl": "https://us18.admin.mailchimp.com/campaigns/show/?id=335601"
+        }
+    ],
+    "meta": {
+        "count": 7
+    }
+}}
+
+        actionColumn={({ row }) => {
+            return (
+                <div style={{ minWidth: '200px' }}>
+                        <Button
+                            size="small"
+                            type="primary"
+                        >
+                            Edit
+                        </Button>
+
+                    <Button size="small" type="danger" text>Delete</Button>
+                </div>
+            );
+        }}
+    />
+</Playground>
+
+## Prop Types
+
+### JSONAPITable
+<PropsTable of={JSONAPITable} />

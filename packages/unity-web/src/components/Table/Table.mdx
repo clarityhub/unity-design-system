@@ -1,0 +1,49 @@
+---
+name: Table
+menu: Components
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { Table, TableHead, TableRow, TableCell, TableBody } from '.';
+
+# Table
+
+The Table components let you display tabular data.
+
+```js
+import { Table, TableHead, TableRow, TableCell, TableBody }  from '@clarityhub/unity-web/lib/components/Table';
+```
+
+## Simple Example
+
+<Playground>
+    <Table>
+        <TableHead>
+            <TableCell>
+                Name
+            </TableCell>
+            <TableCell>
+                Description
+            </TableCell>
+        </TableHead>
+        <TableBody>
+            <TableRow>
+                <TableCell>
+                    Clarity Hub
+                </TableCell>
+                <TableCell>
+                    AI APIs
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    Mantaray AR
+                </TableCell>
+                <TableCell>
+                    Augmented Reality experiences
+                </TableCell>
+            </TableRow>
+        </TableBody>
+    </Table>
+</Playground>
