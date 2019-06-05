@@ -1,6 +1,6 @@
 {
     "name": "@clarityhub/unity-marketing",
-    "version": "1.2.14",
+    "version": "1.2.17",
     "description": "Unity Design System for Clarity Hub marketing sites",
     "main": "lib/index.js",
     "files": [
