@@ -4,12 +4,20 @@ menu: Contexts
 ---
 
 import { Playground, PropsTable } from 'docz';
-import ToastManager from './ToastManager';
+import ToastManager, { ToastManagerProvider } from './ToastManager';
 
 # ToastManager
 
+Wrap your app with the provider:
+
 ```js
 import { ToastManagerProvider } from '@clarityhub/unity-web/lib/contexts/ToastManager';
+```
+
+To use toasts in your app, use the following with `useContext`:
+
+```js
+import ToastManager from '@clarityhub/unity-web/lib/contexts/ToastManager';
 ```
 
 ## ToastManagerProvider Example
@@ -25,7 +33,6 @@ import { ToastManagerProvider } from '@clarityhub/unity-web/lib/contexts/ToastMa
 ```js
 import { useContext } from 'react';
 import ToastManager from '@clarityhub/unity-web/lib/contexts/ToastManager';
-
 
 const CopyToClipboard = ({ children }) => {
 	const { createToast } = useContext(ToastManager);
