@@ -126,6 +126,7 @@ const BorderLabel = styled.div`
       color: transparent;
     }
 `;
+
 const BorderEnd = styled.div`
     border-bottom: 1px solid ${colors.gray.default};
     border-top: 1px solid ${colors.gray.default};
@@ -312,3 +313,4 @@ const StyledInput = ({
 };
 
 export default StyledInput;
+export { BorderEnd };

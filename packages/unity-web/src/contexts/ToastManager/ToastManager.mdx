@@ -1,0 +1,52 @@
+---
+name: ToastManager
+menu: Contexts
+---
+
+import { Playground, PropsTable } from 'docz';
+import ToastManager from './ToastManager';
+
+# ToastManager
+
+```js
+import { ToastManagerProvider } from '@clarityhub/unity-web/lib/contexts/ToastManager';
+```
+
+## ToastManagerProvider Example
+
+<Playground>
+    <ToastManagerProvider>
+        Your content here
+    </ToastManagerProvider>
+</Playground>
+
+## ToastManager Usage Example
+
+```js
+import { useContext } from 'react';
+import ToastManager from '@clarityhub/unity-web/lib/contexts/ToastManager';
+
+
+const CopyToClipboard = ({ children }) => {
+	const { createToast } = useContext(ToastManager);
+
+	const onClick = (data) => {
+		copyToClipboard(data);
+
+		createToast({
+			dedupId: 'copy-to-clipboard',
+			message: 'Copied!',
+			type: 'success',
+		});
+	};
+
+	return children({ onClick });
+};
+
+```
+
+## Prop Types
+
+The following props are available for the ToastManagerProvider component.
+
+<PropsTable of={ToastManagerProvider} />

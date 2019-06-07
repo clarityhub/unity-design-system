@@ -1,0 +1,53 @@
+---
+name: Input Addons
+menu: Forms
+---
+
+import { Playground, PropsTable } from 'docz';
+import InputGroupAppend from './InputGroupAppend';
+
+import Button from '../../components/Buttons';
+import InputGroup from '../../forms/InputGroup';
+import LabelledInput from '../../forms/LabelledInput';
+
+# InputGroupAppend
+
+```js
+import InputGroupAppend from '@clarityhub/unity-web/lib/forms/InputGroupAppend';
+```
+
+## InputGroupAppend Example
+
+<Playground>
+    <InputGroup>
+        <LabelledInput
+            label="Access Key ID"
+            readonly
+            value={"123456"}
+        />
+        <InputGroupAppend>
+            <Button
+                outline
+                type="primary"
+                onClick={() => onClick("123456")}
+            >
+                Button
+            </Button>
+        </InputGroupAppend>
+        <InputGroupAppend>
+            <Button
+                outline
+                type="primary"
+                onClick={() => onClick("123456")}
+            >
+                Button
+            </Button>
+        </InputGroupAppend>
+    </InputGroup>
+</Playground>
+
+## Prop Types
+
+The following props are available for the CopyToClipboard component.
+
+<PropsTable of={InputGroupAppend} />
