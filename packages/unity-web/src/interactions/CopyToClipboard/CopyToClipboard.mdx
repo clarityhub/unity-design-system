@@ -1,0 +1,56 @@
+---
+name: CopyToClipboard
+menu: Interactions
+---
+
+import { Playground, PropsTable } from 'docz';
+import CopyToClipboard from './CopyToClipboard';
+
+import { ToastManagerProvider } from '../../contexts/ToastManager';
+import Button from '../../components/Buttons';
+import InputGroup from '../../forms/InputGroup';
+import LabelledInput from '../../forms/LabelledInput';
+import InputGroupAppend from '../../forms/InputGroupAppend';
+
+# CopyToClipboard
+
+Use the CopyToClipboard interaction to allow users to quickly copy text to their clipboard
+
+```js
+import CopyToClipboard from '@clarityhub/unity-web/lib/interactions/CopyToClipboard';
+```
+
+Make sure you also have `ToastManagerProvider` as a wrapper.
+
+## CopyToClipboard Example
+
+<Playground>
+    <ToastManagerProvider>
+        <CopyToClipboard>
+			{({ onClick }) => (
+				<InputGroup>
+					<LabelledInput
+						label="Access Key ID"
+                        readonly
+						value={"123456"}
+					/>
+					<InputGroupAppend>
+						<Button
+                            outline
+                            type="primary"
+                            onClick={() => onClick("123456")}
+                        >
+                            Copy
+                        </Button>
+					</InputGroupAppend>
+				</InputGroup>
+			)}
+		</CopyToClipboard>
+    </ToastManagerProvider>
+</Playground>
+
+## Prop Types
+
+The following props are available for the CopyToClipboard component.
+
+<PropsTable of={CopyToClipboard} />
