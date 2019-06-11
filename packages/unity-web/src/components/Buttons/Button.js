@@ -52,6 +52,11 @@ const Button = styled.button(
         &:not(:disabled):not(.disabled) {
             cursor: pointer;
         }
+
+        svg {
+            height: 1rem;
+            width: 1rem;
+        }
     `,
 	({ type, outline, text }) => {
 		switch (type) {

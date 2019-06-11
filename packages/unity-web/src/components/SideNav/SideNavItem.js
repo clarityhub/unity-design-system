@@ -21,7 +21,7 @@ const SideNavItem = styled.div`
 
     > a,
     > a:visited {
-        border: 0;
+        border: 0 !important;
         text-decoration: none;
         color: ${colors.darkGray.default};
         display: block;
@@ -29,18 +29,23 @@ const SideNavItem = styled.div`
         padding: 0.6rem 0;
         margin-bottom: 0;
 
-        ${({ selected }) => selected && css`
-            color: ${colors.dark.default};
-            font-weight: bold;
-        `}
-
         &:hover {
-            border: 0;
+            border: 0 !important;
             text-decoration: none;
             color: ${colors.dark.default};
             display: block;
             margin-bottom: 0;
         }
+
+        ${({ selected }) => selected && css`
+            color: ${colors.primary.default};
+            font-weight: bold;
+
+            &:hover {
+                color: ${colors.primary.default};
+            }
+        `}
+
     }
 `;
 
