@@ -1,11 +1,9 @@
 import React from 'react';
 import { ADDITIONAL_PROPERTY_FLAG } from "react-jsonschema-form/lib/utils";
-import Label from '@clarityhub/unity-web/lib/forms/Label';
 import InputGroup from '@clarityhub/unity-web/lib/forms/InputGroup';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
+import LabelledInput from '@clarityhub/unity-web/lib/forms/LabelledInput';
 import { ErrorList } from '../ErrorLists';
-
-import LabelInput from './LabelInput';
 
 function WrapIfAdditional(props) {
 	const {
@@ -20,7 +18,6 @@ function WrapIfAdditional(props) {
 		required,
 		schema,
 	} = props;
-	const keyLabel = `${label} Key`; // i18n ?
 	const additional = schema.hasOwnProperty(ADDITIONAL_PROPERTY_FLAG);
 
 	if (!additional) {
@@ -36,8 +33,7 @@ function WrapIfAdditional(props) {
 			<div className="row">
 				<div className="col-xs-5 form-additional">
 					<div className="form-group">
-						<Label children={keyLabel} required={required} id={`${id}-key`} />
-						<LabelInput
+						<LabelledInput
 							label={label}
 							required={required}
 							id={`${id}-key`}

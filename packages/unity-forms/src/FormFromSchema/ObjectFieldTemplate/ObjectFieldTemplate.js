@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { getUiOptions } from 'react-jsonschema-form/lib/utils';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
 
@@ -22,23 +22,30 @@ function ObjectFieldTemplate(props) {
 
 	const { TitleField, DescriptionField } = props;
 
+	console.log(props.idSchema.$id, props.uiSchema);
+
 	return (
-		<div id={props.idSchema.$id}>
-			{(props.uiSchema['ui:title'] || props.title) && (
-				<TitleField
-					id={`${props.idSchema.$id}__title`}
-					title={props.title || props.uiSchema['ui:title']}
-					required={props.required}
-					formContext={props.formContext}
-				/>
-			)}
-			{props.description && (
-				<DescriptionField
-					id={`${props.idSchema.$id}__description`}
-					description={props.description}
-					formContext={props.formContext}
-				/>
-			)}
+		<div style={{ width: props.idSchema.$id === 'root' ? '100%' : undefined }} id={props.idSchema.$id}>
+
+			{props.idSchema.$id !== 'root' || (props.idSchema.$id === 'root' && !props.uiSchema._hideTitle) ? (
+				<Fragment>
+					{(props.uiSchema['ui:title'] || props.title) && (
+						<TitleField
+							id={`${props.idSchema.$id}__title`}
+							title={props.title || props.uiSchema['ui:title']}
+							required={props.required}
+							formContext={props.formContext}
+						/>
+					)}
+					{props.description && (
+						<DescriptionField
+							id={`${props.idSchema.$id}__description`}
+							description={props.description}
+							formContext={props.formContext}
+						/>
+					)}
+				</Fragment>
+			) : null}
 			{props.properties.map(prop => prop.content)}
 			{canExpand() && (
 				<Button

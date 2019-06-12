@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-jsonschema-form';
 import { bool, func, object, string } from 'prop-types';
 import InputGroup from '@clarityhub/unity-web/lib/forms/InputGroup';
-import Button from '@clarityhub/unity-web/lib/components/Buttons';
+import Button, { ButtonSet } from '@clarityhub/unity-web/lib/components/Buttons';
 
 import { WrappedLabelledInput, WrappedLabelledTextarea } from './Widgets';
 import { Title, Description } from './Fields';
@@ -23,6 +23,8 @@ const fields = {
 
 const FormFromSchema = ({
 	children,
+	hideTitle,
+	additionalButtons = () => null,
 	submitText = 'Submit',
 	submitting,
 	schema,
@@ -33,7 +35,10 @@ const FormFromSchema = ({
 	<Form
 		schema={schema}
 		fields={fields}
-		uiSchema={uiSchema}
+		uiSchema={{
+			_hideTitle: hideTitle,
+			...uiSchema,
+		}}
 		FieldTemplate={FieldTemplate}
 		ErrorList={FormErrorList}
 		ObjectFieldTemplate={ObjectFieldTemplate}
@@ -46,17 +51,22 @@ const FormFromSchema = ({
 			children({ submitting, submitText })
 		) : (
 			<InputGroup>
-				<Button type="primary" buttonType="submit" disabled={submitting} loading={submitting}>
-					{submitText}
-				</Button>
+				<ButtonSet>
+					{additionalButtons()}
+					<Button type="primary" buttonType="submit" disabled={submitting} loading={submitting}>
+						{submitText}
+					</Button>
+				</ButtonSet>
 			</InputGroup>
 		)}
 	</Form>
 );
 
 FormFromSchema.propTypes = {
+	additionalButtons: func,
 	children: func,
 	formData: object,
+	hideTitle: bool,
 	onSubmit: func.isRequired,
 	schema: object,
 	submitText: string,

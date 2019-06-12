@@ -5,6 +5,8 @@ name: FormFromSchema
 
 import { Playground, PropsTable } from 'docz';
 import GoogleMapReact, { GoogleMapMarkers } from 'google-map-react';
+import Button from '@clarityhub/unity-web/lib/components/Buttons';
+
 import FormFromSchema from './index';
 
 # FormFromSchema
@@ -24,6 +26,11 @@ import FormFromSchema from '@clarityhub/unity-forms/lib/FormFromSchema';
 
 <Playground>
     <FormFromSchema
+        additionalButtons={() => {
+            return (
+                <Button>Cancel</Button>
+            )
+        }}
         onSubmit={data => alert(JSON.stringify(data))}
         schema={{
             "definitions": {},
@@ -113,6 +120,7 @@ For more information on how to use the `uiSchema` property, see [react-jsonschem
 
 <Playground>
     <FormFromSchema
+        hideTitle
         onSubmit={data => alert(JSON.stringify(data))}
         formData={{
             name: "Clarity Hub",
