@@ -5,6 +5,7 @@ menu: Scaffolding
 
 import { Playground, PropsTable } from 'docz';
 import Box, { BoxProps } from './Box';
+import Typography from '../../components/Typography';
 
 # Box
 
@@ -22,8 +23,67 @@ import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
 
 ## Examples
 
+### Boxes as rows
+
 <Playground>
-	<Box withGutter style={{ border: '1px solid red' }}>
-		<div style={{ backgroundColor: 'blue', color: 'white' }}>withGutter</div>
+	<Box
+		direction="row"
+		padding="medium"
+		style={{ border: '10px solid blue', width: '100px' }}
+	>
+		<Box margin={{ top: "small" }} padding="small" style={{ background: 'lightgrey' }} />
+		<Box padding="medium" style={{ background: 'gray' }} />
+	</Box>
+</Playground>
+
+### Various Padding and Margins
+
+<Playground>
+	<Box padding="large" style={{ background: 'blue' }}>
+		<div style={{ backgroundColor: 'white' }}>padding</div>
+	</Box>
+
+	<div style={{ background: 'red' }}>
+		<Box margin="large" padding="large" style={{ background: 'blue' }}>
+			<div style={{ backgroundColor: 'white' }}>padding + margin</div>
+		</Box>
+	</div>
+</Playground>
+
+### Pull the box around content
+
+<Playground>
+	<Box padding="large" pull="left" style={{ background: 'blue' }}>
+		<div style={{ backgroundColor: 'white' }}>Pulled</div>
+	</Box>
+
+	<Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
+</Playground>
+
+### Create a simple grid
+
+<Playground>
+	<Box
+		direction="row"
+		padding="medium"
+		gap="small"
+		style={{ border: '10px solid blue' }}
+	>
+		<Box flex padding="medium" style={{ background: 'lightgrey' }} />
+		<Box flex padding="medium" style={{ background: 'lightgrey' }} />
+		<Box flex={3} padding="medium" style={{ background: 'lightgrey' }} />
+	</Box>
+</Playground>
+
+<Playground>
+	<Box
+		direction="column"
+		padding="medium"
+		gap="small"
+		style={{ border: '10px solid blue' }}
+	>
+		<Box flex padding="medium" style={{ background: 'lightgrey' }} />
+		<Box flex padding="medium" style={{ background: 'lightgrey' }} />
+		<Box flex={3} padding="medium" style={{ background: 'lightgrey' }} />
 	</Box>
 </Playground>

@@ -66,7 +66,7 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin }) => (
                         Welcome to Clarity Hub
 					</Typography>
                     
-					<Box withGutterTop>
+					<Box margin={{ top: "small" }}>
 						<Button type="primary" block onClick={onSignUp}>
                             Sign Up
 						</Button>

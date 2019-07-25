@@ -7,17 +7,18 @@ import { bool, oneOf } from 'prop-types';
 import { CardHeaderWrapper } from './CardHeader';
 import CardBody from './CardBody';
 
-const Card = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-    border-radius: ${borders.borderRadius.rem}rem;
-    box-shadow: ${colors.shadow.default};
-
-    ${({ type }) => {
+const Card = styled.div(
+	css`
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        border-radius: ${borders.borderRadius.rem}rem;
+        box-shadow: ${colors.shadow.default};
+    `,
+	({ type }) => {
 		switch (type) {
 		case 'notification':
 			return css`
@@ -33,27 +34,36 @@ const Card = styled.div`
                 background-color: ${colors.white.default};
             `;
 		}
-	}}
+	},
+	css`
+        > :not(${CardHeaderWrapper}) {
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
 
-    > :not(${CardHeaderWrapper}) {
-        h3 {
-            margin: 0;
-            padding: 0;
+            h4 {
+                margin-top: 0.6rem;
+            }
+
+            p:only-child {
+                margin: 0;
+            }
         }
-
-        h4 {
-            margin-top: 0.6rem;
-        }
-
-        p:only-child {
-            margin: 0;
-        }
-    }
-
-    ${({ center }) => center && css`
+    `,
+	({ center }) => center && css`
         text-align: center;
-    `}
-`;
+    `,
+	({ hoverable }) => hoverable && css`
+        transition: box-shadow 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 0 1px rgba(50,50,93,.05),
+                0 7px 14px 0 rgba(50,50,93,.1),
+                0 3px 6px 0 rgba(0,0,0,.07)
+        }
+    `,
+);
 
 /**
  * Hack for docz and react-docgen
