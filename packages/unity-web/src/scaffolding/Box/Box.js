@@ -3,25 +3,11 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { any, oneOf, oneOfType, shape, string, func, node } from 'prop-types';
 
-const sizeMapper = (size) => {
-	switch (size) {
-	case 'xsmall':
-		return 0.5;
-	case 'small':
-		return 1;
-	case 'medium':
-		return 2;
-	case 'large':
-		return 3;
-	case 'xlarge':
-		return 4;
-	default:
-		return size;
-	}
-};
+import colors, { types } from '@clarityhub/unity-core/lib/colors';
+import spacing from '@clarityhub/unity-core/lib/spacing';
 
 const remMapper = (size) => {
-	return `${sizeMapper(size)}rem`;
+	return `${spacing[size]}rem`;
 };
 
 const rectMapper = (top, right, bottom, left) => {
@@ -32,17 +18,20 @@ const StyledBox = styled.div(
 	css`
 		display: flex;
 	`,
+	({ align }) => align && css`
+		text-align: ${align};
+	`,
 	({ gap, direction }) => {
 		if (gap) {
 			if (direction === 'column') {
 				return css`
-					& > *:not(:first-child) {
+					& > *:not(:first-of-type) {
 						margin-top: ${remMapper(gap)};
 					}
 				`;
 			} else {
 				return css`
-					& > *:not(:first-child) {
+					& > *:not(:first-of-type) {
 						margin-left: ${remMapper(gap)};
 					}
 				`;
@@ -69,7 +58,17 @@ const StyledBox = styled.div(
 		return margin && css`
 			margin: ${rectMapper(margin.top || def, margin.right || def, margin.bottom || def, margin.left || def)};
 		`;
-	}
+	},
+	({ background }) => background && colors[background] && css`
+		background: ${colors[background].default};
+	`,
+	({ color }) => color && colors[color] && css`
+		color: ${colors[color].default};
+	`,
+	({ type }) => type && types[type] && css`
+		background: ${types[type].background.default};
+		color: ${types[type].color.default};
+	`,
 );
 
 const Box = ({
@@ -98,12 +97,21 @@ const Box = ({
 	);
 };
 
+// TODO refactor into shared proptypes
 const sizesProp = oneOf([
 	'xsmall',
 	'small',
 	'large',
 	'xlarge',
 	'medium',
+]);
+
+// TODO refactor into shared proptypes
+const typesProp = oneOf([
+	'primary',
+	'danger',
+	'success',
+	'brand',
 ]);
 
 const genericSizesProp = oneOfType([
@@ -122,13 +130,17 @@ const genericSizesProp = oneOfType([
 const BoxProps = () => <div />;
 BoxProps.propTypes = {
 	a11yTitle: string,
+	align: oneOf(['left', 'right', 'center']),
 	as: oneOfType([string, func, node]),
+	background: string,
+	color: string,
 	direction: oneOf(['column', 'row']),
 	flex: any,
 	gap: sizesProp,
 	margin: genericSizesProp,
 	padding: genericSizesProp,
 	pull: oneOf(['left', 'right']),
+	type: typesProp,
 };
 
 Box.propTypes = BoxProps.propTypes;

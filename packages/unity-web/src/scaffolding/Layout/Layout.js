@@ -1,9 +1,10 @@
+import React from 'react';
 import styled from '@emotion/styled';
-import colors from '@clarityhub/unity-core/lib/colors';
 import { node } from 'prop-types';
 
-const Layout = styled.div`
-    background-color: ${colors.muted.default};
+import Box from '../Box';
+
+const StyledLayout = styled(Box)`
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -12,6 +13,10 @@ const Layout = styled.div`
 
     overflow: auto;
 `;
+
+const Layout = ({ as = 'div', background="muted", ...props }) => (
+	<StyledLayout as={as} background={background} {...props} />
+);
 
 /**
  * Hack for docz and react-docgen

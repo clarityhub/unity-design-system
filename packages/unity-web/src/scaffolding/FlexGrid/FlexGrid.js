@@ -1,9 +1,11 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { bool } from 'prop-types';
 
-const FlexGrid = styled.div`
-    display: flex;
+import Box from '../Box';
+
+const StyledFlexGrid = styled(Box)`
     height: 100%;
     position: relative;
     width: 100%;
@@ -12,6 +14,10 @@ const FlexGrid = styled.div`
         align-items: center;
     `}
 `;
+
+const FlexGrid = ({ direction = "row", ...props }) => (
+	<StyledFlexGrid direction={direction} {...props} />
+);
 
 /**
  * Hack for docz and react-docgen

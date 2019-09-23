@@ -1,4 +1,6 @@
-export default {
+
+
+const colors = {
 	primary: {
 		default: '#566ad2',
 	},
@@ -51,3 +53,24 @@ export default {
 		default: '0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02)',
 	},
 };
+
+export const types = {
+	primary: {
+		background: colors.primary,
+		color: colors.white,
+	},
+	danger: {
+		background: colors.danger,
+		color: colors.white,
+	},
+	success: {
+		background: colors.success,
+		color: colors.white,
+	},
+	brand: {
+		background: colors.brand,
+		color: colors.white,
+	},
+};
+
+export default colors;

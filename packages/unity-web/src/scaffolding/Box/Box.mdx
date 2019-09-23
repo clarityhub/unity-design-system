@@ -17,11 +17,23 @@ Box is a primitive that you can use to space out elements on a page.
 import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
 ```
 
-## Prop Types
-
-<PropsTable of={BoxProps} />
-
 ## Examples
+
+### Colored Boxes
+
+Boxes can be colors using `background`, `color`, or `type`:
+
+<Playground>
+	<Box align="center" background="primary">
+		primary
+	</Box>
+	<Box align="center" type="danger">
+		danger (type)
+	</Box>
+	<Box align="center" color="danger">
+		danger (color)
+	</Box>
+</Playground>
 
 ### Boxes as rows
 
@@ -87,3 +99,7 @@ import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
 		<Box flex={3} padding="medium" style={{ background: 'lightgrey' }} />
 	</Box>
 </Playground>
+
+## Prop Types
+
+<PropsTable of={BoxProps} />

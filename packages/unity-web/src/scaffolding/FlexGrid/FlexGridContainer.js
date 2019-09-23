@@ -1,10 +1,13 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 
 import breakpoints from '../../theme/breakpoints';
+import Box from '../Box';
 import { FLEX_MOBILE_GUTTER } from './config';
 
-const FlexGridContainer = styled.div`
+const FlexGridContainer = styled(Box)`
     box-sizing: border-box;
     margin: 0 auto;
     width: 100%;
@@ -12,7 +15,7 @@ const FlexGridContainer = styled.div`
     ${({ size }) => {
 		switch(size) {
 		case 'xsmall':
-			return `
+			return css`
                 max-width: ${breakpoints.xsmallMaxWidth}px;
 
                 @media (max-width: ${breakpoints.xsmallMaxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
@@ -21,7 +24,7 @@ const FlexGridContainer = styled.div`
                 }
             `;
 		case 'small':
-			return `
+			return css`
                 max-width: ${breakpoints.smallMaxWidth}px;
 
                 @media (max-width: ${breakpoints.smallMaxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
@@ -30,7 +33,7 @@ const FlexGridContainer = styled.div`
                 }
             `;
 		default:
-			return `
+			return css`
                 max-width: ${breakpoints.maxWidth}px;
 
                 @media (max-width: ${breakpoints.maxWidth + (FLEX_MOBILE_GUTTER * 16)}px) {
