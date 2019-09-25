@@ -7,7 +7,6 @@ import colors from '@clarityhub/unity-core/lib/colors';
 
 const ProgressWrapper = styled.div`
     position: relative;
-    padding-top: 1.5rem;
 `;
 
 const ProgressInfo = styled.div`
