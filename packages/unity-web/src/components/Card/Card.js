@@ -16,7 +16,11 @@ const Card = styled.div(
         word-wrap: break-word;
         background-clip: border-box;
         border-radius: ${borders.borderRadius.rem}rem;
+    `,
+	({ flat }) => !flat ? css`
         box-shadow: ${colors.shadow.default};
+    ` : css`
+        box-shadow: 0 0 0 1px rgba(0,0,0,0);
     `,
 	({ type }) => {
 		switch (type) {
@@ -28,6 +32,10 @@ const Card = styled.div(
                     padding-top: 2rem;
                     padding-bottom: 2rem;
                 }
+            `;
+		case 'highlight':
+			return css`
+                background: ${colors.highlight.default};
             `;
 		default:
 			return css`
@@ -58,7 +66,7 @@ const Card = styled.div(
         transition: box-shadow 0.2s ease-in-out;
 
         &:hover {
-            box-shadow: 0 0 0 1px rgba(50,50,93,.05),
+            box-shadow: 0 0 0 1px rgba(50,50,93,.1),
                 0 7px 14px 0 rgba(50,50,93,.1),
                 0 3px 6px 0 rgba(0,0,0,.07)
         }
@@ -71,7 +79,14 @@ const Card = styled.div(
 const CardPropTypes = () => <div />;
 CardPropTypes.propTypes = {
 	center: bool,
-	type: oneOf(['notification']),
+	flat: bool,
+	hoverable: bool,
+	type: oneOf(['notification', 'highlight']),
+};
+CardPropTypes.defaultProps = {
+	center: false,
+	hoverable: false,
+	flat: false,
 };
 Card.propTypes = CardPropTypes.propTypes;
 export { CardPropTypes };

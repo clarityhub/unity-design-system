@@ -64,11 +64,11 @@ const ProgressBar = styled.div`
 
 const Progress = ({ children, progress = 0, type = 'default' }) => (
 	<ProgressWrapper>
-		<ProgressInfo class="progress-info">
-			<div class="progress-label">
+		<ProgressInfo>
+			<div>
 				{children}
 			</div>
-			<div class="progress-percentage">
+			<div>
 				<span>{progress}%</span>
 			</div>
 		</ProgressInfo>

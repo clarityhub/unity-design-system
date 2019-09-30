@@ -40,7 +40,7 @@ const Button = styled.button(
         &:focus,
         &.focused {
             outline: 0;
-            box-shadow: 0 0 0 .2rem ${colors.highlight.default};
+            box-shadow: 0 0 0 .2rem ${colors.focused.default};
         }
 
         &:disabled,

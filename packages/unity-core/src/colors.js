@@ -10,8 +10,11 @@ const colors = {
 	success: {
 		default: '#46C161',
 	},
-	highlight: {
+	focused: {
 		default: 'rgba(0, 123, 255, .25)',
+	},
+	highlight: {
+		default: '#fff0cc',
 	},
 	notification: {
 		default: '#FF6A5C',
