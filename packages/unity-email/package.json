@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-email",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@clarityhub/unity-core": "^1.4.3",
+    "@clarityhub/unity-core": "^1.5.0",
     "lodash.omit": "^4.5.0",
     "mjml": "^4.4.0-beta.1",
     "mjml-react": "^1.0.51",
