@@ -16,7 +16,6 @@ const BreadcrumbList = styled.ol`
     display: flex;
     flex-wrap: wrap;
     padding: .75rem 1rem;
-    margin-bottom: 1rem;
     list-style: none;
 `;
 
