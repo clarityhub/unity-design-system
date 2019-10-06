@@ -17,6 +17,43 @@ import Breadcrumbs from '@clarityhub/unity-web/lib/components/Breadcrumbs';
 ## Example
 
 <Playground>
+    <div style={{ width: '400px' }}>
+        <Breadcrumbs
+            crumbs={[
+                {
+                    title: 'Home'
+                }
+            ]}
+        />
+        <Breadcrumbs
+            crumbs={[
+                {
+                    title: 'Home',
+                    path: '/',
+                },
+                {
+                    title: 'Admin',
+                },
+            ]}
+        />
+        <Breadcrumbs
+            crumbs={[
+                {
+                    title: 'Home',
+                    path: '/',
+                },
+                {
+                    title: 'Admin',
+                    path: '/admin',
+                },
+                {
+                    title: 'Long interview name – October 3rd, 2019',
+                    // no path
+                }
+            ]}
+        />
+    </div>
+
     <Breadcrumbs
         crumbs={[
             {

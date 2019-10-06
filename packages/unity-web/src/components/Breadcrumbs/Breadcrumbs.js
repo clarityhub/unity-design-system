@@ -10,16 +10,28 @@ const BreadcrumbsWrapper = styled.nav`
     ${variants.text.string}
 
     color: ${colors.black.default};
+	max-width: 100%;
 `;
 
 const BreadcrumbList = styled.ol`
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: .75rem 1rem;
     list-style: none;
+	white-space: nowrap;
 `;
 
 const Breadcrumb = styled.li`
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	min-width: 3rem;
+
+	&:first-child {
+		overflow: inherit;
+	}
+
     & + &:before {
         display: inline-block;
         padding-right: .5rem;
