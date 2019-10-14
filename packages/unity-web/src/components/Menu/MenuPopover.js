@@ -49,7 +49,8 @@ const Arrow = styled.div`
 
 class MenuPopover extends Component {
     static propTypes = {
-    	items: arrayOf(node).isRequired,
+    	content: node,
+    	items: arrayOf(node),
     	target: node,
     }
 
@@ -109,7 +110,7 @@ class MenuPopover extends Component {
 
     render() {
     	const { position, arrow } = this.state;
-    	const { items, innerRef } = this.props;
+    	const { items, content, innerRef } = this.props;
 
     	return (
     		<div
@@ -125,13 +126,15 @@ class MenuPopover extends Component {
     					left: `${arrow.left || 0}px`,
     				}}
     			/>
-    			<ul>
-    				{items.map((item, i) => (
-    					<li key={i}>
-    						{item}
-    					</li>
-    				))}
-    			</ul>
+    			{content ? content : (
+    				<ul>
+    					{items.map((item, i) => (
+    						<li key={i}>
+    							{item}
+    						</li>
+    					))}
+    				</ul>
+    			)}
     		</div>
     	);
     }

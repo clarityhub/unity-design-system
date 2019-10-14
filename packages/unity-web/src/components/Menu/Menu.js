@@ -28,7 +28,8 @@ const MenuTarget = styled.div`
 export default class Menu extends Component {
     static propTypes = {
     	children: func.isRequired,
-    	items: arrayOf(node).isRequired,
+    	content: node,
+    	items: arrayOf(node),
     }
 
     state = {
@@ -98,7 +99,7 @@ export default class Menu extends Component {
     }
 
     render() {
-    	const { children, items } = this.props;
+    	const { children, content, items } = this.props;
     	const { open, position } = this.state;
 
     	return (
@@ -107,6 +108,7 @@ export default class Menu extends Component {
     				<MenuPortal>
     					<MenuPopover
     						ref={ref => this.menu = ref}
+    						content={content}
     						items={items}
     						position={position}
     						target={this.target}

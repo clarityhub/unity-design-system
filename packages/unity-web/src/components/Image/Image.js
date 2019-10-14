@@ -2,6 +2,7 @@ import React from 'react';
 import { bool, object, string } from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import Img from 'react-image';
 
 const ImageWrapper = styled.div`
     img {
@@ -20,9 +21,17 @@ const ImageWrapper = styled.div`
     `}
 `;
 
-const Image = ({ alt, withSpacing, center, wrapperProps = {}, ...rest }) => (
+const Image = ({ alt, withSpacing, center, wrapperProps = {}, src, fallbackUrl, ...rest }) => (
 	<ImageWrapper {...wrapperProps} withSpacing={withSpacing} center={center}>
-		<img alt={alt} {...rest} />
+		<Img
+			src={[
+				src,
+				fallbackUrl,
+			].filter(Boolean)}
+			loader={fallbackUrl && <img alt={alt} src={fallbackUrl} />}
+			alt={alt}
+			{...rest}
+		/>
 	</ImageWrapper>
 );
 
@@ -33,6 +42,7 @@ const ImagePropTypes = () => <div />;
 ImagePropTypes.propTypes = {
 	alt: string.isRequired,
 	center: bool,
+	fallbackUrl: string,
 	src: string.isRequired,
 	withSpacing: bool,
 	wrapperProps: object,

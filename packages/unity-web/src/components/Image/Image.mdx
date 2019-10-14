@@ -23,6 +23,17 @@ import Image from '@clarityhub/unity-web/lib/components/Image';
     <Image style={{ width: '20rem' }} center withSpacing src="/public/get-started.png" alt="Get Started" />
 </Playground>
 
+
+Image fails to load:
+
+<Playground>
+    <Image
+        src="/public/invalid-url.png"
+        fallbackUrl="/public/get-started.png"
+        alt="Get Started"
+    />
+</Playground>
+
 ## Prop Types
 
 The following prop types are available for the Card component.

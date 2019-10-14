@@ -55,3 +55,19 @@ All `Button` props can also be passed to the `MenuItem`.
         )}
     </Menu>
 </Playground>
+
+## Custom Content
+
+<Playground>
+    <Menu
+        content={
+            <div>
+                <Button>Test</Button>
+            </div>
+        }
+    >
+        {({ open }) => (
+            <Button onClick={open}>Open Menu</Button>
+        )}
+    </Menu>
+</Playground>
