@@ -54,7 +54,7 @@ export default class Menu extends Component {
     		if (this.state.open) {
     			const target = e.target;
     			// check if target is within (or is) the menu
-    			const clickOutsideMenu = this.menu !== target && !this.menu.contains(target);
+    			const clickOutsideMenu = this.menu !== target && !this.menu.contains(target) && document.body.contains(target);
     			if (clickOutsideMenu) {
     				this.close();
     			}
