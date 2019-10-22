@@ -5,11 +5,18 @@ import { variants } from '@clarityhub/unity-core/lib/typography';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { lighten, desaturate } from '@clarityhub/unity-core/lib/utilities/color';
+import {
+	oneOfType, node,
+	func,
+	any,
+	number,
+	string } from 'prop-types';
 
 const labelPadding = 0.3;
 const inputHeight = 2.670;
 const paddingLeft = 0.79;
 const paddingTop = 0.65;
+const iconWidth = 2;
 
 const baseInput = ({ error }) => css`
     box-sizing: border-box;
@@ -64,6 +71,10 @@ const Input = styled.input`
     border-radius: ${borders.borderRadius.rem}rem;
 
     ${({ error }) => baseInput({ error })}
+
+    ${({ prefixIcon }) => prefixIcon && css`
+        padding-left: ${iconWidth + 0.5}rem;
+    `}
 
     ${({ variant }) => {
 		switch (variant) {
@@ -169,7 +180,8 @@ const BorderWrapper = styled.div`
         pointer-events: none;
         text-align: initial;
         padding: 0 ${labelPadding}rem;
-        top: ${paddingTop}rem;
+        padding-left: ${({ prefixIcon }) => prefixIcon ? iconWidth : labelPadding}rem;
+        top: ${paddingTop + 0.1}rem;
         left: ${paddingLeft}rem;
     }
 
@@ -208,6 +220,7 @@ const BorderWrapper = styled.div`
             color: ${colors.darkGray.default};
             font-size: 0.8rem;
             top: -0.5rem;
+            padding-left: ${labelPadding}rem;
         }
 
         & ~ * ${FakeLabel} {
@@ -218,7 +231,7 @@ const BorderWrapper = styled.div`
     ${({ variant }) => {
 		switch (variant) {
 		case 'white':
-			return `
+			return css`
                     ${BorderStart},
                     ${BorderLabel},
                     ${BorderEnd} {
@@ -254,6 +267,10 @@ const FloatingInput = styled.input`
 
     ${({ error }) => baseInput({ error })}
 
+    ${({ prefixIcon }) => prefixIcon && css`
+        padding-left: ${iconWidth}rem;
+    `}
+
     ${({ variant }) => {
 		switch (variant) {
 		case 'white':
@@ -283,6 +300,18 @@ const FloatingInput = styled.input`
 	}}
 `;
 
+const InputWrapper = styled.div`
+    position: relative;
+`;
+
+const PrefixIcon = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: ${paddingTop}rem;
+    margin-left: ${paddingTop}rem;
+`;
+
 const StyledInput = ({
 	children, 
 	error = false,
@@ -290,19 +319,42 @@ const StyledInput = ({
 	targetRef,
 	label,
 	inputType = 'input',
+	prefixIcon,
 	variant,
 	...rest
 }) => {
 	if (!children) {
-		return <Input variant={variant} error={error} {...rest} ref={targetRef} />;
+		return (
+			<InputWrapper>
+				{prefixIcon && (
+					<PrefixIcon>
+						{prefixIcon}
+					</PrefixIcon>
+
+				)}
+				<Input
+					prefixIcon={Boolean(prefixIcon)}
+					variant={variant}
+					error={error}
+					{...rest}
+					ref={targetRef}
+				/>
+			</InputWrapper>
+		);
 	}
 
 	return (
 		<div style={{ height: `${height || `${inputHeight}rem`}`}}>
-			<BorderWrapper error={error} variant={variant}>
-				<FloatingInput variant={variant} inputType={inputType} {...rest} ref={targetRef} />
+			<BorderWrapper error={error} variant={variant} prefixIcon={Boolean(prefixIcon)}>
+				<FloatingInput prefixIcon={prefixIcon} variant={variant} inputType={inputType} {...rest} ref={targetRef} />
 				<BorderStart />
 				<BorderLabel variant={variant}>
+					{prefixIcon && (
+						<PrefixIcon>
+							{prefixIcon}
+						</PrefixIcon>
+
+					)}
 					<FakeLabel>{label}</FakeLabel>
 					{children}
 				</BorderLabel>
@@ -310,6 +362,17 @@ const StyledInput = ({
 			</BorderWrapper>
 		</div>
 	);
+};
+
+StyledInput.propTypes = {
+	children: oneOfType([node, func]),
+	error: any,
+	height: number,
+	inputType: string,
+	label: string,
+	prefixIcon: node,
+	targetRef: func,
+	variant: string,
 };
 
 export default StyledInput;

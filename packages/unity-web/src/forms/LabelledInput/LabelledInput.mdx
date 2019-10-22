@@ -5,6 +5,7 @@ menu: Forms
 
 import { Component } from 'react';
 import { Playground, PropsTable } from 'docz';
+import SearchIcon from '@material-ui/icons/Search';
 import LabelledInput from './LabelledInput';
 import InputGroup from '../InputGroup';
 import Input from '../Input';
@@ -78,6 +79,7 @@ not have values or listeners.
                     <div>
                         <InputGroup>
                             <LabelledInput
+                                prefixIcon={<SearchIcon />}
                                 label="Name"
                                 onChange={e => this.setState({ value: e.target.value })}
                                 value={this.state.value}

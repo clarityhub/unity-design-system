@@ -4,6 +4,7 @@ menu: Forms
 ---
 
 import { Playground, PropsTable } from 'docz';
+import SearchIcon from '@material-ui/icons/Search';
 import Input from './Input';
 import Box from '../../scaffolding/Box';
 
@@ -32,6 +33,33 @@ import Input from '@clarityhub/unity-web/lib/forms/Input';
     <br/>
     <br/>
     <Input placeholder="Hello world placeholder" disabled />
+</Playground>
+
+## With Icon
+
+<Playground>
+    <Input
+        prefixIcon={<SearchIcon />}
+        value="Hello world"
+    />
+    <br/>
+    <br/>
+    <Input
+        prefixIcon={<SearchIcon />}
+        placeholder="Hello world placeholder"
+    />
+    <br/>
+    <br/>
+    <Input
+        prefixIcon={<SearchIcon />}
+        placeholder="Hello world placeholder" error
+    />
+    <br/>
+    <br/>
+    <Input
+        prefixIcon={<SearchIcon />}
+        placeholder="Hello world placeholder" disabled
+    />
 </Playground>
 
 ## White Variant
