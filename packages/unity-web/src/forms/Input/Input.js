@@ -24,7 +24,7 @@ const baseInput = ({ error }) => css`
     font-size: 1rem;
     line-height: 1.2rem;
     margin-bottom: 0;
-    min-width: 250px;
+    /* min-width: 250px; */
     min-height: ${inputHeight}rem;
     padding: 0.625rem 1rem;
     transition: all 0.2s ease-in;
