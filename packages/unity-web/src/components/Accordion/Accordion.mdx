@@ -1,0 +1,157 @@
+---
+name: Accordion
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Accordion from './Accordion';
+import AccordionItem from './AccordionItem';
+import AccordionSummary from './AccordionSummary';
+import AccordionDetails from './AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Typography from '../Typography';
+
+# Accordion
+
+Use accordions to show detailed information to a user.
+
+Don't nest accordions.
+
+```js
+import { Accordion, AccordionItem, AccordionSummary, AccordionDetails } from '@clarityhub/unity-web/lib/components/Accordion';
+```
+
+## Accordions
+
+<Playground>
+    <Accordion>
+        <AccordionItem>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+    </Accordion>
+</Playground>
+
+## Disabled and Multi
+
+<Playground>
+    <Accordion multi>
+        <AccordionItem>
+            <AccordionSummary
+                disabled
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+            >
+                <Typography inline noMargin noPadding type="text" style={{ marginRight: '30px' }}><b>General settings</b></Typography>
+                <Typography inline noMargin noPadding type="text">I am an expansion panel</Typography>
+            </AccordionSummary>
+
+            <AccordionDetails>
+                <Typography>
+                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
+                    maximus est, id dignissim quam.
+                </Typography>
+            </AccordionDetails>
+        </AccordionItem>
+    </Accordion>
+</Playground>
+
+
+## Prop Types
+
+### Accordion
+
+The following props are available for the Accordion component.
+
+The `<Accordion />` component will pass down `expanded`, `index`, `onExpand`, `onClose` are passed down
+to `AccordionItem`, `AccordionSummary`, and `AccordionDetails`. 
+
+<PropsTable of={Accordion} />
+
+### Accordion Item
+
+The following props are available for the AccordionItem component:
+
+<PropsTable of={AccordionItem} />
+
+### Accordion Summary
+
+The following props are available for the AccordionSummary component:
+
+<PropsTable of={AccordionSummary} />
+
+### Accordion Details
+
+The following props are available for the AccordionDetails component:
+
+<PropsTable of={AccordionDetails} />
