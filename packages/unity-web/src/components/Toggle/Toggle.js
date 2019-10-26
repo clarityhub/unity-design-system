@@ -130,15 +130,15 @@ const Toggle = ({
 
 Toggle.propTypes = {
 	center: bool,
-    checked: bool,
-    id: string,
-    labelLeft: string,
-    labelRight: string,
+	checked: bool,
+	id: string,
+	labelLeft: string,
+	labelRight: string,
 
-    onClick: func,
-    onTouchEnd: func,
-    onTouchMove: func,
-    onTouchStart: func,
+	onClick: func,
+	onTouchEnd: func,
+	onTouchMove: func,
+	onTouchStart: func,
 };
 
 export default Toggle;
