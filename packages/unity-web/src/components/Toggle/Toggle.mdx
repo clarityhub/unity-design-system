@@ -1,0 +1,38 @@
+---
+name: Toggle
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Toggle from './Toggle';
+
+# Toggle
+
+## \<Toggle /\> component
+
+```js
+import Toggle from '@clarityhub/unity-web/lib/components/Toggle';
+```
+
+## Examples
+
+<Playground>
+   <Toggle
+        labelLeft={<b>Receive Newsletters</b>}
+        checked={false}
+        onClick={() => console.log('clicked')}
+        center
+    />
+   <Toggle
+        labelLeft={<b>Monthly</b>}
+        labelRight={<b>Yearly</b>}
+        checked={true}
+        onClick={() => console.log('clicked')}
+        center
+    />
+</Playground>
+
+
+## Prop Types
+
+<PropsTable of={Toggle} />
