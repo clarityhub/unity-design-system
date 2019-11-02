@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { func, node, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
+import deepEqual from 'deep-equal';
 
 import { offset } from '../../utilities/position';
 import MenuPopover from './MenuPopover';
@@ -14,6 +15,7 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuTarget = styled.div`
+	display: inline-block;
     position: relative;
 `;
 
@@ -35,18 +37,31 @@ export default class Menu extends Component {
     state = {
     	open: false,
     }
-
+	
+	
     componentDidMount() {
     	this._onClickOutside = this.onClickOutside.bind(this);
     	this._onKeyUp = this.onKeyUp.bind(this);
-
+		
     	document.addEventListener('click', this._onClickOutside);
     	document.addEventListener('keyup', this._onKeyUp);
     }
-
+	
     componentWillUnmount() {
     	document.removeEventListener('click', this._onClickOutside);
     	document.removeEventListener('keyup', this._onKeyUp);
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+    	if (this.state.open && this.target) {
+    		const position = offset(this.target);
+
+    		if (!deepEqual(position, prevState.position)) {
+    			this.setState({
+    				position,
+    			});
+    		}
+    	}
     }
 
     onClickOutside = (e) => {

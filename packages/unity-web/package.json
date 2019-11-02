@@ -19,6 +19,7 @@
   "dependencies": {
     "@clarityhub/unity-core": "^1.8.0",
     "color": "^3.1.0",
+    "deep-equal": "^1.1.0",
     "normalize.css": "^8.0.1",
     "react-image": "^2.0.0",
     "webfontloader": "^1.6.28"
