@@ -7,6 +7,7 @@ import { arrayOf, node } from 'prop-types';
 import { variants } from '@clarityhub/unity-core/lib/typography';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
+import deepEqual from 'deep-equal';
 
 import { offset, noOverflow } from '../../utilities/position';
 
@@ -68,7 +69,7 @@ class MenuPopover extends Component {
     }
 
     componentWillUpdate(nextProps) {
-    	if (nextProps.left !== this.props.left ||
+    	if (!deepEqual(nextProps.position, this.props.position) ||
             nextProps.target !== this.props.target) {
             
     		const position = this.getPosition(nextProps, this.popover);
