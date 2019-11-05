@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { Component } from 'react';
-import { func, node, arrayOf } from 'prop-types';
+import { func, node, arrayOf, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 import deepEqual from 'deep-equal';
@@ -15,7 +15,7 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuTarget = styled.div`
-	display: inline-block;
+	display: ${({ inline }) => inline ? 'inline-block' : 'block' };
     position: relative;
 `;
 
@@ -31,6 +31,7 @@ export default class Menu extends Component {
     static propTypes = {
     	children: func.isRequired,
     	content: node,
+    	inline: bool,
     	items: arrayOf(node),
     }
 
@@ -114,7 +115,7 @@ export default class Menu extends Component {
     }
 
     render() {
-    	const { children, content, items } = this.props;
+    	const { children, content, inline, items } = this.props;
     	const { open, position } = this.state;
 
     	return (
@@ -131,7 +132,7 @@ export default class Menu extends Component {
     				</MenuPortal>
     			)}
 
-    			<MenuTarget ref={ref => this.target = ref}>
+    			<MenuTarget ref={ref => this.target = ref} inline={inline}>
     				{children({
     					open: this.open,
     				})}
