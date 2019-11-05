@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { arrayOf, node } from 'prop-types';
+import { arrayOf, any, node } from 'prop-types';
 import { variants } from '@clarityhub/unity-core/lib/typography';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -52,7 +52,7 @@ class MenuPopover extends Component {
     static propTypes = {
     	content: node,
     	items: arrayOf(node),
-    	target: node,
+    	target: any,
     }
 
     state = {

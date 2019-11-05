@@ -31,6 +31,11 @@ export const noOverflow = (position, el) => {
 	const rect = el.getBoundingClientRect();
 	const newPosition = { ...position };
 
+	if (position.left < 0) {
+		// snap to the left
+		newPosition.left = 0;
+	}
+
 	if (position.left + rect.width > w) {
 		// snap to right
 		newPosition.left = position.right - rect.width;
