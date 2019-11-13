@@ -33,12 +33,12 @@ export default class Menu extends Component {
     	content: node,
     	inline: bool,
     	items: arrayOf(node),
+    	onClose: func,
     }
 
     state = {
     	open: false,
     }
-	
 	
     componentDidMount() {
     	this._onClickOutside = this.onClickOutside.bind(this);
@@ -98,8 +98,8 @@ export default class Menu extends Component {
     		position = offset(this.target);
     	}
 
-    	this.setState(({ open }) => ({
-    		open: !open,
+    	this.setState(() => ({
+    		open: true,
     		position,
     	}), () => {
     		setTimeout(() => {
@@ -111,6 +111,10 @@ export default class Menu extends Component {
     close = () => {
     	this.setState({
     		open: false,
+    	}, () => {
+    		if (this.props.onClose) {
+    			this.props.onClose();
+    		}
     	});
     }
 
