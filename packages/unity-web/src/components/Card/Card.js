@@ -37,6 +37,11 @@ const Card = styled.div(
 			return css`
                 background: ${colors.highlight.default};
             `;
+		case 'callout':
+			return css`
+                background: #F9FAFC;
+                border: 1px solid ${colors.primary.default};
+            `;
 		default:
 			return css`
                 background-color: ${colors.white.default};
@@ -81,7 +86,7 @@ CardPropTypes.propTypes = {
 	center: bool,
 	flat: bool,
 	hoverable: bool,
-	type: oneOf(['notification', 'highlight']),
+	type: oneOf(['notification', 'highlight', 'callout']),
 };
 CardPropTypes.defaultProps = {
 	center: false,
