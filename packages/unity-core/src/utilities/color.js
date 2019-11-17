@@ -24,6 +24,10 @@ export const lighten = (color, percentage = 0.1) => {
 	return perform('lighten', color, percentage);
 };
 
+export const saturate = (color, percentage = 0.1) => {
+	return perform('saturate', color, percentage);
+};
+
 export const desaturate = (color, percentage = 0.1) => {
 	return perform('desaturate', color, percentage);
 };
