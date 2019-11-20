@@ -1,0 +1,74 @@
+---
+name: Tooltip
+menu: Components
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Tooltip from './';
+import { TooltipPropTypes } from './Tooltip';
+import Button from '../Buttons';
+
+# Tooltip
+
+
+## \<Tooltip /\> component
+
+```js
+import { Tooltip } from '@clarityhub/unity-web/lib/components/Tooltip';
+```
+
+## Prop Types
+
+### Tooltip Props
+
+<PropsTable of={TooltipPropTypes} />
+
+## Examples
+
+<Playground>
+    <Tooltip
+       content={"Hello"}
+       inline
+    >
+        <Button>Uncontrolled</Button>
+    </Tooltip>
+
+    <br />
+    <br />
+
+    <Tooltip
+       content={"Hello"}
+       inline
+    >
+        {({ open, close }) => (
+            <Button onMouseOver={open} onMouseOut={close}>Controlled</Button>
+        )}
+    </Tooltip>
+</Playground>
+
+## Placement
+
+<Playground>
+    <Tooltip
+       content={"Hello"}
+       inline
+       placement="top"
+    >
+        <Button>Top</Button>
+    </Tooltip>
+    <Tooltip
+       content={"Hello"}
+       inline
+       placement="left"
+    >
+        <Button>Left</Button>
+    </Tooltip>
+    <Tooltip
+       content={"Hello"}
+       inline
+       placement="right"
+    >
+        <Button>Right</Button>
+    </Tooltip>
+</Playground>

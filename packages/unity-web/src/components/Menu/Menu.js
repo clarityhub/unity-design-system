@@ -1,13 +1,14 @@
 /** @jsx jsx */
 
-import { Component } from 'react';
+import {  Component } from 'react';
 import { func, node, arrayOf, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 import deepEqual from 'deep-equal';
 
+import Fade from '../../animations/Fade';
 import { offset } from '../../utilities/position';
-import MenuPopover from './MenuPopover';
+import MenuPopoverDefault from './MenuPopover';
 import MenuPortal from './MenuPortal';
 
 const MenuWrapper = styled.div`
@@ -18,6 +19,7 @@ const MenuTarget = styled.div`
 	display: ${({ inline }) => inline ? 'inline-block' : 'block' };
     position: relative;
 `;
+
 
 /**
  * When you click on the {children} wrapper,
@@ -40,20 +42,22 @@ export default class Menu extends Component {
     	open: false,
     }
 	
-    componentDidMount() {
+	MenuPopover = MenuPopoverDefault;
+	
+	componentDidMount() {
     	this._onClickOutside = this.onClickOutside.bind(this);
     	this._onKeyUp = this.onKeyUp.bind(this);
 		
     	document.addEventListener('click', this._onClickOutside);
     	document.addEventListener('keyup', this._onKeyUp);
-    }
+	}
 	
-    componentWillUnmount() {
+	componentWillUnmount() {
     	document.removeEventListener('click', this._onClickOutside);
     	document.removeEventListener('keyup', this._onKeyUp);
-    }
+	}
 
-    componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate(prevProps, prevState) {
     	if (this.state.open && this.target) {
     		const position = offset(this.target);
 
@@ -63,7 +67,7 @@ export default class Menu extends Component {
     			});
     		}
     	}
-    }
+	}
 
     onClickOutside = (e) => {
     	if (this.menu && this.doneOpening) {        
@@ -117,31 +121,53 @@ export default class Menu extends Component {
     		}
     	});
     }
+	
+	renderChildren = ({ open, close }) => {
+		const { children } = this.props;
+	
+		return children({
+			open,
+			close,
+		});
+	}
 
-    render() {
-    	const { children, content, inline, items } = this.props;
+	render() {
+    	const { children, content, inline, items, ...props } = this.props;
     	const { open, position } = this.state;
+		
+		const MenuPopover = this.MenuPopover;
 
     	return (
     		<MenuWrapper>
-    			{open && (
-    				<MenuPortal>
-    					<MenuPopover
-    						ref={ref => this.menu = ref}
-    						content={content}
-    						items={items}
-    						position={position}
-    						target={this.target}
-    					/>
-    				</MenuPortal>
-    			)}
+				<MenuPortal>
+					{this.fade ? (
+						<Fade show={open}>
+							<MenuPopover
+								ref={ref => this.menu = ref}
+								content={content}
+								items={items}
+								position={position}
+								target={this.target}
+								{...props}
+							/>
+						</Fade>
+					) : (
+						open && <MenuPopover
+							ref={ref => this.menu = ref}
+							content={content}
+							items={items}
+							position={position}
+							target={this.target}
+							{...props}
+						/>
+					)}
+    				
+				</MenuPortal>
 
     			<MenuTarget ref={ref => this.target = ref} inline={inline}>
-    				{children({
-    					open: this.open,
-    				})}
+					{this.renderChildren({ open: this.open, close: this.close })}
     			</MenuTarget>
     		</MenuWrapper>
     	);
-    }
+	}
 }
