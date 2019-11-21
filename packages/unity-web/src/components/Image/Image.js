@@ -21,14 +21,15 @@ const ImageWrapper = styled.div`
     `}
 `;
 
-const Image = ({ alt, withSpacing, center, wrapperProps = {}, src, fallbackUrl, ...rest }) => (
+const Image = ({ alt, withSpacing, center, wrapperProps = {}, src, loaderUrl, fallbackUrl, ...rest }) => (
 	<ImageWrapper {...wrapperProps} withSpacing={withSpacing} center={center}>
 		<Img
 			src={[
 				src,
 				fallbackUrl,
 			].filter(Boolean)}
-			loader={fallbackUrl && <img alt={alt} src={fallbackUrl} />}
+			loader={loaderUrl && <img alt={alt} src={loaderUrl} />}
+			unloader={fallbackUrl && <img alt={alt} src={fallbackUrl} />}
 			alt={alt}
 			{...rest}
 		/>
@@ -43,6 +44,7 @@ ImagePropTypes.propTypes = {
 	alt: string.isRequired,
 	center: bool,
 	fallbackUrl: string,
+	loaderUrl: string,
 	src: string.isRequired,
 	withSpacing: bool,
 	wrapperProps: object,
