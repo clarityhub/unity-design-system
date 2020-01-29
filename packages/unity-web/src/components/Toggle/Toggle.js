@@ -112,6 +112,7 @@ const Toggle = ({
 				onTouchStart={onTouchStart}
 				onTouchMove={onTouchMove}
 				onTouchEnd={onTouchEnd}
+				type="button"
 			>
 				<Tracker checked={checked} />
 				<Thumb checked={checked} />

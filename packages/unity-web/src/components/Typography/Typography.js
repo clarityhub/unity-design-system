@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { bool, node, oneOf, oneOfType, string } from 'prop-types';
+import { bool, node, object, oneOf, oneOfType, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -69,7 +69,7 @@ Typography.propTypes = {
 	children: node,
 	color: oneOf(Object.keys(colors)),
 	component: oneOfType([string, node]),
-	css: string,
+	css: oneOfType([string, object]),
 	inline: bool,
 	noMargin: bool,
 	noPadding: bool,
