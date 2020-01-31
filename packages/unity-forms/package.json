@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-forms",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Unity Design System for Clarity Hub",
   "main": "lib/index.js",
   "files": [
