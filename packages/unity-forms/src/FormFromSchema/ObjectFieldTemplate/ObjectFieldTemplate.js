@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { getUiOptions } from 'react-jsonschema-form/lib/utils';
 import Button from '@clarityhub/unity-web/lib/components/Buttons';
+import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
 
 function ObjectFieldTemplate(props) {
 	const canExpand = function canExpand() {
@@ -22,10 +23,8 @@ function ObjectFieldTemplate(props) {
 
 	const { TitleField, DescriptionField } = props;
 
-	console.log(props.idSchema.$id, props.uiSchema);
-
 	return (
-		<div style={{ width: props.idSchema.$id === 'root' ? '100%' : undefined }} id={props.idSchema.$id}>
+		<Box style={{ width: props.idSchema.$id === 'root' ? '100%' : undefined }} id={props.idSchema.$id}>
 
 			{props.idSchema.$id !== 'root' || (props.idSchema.$id === 'root' && !props.uiSchema._hideTitle) ? (
 				<Fragment>
@@ -55,7 +54,7 @@ function ObjectFieldTemplate(props) {
 					disabled={props.disabled || props.readonly}
 				>Add</Button>
 			)}
-		</div>
+		</Box>
 	);
 }
 

@@ -31,6 +31,7 @@ const FormFromSchema = ({
 	uiSchema,
 	onSubmit,
 	formData,
+	...props
 }) => (
 	<Form
 		schema={schema}
@@ -46,6 +47,7 @@ const FormFromSchema = ({
 		widgets={widgets}
 		formData={formData}
 		onSubmit={({ formData }) => onSubmit(formData)}
+		{...props}
 	>
 		{children ? (
 			children({ submitting, submitText })
