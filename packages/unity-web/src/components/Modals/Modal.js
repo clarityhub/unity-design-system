@@ -153,7 +153,7 @@ export default class Modal extends Component {
     			// check if target is within (or is) the modal
     			const clickOutsideModal = this.modal !== target && !this.modal.contains(target);
     			if (clickOutsideModal) {
-    				this.close();
+    				this.close(e, { reason: 'onClickOutside' });
     			}
     		}
     	}
@@ -162,16 +162,16 @@ export default class Modal extends Component {
     onKeyUp = (e) => {
     	if (this.props.open) {
     		if (e.key === 'Escape') {
-    			this.close();
+    			this.close(e, { reason: 'escape' });
     		}
     	}
     }
 
-    close = () => {
+    close = (...args) => {
     	const { onClose } = this.props;
 
     	if (onClose) {
-    		onClose();
+    		onClose(...args);
     	}
     }
 

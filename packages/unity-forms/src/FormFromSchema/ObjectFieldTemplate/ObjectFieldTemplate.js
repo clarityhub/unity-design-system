@@ -24,8 +24,7 @@ function ObjectFieldTemplate(props) {
 	const { TitleField, DescriptionField } = props;
 
 	return (
-		<Box style={{ width: props.idSchema.$id === 'root' ? '100%' : undefined }} id={props.idSchema.$id}>
-
+		<Box style={{ width: '100%' }} id={props.idSchema.$id}>
 			{props.idSchema.$id !== 'root' || (props.idSchema.$id === 'root' && !props.uiSchema._hideTitle) ? (
 				<Fragment>
 					{(props.uiSchema['ui:title'] || props.title) && (
