@@ -2,7 +2,7 @@
 import { Fragment } from 'react';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { arrayOf, node, shape, func } from 'prop-types';
+import { arrayOf, bool, node, shape, func, string } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 import Box from '../../scaffolding/Box';
@@ -27,7 +27,7 @@ const Section = styled.div`
     }
 `;
 
-const AuthTemplate = ({ newsFeed, onSignUp, onLogin, onlyLogin = false, termsAndConditionsHref = "#", privacyPolicyHref = "#" }) => (
+const AuthTemplate = ({ newsFeed, onSignUp, onLogin, onlyLogin = false, termsAndConditionsHref = "#", privacyPolicyHref = "#", title }) => (
 	<Layout css={css`
         background-color: ${colors.dove.default};
     `}>
@@ -67,7 +67,7 @@ const AuthTemplate = ({ newsFeed, onSignUp, onLogin, onlyLogin = false, termsAnd
 						noPadding
 						type="h2"
 					>
-                        Welcome to Clarity Hub
+						{title || 'Welcome to Clarity Hub'}
 					</Typography>
                     
 					<Box margin={{ top: "small" }}>
@@ -124,6 +124,11 @@ AuthTemplate.propTypes = {
 	})).isRequired,
 	onLogin: func.isRequired,
 	onSignUp: func.isRequired,
+
+	onlyLogin: bool,
+	privacyPolicyHref: string,
+	termsAndConditionsHref: string,
+	title: string,
 };
 
 export default AuthTemplate;
