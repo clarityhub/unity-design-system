@@ -1,0 +1,42 @@
+---
+name: Error
+menu: Messaging
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { mdiNotebookOutline } from '@mdi/js';
+import Error from './Error';
+import Button from '../Buttons';
+
+# Error
+
+Show an Error message when there is an `Error` to display. You can optionally
+provide a refresh or redirect link to the user.
+
+## \<Error /\> Component
+
+```js
+import { Error } from '@clarityhub/unity-web/lib/components/Messaging';
+```
+
+## Prop Types
+
+### Error Props
+
+<PropsTable of={Error} />
+
+## Examples
+
+
+<Playground>
+    <Error />
+</Playground>
+
+
+<Playground>
+    <Error
+        error={'Any error message shows up here'}
+        refresh
+    />
+</Playground>

@@ -1,0 +1,48 @@
+---
+name: Empty
+menu: Messaging
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { mdiNotebookOutline } from '@mdi/js';
+import Empty from './Empty';
+import Button from '../Buttons';
+
+# Empty
+
+Show an Empty message when there are no items to show. The also allows you to
+display message, details, and actions.
+
+## \<Empty /\> Component
+
+```js
+import { Empty } from '@clarityhub/unity-web/lib/components/Messaging';
+```
+
+## Prop Types
+
+### Empty Props
+
+<PropsTable of={Empty} />
+
+## Examples
+
+<Playground>
+    <Empty />
+</Playground>
+
+<Playground>
+    <Empty
+        icon={mdiNotebookOutline}
+        message="Create your first Notebook"
+        details="Notebooks let you organize your customer interviews, notes, and photos together in one place."
+        actions={[
+            <div>
+                <Button type="primary">
+                    Create a Notebook
+                </Button>
+            </div>,
+        ]}
+    />
+</Playground>

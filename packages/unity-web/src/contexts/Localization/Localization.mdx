@@ -1,0 +1,54 @@
+---
+name: Localization
+menu: Contexts
+---
+
+import { Playground, PropsTable } from 'docz';
+import { getLocale, DEFAULT_LOCALE, LocaleContextProvider } from './';
+
+# LocaleContext
+
+Wrap your app with the provider:
+
+```js
+import { getLocale, DEFAULT_LOCALE, LocaleContextProvider } from '@clarityhub/unity-web/lib/contexts/Localization';
+```
+
+To use the locale, we have the following hook:
+
+```js
+import { useLocale } from '@clarityhub/unity-web/lib/contexts/Localization';
+```
+
+## Prop Types
+
+The following props are available for the ToastManagerProvider component.
+
+<PropsTable of={LocaleContextProvider} />
+
+
+## LocaleContextProvider Example
+
+<Playground>
+    <LocaleContextProvider value={getLocale(DEFAULT_LOCALE)}>
+        Your content here
+    </LocaleContextProvider>
+</Playground>
+
+## useLocale Example
+
+```js
+import { useLocale } from '@clarityhub/unity-web/lib/contexts/Localization';
+
+const UsingLocale = ({ children }) => {
+    const [locale, locales] = useContext(useLocale);
+    
+    return (
+        <ul>
+            <li>Primary Locale: {locale}</li>
+            <li>All Locales: {JSON.stringify(locales)}</li>
+        </ul>
+    );
+};
+
+```

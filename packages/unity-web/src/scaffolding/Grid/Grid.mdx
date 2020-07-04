@@ -1,0 +1,82 @@
+---
+name: Grid
+menu: Scaffolding
+---
+
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { GridLayout, GridItem } from './Grid';
+import Card, { CardBody } from '../../components/Card';
+
+# Grid
+
+Show a 2 column grid that changes to 1 column at mobile size. Useful for 
+displaying a list of Cards.
+
+## Grid versus FlexGrid
+
+FlexGrid is useful when you need to layout a set of visuals and you don't care
+about the size of the device.
+
+You should use Grid when you need to display a list of item data and you want
+to display the data in Cards (or other similar components).
+
+## \<Grid /\> Component
+
+```js
+import { GridLayout, GridItem } from '@clarityhub/unity-web/lib/scaffolding/Grid';
+```
+
+
+## Prop Types
+
+### GridLayout Props
+
+<PropsTable of={GridLayout} />
+
+### GridItem Props
+
+<PropsTable of={GridItem} />
+
+## Examples
+
+<Playground>
+    <GridLayout>
+        <GridItem>
+            <Card>
+                <CardBody>
+                    1
+                </CardBody>
+            </Card>
+        </GridItem>
+        <GridItem>
+            <Card>
+                <CardBody>
+                    2
+                </CardBody>
+            </Card>
+        </GridItem>
+        <GridItem>
+            <Card>
+                <CardBody>
+                    3
+                </CardBody>
+            </Card>
+        </GridItem>
+        <GridItem>
+            <Card>
+                <CardBody>
+                    4
+                </CardBody>
+            </Card>
+        </GridItem>
+        <GridItem>
+            <Card>
+                <CardBody>
+                    5
+                </CardBody>
+            </Card>
+        </GridItem>
+    </GridLayout>
+</Playground>
