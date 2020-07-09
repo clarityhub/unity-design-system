@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { node, bool, func, string } from 'prop-types';
+import { node, bool, func, oneOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { opacify } from '@clarityhub/unity-core/lib/utilities/color';
@@ -48,6 +48,18 @@ const ModalDialog = styled.div`
         transform: translate(0, 0);
     `}
 
+    ${({ size }) => {
+		switch (size) {
+		case 'large':
+			return css`
+				max-width: 90%;
+			`;
+		case 'default':
+		default:
+			return '';
+		}
+	}}
+
     ${Card} {
         position: relative;
         display: flex;
@@ -69,8 +81,13 @@ export default class Modal extends Component {
     	children: node,
     	onClose: func,
     	open: bool.isRequired,
+    	size: oneOf(['default', 'large']),
     	type: string,
     }
+	
+	static defaultProps = {
+		size: 'default',
+	}
 
     state = {
     	delayedOpen: false,
@@ -176,14 +193,14 @@ export default class Modal extends Component {
     }
 
     render() {
-    	const { center, children, type } = this.props;
+    	const { size, center, children, type, cardProps, ...props } = this.props;
     	const { delayedOpen, delayedClose } = this.state;
     
     	return (
     		<ModalPortal>
     			<ModalWrapper open={delayedClose}>
-    				<ModalDialog open={delayedOpen}>
-    					<Card ref={ref => this.modal = ref} type={type} center={center}>
+    				<ModalDialog open={delayedOpen} size={size} {...props}>
+    					<Card ref={ref => this.modal = ref} type={type} center={center} {...cardProps}>
     						{children}
     					</Card>
     				</ModalDialog>

@@ -87,6 +87,61 @@ import Modal from '@clarityhub/unity-web/lib/components/Modal';
     }}
 </Playground>
 
+### Large Modal
+
+<Playground>
+    {() => {
+        class ModalExample extends Component {
+            constructor(props) {
+                super(props);
+
+                this.state = { open: false };
+            }
+            render() {
+                const { open } = this.state;
+
+                return (
+                    <Fragment>
+                        <Button onClick={() => this.setState({ open: true })}>
+                            Open Modal
+                        </Button>
+
+                        <Modal size="large" open={open} onClose={() => this.setState({ open: false })}>
+                            <CardBody>
+                                <Typography type="h3">Card title</Typography>
+                                <Typography type="h4">Card subtitle</Typography>
+                                <Typography type="text">
+                                    Meow Mix
+                                </Typography>
+
+                                <CardActions>
+                                    <ButtonSet>
+                                        <Button
+                                            text
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            Close
+                                        </Button>
+                                        <Button
+                                            type="danger"
+                                            onClick={() => this.setState({ open: false })}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </ButtonSet>
+                                </CardActions>
+                            </CardBody>
+                        </Modal>
+                    </Fragment>
+                );
+            }
+        }
+
+
+        return <ModalExample />;
+    }}
+</Playground>
+
 ### Notification Modal
 
 <Playground>
