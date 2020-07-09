@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-email",
-  "version": "1.8.7",
+  "version": "1.10.1",
   "description": "",
   "main": "lib/index.js",
   "files": [
