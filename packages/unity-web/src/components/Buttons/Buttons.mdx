@@ -26,13 +26,15 @@ There are 4 main button types: default, white, primary, and danger.
 * **Danger buttons** are for actions that would cause destructive consequences to occur; like deleting an item or unscheduling a campaign.
 
 <Playground>
-    <Button>Default</Button>
-    {' '}
-    <Button type="white">White</Button>
-    {' '}
-    <Button type="primary">Primary</Button>
-    {' '}
-    <Button type="danger">Danger</Button>
+    <div style={{ backgroundColor: '#dde' }}>
+        <Button>Default</Button>
+        {' '}
+        <Button type="white">White</Button>
+        {' '}
+        <Button type="primary">Primary</Button>
+        {' '}
+        <Button type="danger">Danger</Button>
+    </div>
 </Playground>
 
 ## As a Link
@@ -182,11 +184,16 @@ There are outline and text variants that can be used in different scenarios.
 <Playground>
     <Button outline>Outline</Button>
     {' '}
+    <Button outline type="white">White</Button>
+    {' '}
     <Button outline type="primary">Outline</Button>
     {' '}
     <Button outline type="danger">Outline</Button>
-    {' '}
+    <br/>
+    <br/>
     <Button disabled outline>Outline</Button>
+    {' '}
+    <Button disabled outline type="white">White</Button>
     {' '}
     <Button disabled outline type="primary">Outline</Button>
     {' '}
@@ -195,11 +202,16 @@ There are outline and text variants that can be used in different scenarios.
     <br/>
     <Button text>text</Button>
     {' '}
+    <Button text type="white">text</Button>
+    {' '}
     <Button text type="primary">text</Button>
     {' '}
     <Button text type="danger">text</Button>
-    {' '}
+    <br/>
+    <br/>
     <Button disabled text>text</Button>
+    {' '}
+    <Button disabled text type="white">text</Button>
     {' '}
     <Button disabled text type="primary">text</Button>
     {' '}

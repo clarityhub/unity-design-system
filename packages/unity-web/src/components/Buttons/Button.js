@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { bool, func, oneOf, oneOfType, node, string } from 'prop-types';
@@ -57,255 +58,149 @@ const Button = styled.button(
             height: 1rem;
             width: 1rem;
         }
-    `,
-	({ type, outline, text }) => {
-		switch (type) {
-		case 'primary':
-			return css`
-                    color: ${colors.white.default};
-                    background-color: ${colors.primary.default};
-                    border-color: ${colors.primary.default};
 
-                    ${outline && `
-                        background-color: transparent;
-                        border: 1px solid inherit;
-                        color: ${colors.primary.default};
-                    `}
+        --text: ${colors.primary.default};
+        --text-active: ${colors.black.default};
+        --bg: transparent;
+        --bg-active: transparent;
+        --bg-disabled: transparent;
 
-                    ${text && `
-                        background-color: transparent;
-                        border: 1px solid transparent;
-                        color: ${colors.primary.default};
-                    `}
+        &.-default,
+        &.-primary,
+        &.-danger,
+        &.-white {
+            color: var(--text);
+            background-color: var(--bg);
+            border-color: var(--bg);
 
-                    &:hover,
-                    &.active {
-                        background-color: ${desaturate(darken(colors.primary.default))};
-                        border-color: ${desaturate(darken(colors.primary.default))};
+            &.-outline {
+                border-color: var(--outline, var(--bg));
+                color: var(--outline-text, var(--bg));
+            }
 
-                        ${outline && `
-                            background-color: ${colors.primary.default};
-                            border: 1px solid ${colors.primary.default};
-                            color: ${colors.white.default};
-                        `}
+            &.-text {
+                color: var(--text-text, var(--bg));
+            }
 
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(darken(colors.primary.default))};
-                        `}
-                    }
+            &:hover,
+            &.active {
+                background-color: var(--bg-active);
+                border-color: var(--bg-active);
+                color: var(--text-active);
 
-                    &:disabled,
-                    &.disabled {
-                        background-color: ${desaturate(lighten(colors.primary.default))};
-                        border-color: ${desaturate(lighten(colors.primary.default))};
+                &.-outline {
+                    background-color: var(--bg) !important;
+                    border: 1px solid var(--bg);
+                    color: var(--outline-text-active, var(--text));
+                }
 
-                        ${outline && `
-                            background-color: transparent;
-                            border: 1px solid ${colors.primary.default};
-                            color: ${desaturate(lighten(colors.primary.default))};
-                        `}
+                &.-text {
+                    color: var(--text-text-active, var(--bg-active));
+                }
+            }
 
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.primary.default))};
-                        `}
-                    }
-                `;
-		case 'danger':
-			return css`
-                    color: ${colors.white.default};
-                    background-color: ${colors.danger.default};
-                    border-color: ${colors.danger.default};
+            &:disabled,
+            &.disabled {
+                background-color: var(--bg-disabled);
+                border-color: var(--bg-disabled);
+                color: var(--text);
 
-                    ${outline && `
-                        background-color: transparent;
-                        border: 1px solid inherit;
-                        color: ${colors.danger.default};
-                    `}
+                &.-outline {
+                    border: 1px solid var(--outline-text-disabled, var(--bg-disabled));
+                    color: var(--outline-text-disabled, var(--bg-disabled));
+                }
 
-                    ${text && `
-                        background-color: transparent;
-                        border: 1px solid transparent;
-                        color: ${colors.danger.default};
-                    `}
+                &.-text {
+                    color: var(--text-text-disabled, var(--bg-disabled));
+                }
+            }
+        }
 
-                    &:hover,
-                    &.active {
-                        background-color: ${desaturate(darken(colors.danger.default))};
-                        border-color: ${desaturate(darken(colors.danger.default))};
+        &.-primary {
+            --text: ${colors.white.default};
+            --text-active: ${colors.white.default};
+            --bg: ${colors.primary.default};
+            --bg-active: ${desaturate(darken(colors.primary.default))};
+            --bg-disabled: ${desaturate(lighten(colors.primary.default))};
+        }
 
-                        ${outline && `
-                            background-color: ${colors.danger.default};
-                            border: 1px solid ${colors.danger.default};
-                            color: ${colors.white.default};
-                        `}
+        &.-danger {
+            --text: ${colors.white.default};
+            --text-active: ${colors.white.default};
+            --bg: ${colors.danger.default};
+            --bg-active: ${desaturate(darken(colors.danger.default))};
+            --bg-disabled: ${lighten(colors.danger.default, 0.3)};
+        }
 
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(darken(colors.danger.default))};
-                        `}
-                    }
+        &.-default {
+            --text: ${colors.black.default};
+            --text-active: ${colors.black.default};
+            --outline: ${colors.white.default};
+            --outline-text: ${colors.black.default};
+            --outline-text-active: ${colors.black.default};
+            --outline-text-disabled: ${colors.gray.default};
+            --text-text: ${colors.black.default};
+            --text-text-active: ${colors.black.default};
+            --text-text-disabled: ${colors.gray.default};
+            --bg: ${colors.white.default};
+            --bg-active: ${colors.dove.default};
+            --bg-disabled: ${colors.muted.default};
+        }
 
-                    &:disabled,
-                    &.disabled {
-                        background-color: ${lighten(colors.danger.default, 0.3)};
-                        border-color: ${lighten(colors.danger.default, 0.3)};
+        &.-white {
+            --text: ${colors.primary.default};
+            --text-active: ${colors.black.default};
+            --outline: ${colors.white.default};
+            --outline-text: ${colors.primary.default};
+            --outline-text-active: ${colors.primary.default};
+            --outline-text-disabled: ${colors.gray.default};
+            --text-text: ${colors.primary.default};
+            --text-text-active: ${desaturate(darken(colors.primary.default))};
+            --text-text-disabled: ${colors.gray.default};
+            --bg: ${colors.white.default};
+            --bg-active: ${colors.dove.default};
+            --bg-disabled: ${colors.muted.default};
+        }
 
-                        ${outline && `
-                            background-color: transparent;
-                            border: 1px solid ${colors.danger.default};
-                            color: ${desaturate(lighten(colors.danger.default, 0.3))};
-                        `}
+        &.-text {
+            background-color: transparent !important;
+            border: 1px solid transparent;
+            box-shadow: none;
 
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.danger.default, 0.3))};
-                        `}
-                    }
-                `;
-		case 'white':
-			return css`
-                background-color: ${colors.white.default};
+            &:hover,
+            &.active {
                 border-color: transparent;
-                color: ${colors.primary.default};
+            }
 
-                ${outline && `
-                    background-color: transparent;
-                    border: 1px solid inherit;
-                    color: ${colors.white.default};
-                `}
+            &.disabled,
+            &:disabled {
+                border: 1px solid transparent;
+            }
+        }
 
-                ${text && `
-                    background-color: transparent;
-                    border: 1px solid transparent;
-                    color: ${colors.white.default};
-                `}
+        &.-outline {
+            background-color: transparent !important;
+            border: 1px solid inherit;
+            box-shadow: none;
+        }
 
-                &:hover,
-                &.active {
-                    background-color: ${colors.dove.default};
-                    border-color: transparent;
-                    color: ${colors.dark.default};
-
-                    ${outline && `
-                        background-color: ${colors.dove.default};
-                        border: 1px solid ${colors.dove.default};
-                        color: ${colors.black.default};
-                    `}
-
-                    ${text && `
-                        background-color: transparent;
-                        border: 1px solid transparent;
-                        color: ${colors.dove.default};
-                    `}
-                }
-
-                &:disabled,
-                &.disabled {
-                    color: ${darken(colors.gray.default, 0.1)};
-                    background-color: ${lighten(colors.muted.default, 0.01)};
-                    border-color: transparent;
-
-                    ${outline && `
-                        background-color: transparent;
-                        border: 1px solid ${colors.gray.default};
-                        color: ${lighten(colors.gray.default, 0.01)};
-                    `}
-
-                    ${text && `
-                        background-color: transparent;
-                        border: 1px solid transparent;
-                        color: ${desaturate(lighten(colors.black.default))};
-                    `}
-                }
-            `;
-		case 'default':
-		default:
-			return css`
-                    background-color: rgba(255, 255, 255, 1);
-                    border-color: transparent;
-                    color: ${colors.primary.default};
-
-                    ${outline && `
-                        background-color: transparent;
-                        border: 1px solid inherit;
-                        color: ${colors.black.default};
-                    `}
-
-                    ${text && `
-                        background-color: transparent;
-                        border: 1px solid transparent;
-                        color: ${colors.black.default};
-                    `}
-
-                    &:hover,
-                    &.active {
-                        background-color: ${colors.dove.default};
-                        border-color: transparent;
-                        color: ${colors.dark.default};
-
-                        ${outline && `
-                            background-color: ${colors.muted.default};
-                            border: 1px solid ${colors.muted.default};
-                            color: ${colors.black.default};
-                        `}
-
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.black.default, 0.5))};
-                        `}
-                    }
-
-                    &:disabled,
-                    &.disabled {
-                        color: ${darken(colors.gray.default, 0.1)};
-                        background-color: ${lighten(colors.muted.default, 0.01)};
-                        border-color: transparent;
-
-                        ${outline && `
-                            background-color: transparent;
-                            border: 1px solid ${colors.gray.default};
-                            color: ${lighten(colors.gray.default, 0.01)};
-                        `}
-
-                        ${text && `
-                            background-color: transparent;
-                            border: 1px solid transparent;
-                            color: ${desaturate(lighten(colors.black.default))};
-                        `}
-                    }
-                `;
-		}
-	},
-
-	({ outline }) => outline && css`
-        background-color: transparent;
-        border: 1px solid inherit;
-        box-shadow: none;
+        &.disabled,
+        &:disabled {
+            cursor: not-allowed;
+        }
     `,
-
-	({ text }) => text && css`
-        box-shadow: none;
-    `,
-
 	({ size }) => {
 		switch (size) {
 		case 'small':
 			return css`
-                    font-size: 0.9rem;
-                    padding: .2rem 1rem;
-                `;
+                font-size: 0.9rem;
+                padding: .2rem 1rem;
+            `;
 		case 'large':
 			return css`
-                    font-size: 1.2rem;
-                    padding: 0.8rem 1.4rem;
-                `;
+                font-size: 1.2rem;
+                padding: 0.8rem 1.4rem;
+            `;
 		case 'default':
 		default:
 			return '';
@@ -319,6 +214,7 @@ const Button = styled.button(
 
 	({ loading }) => loading && css`
         color: transparent !important;
+        cursor: wait !important;
 
         &:hover {
             color: transparent !important;
@@ -339,14 +235,14 @@ const IconWrapper = styled.span`
 		switch (size) {
 		case 'small':
 			return css`
-                        height: 0.9rem;
-                        width: 0.9rem;
-                    `;
+                height: 0.9rem;
+                width: 0.9rem;
+            `;
 		case 'large':
 			return css`
-                        height: 1.2rem;
-                        width: 1.2rem;
-                    `;
+                height: 1.2rem;
+                width: 1.2rem;
+            `;
 		case 'default':
 		default:
 			return '';
@@ -372,128 +268,128 @@ const LoadingWrapper = styled.div`
 		switch (size) {
 		case 'small':
 			return css`
-                            height: 1.2rem;
-                            width: 1.2rem;
-                        `;
+                height: 1.2rem;
+                width: 1.2rem;
+            `;
 		case 'large':
 			return css`
-                            height: 2.4rem;
-                            width: 2.4rem;
-                        `;
+                height: 2.4rem;
+                width: 2.4rem;
+            `;
 		case 'default':
 		default:
 			return '';
 		}
 	}}
 
-        path {
-            ${({ type, outline, text }) => {
+    path {
+        ${({ type, outline, text }) => {
 		switch (type) {
 		case 'primary':
 			return css`
-                            fill: ${colors.white.default};
+                fill: ${colors.white.default};
 
-                            ${outline && css`
-                                fill: ${colors.primary.default};
-                            `}
+                ${outline && css`
+                    fill: ${colors.primary.default};
+                `}
 
-                            ${text && css`
-                                fill: ${colors.primary.default};
-                            `}
+                ${text && css`
+                    fill: ${colors.primary.default};
+                `}
 
-                            &:hover,
-                            &.active {
-                                ${outline && css`
-                                    fill: ${colors.white.default};
-                                `}
+                &:hover,
+                &.active {
+                    ${outline && css`
+                        fill: ${colors.white.default};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(darken(colors.primary.default))};
-                                `}
-                            }
+                    ${text && css`
+                        fill: ${desaturate(darken(colors.primary.default))};
+                    `}
+                }
 
-                            &:disabled,
-                            &.disabled {
-                                ${outline && css`
-                                    fill: ${desaturate(lighten(colors.primary.default))};
-                                `}
+                &:disabled,
+                &.disabled {
+                    ${outline && css`
+                        fill: ${desaturate(lighten(colors.primary.default))};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(lighten(colors.primary.default))};
-                                `}
-                            }
-                        `;
+                    ${text && css`
+                        fill: ${desaturate(lighten(colors.primary.default))};
+                    `}
+                }
+            `;
 		case 'danger':
 			return css`
-                            fill: ${colors.white.default};
+                fill: ${colors.white.default};
 
-                            ${outline && css`
-                                fill: ${colors.danger.default};
-                            `}
+                ${outline && css`
+                    fill: ${colors.danger.default};
+                `}
 
-                            ${text && css`
-                                fill: ${colors.danger.default};
-                            `}
+                ${text && css`
+                    fill: ${colors.danger.default};
+                `}
 
-                            &:hover,
-                            &.active {
-                                ${outline && css`
-                                    fill: ${colors.white.default};
-                                `}
+                &:hover,
+                &.active {
+                    ${outline && css`
+                        fill: ${colors.white.default};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(darken(colors.danger.default))};
-                                `}
-                            }
+                    ${text && css`
+                        fill: ${desaturate(darken(colors.danger.default))};
+                    `}
+                }
 
-                            &:disabled,
-                            &.disabled {
-                                ${outline && css`
-                                    fill: ${desaturate(lighten(colors.danger.default, 0.3))};
-                                `}
+                &:disabled,
+                &.disabled {
+                    ${outline && css`
+                        fill: ${desaturate(lighten(colors.danger.default, 0.3))};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(lighten(colors.danger.default, 0.3))};
-                                `}
-                            }
-                        `;
+                    ${text && css`
+                        fill: ${desaturate(lighten(colors.danger.default, 0.3))};
+                    `}
+                }
+            `;
 		case 'default':
 		default:
 			return css`
-                            fill: ${colors.black.default};
+                fill: ${colors.black.default};
 
-                            ${outline && css`
-                                fill: ${colors.black.default};
-                            `}
+                ${outline && css`
+                    fill: ${colors.black.default};
+                `}
 
-                            ${text && css`
-                                fill: ${colors.black.default};
-                            `}
+                ${text && css`
+                    fill: ${colors.black.default};
+                `}
 
-                            &:hover,
-                            &.active {
-                                ${outline && css`
-                                    fill: ${colors.black.default};
-                                `}
+                &:hover,
+                &.active {
+                    ${outline && css`
+                        fill: ${colors.black.default};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(darken(colors.black.default))};
-                                `}
-                            }
+                    ${text && css`
+                        fill: ${desaturate(darken(colors.black.default))};
+                    `}
+                }
 
-                            &:disabled,
-                            &.disabled {
-                                fill: ${darken(colors.gray.default, 0.1)};
+                &:disabled,
+                &.disabled {
+                    fill: ${darken(colors.gray.default, 0.1)};
 
-                                ${outline && css`
-                                    fill: ${lighten(colors.gray.default, 0.01)};
-                                `}
+                    ${outline && css`
+                        fill: ${lighten(colors.gray.default, 0.01)};
+                    `}
 
-                                ${text && css`
-                                    fill: ${desaturate(lighten(colors.black.default))};
-                                `}
-                            }
-                        `;
+                    ${text && css`
+                        fill: ${desaturate(lighten(colors.black.default))};
+                    `}
+                }
+            `;
 		}}
 }
         }
@@ -508,7 +404,19 @@ const renderIcon = (Icon) => {
 	return Icon;
 };
 
-const ButtonWrapper = ({ icon, children, component, size, loading, buttonType = 'button', ...rest }) => {
+const ButtonWrapper = ({
+	className,
+	type,
+	outline,
+	text,
+	size,
+	icon,
+	children, 
+	component,
+	loading,
+	buttonType = 'button',
+	...rest
+}) => {
 	let Component = Button;
 
 	if (component) {
@@ -516,7 +424,19 @@ const ButtonWrapper = ({ icon, children, component, size, loading, buttonType = 
 	}
 
 	return (
-		<Component size={size} loading={loading} type={buttonType} {...rest}>
+		<Component
+			className={cx(className, {
+				[`-${type}`]: type,
+				'-outline': outline,
+				'-text': text,
+			})}
+			outline={outline}
+			text={text}
+			size={size}
+			loading={loading}
+			type={buttonType}
+			{...rest}
+		>
 			{
 				icon && (
 					<IconWrapper size={size}>{renderIcon(icon)}</IconWrapper>
@@ -524,7 +444,15 @@ const ButtonWrapper = ({ icon, children, component, size, loading, buttonType = 
 			}
 			{
 				loading && (
-					<LoadingWrapper size={size} {...rest}><Loading /></LoadingWrapper>
+					<LoadingWrapper
+						type={type}
+						outline={outline}
+						text={text}
+						size={size}
+						{...rest}
+					>
+						<Loading />
+					</LoadingWrapper>
 				)
 			}
 			{children}
@@ -542,6 +470,10 @@ ButtonWrapper.propTypes = {
 	size: oneOf(['small', 'default', 'large']),
 	text: bool,
 	type: oneOf(['default', 'white', 'primary', 'danger', 'success']),
+};
+
+ButtonWrapper.defaultProps = {
+	type: 'default',
 };
 
 export { Button as EmotionButton };

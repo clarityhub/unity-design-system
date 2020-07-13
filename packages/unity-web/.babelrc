@@ -7,6 +7,11 @@
         "@babel/plugin-transform-destructuring",
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-proposal-object-rest-spread",
-        "babel-plugin-emotion"
+        [
+            "babel-plugin-emotion",
+            {
+                "sourceMap": false /* removing source maps since they never seem to work */
+            }
+        ]
     ]
 }
