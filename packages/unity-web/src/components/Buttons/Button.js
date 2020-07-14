@@ -106,7 +106,7 @@ const Button = styled.button(
                 color: var(--text);
 
                 &.-outline {
-                    border: 1px solid var(--outline-text-disabled, var(--bg-disabled));
+                    border: 1px solid var(--outline-disabled, var(--outline-text-disabled, var(--bg-disabled)));
                     color: var(--outline-text-disabled, var(--bg-disabled));
                 }
 
@@ -119,6 +119,7 @@ const Button = styled.button(
         &.-primary {
             --text: ${colors.white.default};
             --text-active: ${colors.white.default};
+            --outline-disabled: ${colors.gray.default};
             --bg: ${colors.primary.default};
             --bg-active: ${desaturate(darken(colors.primary.default))};
             --bg-disabled: ${desaturate(lighten(colors.primary.default))};
@@ -127,6 +128,7 @@ const Button = styled.button(
         &.-danger {
             --text: ${colors.white.default};
             --text-active: ${colors.white.default};
+            --outline-disabled: ${colors.gray.default};
             --bg: ${colors.danger.default};
             --bg-active: ${desaturate(darken(colors.danger.default))};
             --bg-disabled: ${lighten(colors.danger.default, 0.3)};
@@ -135,7 +137,7 @@ const Button = styled.button(
         &.-default {
             --text: ${colors.black.default};
             --text-active: ${colors.black.default};
-            --outline: ${colors.white.default};
+            --outline: ${colors.black.default};
             --outline-text: ${colors.black.default};
             --outline-text-active: ${colors.black.default};
             --outline-text-disabled: ${colors.gray.default};
@@ -151,7 +153,7 @@ const Button = styled.button(
             --text: ${colors.primary.default};
             --text-active: ${colors.black.default};
             --outline: ${colors.white.default};
-            --outline-text: ${colors.primary.default};
+            --outline-text: ${colors.white.default};
             --outline-text-active: ${colors.primary.default};
             --outline-text-disabled: ${colors.gray.default};
             --text-text: ${colors.primary.default};
