@@ -1,0 +1,41 @@
+---
+name: Skeleton
+menu: Components
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { SkeletonText } from './Skeleton';
+import Card, { CardHeader, CardBody } from '../Card';
+
+
+# Skeleton
+
+
+## \<SkeletonText /\> component
+
+```js
+import { SkeletonText } from '@clarityhub/unity-web/lib/components/Skeleton';
+```
+
+## Prop Types
+
+### SkeletonText
+<PropsTable of={SkeletonText} />
+
+## Examples
+
+<Playground>
+    <Card>
+        <CardHeader>
+            <SkeletonText type="h2">
+                Loading text
+            </SkeletonText>
+        </CardHeader>
+        <CardBody>
+            <SkeletonText width='100%' />
+            <SkeletonText width='100%' />
+            <SkeletonText width='100%' />
+        </CardBody>
+    </Card>
+</Playground>
