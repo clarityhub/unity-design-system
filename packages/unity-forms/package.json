@@ -3,6 +3,9 @@
   "version": "1.11.1",
   "description": "Unity Design System for Clarity Hub",
   "main": "lib/index.js",
+  "sideEffects": [
+    "./lib/init.js"
+  ],
   "files": [
     "lib",
     "README.md"

@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { arrayOf, string, node, func, oneOfType } from 'prop-types';
-import { mdiTextBoxRemoveOutline } from '@mdi/js';
 import Icon from '@mdi/react';
 
 import Box from '../../scaffolding/Box';
 import Typography from '../Typography/Typography';
+import { mdiTextBoxRemoveOutline } from './emptyIcon';
 
 const Empty = ({
 	icon,
