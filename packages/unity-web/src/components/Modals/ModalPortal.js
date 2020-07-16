@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 export default class ModalPortal extends Component {
@@ -24,7 +24,16 @@ export default class ModalPortal extends Component {
 	}
 
 	render() {
+		const { noPortal } = this.props;
 		const { ready } = this.state;
+
+		if (noPortal) {
+			return (
+				<div>
+					{this.props.children}
+				</div>	
+			);
+		}
 
 		if (ready) {
 			// Use a portal to render the children into the element

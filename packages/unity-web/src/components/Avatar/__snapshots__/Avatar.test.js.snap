@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> renders image 1`] = `
+<span
+  className="css-anmw72-AvatarWrapper e1syn5zm0"
+>
+  <img
+    alt="Ivan's Avatar"
+    src="/public/avatar-placeholder.png"
+  />
+</span>
+`;

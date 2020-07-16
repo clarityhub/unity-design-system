@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import isPropValid from '@emotion/is-prop-valid';
 import { css } from '@emotion/core';
 import borders from '@clarityhub/unity-core/lib/borders';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -7,7 +8,9 @@ import { bool, oneOf } from 'prop-types';
 import { CardHeaderWrapper } from './CardHeader';
 import CardBody from './CardBody';
 
-const Card = styled.div(
+const Card = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['type'].includes(prop),
+})(
 	css`
         position: relative;
         display: flex;

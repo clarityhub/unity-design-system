@@ -6,9 +6,15 @@ export const offset = (el) => {
 	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-	const styles = document.defaultView.getComputedStyle(el, '');
-	const marginTop = parseFloat(styles.getPropertyValue('margin-top'));
-	const marginBottom = parseFloat(styles.getPropertyValue('margin-bottom'));
+	let marginTop = 0;
+	let marginBottom = 0;
+	try {
+		const styles = document.defaultView.getComputedStyle(el, '');
+		marginTop = parseFloat(styles.getPropertyValue('margin-top'));
+		marginBottom = parseFloat(styles.getPropertyValue('margin-bottom'));
+	} catch (e) {
+		// do nothing
+	}
 
 	return {
 		top: rect.top + scrollTop,

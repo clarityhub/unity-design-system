@@ -1,5 +1,6 @@
 import React from 'react';
 import { number, bool } from 'prop-types';
+import isPropValid from '@emotion/is-prop-valid';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -29,7 +30,9 @@ const size = ({ size }) => size && css`
     }
 `;
 
-const LoadingWrapper = styled.div([
+const LoadingWrapper = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['size'].includes(prop),
+})([
 	base,
 	flex,
 	size,

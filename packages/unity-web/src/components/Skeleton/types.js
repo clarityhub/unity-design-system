@@ -1,7 +1,7 @@
 import { sizes } from '@clarityhub/unity-core/lib/typography';
 
 export default {
-    h1: `
+	h1: `
         height: ${sizes.h1.rem}rem;
     `,
 	h2: `

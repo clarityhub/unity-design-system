@@ -2,6 +2,7 @@
 node_modules
 dist
 lib
+coverage
 
 package.json.lerna_backup
 lerna-debug.log

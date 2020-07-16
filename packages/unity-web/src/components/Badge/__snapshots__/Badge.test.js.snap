@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> renders different badge types 1`] = `
+<div>
+  <div
+    className="css-27cpyj-Badge-Badge e3hul5p0"
+  >
+    Default
+  </div>
+   
+  <div
+    className="css-1bqee8j-Badge-Badge e3hul5p0"
+  >
+    Primary
+  </div>
+   
+  <div
+    className="css-18fltej-Badge-Badge e3hul5p0"
+  >
+    Success
+  </div>
+   
+  <div
+    className="css-9bve6f-Badge-Badge e3hul5p0"
+  >
+    Danger
+  </div>
+   
+  <div
+    className="css-z4te36-Badge-Badge e3hul5p0"
+  >
+    Notification
+  </div>
+</div>
+`;

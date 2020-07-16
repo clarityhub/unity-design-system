@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonSet /> renders a set of buttons 1`] = `
+<div
+  className="css-1f6tjue-ButtonSet e869cgw0"
+>
+  <button
+    className="-default -text css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Back
+  </button>
+  <button
+    className="-primary css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Edit
+  </button>
+  <button
+    className="-danger -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;
+
+exports[`<ButtonSet /> renders a spread of buttons 1`] = `
+<div
+  className="css-1v0gppc-ButtonSet-ButtonSet e869cgw0"
+>
+  <button
+    className="-default -text css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Back
+  </button>
+  <button
+    className="-primary css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Edit
+  </button>
+  <button
+    className="-danger -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;

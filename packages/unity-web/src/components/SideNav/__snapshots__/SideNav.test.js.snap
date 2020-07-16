@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideNav /> renders a sidenav 1`] = `
+<div
+  className="css-lv8csa-SideNav eh4nhn00"
+>
+  <div
+    className="css-sp7l44-SideNavItem-SideNavItem-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Home
+    </a>
+  </div>
+  <div
+    className="css-u9bzr8-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Insights
+    </a>
+  </div>
+  <div
+    className="css-u9bzr8-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Integrations
+    </a>
+  </div>
+  <div
+    className="css-u9bzr8-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Apps
+    </a>
+  </div>
+  <div
+    className="css-u9bzr8-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Account
+    </a>
+    <div
+      className="css-uft8jc-SideNavGroup elxq9rq0"
+    >
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Profile
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Billing
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Usage
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Users
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-u9bzr8-SideNavItem ec2haq50"
+  >
+    <a
+      className="css-i8x1an"
+      href="#"
+    >
+      Developers
+    </a>
+    <div
+      className="css-uft8jc-SideNavGroup elxq9rq0"
+    >
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          API Keys
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Web Console
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Webhooks
+        </a>
+      </div>
+      <div
+        className="css-u9bzr8-SideNavItem ec2haq50"
+      >
+        <a
+          className="css-i8x1an"
+          href="#"
+        >
+          Logs
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

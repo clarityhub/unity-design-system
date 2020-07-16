@@ -60,9 +60,18 @@ const AccordionItem = ({ expanded, onExpand, onClose, index, children, ...props 
 AccordionItem.propTypes = {
 	children: oneOfType([func, node]).isRequired,
 	expanded: bool,
-	index: number.isRequired,
-	onClose: func.isRequired,
-	onExpand: func.isRequired,
+	/**
+	 * Auto-provided by <Accordion />
+	 */
+	index: number,
+	/**
+	 * Auto-provided by <Accordion />
+	 */
+	onClose: func,
+	/**
+	 * Auto-provided by <Accordion />
+	 */
+	onExpand: func,
 };
 
 export default AccordionItem;

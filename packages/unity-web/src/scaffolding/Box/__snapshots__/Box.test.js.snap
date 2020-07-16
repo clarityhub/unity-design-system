@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> renders a simple grid 1`] = `
+<div
+  className="css-346yjg-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+>
+  <div
+    className="css-17psxz-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  />
+  <div
+    className="css-17psxz-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  />
+  <div
+    className="css-1661iiv-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  />
+</div>
+`;
+
+exports[`<Box /> renders paddings and margins 1`] = `
+Array [
+  <div
+    className="css-1bq9syo-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    <div>
+      padding
+    </div>
+  </div>,
+  <div>
+    <div
+      className="css-1nz9mi7-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    >
+      <div>
+        padding + margin
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`<Box /> renders text 1`] = `
+<div
+  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+>
+  Children
+</div>
+`;
+
+exports[`<Box /> renders types and colors 1`] = `
+Array [
+  <div
+    className="css-2ng6uf-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    primary
+  </div>,
+  <div
+    className="css-6bj8v1-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    danger (type)
+  </div>,
+  <div
+    className="css-vqmqvd-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    danger (color)
+  </div>,
+]
+`;

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders link buttons 1`] = `
+<a
+  className="-default css-1t30yu8-ButtonWrapper-Button-Button entsyi63"
+  href="#"
+  type="button"
+>
+  Link
+</a>
+`;
+
+exports[`<Button /> renders outline buttons 1`] = `
+Array [
+  <button
+    className="-default -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Default
+  </button>,
+  " ",
+  <button
+    className="-white -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    White
+  </button>,
+  " ",
+  <button
+    className="-primary -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Primary
+  </button>,
+  " ",
+  <button
+    className="-danger -outline css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Danger
+  </button>,
+]
+`;
+
+exports[`<Button /> renders solid buttons 1`] = `
+Array [
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Default
+  </button>,
+  " ",
+  <button
+    className="-white css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    White
+  </button>,
+  " ",
+  <button
+    className="-primary css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Primary
+  </button>,
+  " ",
+  <button
+    className="-danger css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Danger
+  </button>,
+]
+`;

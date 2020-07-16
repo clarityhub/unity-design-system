@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> renders images 1`] = `
+Array [
+  <div
+    className="css-119gdmf-ImageWrapper e1h9019k0"
+  />,
+  <div
+    className="css-12kn8xa-ImageWrapper-ImageWrapper e1h9019k0"
+  />,
+  <div
+    className="css-11rfl6x-ImageWrapper-ImageWrapper e1h9019k0"
+  />,
+  <div
+    className="css-hdn7cq-ImageWrapper-ImageWrapper-ImageWrapper e1h9019k0"
+  />,
+]
+`;

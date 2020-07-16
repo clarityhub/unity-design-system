@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> renders default 1`] = `
+<div
+  className="css-5swc56-base-danger-block"
+  role="alert"
+>
+  <div
+    className="css-d4n4rw"
+  >
+    <p
+      className="css-1imar2r"
+    >
+      Something bad happened
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Error /> renders with message 1`] = `
+<div
+  className="css-5swc56-base-danger-block"
+  role="alert"
+>
+  <div
+    className="css-d4n4rw"
+  >
+    <p
+      className="css-1imar2r"
+    >
+      Any error message shows up here
+    </p>
+    <div
+      className="css-15uzpn3-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    >
+      <div
+        className="css-1f6tjue-ButtonSet e869cgw0"
+      >
+        <button
+          className="-white css-1qfeqqs-Button-Button entsyi60"
+          onClick={[Function]}
+          type="button"
+        >
+          Refresh
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

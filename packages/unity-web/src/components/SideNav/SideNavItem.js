@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
 import { bool, node } from 'prop-types';
+import isPropValid from '@emotion/is-prop-valid';
 import { css } from '@emotion/core';
 import colors from '@clarityhub/unity-core/lib/colors';
 
 import SideNavGroup from './SideNavGroup';
 
-const SideNavItem = styled.div`
+const SideNavItem = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['selected'].includes(prop),
+})`
     width: 100%;
 
     ${SideNavGroup} {
@@ -55,7 +58,10 @@ const SideNavItem = styled.div`
 const SideNavItemProps = () => <div />;
 SideNavItemProps.propTypes = {
 	children: node,
-	selected: bool.isRequired,
+	selected: bool,
+};
+SideNavItemProps.defaultProps = {
+	selected: false,
 };
 
 SideNavItem.propTypes = SideNavItemProps.propTypes;

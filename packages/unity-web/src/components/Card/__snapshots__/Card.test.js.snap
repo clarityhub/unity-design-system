@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> renders a simple card 1`] = `
+<div
+  className="css-hrz6r9-Card-Card-Card-Card-Card e6pferz0"
+>
+  <div
+    className="css-opo7aj-CardBody em76frp0"
+  >
+    <p
+      className="css-b04jnf"
+    >
+      Default
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Card /> renders different card types 1`] = `
+Array [
+  <div
+    className="css-8cmj7f-Card-Card-Card-Card-Card e6pferz0"
+  >
+    <div
+      className="css-opo7aj-CardBody em76frp0"
+    >
+      <p
+        className="css-1imar2r"
+      >
+        Notification
+      </p>
+    </div>
+  </div>,
+  <div
+    className="css-1wi5bj8-Card-Card-Card-Card-Card e6pferz0"
+  >
+    <div
+      className="css-opo7aj-CardBody em76frp0"
+    >
+      <p
+        className="css-b04jnf"
+      >
+        Highlight
+      </p>
+    </div>
+  </div>,
+  <div
+    className="css-1nzwfk4-Card-Card-Card-Card-Card e6pferz0"
+  >
+    <div
+      className="css-opo7aj-CardBody em76frp0"
+    >
+      <p
+        className="css-b04jnf"
+      >
+        Callout
+      </p>
+    </div>
+  </div>,
+]
+`;

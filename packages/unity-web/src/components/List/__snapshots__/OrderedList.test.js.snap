@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderedList /> renders items 1`] = `
+<ol
+  className="css-1wwl84o-OrderedList e50npi0"
+>
+  <li
+    className="css-8lg160"
+  >
+    First item
+  </li>
+  <li
+    className="css-8lg160"
+  >
+    Second item
+  </li>
+  <li
+    className="css-8lg160"
+  >
+    Third item
+  </li>
+</ol>
+`;

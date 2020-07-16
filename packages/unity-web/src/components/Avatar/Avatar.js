@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
-import Img from 'react-image';
+import { Img } from 'react-image';
 
 const AvatarWrapper = styled.span`
     display: inline-block;

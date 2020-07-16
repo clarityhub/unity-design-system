@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> renders paginiation bar 1`] = `
+<div
+  className="css-13p1w26-Container e171o4c40"
+>
+  <ul>
+    <li
+      className="previous"
+    >
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/3"
+        >
+          &lt;
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/"
+        >
+          1
+        </a>
+      </div>
+    </li>
+    <li>
+      ...
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/3"
+        >
+          3
+        </a>
+      </div>
+    </li>
+    <li
+      className="selected"
+    >
+      <div
+        className="css-1fxzov6-Item-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/4"
+        >
+          4
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/5"
+        >
+          5
+        </a>
+      </div>
+    </li>
+    <li>
+      ...
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/120"
+        >
+          120
+        </a>
+      </div>
+    </li>
+    <li
+      className="next"
+    >
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="/5"
+        >
+          &gt;
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Pagination /> uses renderers 1`] = `
+<div
+  className="css-13p1w26-Container e171o4c40"
+>
+  <ul>
+    <li
+      className="previous disabled"
+    />
+    <li
+      className="selected"
+    >
+      <div
+        className="css-1fxzov6-Item-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="#/"
+        >
+          1
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="#/2"
+        >
+          2
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="#/3"
+        >
+          3
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="#/4"
+        >
+          4
+        </a>
+      </div>
+    </li>
+    <li>
+      ...
+    </li>
+    <li>
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <a
+          className="css-i8x1an"
+          href="#/120"
+        >
+          120
+        </a>
+      </div>
+    </li>
+    <li
+      className="next"
+    >
+      <div
+        className="css-repihg-Item e171o4c41"
+      >
+        <button
+          className="-default css-1qfeqqs-Button-Button entsyi60"
+          type="button"
+        >
+          Next »
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

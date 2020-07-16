@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, shape, func, string } from 'prop-types';
 
-import Button from '../Buttons/Button';
+import Button from '../Button';
 
 const LinkButton = ({ history, to, onClick, ...rest }) => (
 	<Button

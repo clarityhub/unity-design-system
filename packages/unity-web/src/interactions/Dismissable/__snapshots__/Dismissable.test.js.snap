@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dismissable /> dismisses the notification 1`] = `null`;
+
+exports[`<Dismissable /> renders text 1`] = `
+<div
+  className="css-5swc56-base-danger-block"
+  role="alert"
+>
+  <div
+    className="css-d4n4rw"
+  >
+    <button
+      aria-label="Dismiss"
+      className="css-mpjvgz-DismissButton e1jp307v0"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    There were problems with processing your request. We encountered the following issues:
+    <ul>
+      <li>
+        Our servers are offline
+      </li>
+    </ul>
+  </div>
+</div>
+`;

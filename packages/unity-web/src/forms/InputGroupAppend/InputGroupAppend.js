@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { EmotionButton } from '../../components/Buttons/Button';
+import { EmotionButton } from '../../components/Button';
 
 const InputGroupAppend = styled.div`
     display: flex;

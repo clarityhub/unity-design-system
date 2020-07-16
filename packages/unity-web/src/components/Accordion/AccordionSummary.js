@@ -99,11 +99,23 @@ AccordionSummary.propTypes = {
 	children: oneOfType([node, func]).isRequired,
 	disabled: bool,
 	expandIcon: node,
+	/**
+	 * Auto-provided by <AccordionItem />
+	 */
 	expanded: bool,
-	index: number.isRequired,
-	onClick: func.isRequired,
-	onClose: func.isRequired,
-	onExpand: func.isRequired,
+	/**
+	 * Auto-provided by <AccordionItem />
+	 */
+	index: number,
+	onClick: func,
+	/**
+	 * Auto-provided by <AccordionItem />
+	 */
+	onClose: func,
+	/**
+	 * Auto-provided by <AccordionItem />
+	 */
+	onExpand: func,
 };
 
 AccordionSummary.defaultProps = {

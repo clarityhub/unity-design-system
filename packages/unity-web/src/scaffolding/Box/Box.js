@@ -1,4 +1,5 @@
 import React from 'react';
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { any, oneOf, oneOfType, shape, string, func, node } from 'prop-types';
@@ -14,7 +15,19 @@ const rectMapper = (top, right, bottom, left) => {
 	return `${top ? remMapper(top) : 0} ${right ? remMapper(right) : 0} ${bottom ? remMapper(bottom) : 0} ${left ? remMapper(left) : 0}`;
 };
 
-const StyledBox = styled.div(
+const StyledBox = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && ![
+		'align',
+		'background',
+		'color',
+		'direction',
+		'flex',
+		'gap',
+		'padding',
+		'pull',
+		'type',
+	].includes(prop),
+})(
 	css`
 		display: flex;
 	`,

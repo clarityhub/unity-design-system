@@ -68,14 +68,13 @@ class MenuPopover extends Component {
     	});
     }
 
-    componentWillUpdate(nextProps) {
-    	if (!deepEqual(nextProps.position, this.props.position) ||
-            nextProps.target !== this.props.target) {
-            
-    		const position = this.getPosition(nextProps, this.popover);
+    componentDidUpdate(prevProps) {
+    	if (!deepEqual(prevProps.position, this.props.position) ||
+            prevProps.target !== this.props.target) {            
+    		const position = this.getPosition(this.props, this.popover);
     		this.setState({
     			position,
-    			arrow: this.getArrowPosition(nextProps, position),
+    			arrow: this.getArrowPosition(this.props, position),
     		});
     	}
     }

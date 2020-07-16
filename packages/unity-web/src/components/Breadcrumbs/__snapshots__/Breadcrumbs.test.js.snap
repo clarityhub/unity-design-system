@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> renders crumbs 1`] = `
+<div>
+  <nav
+    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+  >
+    <ol
+      className="css-r7a13i-BreadcrumbList e5d63db1"
+    >
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        Home
+      </li>
+    </ol>
+  </nav>
+  <nav
+    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+  >
+    <ol
+      className="css-r7a13i-BreadcrumbList e5d63db1"
+    >
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        <a
+          className="css-i8x1an"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        Admin
+      </li>
+    </ol>
+  </nav>
+  <nav
+    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+  >
+    <ol
+      className="css-r7a13i-BreadcrumbList e5d63db1"
+    >
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        <a
+          className="css-i8x1an"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        <a
+          className="css-i8x1an"
+          href="/admin"
+        >
+          Admin
+        </a>
+      </li>
+      <li
+        className="css-yabpar-Breadcrumb e5d63db2"
+      >
+        Long interview name – October 3rd, 2019
+      </li>
+    </ol>
+  </nav>
+</div>
+`;

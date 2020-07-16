@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { bool } from 'prop-types';
-import { EmotionButton } from './Button';
+import { EmotionButton } from '../Button';
 
 const ButtonSet = styled.div`
     ${({ spread }) => spread && css`

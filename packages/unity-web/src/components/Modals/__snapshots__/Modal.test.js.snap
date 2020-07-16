@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> renders a Modal 1`] = `
+<div>
+  <div
+    className="css-h4bm38-ModalWrapper e1bxx9lo0"
+  >
+    <div
+      className="css-1ter3hz-ModalDialog-ModalDialog e1bxx9lo1"
+    >
+      <div
+        className="css-hrz6r9-Card-Card-Card-Card-Card e6pferz0"
+      >
+        <div
+          className="css-opo7aj-CardBody em76frp0"
+        >
+          <h3
+            className="css-196s5e3"
+          >
+            Card title
+          </h3>
+          <h4
+            className="css-14ktsf5"
+          >
+            Card subtitle
+          </h4>
+          <p
+            className="css-b04jnf"
+          >
+            Meow Mix
+          </p>
+          <div
+            className="css-75y03g-CardActions eq07m5o0"
+          >
+            <div
+              className="css-1f6tjue-ButtonSet e869cgw0"
+            >
+              <button
+                className="-default -text css-1qfeqqs-Button-Button entsyi60"
+                type="button"
+              >
+                Close
+              </button>
+              <button
+                className="-danger css-1qfeqqs-Button-Button entsyi60"
+                type="button"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

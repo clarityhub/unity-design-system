@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, object, string } from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import Img from 'react-image';
+import { Img } from 'react-image';
 
 const ImageWrapper = styled.div`
     img {

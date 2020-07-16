@@ -20,7 +20,6 @@ const MenuTarget = styled.div`
     position: relative;
 `;
 
-
 /**
  * When you click on the {children} wrapper,
  * a menu will appear below the {children}'s position.
@@ -35,10 +34,12 @@ export default class Menu extends Component {
     	content: node,
     	inline: bool,
     	items: arrayOf(node),
+    	noPortal: bool,
     	onClose: func,
     }
 
     state = {
+    	noPortal: false,
     	open: false,
     }
 	
@@ -122,24 +123,33 @@ export default class Menu extends Component {
     	});
     }
 	
-	renderChildren = ({ open, close }) => {
+	toggle = () => {
+		if (this.state.open) {
+			this.close();
+		} else {
+			this.open();
+		}
+	}
+	
+	renderChildren = ({ open, close, toggle }) => {
 		const { children } = this.props;
 	
 		return children({
 			open,
 			close,
+			toggle,
 		});
 	}
 
 	render() {
-    	const { children, content, inline, items, ...props } = this.props;
+    	const { children, content, inline, items, noPortal, ...props } = this.props;
     	const { open, position } = this.state;
 		
 		const MenuPopover = this.MenuPopover;
 
     	return (
     		<MenuWrapper>
-				<MenuPortal>
+				<MenuPortal noPortal={noPortal}>
 					{this.fade ? (
 						<Fade show={open}>
 							<MenuPopover
@@ -165,7 +175,7 @@ export default class Menu extends Component {
 				</MenuPortal>
 
     			<MenuTarget ref={ref => this.target = ref} inline={inline}>
-					{this.renderChildren({ open: this.open, close: this.close })}
+					{this.renderChildren({ open: this.open, close: this.close, toggle: this.toggle })}
     			</MenuTarget>
     		</MenuWrapper>
     	);

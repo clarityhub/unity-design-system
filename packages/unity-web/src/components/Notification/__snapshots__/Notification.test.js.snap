@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> renders text 1`] = `
+<div
+  className="css-5swc56-base-danger-block"
+  role="alert"
+>
+  <div
+    className="css-d4n4rw"
+  >
+    There were problems with processing your request. We encountered the following issues:
+    <ul>
+      <li>
+        Our servers are offline
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<Notification /> renders variants 1`] = `
+<div
+  className="css-1m55s5w-base-danger-thin"
+  role="alert"
+>
+  <div
+    className="css-d4n4rw"
+  >
+    There were problems with processing your request. We encountered the following issues:
+    <ul>
+      <li>
+        Our servers are offline
+      </li>
+    </ul>
+  </div>
+</div>
+`;

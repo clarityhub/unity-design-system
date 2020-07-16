@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> renders a group of items 1`] = `
+<div
+  className="css-es8daz-ButtonGroup e1yduq3m0"
+>
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Mon
+  </button>
+  <button
+    className="-primary css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Tue
+  </button>
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Wed
+  </button>
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Thu
+  </button>
+  <button
+    className="-primary css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Fri
+  </button>
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Sat
+  </button>
+  <button
+    className="-default css-1qfeqqs-Button-Button entsyi60"
+    type="button"
+  >
+    Sun
+  </button>
+</div>
+`;

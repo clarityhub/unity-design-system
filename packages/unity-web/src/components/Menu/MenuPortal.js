@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 let menuPortalId = 0;
@@ -21,6 +21,14 @@ export default class MenuPortal extends Component {
 	}
 
 	render() {
+		if (this.props.noPortal) {
+			return (
+				<div>
+					{this.props.children}
+				</div>
+			);
+		}
+
 		if (this.el) {
 			return ReactDOM.createPortal(
 				this.props.children,

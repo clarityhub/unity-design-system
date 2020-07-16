@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> renders a button 1`] = `
+<div
+  className="css-uhhx3m-MenuWrapper e1vovinh0"
+>
+  <div />
+  <div
+    className="css-ivde54-MenuTarget e1vovinh1"
+  >
+    <button
+      className="-default css-1qfeqqs-Button-Button entsyi60"
+      onClick={[Function]}
+      type="button"
+    >
+      Open Menu
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Menu /> renders menu items 1`] = `
+<div
+  className="css-uhhx3m-MenuWrapper e1vovinh0"
+>
+  <div>
+    <div
+      className="css-7bq2ov"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <div
+        className="css-1ypkzdo-Arrow e1yoe36r0"
+        style={
+          Object {
+            "left": "0px",
+          }
+        }
+      />
+      <ul>
+        <li>
+          <button
+            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            type="button"
+          >
+            Item 1
+          </button>
+        </li>
+        <li>
+          <button
+            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            type="button"
+          >
+            Item 2
+          </button>
+        </li>
+        <li>
+          <button
+            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            type="button"
+          >
+            Item 3
+          </button>
+        </li>
+        <li>
+          <hr
+            className="css-1fxgots-MenuItemDivider e17w1yli0"
+          />
+        </li>
+        <li>
+          <button
+            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            type="button"
+          >
+            Long Item 4
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="css-ivde54-MenuTarget e1vovinh1"
+  >
+    <button
+      className="-default css-1qfeqqs-Button-Button entsyi60"
+      onClick={[Function]}
+      type="button"
+    >
+      Open Menu
+    </button>
+  </div>
+</div>
+`;

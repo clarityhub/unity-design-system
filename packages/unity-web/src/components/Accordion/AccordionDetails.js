@@ -21,13 +21,17 @@ const AccordionDetails = ({ expanded, children, ...props }) => {
 	const [height, setHeight] = useState(0);
 
 	useLayoutEffect(() => {
-		const h = ref.current.scrollHeight;
-
-		setHeight(h);
+		if (ref.current) {
+			const h = ref.current.scrollHeight;
+	
+			setHeight(h);
+		}
 	}, []);
 
+	const { onExpand, ...rest } = props;
+
 	return (
-		<AccordionDetailsStyled ref={ref} predictedHeight={height} expanded={expanded} {...props}>
+		<AccordionDetailsStyled ref={ref} predictedHeight={height} expanded={expanded} {...rest}>
 			<CardBody>
 				{children}
 			</CardBody>

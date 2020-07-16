@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { node, bool, func, oneOf, string } from 'prop-types';
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { opacify } from '@clarityhub/unity-core/lib/utilities/color';
@@ -11,7 +12,9 @@ import ModalPortal from './ModalPortal';
 
 // XXX refactor animations to be reuseable
 
-const ModalWrapper = styled.div`
+const ModalWrapper = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['open'].includes(prop),
+})`
     position: fixed;
     top: 0;
     bottom: 0;
@@ -26,7 +29,13 @@ const ModalWrapper = styled.div`
     `}
 `;
 
-const ModalDialog = styled.div`
+const ModalDialog = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && ![
+		'onClose',
+		'open',
+		'size',
+	].includes(prop),
+})`
     transition: all .3s ease-out;
     transition-property: opacity, transform;
     transform: translate(0, -25%);
@@ -79,6 +88,7 @@ export default class Modal extends Component {
 		 * Passthrough to Card
 		 */
     	children: node,
+    	noPortal: bool,
     	onClose: func,
     	open: bool.isRequired,
     	size: oneOf(['default', 'large']),
@@ -86,6 +96,7 @@ export default class Modal extends Component {
     }
 	
 	static defaultProps = {
+		noPortal: false,
 		size: 'default',
 	}
 
@@ -193,11 +204,11 @@ export default class Modal extends Component {
     }
 
     render() {
-    	const { size, center, children, type, cardProps, ...props } = this.props;
+    	const { size, center, children, type, cardProps, noPortal, ...props } = this.props;
     	const { delayedOpen, delayedClose } = this.state;
     
     	return (
-    		<ModalPortal>
+    		<ModalPortal noPortal={noPortal}>
     			<ModalWrapper open={delayedClose}>
     				<ModalDialog open={delayedOpen} size={size} {...props}>
     					<Card ref={ref => this.modal = ref} type={type} center={center} {...cardProps}>

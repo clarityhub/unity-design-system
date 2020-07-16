@@ -28,7 +28,7 @@ const Breadcrumb = styled.li`
     white-space: nowrap;
 	min-width: 3rem;
 
-	&:first-child {
+	&:first-of-type {
 		overflow: inherit;
 	}
 

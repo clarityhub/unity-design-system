@@ -17,6 +17,8 @@
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "test": "lerna exec --parallel 'jest --ci --passWithNoTests'",
+    "test:watch": "lerna exec 'jest --watch'",
+    "test:coverage": "lerna exec 'jest --passWithNoTests --coverage'",
     "prerelease": "npm run lint && npm run test && npm run clean && npm run build",
     "release": "lerna publish",
     "predeploy": "npm run docz:build",

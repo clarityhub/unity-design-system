@@ -1,4 +1,5 @@
 import React from 'react';
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { number, string, node } from 'prop-types';
@@ -26,7 +27,9 @@ const ProgressCore = styled.div`
     box-shadow: inset ${colors.outlineShadow.default};
 `;
 
-const ProgressBar = styled.div`
+const ProgressBar = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['type'].includes(prop),
+})`
     height: auto;
     border-radius: 0;
     box-shadow: none;

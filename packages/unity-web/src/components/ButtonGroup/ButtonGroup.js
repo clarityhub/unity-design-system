@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { bool } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 
-import Button, { EmotionButton } from './Button';
+import Button, { EmotionButton } from '../Button';
 
 const ButtonGroup = styled.div`
     box-shadow: ${colors.shadow.default};
@@ -38,4 +38,10 @@ ButtonGroupItem.propTypes = {
 	selected: bool,
 };
 
+/**
+ * @deprecated use default import instead
+ */
 export { ButtonGroup, ButtonGroupItem };
+
+ButtonGroup.ButtonGroupItem = ButtonGroupItem;
+export default ButtonGroup;

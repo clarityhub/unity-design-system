@@ -24,7 +24,7 @@
     "color": "^3.1.0",
     "deep-equal": "^1.1.0",
     "normalize.css": "^8.0.1",
-    "react-image": "^2.0.0",
+    "react-image": "^4.0.3",
     "webfontloader": "^1.6.28"
   },
   "peerDependencies": {
@@ -35,5 +35,10 @@
     "react": ">=16",
     "react-dom": ">=16"
   },
-  "gitHead": "170b3b6d164cfccc8daf2ce9fa16eeeea16167d3"
+  "gitHead": "170b3b6d164cfccc8daf2ce9fa16eeeea16167d3",
+  "devDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-test-renderer": "16.13.1"
+  }
 }

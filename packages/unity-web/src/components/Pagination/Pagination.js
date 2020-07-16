@@ -1,5 +1,6 @@
 import React from 'react';
 import { number, func } from 'prop-types';
+import isPropValid from '@emotion/is-prop-valid';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import colors from '@clarityhub/unity-core/lib/colors';
@@ -24,15 +25,17 @@ const Container = styled.div`
     }
 
     @media (max-width: ${breakpoints.smallMaxWidth}px) {
-        li:first-child,
-        li:last-child {
+        li:first-of-type,
+        li:last-of-type {
             display: block;
             margin: 1rem;
         }
     }
 `;
 
-const Item = styled.div`
+const Item = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['selected'].includes(prop),
+})`
 	a {
         border: 1px solid ${colors.gray.default};
 		border-radius: 50%;

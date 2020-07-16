@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Empty /> renders complex 1`] = `
+<div
+  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    className="css-1ooqwlu-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    <svg
+      aria-labelledby="icon_labelledby_2"
+      style={
+        Object {
+          "height": "4.5rem",
+          "margin": "auto",
+          "width": "4.5rem",
+        }
+      }
+      viewBox="0 0 24 24"
+    >
+      <title
+        id="icon_labelledby_2"
+      >
+        Not found
+      </title>
+      <path
+        d="M17,4V10L15,8L13,10V4H9V20H19V4H17M3,7V5H5V4C5,2.89 5.9,2 7,2H19C20.05,2 21,2.95 21,4V20C21,21.05 20.05,22 19,22H7C5.95,22 5,21.05 5,20V19H3V17H5V13H3V11H5V7H3M5,5V7H7V5H5M5,19H7V17H5V19M5,13H7V11H5V13Z"
+        style={
+          Object {
+            "fill": "currentColor",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <h3
+    className="css-1ueflp8"
+  >
+    Create your first Notebook
+  </h3>
+  <p
+    className="css-b04jnf"
+  >
+    Notebooks let you organize your customer interviews, notes, and photos together in one place.
+  </p>
+  <div>
+    <button
+      className="-primary css-1qfeqqs-Button-Button entsyi60"
+      type="button"
+    >
+      Create a Notebook
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Empty /> renders default 1`] = `
+<div
+  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    className="css-1ooqwlu-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  >
+    <svg
+      aria-labelledby="icon_labelledby_1"
+      style={
+        Object {
+          "height": "4.5rem",
+          "margin": "auto",
+          "width": "4.5rem",
+        }
+      }
+      viewBox="0 0 24 24"
+    >
+      <title
+        id="icon_labelledby_1"
+      >
+        Not found
+      </title>
+      <path
+        d="M14.46,15.88L15.88,14.46L18,16.59L20.12,14.46L21.54,15.88L19.41,18L21.54,20.12L20.12,21.54L18,19.41L15.88,21.54L14.46,20.12L16.59,18L14.46,15.88M5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3M7,7H17V9H7V7M7,11H17V12.08C16.15,12.22 15.37,12.54 14.68,13H7V11M7,15H12V17H7V15Z"
+        style={
+          Object {
+            "fill": "currentColor",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <h3
+    className="css-1ueflp8"
+  >
+    No data
+  </h3>
+</div>
+`;

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> renders nav items 1`] = `
+<nav
+  className="css-ub7zyf-NavbarContainer e1rvg8h0"
+>
+  <div
+    className="css-1gbywb9-NavbarContent-NavbarContent e1rvg8h1"
+  >
+    <section
+      className="css-1yfhbo6-NavbarBrandWrapper e1rvg8h2"
+    >
+      <a
+        className="css-i8x1an"
+        href="/"
+      >
+        <svg
+          height="313px"
+          version="1.1"
+          viewBox="0 0 392 313"
+          width="392px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Clarity Hub
+          </title>
+          <defs />
+          <g
+            fill="none"
+            fillRule="evenodd"
+            id="Logo"
+            stroke="none"
+            strokeWidth="1"
+          >
+            <g
+              fill="#FFFFFF"
+              id="Simple-Reversed-Filled"
+              transform="translate(-14.000000, -54.000000)"
+            >
+              <g
+                id="Simple"
+                transform="translate(14.000000, 54.000000)"
+              >
+                <g
+                  id="Body"
+                >
+                  <path
+                    d="M19,0 L373,0 C383.49341,-1.92760819e-15 392,8.50658975 392,19 L392,294 C392,304.49341 383.49341,313 373,313 L19,313 C8.50658975,313 1.28507213e-15,304.49341 0,294 L0,19 C-1.28507213e-15,8.50658975 8.50658975,1.92760819e-15 19,0 Z M94.3110522,219.890145 C131.145116,249.95077 164.584555,268.451335 195.052311,275.39184 C225.097126,268.451335 258.536566,249.95077 295.370629,219.890145 C348.341694,176.659962 363.445819,112.032788 345.398601,79.8638289 C326.474838,46.1324376 286.428443,38.5339668 243.286713,55.1533026 C219.720716,64.2315483 203.572092,81.1892036 194.840841,106.026269 C186.10959,81.1892036 169.960966,64.2315483 146.394968,55.1533026 C103.253238,38.5339668 63.2068437,46.1324376 44.2830802,79.8638289 C26.2358624,112.032788 41.3399879,176.659962 94.3110522,219.890145 Z"
+                    id="Combined-Shape"
+                  />
+                </g>
+                <g
+                  id="Eyes"
+                  transform="translate(81.000000, 90.000000)"
+                >
+                  <ellipse
+                    cx="34"
+                    cy="34.1555017"
+                    id="Oval"
+                    rx="34"
+                    ry="34.1555017"
+                  />
+                  <ellipse
+                    cx="193"
+                    cy="34.1555017"
+                    id="Oval"
+                    rx="34"
+                    ry="34.1555017"
+                  />
+                </g>
+                <g
+                  id="Nose"
+                  transform="translate(176.208469, 155.861224)"
+                >
+                  <path
+                    d="M20.4739975,0 C6.82466584,18.3562632 0,32.7064293 0,43.0504983 C0,53.3945674 6.82466584,58.6335169 20.4739975,58.7673469 C32.758396,58.7673469 38.9005953,53.5283974 38.9005953,43.0504983 C38.9005953,32.5725993 32.758396,18.2224332 20.4739975,0 Z"
+                    id="Line-2"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <span
+          className="css-cyeymo"
+        >
+          Dashboard
+        </span>
+      </a>
+    </section>
+    <div
+      className="css-1niewbo-Gutter e1rvg8h3"
+    />
+    <div
+      className="css-1kvxdud-NavbarItems e1rvg8h4"
+    >
+      <div
+        className="css-1c9oiha-NavItem-NavItem efsgewv0"
+      >
+        <a
+          className="css-c25770"
+          href="#"
+        >
+          Dashboard
+        </a>
+      </div>
+      <div
+        className="css-1k4txj3-NavItem efsgewv0"
+      >
+        <a
+          className="css-c25770"
+          href="#"
+        >
+          Integrations
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

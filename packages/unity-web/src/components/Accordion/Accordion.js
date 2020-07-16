@@ -17,7 +17,7 @@ const Accordion = ({ multi, children, ...props }) => {
 				};
 			});
 		} else {
-			setOpenItems((openItems) => {
+			setOpenItems(() => {
 				return {
 					[i]: true,
 				};
@@ -36,7 +36,7 @@ const Accordion = ({ multi, children, ...props }) => {
 
 	return (
 		<AccordionStyled {...props}>
-			{React.Children.map(children, (child, index, arr) => {
+			{React.Children.map(children, (child, index) => {
 				return React.cloneElement(child, {
 					expanded: openItems[index],
 					onExpand,

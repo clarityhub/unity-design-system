@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func } from 'prop-types';
+import { func, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import noop from '@clarityhub/unity-core/lib/utilities/noop';
 
@@ -29,68 +29,79 @@ const DismissButton = styled.button`
 `;
 
 export default class Dismissable extends Component {
-  static propTypes = {
-  	children: func.isRequired,
-  	onDismiss: func,
-  }
+	static propTypes = {
+		children: func.isRequired,
+		dismissImmediately: bool,
+		onDismiss: func,
+	}
 
-  static defaultProps = {
-  	onDismiss: noop,
-  }
+	static defaultProps = {
+		dismissImmediately: false,
+		onDismiss: noop,
+	}
 
-  state = {
-  	status: 'show',
-  }
+	state = {
+		status: 'show',
+	}
 
-  componentWillUnmount() {
-  	if (this.timer) {
-  		clearTimeout(this.timer);
-  	}
-  }
+	componentWillUnmount() {
+		if (this.timer) {
+			clearTimeout(this.timer);
+		}
+	}
 
-  onDismiss = (e) => {
-  	e.preventDefault();
-  	e.stopPropagation();
+	onDismiss = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 
-  	this.setState({
-  		status: 'hiding',
-  	}, () => {
-  		this.timer = setTimeout(() => {
-  			const { onDismiss } = this.props;
-  			this.setState({
-  				status: 'hidden',
-  			}, onDismiss);
-  		}, ANIMATION_LENGTH);
-  	});
-  }
+		const { dismissImmediately, onDismiss } = this.props;
 
-  reset = () => {
-  	this.setState({
-  		status: 'show',
-  	});
-  }
+		if (dismissImmediately) {
+			this.setState({
+				status: 'hidden',
+			}, onDismiss);
+			return;
+		}
 
-  render() {
-  	const { children } = this.props;
-  	const { status } = this.state;
+		this.setState({
+			status: 'hiding',
+		}, () => {
+			this.timer = setTimeout(() => {
+				const { onDismiss } = this.props;
+				this.setState({
+					status: 'hidden',
+				}, onDismiss);
+			}, ANIMATION_LENGTH);
+		});
+	}
 
-  	const Dismiss = () => (
-  		<DismissButton
-  			onClick={this.onDismiss}
-  			type="button"
-  			aria-label="Dismiss"
-  		>
-  			<span aria-hidden="true">×</span>
-  		</DismissButton>
-  	);
+	reset = () => {
+		this.setState({
+			status: 'show',
+		});
+	}
 
-  	if (status === 'hidden') {
-  		return null;
-  	}
+	render() {
+		const { children } = this.props;
+		const { status } = this.state;
 
-  	return children({
-  		onDismiss: this.onDismiss,
-  		Dismiss,
-  	});
-  }
+		const Dismiss = () => (
+			<DismissButton
+				onClick={this.onDismiss}
+				type="button"
+				aria-label="Dismiss"
+			>
+				<span aria-hidden="true">×</span>
+			</DismissButton>
+		);
+
+		if (status === 'hidden') {
+			return null;
+		}
+
+		return children({
+			onDismiss: this.onDismiss,
+			Dismiss,
+		});
+	}
 }

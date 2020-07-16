@@ -1,0 +1,41 @@
+---
+menu: Components
+name: ButtonGroup
+---
+
+import { Playground, PropsTable } from 'docz';
+import ButtonGroup from './ButtonGroup';
+
+# ButtonGroup
+
+A `ButtonGroup` groups a set of actions together that act like checkboxes or
+radio inputs. For example, displaying days of the week would be better suited
+as a ButtonGroup then as distinct checkboxes. 
+
+```js
+import ButtonGroup from '@clarityhub/unity-web/lib/components/ButtonGroup';
+```
+
+## Examples
+
+<Playground>
+    <ButtonGroup>
+        <ButtonGroup.ButtonGroupItem>Mon</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem selected>Tue</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem>Wed</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem>Thu</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem selected>Fri</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem>Sat</ButtonGroup.ButtonGroupItem>
+        <ButtonGroup.ButtonGroupItem>Sun</ButtonGroup.ButtonGroupItem>
+    </ButtonGroup>
+</Playground>
+
+## Prop Types
+
+The `\<ButtonGroup /\>` component takes the following prop types.
+
+<PropsTable of={ButtonGroup} />
+
+The `\<ButtonGroup.ButtonGroupItem /\>` component takes the following prop types.
+
+<PropsTable of={ButtonGroup.ButtonGroupItem} />

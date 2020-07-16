@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { oneOf } from 'prop-types';
+import { func, node, oneOfType } from 'prop-types';
 
 import { SIDENAV_WIDTH } from './config';
 
@@ -14,7 +14,7 @@ const SideNav = styled.div`
  */
 const SideNavProps = () => <div />;
 SideNavProps.propTypes = {
-	children: oneOf(['SideNavGroup', 'SideNavItem']),
+	children: oneOfType([node, func]),
 };
 
 SideNav.propTypes = SideNavProps.propTypes;

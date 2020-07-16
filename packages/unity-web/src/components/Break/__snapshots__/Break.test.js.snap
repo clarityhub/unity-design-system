@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Break /> renders a break 1`] = `
+<div
+  className="css-9jsh3j-Break e181nq4s0"
+/>
+`;

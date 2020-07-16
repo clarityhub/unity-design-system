@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> renders with panels 1`] = `
+<div
+  className="css-17fa11i-AccordionStyled e1slpiaj0"
+>
+  <div
+    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+  >
+    <button
+      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+      >
+        <p
+          className="css-669rpd"
+          style={
+            Object {
+              "marginRight": "30px",
+            }
+          }
+        >
+          <b>
+            General settings
+          </b>
+        </p>
+        <p
+          className="css-669rpd"
+        >
+          I am an expansion panel
+        </p>
+      </div>
+      <div
+        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      onClose={[Function]}
+    >
+      <div
+        className="css-opo7aj-CardBody em76frp0"
+      >
+        <p
+          className="css-b04jnf"
+        >
+          Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+  >
+    <button
+      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+      >
+        <p
+          className="css-669rpd"
+          style={
+            Object {
+              "marginRight": "30px",
+            }
+          }
+        >
+          <b>
+            General settings
+          </b>
+        </p>
+        <p
+          className="css-669rpd"
+        >
+          I am an expansion panel
+        </p>
+      </div>
+      <div
+        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      onClose={[Function]}
+    >
+      <div
+        className="css-opo7aj-CardBody em76frp0"
+      >
+        <p
+          className="css-b04jnf"
+        >
+          Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+  >
+    <button
+      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+      >
+        <p
+          className="css-669rpd"
+          style={
+            Object {
+              "marginRight": "30px",
+            }
+          }
+        >
+          <b>
+            General settings
+          </b>
+        </p>
+        <p
+          className="css-669rpd"
+        >
+          I am an expansion panel
+        </p>
+      </div>
+      <div
+        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-1"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      onClose={[Function]}
+    >
+      <div
+        className="css-opo7aj-CardBody em76frp0"
+      >
+        <p
+          className="css-b04jnf"
+        >
+          Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

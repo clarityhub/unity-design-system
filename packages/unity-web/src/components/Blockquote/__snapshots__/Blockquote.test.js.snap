@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Blockquote /> renders text 1`] = `
+<blockquote
+  className="css-6fauep-Blockquote e9ltruz0"
+>
+  <p
+    className="css-b04jnf"
+  >
+    This is a block quote with some text
+  </p>
+  <p
+    className="css-b04jnf"
+  >
+    There can be multiple paragraphs
+  </p>
+</blockquote>
+`;

@@ -1,8 +1,11 @@
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import colors from '@clarityhub/unity-core/lib/colors';
 
-const NavItem = styled.div`
+const NavItem = styled('div', {
+	shouldForwardProp: prop => isPropValid(prop) && !['selected'].includes(prop),
+})`
     a {
         color: ${colors.white.default};
 
