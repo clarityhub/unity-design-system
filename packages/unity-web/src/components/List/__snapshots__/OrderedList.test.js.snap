@@ -1,21 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OrderedList /> renders items 1`] = `
+.emotion-3 {
+  list-style: decimal;
+  margin-left: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.emotion-3 li {
+  padding-left: 1.6rem;
+}
+
+.emotion-0 {
+  font-family: 'Crimson Text',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  color: #322439;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <ol
-  className="css-1wwl84o-OrderedList e50npi0"
+  className="emotion-3 emotion-4"
 >
   <li
-    className="css-8lg160"
+    className="emotion-0"
   >
     First item
   </li>
   <li
-    className="css-8lg160"
+    className="emotion-0"
   >
     Second item
   </li>
   <li
-    className="css-8lg160"
+    className="emotion-0"
   >
     Third item
   </li>

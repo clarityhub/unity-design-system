@@ -1,18 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Pagination /> renders paginiation bar 1`] = `
+.emotion-21 {
+  margin: 3rem 1rem;
+  text-align: center;
+}
+
+.emotion-21 li {
+  display: inline-block;
+}
+
+.emotion-21 li + li {
+  margin-left: 1rem;
+}
+
+@media (max-width:820px) {
+  .emotion-21 li:first-of-type,
+  .emotion-21 li:last-of-type {
+    display: block;
+    margin: 1rem;
+  }
+}
+
+.emotion-1 a {
+  border: 1px solid #C2C2C2;
+  border-radius: 50%;
+  color: #566ad2;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-1 a:hover {
+  background-color: #F1F1F1;
+  border: 1px solid #C2C2C2;
+}
+
+.emotion-1 a:visited {
+  border: 1px solid #C2C2C2;
+  color: #566ad2;
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #566ad2;
+  color: #566ad2;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  border-bottom: 2px solid #566ad2;
+  border-bottom-width: 2px;
+  color: #566ad2;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  border-bottom: 1px solid rgb(50,72,187);
+  color: rgb(50,72,187);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited:hover,
+.emotion-0:visited:active {
+  margin-bottom: 0;
+}
+
+.emotion-10 a {
+  border: 1px solid #C2C2C2;
+  border-radius: 50%;
+  color: #566ad2;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #566ad2;
+  color: #FFF !important;
+  border: 1px solid #566ad2;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+}
+
+.emotion-10 a:hover {
+  background-color: #F1F1F1;
+  border: 1px solid #C2C2C2;
+}
+
+.emotion-10 a:visited {
+  border: 1px solid #C2C2C2;
+  color: #566ad2;
+}
+
+.emotion-10 a:hover {
+  background-color: #566ad2;
+  border: 1px solid #566ad2;
+}
+
+.emotion-10 a:visited {
+  color: #FFF !important;
+}
+
 <div
-  className="css-13p1w26-Container e171o4c40"
+  className="emotion-21 emotion-22"
 >
   <ul>
     <li
       className="previous"
     >
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/3"
         >
           &lt;
@@ -21,10 +154,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/"
         >
           1
@@ -36,10 +169,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/3"
         >
           3
@@ -50,10 +183,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
       className="selected"
     >
       <div
-        className="css-1fxzov6-Item-Item e171o4c41"
+        className="emotion-10 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/4"
         >
           4
@@ -62,10 +195,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/5"
         >
           5
@@ -77,10 +210,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/120"
         >
           120
@@ -91,10 +224,10 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
       className="next"
     >
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="/5"
         >
           &gt;
@@ -106,8 +239,376 @@ exports[`<Pagination /> renders paginiation bar 1`] = `
 `;
 
 exports[`<Pagination /> uses renderers 1`] = `
+.emotion-19 {
+  margin: 3rem 1rem;
+  text-align: center;
+}
+
+.emotion-19 li {
+  display: inline-block;
+}
+
+.emotion-19 li + li {
+  margin-left: 1rem;
+}
+
+@media (max-width:820px) {
+  .emotion-19 li:first-of-type,
+  .emotion-19 li:last-of-type {
+    display: block;
+    margin: 1rem;
+  }
+}
+
+.emotion-4 a {
+  border: 1px solid #C2C2C2;
+  border-radius: 50%;
+  color: #566ad2;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-4 a:hover {
+  background-color: #F1F1F1;
+  border: 1px solid #C2C2C2;
+}
+
+.emotion-4 a:visited {
+  border: 1px solid #C2C2C2;
+  color: #566ad2;
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #566ad2;
+  color: #566ad2;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  border-bottom: 2px solid #566ad2;
+  border-bottom-width: 2px;
+  color: #566ad2;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  border-bottom: 1px solid rgb(50,72,187);
+  color: rgb(50,72,187);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited:hover,
+.emotion-0:visited:active {
+  margin-bottom: 0;
+}
+
+.emotion-1 a {
+  border: 1px solid #C2C2C2;
+  border-radius: 50%;
+  color: #566ad2;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #566ad2;
+  color: #FFF !important;
+  border: 1px solid #566ad2;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+}
+
+.emotion-1 a:hover {
+  background-color: #F1F1F1;
+  border: 1px solid #C2C2C2;
+}
+
+.emotion-1 a:visited {
+  border: 1px solid #C2C2C2;
+  color: #566ad2;
+}
+
+.emotion-1 a:hover {
+  background-color: #566ad2;
+  border: 1px solid #566ad2;
+}
+
+.emotion-1 a:visited {
+  color: #FFF !important;
+}
+
+.emotion-15 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-15:focus,
+.emotion-15:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15:focus,
+.emotion-15.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-15:disabled,
+.emotion-15.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-15:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-15 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-15.-default,
+.emotion-15.-primary,
+.emotion-15.-danger,
+.emotion-15.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-15.-default.-outline,
+.emotion-15.-primary.-outline,
+.emotion-15.-danger.-outline,
+.emotion-15.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-15.-default.-text,
+.emotion-15.-primary.-text,
+.emotion-15.-danger.-text,
+.emotion-15.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-15.-default:hover,
+.emotion-15.-primary:hover,
+.emotion-15.-danger:hover,
+.emotion-15.-white:hover,
+.emotion-15.-default.active,
+.emotion-15.-primary.active,
+.emotion-15.-danger.active,
+.emotion-15.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-15.-default:hover.-outline,
+.emotion-15.-primary:hover.-outline,
+.emotion-15.-danger:hover.-outline,
+.emotion-15.-white:hover.-outline,
+.emotion-15.-default.active.-outline,
+.emotion-15.-primary.active.-outline,
+.emotion-15.-danger.active.-outline,
+.emotion-15.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-15.-default:hover.-text,
+.emotion-15.-primary:hover.-text,
+.emotion-15.-danger:hover.-text,
+.emotion-15.-white:hover.-text,
+.emotion-15.-default.active.-text,
+.emotion-15.-primary.active.-text,
+.emotion-15.-danger.active.-text,
+.emotion-15.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-15.-default:disabled,
+.emotion-15.-primary:disabled,
+.emotion-15.-danger:disabled,
+.emotion-15.-white:disabled,
+.emotion-15.-default.disabled,
+.emotion-15.-primary.disabled,
+.emotion-15.-danger.disabled,
+.emotion-15.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-15.-default:disabled.-outline,
+.emotion-15.-primary:disabled.-outline,
+.emotion-15.-danger:disabled.-outline,
+.emotion-15.-white:disabled.-outline,
+.emotion-15.-default.disabled.-outline,
+.emotion-15.-primary.disabled.-outline,
+.emotion-15.-danger.disabled.-outline,
+.emotion-15.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-15.-default:disabled.-text,
+.emotion-15.-primary:disabled.-text,
+.emotion-15.-danger:disabled.-text,
+.emotion-15.-white:disabled.-text,
+.emotion-15.-default.disabled.-text,
+.emotion-15.-primary.disabled.-text,
+.emotion-15.-danger.disabled.-text,
+.emotion-15.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-15.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-15.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-15.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-15.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-15.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-15.-text:hover,
+.emotion-15.-text.active {
+  border-color: transparent;
+}
+
+.emotion-15.-text.disabled,
+.emotion-15.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-15.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-15.disabled,
+.emotion-15:disabled {
+  cursor: not-allowed;
+}
+
 <div
-  className="css-13p1w26-Container e171o4c40"
+  className="emotion-19 emotion-20"
 >
   <ul>
     <li
@@ -117,10 +618,10 @@ exports[`<Pagination /> uses renderers 1`] = `
       className="selected"
     >
       <div
-        className="css-1fxzov6-Item-Item e171o4c41"
+        className="emotion-1 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#/"
         >
           1
@@ -129,10 +630,10 @@ exports[`<Pagination /> uses renderers 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#/2"
         >
           2
@@ -141,10 +642,10 @@ exports[`<Pagination /> uses renderers 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#/3"
         >
           3
@@ -153,10 +654,10 @@ exports[`<Pagination /> uses renderers 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#/4"
         >
           4
@@ -168,10 +669,10 @@ exports[`<Pagination /> uses renderers 1`] = `
     </li>
     <li>
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#/120"
         >
           120
@@ -182,10 +683,10 @@ exports[`<Pagination /> uses renderers 1`] = `
       className="next"
     >
       <div
-        className="css-repihg-Item e171o4c41"
+        className="emotion-4 emotion-2"
       >
         <button
-          className="-default css-1qfeqqs-Button-Button entsyi60"
+          className="-default emotion-15 emotion-16"
           type="button"
         >
           Next »

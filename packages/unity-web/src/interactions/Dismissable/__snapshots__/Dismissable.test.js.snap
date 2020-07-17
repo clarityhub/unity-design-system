@@ -3,16 +3,71 @@
 exports[`<Dismissable /> dismisses the notification 1`] = `null`;
 
 exports[`<Dismissable /> renders text 1`] = `
+.emotion-3 {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #f5365c;
+  color: #FFF;
+  padding: 2rem;
+}
+
+.emotion-2 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #FFF;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-2 + .emotion-2 {
+  margin-top: 1.6rem;
+}
+
+.emotion-2 strong,
+.emotion-2 b {
+  font-weight: 800;
+}
+
+.emotion-2 i,
+.emotion-2 em {
+  font-style: italic;
+}
+
+.emotion-2 + .emotion-2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.2rem;
+  top: 0;
+  right: 0;
+  padding: .75rem 1.25rem;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 <div
-  className="css-5swc56-base-danger-block"
+  className="emotion-3"
   role="alert"
 >
   <div
-    className="css-d4n4rw"
+    className="emotion-2"
   >
     <button
       aria-label="Dismiss"
-      className="css-mpjvgz-DismissButton e1jp307v0"
+      className="emotion-0 emotion-1"
       onClick={[Function]}
       type="button"
     >

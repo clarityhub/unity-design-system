@@ -1,22 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> renders with panels 1`] = `
+.emotion-13 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  background-color: #FFF;
+  margin-bottom: 0;
+  -webkit-transition: all 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition-property: margin-top,margin-bottom;
+  transition-property: margin-top,margin-bottom;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emotion-13 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-13 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-13 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+.emotion-13:first-of-type {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.emotion-13:last-of-type {
+  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.emotion-6 {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-transition: padding 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: padding 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  text-align: left;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: inline-block;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-11 {
+  overflow: hidden;
+  -webkit-transition: max-height 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: max-height 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  max-height: 0;
+}
+
+.emotion-9 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-8 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-8 + .emotion-8 {
+  margin-top: 1.6rem;
+}
+
+.emotion-8 strong,
+.emotion-8 b {
+  font-weight: 800;
+}
+
+.emotion-8 i,
+.emotion-8 em {
+  font-style: italic;
+}
+
 <div
-  className="css-17fa11i-AccordionStyled e1slpiaj0"
+  className="emotion-45 emotion-46"
 >
   <div
-    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+    className="emotion-13 emotion-14"
   >
     <button
-      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      className="emotion-6 emotion-7"
       disabled={false}
       onClick={[Function]}
     >
       <div
-        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+        className="emotion-2 emotion-3"
       >
         <p
-          className="css-669rpd"
+          className="emotion-0"
           style={
             Object {
               "marginRight": "30px",
@@ -28,13 +191,13 @@ exports[`<Accordion /> renders with panels 1`] = `
           </b>
         </p>
         <p
-          className="css-669rpd"
+          className="emotion-0"
         >
           I am an expansion panel
         </p>
       </div>
       <div
-        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+        className="emotion-4 emotion-5"
       >
         <svg
           aria-hidden="true"
@@ -46,22 +209,18 @@ exports[`<Accordion /> renders with panels 1`] = `
           <path
             d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
           />
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
         </svg>
       </div>
     </button>
     <div
-      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      className="emotion-11 emotion-12"
       onClose={[Function]}
     >
       <div
-        className="css-opo7aj-CardBody em76frp0"
+        className="emotion-9 emotion-10"
       >
         <p
-          className="css-b04jnf"
+          className="emotion-8"
         >
           Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
         </p>
@@ -69,18 +228,18 @@ exports[`<Accordion /> renders with panels 1`] = `
     </div>
   </div>
   <div
-    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+    className="emotion-13 emotion-14"
   >
     <button
-      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      className="emotion-6 emotion-7"
       disabled={false}
       onClick={[Function]}
     >
       <div
-        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+        className="emotion-2 emotion-3"
       >
         <p
-          className="css-669rpd"
+          className="emotion-0"
           style={
             Object {
               "marginRight": "30px",
@@ -92,13 +251,13 @@ exports[`<Accordion /> renders with panels 1`] = `
           </b>
         </p>
         <p
-          className="css-669rpd"
+          className="emotion-0"
         >
           I am an expansion panel
         </p>
       </div>
       <div
-        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+        className="emotion-4 emotion-5"
       >
         <svg
           aria-hidden="true"
@@ -110,22 +269,18 @@ exports[`<Accordion /> renders with panels 1`] = `
           <path
             d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
           />
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
         </svg>
       </div>
     </button>
     <div
-      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      className="emotion-11 emotion-12"
       onClose={[Function]}
     >
       <div
-        className="css-opo7aj-CardBody em76frp0"
+        className="emotion-9 emotion-10"
       >
         <p
-          className="css-b04jnf"
+          className="emotion-8"
         >
           Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
         </p>
@@ -133,18 +288,18 @@ exports[`<Accordion /> renders with panels 1`] = `
     </div>
   </div>
   <div
-    className="css-1k7y4tw-Card-Card-Card-Card-Card-AccordionItemStyled e21no370"
+    className="emotion-13 emotion-14"
   >
     <button
-      className="css-19znnnc-AccordionSummaryButton e1xo0hiy0"
+      className="emotion-6 emotion-7"
       disabled={false}
       onClick={[Function]}
     >
       <div
-        className="css-1ymntya-AccordionSummaryStyled e1xo0hiy1"
+        className="emotion-2 emotion-3"
       >
         <p
-          className="css-669rpd"
+          className="emotion-0"
           style={
             Object {
               "marginRight": "30px",
@@ -156,13 +311,13 @@ exports[`<Accordion /> renders with panels 1`] = `
           </b>
         </p>
         <p
-          className="css-669rpd"
+          className="emotion-0"
         >
           I am an expansion panel
         </p>
       </div>
       <div
-        className="css-1vqi9ux-IconWrapper e1xo0hiy2"
+        className="emotion-4 emotion-5"
       >
         <svg
           aria-hidden="true"
@@ -174,22 +329,18 @@ exports[`<Accordion /> renders with panels 1`] = `
           <path
             d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
           />
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
         </svg>
       </div>
     </button>
     <div
-      className="css-14w8nl5-AccordionDetailsStyled-AccordionDetailsStyled e1147wlk0"
+      className="emotion-11 emotion-12"
       onClose={[Function]}
     >
       <div
-        className="css-opo7aj-CardBody em76frp0"
+        className="emotion-9 emotion-10"
       >
         <p
-          className="css-b04jnf"
+          className="emotion-8"
         >
           Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.
         </p>

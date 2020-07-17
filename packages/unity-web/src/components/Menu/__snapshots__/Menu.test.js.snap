@@ -1,15 +1,259 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Menu /> renders a button 1`] = `
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: relative;
+}
+
+.emotion-0 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:focus,
+.emotion-0.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-0:disabled,
+.emotion-0.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-0:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-0.-default,
+.emotion-0.-primary,
+.emotion-0.-danger,
+.emotion-0.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-0.-default.-outline,
+.emotion-0.-primary.-outline,
+.emotion-0.-danger.-outline,
+.emotion-0.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-0.-default.-text,
+.emotion-0.-primary.-text,
+.emotion-0.-danger.-text,
+.emotion-0.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-0.-default:hover,
+.emotion-0.-primary:hover,
+.emotion-0.-danger:hover,
+.emotion-0.-white:hover,
+.emotion-0.-default.active,
+.emotion-0.-primary.active,
+.emotion-0.-danger.active,
+.emotion-0.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-0.-default:hover.-outline,
+.emotion-0.-primary:hover.-outline,
+.emotion-0.-danger:hover.-outline,
+.emotion-0.-white:hover.-outline,
+.emotion-0.-default.active.-outline,
+.emotion-0.-primary.active.-outline,
+.emotion-0.-danger.active.-outline,
+.emotion-0.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-0.-default:hover.-text,
+.emotion-0.-primary:hover.-text,
+.emotion-0.-danger:hover.-text,
+.emotion-0.-white:hover.-text,
+.emotion-0.-default.active.-text,
+.emotion-0.-primary.active.-text,
+.emotion-0.-danger.active.-text,
+.emotion-0.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-0.-default:disabled,
+.emotion-0.-primary:disabled,
+.emotion-0.-danger:disabled,
+.emotion-0.-white:disabled,
+.emotion-0.-default.disabled,
+.emotion-0.-primary.disabled,
+.emotion-0.-danger.disabled,
+.emotion-0.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-0.-default:disabled.-outline,
+.emotion-0.-primary:disabled.-outline,
+.emotion-0.-danger:disabled.-outline,
+.emotion-0.-white:disabled.-outline,
+.emotion-0.-default.disabled.-outline,
+.emotion-0.-primary.disabled.-outline,
+.emotion-0.-danger.disabled.-outline,
+.emotion-0.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-0.-default:disabled.-text,
+.emotion-0.-primary:disabled.-text,
+.emotion-0.-danger:disabled.-text,
+.emotion-0.-white:disabled.-text,
+.emotion-0.-default.disabled.-text,
+.emotion-0.-primary.disabled.-text,
+.emotion-0.-danger.disabled.-text,
+.emotion-0.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-0.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-0.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-0.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-0.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-0.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-0.-text:hover,
+.emotion-0.-text.active {
+  border-color: transparent;
+}
+
+.emotion-0.-text.disabled,
+.emotion-0.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-0.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-0.disabled,
+.emotion-0:disabled {
+  cursor: not-allowed;
+}
+
 <div
-  className="css-uhhx3m-MenuWrapper e1vovinh0"
+  className="emotion-4 emotion-5"
 >
   <div />
   <div
-    className="css-ivde54-MenuTarget e1vovinh1"
+    className="emotion-2 emotion-3"
   >
     <button
-      className="-default css-1qfeqqs-Button-Button entsyi60"
+      className="-default emotion-0 emotion-1"
       onClick={[Function]}
       type="button"
     >
@@ -20,12 +264,548 @@ exports[`<Menu /> renders a button 1`] = `
 `;
 
 exports[`<Menu /> renders menu items 1`] = `
+.emotion-17 {
+  position: relative;
+}
+
+.emotion-15 {
+  display: inline-block;
+  position: relative;
+}
+
+.emotion-13 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-13:focus,
+.emotion-13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13:focus,
+.emotion-13.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-13:disabled,
+.emotion-13.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-13:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-13 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-13.-default,
+.emotion-13.-primary,
+.emotion-13.-danger,
+.emotion-13.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-13.-default.-outline,
+.emotion-13.-primary.-outline,
+.emotion-13.-danger.-outline,
+.emotion-13.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-13.-default.-text,
+.emotion-13.-primary.-text,
+.emotion-13.-danger.-text,
+.emotion-13.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-13.-default:hover,
+.emotion-13.-primary:hover,
+.emotion-13.-danger:hover,
+.emotion-13.-white:hover,
+.emotion-13.-default.active,
+.emotion-13.-primary.active,
+.emotion-13.-danger.active,
+.emotion-13.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-13.-default:hover.-outline,
+.emotion-13.-primary:hover.-outline,
+.emotion-13.-danger:hover.-outline,
+.emotion-13.-white:hover.-outline,
+.emotion-13.-default.active.-outline,
+.emotion-13.-primary.active.-outline,
+.emotion-13.-danger.active.-outline,
+.emotion-13.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-13.-default:hover.-text,
+.emotion-13.-primary:hover.-text,
+.emotion-13.-danger:hover.-text,
+.emotion-13.-white:hover.-text,
+.emotion-13.-default.active.-text,
+.emotion-13.-primary.active.-text,
+.emotion-13.-danger.active.-text,
+.emotion-13.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-13.-default:disabled,
+.emotion-13.-primary:disabled,
+.emotion-13.-danger:disabled,
+.emotion-13.-white:disabled,
+.emotion-13.-default.disabled,
+.emotion-13.-primary.disabled,
+.emotion-13.-danger.disabled,
+.emotion-13.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-13.-default:disabled.-outline,
+.emotion-13.-primary:disabled.-outline,
+.emotion-13.-danger:disabled.-outline,
+.emotion-13.-white:disabled.-outline,
+.emotion-13.-default.disabled.-outline,
+.emotion-13.-primary.disabled.-outline,
+.emotion-13.-danger.disabled.-outline,
+.emotion-13.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-13.-default:disabled.-text,
+.emotion-13.-primary:disabled.-text,
+.emotion-13.-danger:disabled.-text,
+.emotion-13.-white:disabled.-text,
+.emotion-13.-default.disabled.-text,
+.emotion-13.-primary.disabled.-text,
+.emotion-13.-danger.disabled.-text,
+.emotion-13.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-13.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-13.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-13.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-13.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-13.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-13.-text:hover,
+.emotion-13.-text.active {
+  border-color: transparent;
+}
+
+.emotion-13.-text.disabled,
+.emotion-13.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-13.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-13.disabled,
+.emotion-13:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-12 {
+  background-color: #FFF;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  position: absolute;
+  z-index: 99999999;
+  margin-top: 1rem;
+  min-width: 13rem;
+  padding: 0.4rem 0;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-size: 1rem;
+}
+
+.emotion-12 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-12 li {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-0 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #FFF;
+  top: -0.5rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-2 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+  border-radius: 0;
+  text-align: left;
+  text-transform: none;
+  min-width: 150px;
+  width: 100%;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2:focus,
+.emotion-2.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-2:disabled,
+.emotion-2.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-2:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-2 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-2.-default,
+.emotion-2.-primary,
+.emotion-2.-danger,
+.emotion-2.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-2.-default.-outline,
+.emotion-2.-primary.-outline,
+.emotion-2.-danger.-outline,
+.emotion-2.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-2.-default.-text,
+.emotion-2.-primary.-text,
+.emotion-2.-danger.-text,
+.emotion-2.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-2.-default:hover,
+.emotion-2.-primary:hover,
+.emotion-2.-danger:hover,
+.emotion-2.-white:hover,
+.emotion-2.-default.active,
+.emotion-2.-primary.active,
+.emotion-2.-danger.active,
+.emotion-2.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-2.-default:hover.-outline,
+.emotion-2.-primary:hover.-outline,
+.emotion-2.-danger:hover.-outline,
+.emotion-2.-white:hover.-outline,
+.emotion-2.-default.active.-outline,
+.emotion-2.-primary.active.-outline,
+.emotion-2.-danger.active.-outline,
+.emotion-2.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-2.-default:hover.-text,
+.emotion-2.-primary:hover.-text,
+.emotion-2.-danger:hover.-text,
+.emotion-2.-white:hover.-text,
+.emotion-2.-default.active.-text,
+.emotion-2.-primary.active.-text,
+.emotion-2.-danger.active.-text,
+.emotion-2.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-2.-default:disabled,
+.emotion-2.-primary:disabled,
+.emotion-2.-danger:disabled,
+.emotion-2.-white:disabled,
+.emotion-2.-default.disabled,
+.emotion-2.-primary.disabled,
+.emotion-2.-danger.disabled,
+.emotion-2.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-2.-default:disabled.-outline,
+.emotion-2.-primary:disabled.-outline,
+.emotion-2.-danger:disabled.-outline,
+.emotion-2.-white:disabled.-outline,
+.emotion-2.-default.disabled.-outline,
+.emotion-2.-primary.disabled.-outline,
+.emotion-2.-danger.disabled.-outline,
+.emotion-2.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-2.-default:disabled.-text,
+.emotion-2.-primary:disabled.-text,
+.emotion-2.-danger:disabled.-text,
+.emotion-2.-white:disabled.-text,
+.emotion-2.-default.disabled.-text,
+.emotion-2.-primary.disabled.-text,
+.emotion-2.-danger.disabled.-text,
+.emotion-2.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-2.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-2.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-2.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-2.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-2.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-2.-text:hover,
+.emotion-2.-text.active {
+  border-color: transparent;
+}
+
+.emotion-2.-text.disabled,
+.emotion-2.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-2.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-2.disabled,
+.emotion-2:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-2:hover {
+  background-color: #F1F1F1;
+}
+
+.emotion-8 {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #C2C2C2;
+}
+
 <div
-  className="css-uhhx3m-MenuWrapper e1vovinh0"
+  className="emotion-17 emotion-18"
 >
   <div>
     <div
-      className="css-7bq2ov"
+      className="emotion-12"
       style={
         Object {
           "left": "0px",
@@ -34,7 +814,7 @@ exports[`<Menu /> renders menu items 1`] = `
       }
     >
       <div
-        className="css-1ypkzdo-Arrow e1yoe36r0"
+        className="emotion-0 emotion-1"
         style={
           Object {
             "left": "0px",
@@ -44,7 +824,7 @@ exports[`<Menu /> renders menu items 1`] = `
       <ul>
         <li>
           <button
-            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            className="-default -text emotion-2 emotion-3"
             type="button"
           >
             Item 1
@@ -52,7 +832,7 @@ exports[`<Menu /> renders menu items 1`] = `
         </li>
         <li>
           <button
-            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            className="-default -text emotion-2 emotion-3"
             type="button"
           >
             Item 2
@@ -60,7 +840,7 @@ exports[`<Menu /> renders menu items 1`] = `
         </li>
         <li>
           <button
-            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            className="-default -text emotion-2 emotion-3"
             type="button"
           >
             Item 3
@@ -68,12 +848,12 @@ exports[`<Menu /> renders menu items 1`] = `
         </li>
         <li>
           <hr
-            className="css-1fxgots-MenuItemDivider e17w1yli0"
+            className="emotion-8 emotion-9"
           />
         </li>
         <li>
           <button
-            className="-default -text css-ot0ksi-Button-Button-MenuItem entsyi60"
+            className="-default -text emotion-2 emotion-3"
             type="button"
           >
             Long Item 4
@@ -83,10 +863,10 @@ exports[`<Menu /> renders menu items 1`] = `
     </div>
   </div>
   <div
-    className="css-ivde54-MenuTarget e1vovinh1"
+    className="emotion-15 emotion-16"
   >
     <button
-      className="-default css-1qfeqqs-Button-Button entsyi60"
+      className="-default emotion-13 emotion-3"
       onClick={[Function]}
       type="button"
     >

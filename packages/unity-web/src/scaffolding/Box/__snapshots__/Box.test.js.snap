@@ -1,33 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Box /> renders a simple grid 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.emotion-6 > *:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
 <div
-  className="css-346yjg-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  className="emotion-6 emotion-1"
 >
   <div
-    className="css-17psxz-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    className="emotion-0 emotion-1"
   />
   <div
-    className="css-17psxz-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    className="emotion-0 emotion-1"
   />
   <div
-    className="css-1661iiv-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    className="emotion-4 emotion-1"
   />
 </div>
 `;
 
 exports[`<Box /> renders paddings and margins 1`] = `
 Array [
-  <div
-    className="css-1bq9syo-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 4rem 4rem 4rem 4rem;
+}
+
+<div
+    className="emotion-0 emotion-1"
   >
     <div>
       padding
     </div>
   </div>,
-  <div>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 4rem 4rem 4rem 4rem;
+  margin: 4rem 4rem 4rem 4rem;
+}
+
+<div>
     <div
-      className="css-1nz9mi7-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+      className="emotion-0 emotion-1"
     >
       <div>
         padding + margin
@@ -38,8 +101,18 @@ Array [
 `;
 
 exports[`<Box /> renders text 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 <div
-  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  className="emotion-0 emotion-1"
 >
   Children
 </div>
@@ -47,18 +120,55 @@ exports[`<Box /> renders text 1`] = `
 
 exports[`<Box /> renders types and colors 1`] = `
 Array [
-  <div
-    className="css-2ng6uf-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #566ad2;
+}
+
+<div
+    className="emotion-0 emotion-1"
   >
     primary
   </div>,
-  <div
-    className="css-6bj8v1-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f5365c;
+  color: #FFF;
+}
+
+<div
+    className="emotion-0 emotion-1"
   >
     danger (type)
   </div>,
-  <div
-    className="css-vqmqvd-StyledBox-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f5365c;
+}
+
+<div
+    className="emotion-0 emotion-1"
   >
     danger (color)
   </div>,

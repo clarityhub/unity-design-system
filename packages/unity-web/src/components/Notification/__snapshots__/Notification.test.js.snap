@@ -1,12 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Notification /> renders text 1`] = `
+.emotion-1 {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #f5365c;
+  color: #FFF;
+  padding: 2rem;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #FFF;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-  className="css-5swc56-base-danger-block"
+  className="emotion-1"
   role="alert"
 >
   <div
-    className="css-d4n4rw"
+    className="emotion-0"
   >
     There were problems with processing your request. We encountered the following issues:
     <ul>
@@ -19,12 +59,52 @@ exports[`<Notification /> renders text 1`] = `
 `;
 
 exports[`<Notification /> renders variants 1`] = `
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #FFF;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-1 {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #f5365c;
+  color: #FFF;
+  padding: 0.6rem 2rem;
+}
+
 <div
-  className="css-1m55s5w-base-danger-thin"
+  className="emotion-1"
   role="alert"
 >
   <div
-    className="css-d4n4rw"
+    className="emotion-0"
   >
     There were problems with processing your request. We encountered the following issues:
     <ul>

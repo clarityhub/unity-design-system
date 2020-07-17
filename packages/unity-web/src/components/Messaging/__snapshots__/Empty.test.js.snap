@@ -1,8 +1,304 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Empty /> renders complex 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.emotion-2 {
+  font-family: Futura,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  color: #322439;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-2 + .emotion-2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-3 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-3 + .emotion-3 {
+  margin-top: 1.6rem;
+}
+
+.emotion-3 strong,
+.emotion-3 b {
+  font-weight: 800;
+}
+
+.emotion-3 i,
+.emotion-3 em {
+  font-style: italic;
+}
+
+.emotion-4 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4:focus,
+.emotion-4.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-4:disabled,
+.emotion-4.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-4:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-4 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-4.-default,
+.emotion-4.-primary,
+.emotion-4.-danger,
+.emotion-4.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-4.-default.-outline,
+.emotion-4.-primary.-outline,
+.emotion-4.-danger.-outline,
+.emotion-4.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-4.-default.-text,
+.emotion-4.-primary.-text,
+.emotion-4.-danger.-text,
+.emotion-4.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-4.-default:hover,
+.emotion-4.-primary:hover,
+.emotion-4.-danger:hover,
+.emotion-4.-white:hover,
+.emotion-4.-default.active,
+.emotion-4.-primary.active,
+.emotion-4.-danger.active,
+.emotion-4.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-4.-default:hover.-outline,
+.emotion-4.-primary:hover.-outline,
+.emotion-4.-danger:hover.-outline,
+.emotion-4.-white:hover.-outline,
+.emotion-4.-default.active.-outline,
+.emotion-4.-primary.active.-outline,
+.emotion-4.-danger.active.-outline,
+.emotion-4.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-4.-default:hover.-text,
+.emotion-4.-primary:hover.-text,
+.emotion-4.-danger:hover.-text,
+.emotion-4.-white:hover.-text,
+.emotion-4.-default.active.-text,
+.emotion-4.-primary.active.-text,
+.emotion-4.-danger.active.-text,
+.emotion-4.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-4.-default:disabled,
+.emotion-4.-primary:disabled,
+.emotion-4.-danger:disabled,
+.emotion-4.-white:disabled,
+.emotion-4.-default.disabled,
+.emotion-4.-primary.disabled,
+.emotion-4.-danger.disabled,
+.emotion-4.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-4.-default:disabled.-outline,
+.emotion-4.-primary:disabled.-outline,
+.emotion-4.-danger:disabled.-outline,
+.emotion-4.-white:disabled.-outline,
+.emotion-4.-default.disabled.-outline,
+.emotion-4.-primary.disabled.-outline,
+.emotion-4.-danger.disabled.-outline,
+.emotion-4.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-4.-default:disabled.-text,
+.emotion-4.-primary:disabled.-text,
+.emotion-4.-danger:disabled.-text,
+.emotion-4.-white:disabled.-text,
+.emotion-4.-default.disabled.-text,
+.emotion-4.-primary.disabled.-text,
+.emotion-4.-danger.disabled.-text,
+.emotion-4.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-4.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-4.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-4.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-4.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-4.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-4.-text:hover,
+.emotion-4.-text.active {
+  border-color: transparent;
+}
+
+.emotion-4.-text.disabled,
+.emotion-4.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-4.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-4.disabled,
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
 <div
-  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  className="emotion-6 emotion-1"
   style={
     Object {
       "textAlign": "center",
@@ -10,7 +306,7 @@ exports[`<Empty /> renders complex 1`] = `
   }
 >
   <div
-    className="css-1ooqwlu-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    className="emotion-0 emotion-1"
   >
     <svg
       aria-labelledby="icon_labelledby_2"
@@ -39,18 +335,18 @@ exports[`<Empty /> renders complex 1`] = `
     </svg>
   </div>
   <h3
-    className="css-1ueflp8"
+    className="emotion-2"
   >
     Create your first Notebook
   </h3>
   <p
-    className="css-b04jnf"
+    className="emotion-3"
   >
     Notebooks let you organize your customer interviews, notes, and photos together in one place.
   </p>
   <div>
     <button
-      className="-primary css-1qfeqqs-Button-Button entsyi60"
+      className="-primary emotion-4 emotion-5"
       type="button"
     >
       Create a Notebook
@@ -60,8 +356,47 @@ exports[`<Empty /> renders complex 1`] = `
 `;
 
 exports[`<Empty /> renders default 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.emotion-2 {
+  font-family: Futura,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  color: #322439;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-2 + .emotion-2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-  className="css-knztyz-StyledBox-StyledBox-StyledBox e1b7liwf0"
+  className="emotion-3 emotion-1"
   style={
     Object {
       "textAlign": "center",
@@ -69,7 +404,7 @@ exports[`<Empty /> renders default 1`] = `
   }
 >
   <div
-    className="css-1ooqwlu-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+    className="emotion-0 emotion-1"
   >
     <svg
       aria-labelledby="icon_labelledby_1"
@@ -98,7 +433,7 @@ exports[`<Empty /> renders default 1`] = `
     </svg>
   </div>
   <h3
-    className="css-1ueflp8"
+    className="emotion-2"
   >
     No data
   </h3>

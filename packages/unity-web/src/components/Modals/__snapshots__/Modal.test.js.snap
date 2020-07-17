@@ -1,48 +1,434 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Modal /> renders a Modal 1`] = `
+.emotion-15 {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transform: translate(0,-25%);
+  -ms-transform: translate(0,-25%);
+  transform: translate(0,-25%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100% - (.5rem * 2));
+  opacity: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 1.75rem auto;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+  .emotion-15 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-15 .emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.emotion-13 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  background-color: #FFF;
+}
+
+.emotion-13 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-13 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-13 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+.emotion-11 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-0 {
+  font-family: Futura,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  color: #322439;
+}
+
+.emotion-1 {
+  font-family: 'Roboto',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.2;
+  color: #322439;
+}
+
+.emotion-2 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-2 + .emotion-2 {
+  margin-top: 1.6rem;
+}
+
+.emotion-2 strong,
+.emotion-2 b {
+  font-weight: 800;
+}
+
+.emotion-2 i,
+.emotion-2 em {
+  font-style: italic;
+}
+
+.emotion-9 {
+  margin-top: 1rem;
+}
+
+.emotion-7 button + button,
+.emotion-7 a + a,
+.emotion-7 a + button,
+.emotion-7 button + a {
+  margin-left: 0.4rem;
+}
+
+.emotion-3 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3:focus,
+.emotion-3.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-3:disabled,
+.emotion-3.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-3:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-3 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-3.-default,
+.emotion-3.-primary,
+.emotion-3.-danger,
+.emotion-3.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-3.-default.-outline,
+.emotion-3.-primary.-outline,
+.emotion-3.-danger.-outline,
+.emotion-3.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-3.-default.-text,
+.emotion-3.-primary.-text,
+.emotion-3.-danger.-text,
+.emotion-3.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-3.-default:hover,
+.emotion-3.-primary:hover,
+.emotion-3.-danger:hover,
+.emotion-3.-white:hover,
+.emotion-3.-default.active,
+.emotion-3.-primary.active,
+.emotion-3.-danger.active,
+.emotion-3.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-3.-default:hover.-outline,
+.emotion-3.-primary:hover.-outline,
+.emotion-3.-danger:hover.-outline,
+.emotion-3.-white:hover.-outline,
+.emotion-3.-default.active.-outline,
+.emotion-3.-primary.active.-outline,
+.emotion-3.-danger.active.-outline,
+.emotion-3.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-3.-default:hover.-text,
+.emotion-3.-primary:hover.-text,
+.emotion-3.-danger:hover.-text,
+.emotion-3.-white:hover.-text,
+.emotion-3.-default.active.-text,
+.emotion-3.-primary.active.-text,
+.emotion-3.-danger.active.-text,
+.emotion-3.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-3.-default:disabled,
+.emotion-3.-primary:disabled,
+.emotion-3.-danger:disabled,
+.emotion-3.-white:disabled,
+.emotion-3.-default.disabled,
+.emotion-3.-primary.disabled,
+.emotion-3.-danger.disabled,
+.emotion-3.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-3.-default:disabled.-outline,
+.emotion-3.-primary:disabled.-outline,
+.emotion-3.-danger:disabled.-outline,
+.emotion-3.-white:disabled.-outline,
+.emotion-3.-default.disabled.-outline,
+.emotion-3.-primary.disabled.-outline,
+.emotion-3.-danger.disabled.-outline,
+.emotion-3.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-3.-default:disabled.-text,
+.emotion-3.-primary:disabled.-text,
+.emotion-3.-danger:disabled.-text,
+.emotion-3.-white:disabled.-text,
+.emotion-3.-default.disabled.-text,
+.emotion-3.-primary.disabled.-text,
+.emotion-3.-danger.disabled.-text,
+.emotion-3.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-3.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-3.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-3.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-3.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-3.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-3.-text:hover,
+.emotion-3.-text.active {
+  border-color: transparent;
+}
+
+.emotion-3.-text.disabled,
+.emotion-3.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-3.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-3.disabled,
+.emotion-3:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-17 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(50,36,57,0.6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9999;
+}
+
 <div>
   <div
-    className="css-h4bm38-ModalWrapper e1bxx9lo0"
+    className="emotion-17 emotion-18"
   >
     <div
-      className="css-1ter3hz-ModalDialog-ModalDialog e1bxx9lo1"
+      className="emotion-15 emotion-16"
     >
       <div
-        className="css-hrz6r9-Card-Card-Card-Card-Card e6pferz0"
+        className="emotion-13 emotion-14"
       >
         <div
-          className="css-opo7aj-CardBody em76frp0"
+          className="emotion-11 emotion-12"
         >
           <h3
-            className="css-196s5e3"
+            className="emotion-0"
           >
             Card title
           </h3>
           <h4
-            className="css-14ktsf5"
+            className="emotion-1"
           >
             Card subtitle
           </h4>
           <p
-            className="css-b04jnf"
+            className="emotion-2"
           >
             Meow Mix
           </p>
           <div
-            className="css-75y03g-CardActions eq07m5o0"
+            className="emotion-9 emotion-10"
           >
             <div
-              className="css-1f6tjue-ButtonSet e869cgw0"
+              className="emotion-7 emotion-8"
             >
               <button
-                className="-default -text css-1qfeqqs-Button-Button entsyi60"
+                className="-default -text emotion-3 emotion-4"
                 type="button"
               >
                 Close
               </button>
               <button
-                className="-danger css-1qfeqqs-Button-Button entsyi60"
+                className="-danger emotion-3 emotion-4"
                 type="button"
               >
                 Delete

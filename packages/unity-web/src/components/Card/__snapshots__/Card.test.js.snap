@@ -1,14 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Card /> renders a simple card 1`] = `
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  background-color: #FFF;
+}
+
+.emotion-3 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-3 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-3 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+.emotion-1 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
 <div
-  className="css-hrz6r9-Card-Card-Card-Card-Card e6pferz0"
+  className="emotion-3 emotion-4"
 >
   <div
-    className="css-opo7aj-CardBody em76frp0"
+    className="emotion-1 emotion-2"
   >
     <p
-      className="css-b04jnf"
+      className="emotion-0"
     >
       Default
     </p>
@@ -18,40 +77,223 @@ exports[`<Card /> renders a simple card 1`] = `
 
 exports[`<Card /> renders different card types 1`] = `
 Array [
-  <div
-    className="css-8cmj7f-Card-Card-Card-Card-Card e6pferz0"
+  .emotion-1 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  background: linear-gradient(-104deg,#dd2476 16%,#ff512f 95%);
+}
+
+.emotion-3 .emotion-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.emotion-3 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-3 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-3 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+<div
+    className="emotion-3 emotion-4"
   >
     <div
-      className="css-opo7aj-CardBody em76frp0"
+      className="emotion-1 emotion-2"
     >
       <p
-        className="css-1imar2r"
+        className="emotion-0"
       >
         Notification
       </p>
     </div>
   </div>,
-  <div
-    className="css-1wi5bj8-Card-Card-Card-Card-Card e6pferz0"
+  .emotion-1 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0);
+  background: #fff0cc;
+}
+
+.emotion-3 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-3 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-3 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+<div
+    className="emotion-3 emotion-4"
   >
     <div
-      className="css-opo7aj-CardBody em76frp0"
+      className="emotion-1 emotion-2"
     >
       <p
-        className="css-b04jnf"
+        className="emotion-0"
       >
         Highlight
       </p>
     </div>
   </div>,
-  <div
-    className="css-1nzwfk4-Card-Card-Card-Card-Card e6pferz0"
+  .emotion-1 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0);
+  background: #F9FAFC;
+  border: 1px solid #566ad2;
+}
+
+.emotion-3 >:not(.eedi62r0) h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-3 >:not(.eedi62r0) h4 {
+  margin-top: 0.6rem;
+}
+
+.emotion-3 >:not(.eedi62r0) p:only-child {
+  margin: 0;
+}
+
+<div
+    className="emotion-3 emotion-4"
   >
     <div
-      className="css-opo7aj-CardBody em76frp0"
+      className="emotion-1 emotion-2"
     >
       <p
-        className="css-b04jnf"
+        className="emotion-0"
       >
         Callout
       </p>

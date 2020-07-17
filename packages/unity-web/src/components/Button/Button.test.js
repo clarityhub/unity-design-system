@@ -36,9 +36,9 @@ describe('<Button />', () => {
 		const tree = renderer.create(node).toJSON();
 
 		expect(tree).toMatchSnapshot();
-    });
+	});
     
-    it('renders link buttons', () => {
+	it('renders link buttons', () => {
 		const node = (
 			<Fragment>
 				<Button component="a" href="#">Link</Button>

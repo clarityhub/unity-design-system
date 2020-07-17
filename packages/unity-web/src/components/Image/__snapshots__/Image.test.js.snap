@@ -2,17 +2,54 @@
 
 exports[`<Image /> renders images 1`] = `
 Array [
-  <div
-    className="css-119gdmf-ImageWrapper e1h9019k0"
+  .emotion-0 img {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  max-width: 100%;
+}
+
+<div
+    className="emotion-0 emotion-1"
   />,
-  <div
-    className="css-12kn8xa-ImageWrapper-ImageWrapper e1h9019k0"
+  .emotion-0 {
+  padding: 1rem;
+}
+
+.emotion-0 img {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  max-width: 100%;
+}
+
+<div
+    className="emotion-0 emotion-1"
   />,
-  <div
-    className="css-11rfl6x-ImageWrapper-ImageWrapper e1h9019k0"
+  .emotion-0 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.emotion-0 img {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  max-width: 100%;
+}
+
+<div
+    className="emotion-0 emotion-1"
   />,
-  <div
-    className="css-hdn7cq-ImageWrapper-ImageWrapper-ImageWrapper e1h9019k0"
+  .emotion-0 {
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.emotion-0 img {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  max-width: 100%;
+}
+
+<div
+    className="emotion-0 emotion-1"
   />,
 ]
 `;

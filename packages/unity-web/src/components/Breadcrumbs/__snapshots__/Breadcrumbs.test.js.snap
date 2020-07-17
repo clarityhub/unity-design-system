@@ -1,71 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> renders crumbs 1`] = `
+.emotion-4 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #333;
+  max-width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .75rem 1rem;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.emotion-0 {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 3rem;
+}
+
+.emotion-0:first-of-type {
+  overflow: inherit;
+}
+
+.emotion-0 + .emotion-0:before {
+  display: inline-block;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: #C2C2C2;
+  content: "/";
+}
+
+.emotion-0 a,
+.emotion-0 a:visited {
+  color: #333;
+}
+
+.emotion-6 {
+  border-bottom: 1px solid #566ad2;
+  color: #566ad2;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-6:hover,
+.emotion-6:active {
+  border-bottom: 2px solid #566ad2;
+  border-bottom-width: 2px;
+  color: #566ad2;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:visited {
+  border-bottom: 1px solid rgb(50,72,187);
+  color: rgb(50,72,187);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:visited:hover,
+.emotion-6:visited:active {
+  margin-bottom: 0;
+}
+
 <div>
   <nav
-    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+    className="emotion-4 emotion-5"
   >
     <ol
-      className="css-r7a13i-BreadcrumbList e5d63db1"
+      className="emotion-2 emotion-3"
     >
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         Home
       </li>
     </ol>
   </nav>
   <nav
-    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+    className="emotion-4 emotion-5"
   >
     <ol
-      className="css-r7a13i-BreadcrumbList e5d63db1"
+      className="emotion-2 emotion-3"
     >
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-6"
           href="/"
         >
           Home
         </a>
       </li>
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         Admin
       </li>
     </ol>
   </nav>
   <nav
-    className="css-18f1o3x-BreadcrumbsWrapper e5d63db0"
+    className="emotion-4 emotion-5"
   >
     <ol
-      className="css-r7a13i-BreadcrumbList e5d63db1"
+      className="emotion-2 emotion-3"
     >
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-6"
           href="/"
         >
           Home
         </a>
       </li>
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-6"
           href="/admin"
         >
           Admin
         </a>
       </li>
       <li
-        className="css-yabpar-Breadcrumb e5d63db2"
+        className="emotion-0 emotion-1"
       >
         Long interview name – October 3rd, 2019
       </li>

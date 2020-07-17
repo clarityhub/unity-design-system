@@ -1,96 +1,220 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SideNav /> renders a sidenav 1`] = `
+.emotion-46 {
+  box-sizing: border-box;
+  padding: 3rem 2rem 3rem 0;
+  width: 14rem;
+}
+
+.emotion-1 {
+  width: 100%;
+}
+
+.emotion-1 .emotion-26 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 1;
+  max-height: 400px;
+}
+
+.emotion-1 > a,
+.emotion-1 > a:visited {
+  border: 0 !important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #999;
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+  margin-bottom: 0;
+  color: #566ad2;
+  font-weight: bold;
+}
+
+.emotion-1 > a:hover,
+.emotion-1 > a:visited:hover {
+  border: 0 !important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #322439;
+  display: block;
+  margin-bottom: 0;
+}
+
+.emotion-1 > a:hover,
+.emotion-1 > a:visited:hover {
+  color: #566ad2;
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #566ad2;
+  color: #566ad2;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  border-bottom: 2px solid #566ad2;
+  border-bottom-width: 2px;
+  color: #566ad2;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited {
+  border-bottom: 1px solid rgb(50,72,187);
+  color: rgb(50,72,187);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:visited:hover,
+.emotion-0:visited:active {
+  margin-bottom: 0;
+}
+
+.emotion-4 {
+  width: 100%;
+}
+
+.emotion-4 .emotion-26 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.emotion-4 > a,
+.emotion-4 > a:visited {
+  border: 0 !important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #999;
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+  margin-bottom: 0;
+}
+
+.emotion-4 > a:hover,
+.emotion-4 > a:visited:hover {
+  border: 0 !important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #322439;
+  display: block;
+  margin-bottom: 0;
+}
+
+.emotion-25 {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.emotion-25 a,
+.emotion-25 a:visited {
+  padding-left: 1rem !important;
+}
+
 <div
-  className="css-lv8csa-SideNav eh4nhn00"
+  className="emotion-46 emotion-47"
 >
   <div
-    className="css-sp7l44-SideNavItem-SideNavItem-SideNavItem ec2haq50"
+    className="emotion-1 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Home
     </a>
   </div>
   <div
-    className="css-u9bzr8-SideNavItem ec2haq50"
+    className="emotion-4 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Insights
     </a>
   </div>
   <div
-    className="css-u9bzr8-SideNavItem ec2haq50"
+    className="emotion-4 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Integrations
     </a>
   </div>
   <div
-    className="css-u9bzr8-SideNavItem ec2haq50"
+    className="emotion-4 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Apps
     </a>
   </div>
   <div
-    className="css-u9bzr8-SideNavItem ec2haq50"
+    className="emotion-4 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Account
     </a>
     <div
-      className="css-uft8jc-SideNavGroup elxq9rq0"
+      className="emotion-25 emotion-26"
     >
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Profile
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Billing
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Usage
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Users
@@ -99,52 +223,52 @@ exports[`<SideNav /> renders a sidenav 1`] = `
     </div>
   </div>
   <div
-    className="css-u9bzr8-SideNavItem ec2haq50"
+    className="emotion-4 emotion-2"
   >
     <a
-      className="css-i8x1an"
+      className="emotion-0"
       href="#"
     >
       Developers
     </a>
     <div
-      className="css-uft8jc-SideNavGroup elxq9rq0"
+      className="emotion-25 emotion-26"
     >
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           API Keys
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Web Console
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Webhooks
         </a>
       </div>
       <div
-        className="css-u9bzr8-SideNavItem ec2haq50"
+        className="emotion-4 emotion-2"
       >
         <a
-          className="css-i8x1an"
+          className="emotion-0"
           href="#"
         >
           Logs

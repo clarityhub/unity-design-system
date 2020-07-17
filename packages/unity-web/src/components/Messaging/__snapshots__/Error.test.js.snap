@@ -1,15 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Error /> renders default 1`] = `
+.emotion-2 {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #f5365c;
+  color: #FFF;
+  padding: 2rem;
+}
+
+.emotion-1 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #FFF;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-1 + .emotion-1 {
+  margin-top: 1.6rem;
+}
+
+.emotion-1 strong,
+.emotion-1 b {
+  font-weight: 800;
+}
+
+.emotion-1 i,
+.emotion-1 em {
+  font-style: italic;
+}
+
+.emotion-1 + .emotion-1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
 <div
-  className="css-5swc56-base-danger-block"
+  className="emotion-2"
   role="alert"
 >
   <div
-    className="css-d4n4rw"
+    className="emotion-1"
   >
     <p
-      className="css-1imar2r"
+      className="emotion-0"
     >
       Something bad happened
     </p>
@@ -18,26 +80,341 @@ exports[`<Error /> renders default 1`] = `
 `;
 
 exports[`<Error /> renders with message 1`] = `
+.emotion-8 {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #f5365c;
+  color: #FFF;
+  padding: 2rem;
+}
+
+.emotion-7 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #FFF;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-7 + .emotion-7 {
+  margin-top: 1.6rem;
+}
+
+.emotion-7 strong,
+.emotion-7 b {
+  font-weight: 800;
+}
+
+.emotion-7 i,
+.emotion-7 em {
+  font-style: italic;
+}
+
+.emotion-7 + .emotion-7 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 1rem 0 0 0;
+}
+
+.emotion-3 button + button,
+.emotion-3 a + a,
+.emotion-3 a + button,
+.emotion-3 button + a {
+  margin-left: 0.4rem;
+}
+
+.emotion-1 {
+  overflow: visible;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  --text: #566ad2;
+  --text-active: #333;
+  --bg: transparent;
+  --bg-active: transparent;
+  --bg-disabled: transparent;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:focus,
+.emotion-1.focused {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.emotion-1:disabled,
+.emotion-1.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-1:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.emotion-1 svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.emotion-1.-default,
+.emotion-1.-primary,
+.emotion-1.-danger,
+.emotion-1.-white {
+  color: var(--text);
+  background-color: var(--bg);
+  border-color: var(--bg);
+}
+
+.emotion-1.-default.-outline,
+.emotion-1.-primary.-outline,
+.emotion-1.-danger.-outline,
+.emotion-1.-white.-outline {
+  border-color: var(--outline,var(--bg));
+  color: var(--outline-text,var(--bg));
+}
+
+.emotion-1.-default.-text,
+.emotion-1.-primary.-text,
+.emotion-1.-danger.-text,
+.emotion-1.-white.-text {
+  color: var(--text-text,var(--bg));
+}
+
+.emotion-1.-default:hover,
+.emotion-1.-primary:hover,
+.emotion-1.-danger:hover,
+.emotion-1.-white:hover,
+.emotion-1.-default.active,
+.emotion-1.-primary.active,
+.emotion-1.-danger.active,
+.emotion-1.-white.active {
+  background-color: var(--bg-active);
+  border-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.emotion-1.-default:hover.-outline,
+.emotion-1.-primary:hover.-outline,
+.emotion-1.-danger:hover.-outline,
+.emotion-1.-white:hover.-outline,
+.emotion-1.-default.active.-outline,
+.emotion-1.-primary.active.-outline,
+.emotion-1.-danger.active.-outline,
+.emotion-1.-white.active.-outline {
+  background-color: var(--bg) !important;
+  border: 1px solid var(--bg);
+  color: var(--outline-text-active,var(--text));
+}
+
+.emotion-1.-default:hover.-text,
+.emotion-1.-primary:hover.-text,
+.emotion-1.-danger:hover.-text,
+.emotion-1.-white:hover.-text,
+.emotion-1.-default.active.-text,
+.emotion-1.-primary.active.-text,
+.emotion-1.-danger.active.-text,
+.emotion-1.-white.active.-text {
+  color: var(--text-text-active,var(--bg-active));
+}
+
+.emotion-1.-default:disabled,
+.emotion-1.-primary:disabled,
+.emotion-1.-danger:disabled,
+.emotion-1.-white:disabled,
+.emotion-1.-default.disabled,
+.emotion-1.-primary.disabled,
+.emotion-1.-danger.disabled,
+.emotion-1.-white.disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+  color: var(--text);
+}
+
+.emotion-1.-default:disabled.-outline,
+.emotion-1.-primary:disabled.-outline,
+.emotion-1.-danger:disabled.-outline,
+.emotion-1.-white:disabled.-outline,
+.emotion-1.-default.disabled.-outline,
+.emotion-1.-primary.disabled.-outline,
+.emotion-1.-danger.disabled.-outline,
+.emotion-1.-white.disabled.-outline {
+  border: 1px solid var(--outline-disabled,var(--outline-text-disabled,var(--bg-disabled)));
+  color: var(--outline-text-disabled,var(--bg-disabled));
+}
+
+.emotion-1.-default:disabled.-text,
+.emotion-1.-primary:disabled.-text,
+.emotion-1.-danger:disabled.-text,
+.emotion-1.-white:disabled.-text,
+.emotion-1.-default.disabled.-text,
+.emotion-1.-primary.disabled.-text,
+.emotion-1.-danger.disabled.-text,
+.emotion-1.-white.disabled.-text {
+  color: var(--text-text-disabled,var(--bg-disabled));
+}
+
+.emotion-1.-primary {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #566ad2;
+  --bg-active: rgb(70,90,197);
+  --bg-disabled: rgb(114,131,211);
+}
+
+.emotion-1.-danger {
+  --text: #FFF;
+  --text-active: #FFF;
+  --outline-disabled: #C2C2C2;
+  --bg: #f5365c;
+  --bg-active: rgb(233,37,76);
+  --bg-disabled: rgb(249,139,161);
+}
+
+.emotion-1.-default {
+  --text: #333;
+  --text-active: #333;
+  --outline: #333;
+  --outline-text: #333;
+  --outline-text-active: #333;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #333;
+  --text-text-active: #333;
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-1.-white {
+  --text: #566ad2;
+  --text-active: #333;
+  --outline: #FFF;
+  --outline-text: #FFF;
+  --outline-text-active: #566ad2;
+  --outline-text-disabled: #C2C2C2;
+  --text-text: #566ad2;
+  --text-text-active: rgb(70,90,197);
+  --text-text-disabled: #C2C2C2;
+  --bg: #FFF;
+  --bg-active: #FDFDFD;
+  --bg-disabled: #F1F1F1;
+}
+
+.emotion-1.-text {
+  background-color: transparent !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.emotion-1.-text:hover,
+.emotion-1.-text.active {
+  border-color: transparent;
+}
+
+.emotion-1.-text.disabled,
+.emotion-1.-text:disabled {
+  border: 1px solid transparent;
+}
+
+.emotion-1.-outline {
+  background-color: transparent !important;
+  border: 1px solid inherit;
+  box-shadow: none;
+}
+
+.emotion-1.disabled,
+.emotion-1:disabled {
+  cursor: not-allowed;
+}
+
 <div
-  className="css-5swc56-base-danger-block"
+  className="emotion-8"
   role="alert"
 >
   <div
-    className="css-d4n4rw"
+    className="emotion-7"
   >
     <p
-      className="css-1imar2r"
+      className="emotion-0"
     >
       Any error message shows up here
     </p>
     <div
-      className="css-15uzpn3-StyledBox-StyledBox-StyledBox-StyledBox e1b7liwf0"
+      className="emotion-5 emotion-6"
     >
       <div
-        className="css-1f6tjue-ButtonSet e869cgw0"
+        className="emotion-3 emotion-4"
       >
         <button
-          className="-white css-1qfeqqs-Button-Button entsyi60"
+          className="-white emotion-1 emotion-2"
           onClick={[Function]}
           type="button"
         >

@@ -1,16 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Blockquote /> renders text 1`] = `
+.emotion-2 {
+  border-left: 4px solid #322439;
+  padding-left: calc(2rem - 4px);
+  font-style: italic;
+  margin-left: -2rem;
+}
+
+p + .emotion-2 {
+  margin-top: 1.6rem;
+}
+
+.emotion-2 + p {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #322439;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
 <blockquote
-  className="css-6fauep-Blockquote e9ltruz0"
+  className="emotion-2 emotion-3"
 >
   <p
-    className="css-b04jnf"
+    className="emotion-0"
   >
     This is a block quote with some text
   </p>
   <p
-    className="css-b04jnf"
+    className="emotion-0"
   >
     There can be multiple paragraphs
   </p>

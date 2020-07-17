@@ -1,17 +1,268 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Navbar /> renders nav items 1`] = `
+.emotion-16 {
+  background: #FF6A5C;
+  color: #FFF;
+  height: 5.3rem;
+  padding-top: 0;
+}
+
+.emotion-14 {
+  height: 5.3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0 3rem;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+@media (max-width:540px) {
+  .emotion-14 {
+    width: auto;
+  }
+}
+
+.emotion-2 a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-right: 40px;
+  text-align: center;
+  width: auto;
+  border-bottom-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a:visited {
+  border-bottom-color: transparent;
+}
+
+.emotion-2 a:hover {
+  border-bottom-color: transparent;
+}
+
+.emotion-2 span {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-left: 15px;
+}
+
+@media (max-width:480px) {
+  .emotion-2 span {
+    display: none;
+  }
+}
+
+.emotion-2 img,
+.emotion-2 svg {
+  height: 40px;
+  width: auto;
+}
+
+.emotion-1 {
+  border-bottom: 1px solid #566ad2;
+  color: #566ad2;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-1:hover,
+.emotion-1:active {
+  border-bottom: 2px solid #566ad2;
+  border-bottom-width: 2px;
+  color: #566ad2;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:visited {
+  border-bottom: 1px solid rgb(50,72,187);
+  color: rgb(50,72,187);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:visited:hover,
+.emotion-1:visited:active {
+  margin-bottom: 0;
+}
+
+.emotion-0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Futura,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:Futura,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.emotion-0 + .emotion-0 {
+  margin-top: 1.6rem;
+}
+
+.emotion-0 strong,
+.emotion-0 b {
+  font-weight: 800;
+}
+
+.emotion-0 i,
+.emotion-0 em {
+  font-style: italic;
+}
+
+.emotion-4 {
+  width: 2rem;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.emotion-7 a {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.emotion-7:not(:first-of-type) {
+  margin-left: 3rem;
+}
+
+.emotion-7 img {
+  margin-top: 4px;
+}
+
+.emotion-6 {
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  border: 0 !important;
+  color: #FDFDFD;
+  cursor: pointer;
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-letter-spacing: 0.8px !important;
+  -moz-letter-spacing: 0.8px !important;
+  -ms-letter-spacing: 0.8px !important;
+  letter-spacing: 0.8px !important;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  string: font-family:'Open Sans',Arial,sans-serif;
+  font-weight: 400;
+  color: #566ad2;
+}
+
+.emotion-6:visited {
+  color: #FDFDFD !important;
+}
+
+.emotion-6::before {
+  background: #FDFDFD;
+  bottom: -6px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transform: scale3d(0,0.4,1);
+  -ms-transform: scale3d(0,0.4,1);
+  transform: scale3d(0,0.4,1);
+  -webkit-transition: -webkit-transform 0.1s;
+  -webkit-transition: transform 0.1s;
+  transition: transform 0.1s;
+  width: 100%;
+}
+
+.emotion-6.active::before,
+.emotion-6:hover::before,
+.emotion-6:focus::before {
+  -webkit-transform: scale3d(0.8,0.4,1);
+  -ms-transform: scale3d(0.8,0.4,1);
+  transform: scale3d(0.8,0.4,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-10 a {
+  color: #FFF;
+}
+
+.emotion-10:not(:first-of-type) {
+  margin-left: 3rem;
+}
+
+.emotion-10 img {
+  margin-top: 4px;
+}
+
 <nav
-  className="css-ub7zyf-NavbarContainer e1rvg8h0"
+  className="emotion-16 emotion-17"
 >
   <div
-    className="css-1gbywb9-NavbarContent-NavbarContent e1rvg8h1"
+    className="emotion-14 emotion-15"
   >
     <section
-      className="css-1yfhbo6-NavbarBrandWrapper e1rvg8h2"
+      className="emotion-2 emotion-3"
     >
       <a
-        className="css-i8x1an"
+        className="emotion-1"
         href="/"
       >
         <svg
@@ -82,33 +333,33 @@ exports[`<Navbar /> renders nav items 1`] = `
           </g>
         </svg>
         <span
-          className="css-cyeymo"
+          className="emotion-0"
         >
           Dashboard
         </span>
       </a>
     </section>
     <div
-      className="css-1niewbo-Gutter e1rvg8h3"
+      className="emotion-4 emotion-5"
     />
     <div
-      className="css-1kvxdud-NavbarItems e1rvg8h4"
+      className="emotion-12 emotion-13"
     >
       <div
-        className="css-1c9oiha-NavItem-NavItem efsgewv0"
+        className="emotion-7 emotion-8"
       >
         <a
-          className="css-c25770"
+          className="emotion-6"
           href="#"
         >
           Dashboard
         </a>
       </div>
       <div
-        className="css-1k4txj3-NavItem efsgewv0"
+        className="emotion-10 emotion-8"
       >
         <a
-          className="css-c25770"
+          className="emotion-6"
           href="#"
         >
           Integrations
