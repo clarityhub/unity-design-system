@@ -1,6 +1,7 @@
 # Unity Design System
 
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![Actions Status](https://github.com/clarityhub/unity-design-system/workflows/node/badge.svg)](https://github.com/clarityhub/unity-design-system/actions)
+
 
 ## Getting Started
 
