@@ -37,10 +37,7 @@
   },
   "gitHead": "170b3b6d164cfccc8daf2ce9fa16eeeea16167d3",
   "devDependencies": {
-    "@mdi/js": "^5.3.45",
-    "@mdi/react": "^1.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-test-renderer": "16.13.1"
+    "react-dom": "16.13.1"
   }
 }

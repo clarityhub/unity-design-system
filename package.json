@@ -46,6 +46,8 @@
     "@emotion/styled": "^10.0.7",
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^4.9.1",
+    "@mdi/js": "^5.3.45",
+    "@mdi/react": "^1.4.0",
     "acorn": "^6.1.1",
     "acorn-dynamic-import": "^4.0.0",
     "acorn-jsx": "^5.0.1",
@@ -71,6 +73,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-test-renderer": "^16.13.1",
     "rimraf": "^2.6.3",
     "typescript": "^3.3.3333",
     "webpack": "4.28.4"
