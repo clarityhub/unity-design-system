@@ -1,0 +1,22 @@
+---
+menu: Standards
+name: Testing Standards
+---
+
+# Testing Standards
+
+Clarity Hub projects should use [jest](https://jestjs.io/) for running unit tests.
+
+Additional types of testing, might use tools outside of jest:
+
+* Mutation testing – [Styker](https://stryker-mutator.io/)
+* End-to-End testing - [Cypress](https://github.com/cypress-io/cypress)
+
+## Running Tests
+
+Any Continuous Integration system should always run unit tests on push.
+
+Additionally, projects should use [husky](https://www.npmjs.com/package/husky) to run unit tests locally before
+pushing to remote.
+
+More complex tests such as End-to-End tests should run on deployment or nightly.

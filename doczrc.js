@@ -2,11 +2,11 @@ const { css } = require('docz-plugin-css');
 
 export default {
 	codeSandbox: false,
-	public: 'docz/public',
-	wrapper: 'docz/DoczWrapper',
+	public: 'docs/public',
+	wrapper: 'docs/DoczWrapper',
 	hashRouter: true,
 
-	files: 'packages/{unity-core,unity-web,unity-marketing,unity-forms}/**/*.mdx', // TODO support unity-email
+	files: '{docs/*.mdx,packages/{unity-core,unity-web,unity-marketing,unity-forms}/**/*.mdx}', // TODO support unity-email
 
 	plugins: [
 		css({
@@ -17,11 +17,16 @@ export default {
 
 	menu: [
 		'Getting Started',
+		'Standards',
 		'Theme',
 		'Scaffolding',
+		'Contexts',
 		'Components',
+		'Interactions',
 		'Forms',
+		'Form Builders',
 		'Templates',
+		'Marketing',
 		'Utilities',
 	],
 };

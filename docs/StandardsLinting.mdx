@@ -1,0 +1,18 @@
+---
+menu: Standards
+name: Linting Standards
+---
+
+# Linting Standards
+
+JavaScript based projects at Clarity Hub should use [eslint](https://eslint.org/) to lint files.
+
+See [eslint-config-clarity-hub](https://github.com/clarityhub/eslint-config-clarity-hub) for
+a set of linting rules that Clarity Hub uses for Node and React projects.
+
+## Linting Checks
+
+Any Continuous Integration system should always run linting on push.
+
+Additionally, projects should use [husky](https://www.npmjs.com/package/husky) to run linting locally before
+pushing to remote.

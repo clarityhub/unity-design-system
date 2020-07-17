@@ -1,5 +1,3 @@
-
-
 const colors = {
 	primary: {
 		default: '#566ad2',

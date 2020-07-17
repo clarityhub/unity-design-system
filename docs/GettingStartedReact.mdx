@@ -1,0 +1,38 @@
+---
+menu: Getting Started
+name: React
+---
+
+# React
+
+```bash
+npm i --save @clarityhub/unity-web
+npm i --save react react-dom prop-types @emotion/core @emotion/styled
+```
+
+## Initialize Styleguide
+
+This will normalize your css and load in webfonts from Google.
+
+```js
+import '@clarityhub/unity-web/lib/init';
+```
+
+Simply use the above line in your entrypoint of your application (usually `index.js`).
+
+## Icons
+
+The prefered icon set to use is the one provided by Material UI:
+
+```bash
+npm i --save @material-ui/core @material-ui/icons
+```
+
+Or, use the MDI icons:
+
+```bash
+npm i --save @mdi/js @mdi/react
+```
+
+These are not marked as peerDependencies since they are not actually
+required to get the Unity Design System to run.
