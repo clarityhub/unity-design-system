@@ -1,0 +1,60 @@
+---
+name: Tabs
+menu: Components
+---
+
+import { Component } from 'react';
+import { Playground, PropsTable } from 'docz';
+import Tabs from '.';
+import TabContainer from './TabContainer';
+import TabContent from './TabContent';
+
+# Tabs
+
+Use Tabs when you want to display different information depending on a selection.
+
+```js
+import Tabs from '@clarityhub/unity-web/lib/components/Tabs';
+```
+
+## Examples
+
+<Playground>
+    <Tabs.Container>
+        <Tabs.Tabs>
+            <Tabs.Tab tab="table" title="Switch to Table View">
+                <span style={{ verticalAlign: 'middle' }}>
+                    {' '}
+                    Table
+                </span>
+            </Tabs.Tab>
+            <Tabs.Tab tab="chart" title="Switch to Chart View">
+                <span style={{ verticalAlign: 'middle' }}>
+                    {' '}
+                    Charts
+                </span>
+            </Tabs.Tab>
+        </Tabs.Tabs>
+        <Tabs.TabContent for="table">
+            Table content
+        </Tabs.TabContent>
+        <Tabs.TabContent for="chart">
+            Chart content
+        </Tabs.TabContent>
+    </Tabs.Container>
+</Playground>
+
+## Prop Types
+
+### Tabs.Container
+<PropsTable of={TabContainer} />
+
+### Tabs.Tabs
+<PropsTable of={Tabs.Tabs} />
+
+### Tabs.Tab
+<PropsTable of={Tabs.Tab} />
+
+### Tabs.TabContent
+<PropsTable of={TabContent} />
+
