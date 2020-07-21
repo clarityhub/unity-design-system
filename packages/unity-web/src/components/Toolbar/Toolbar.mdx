@@ -1,0 +1,41 @@
+---
+name: Toolbar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Toolbar from './';
+import Button from '../Button';
+
+# Toolbar
+
+The Toolbar set of components is for laying out actions related to a table.
+
+## \<Toolbar /\> component
+
+```js
+import Toolbar from '@clarityhub/unity-web/lib/components/Toolbar';
+```
+
+## Simple Toolbar
+
+<Playground>
+    <Toolbar>
+        <Toolbar.Action>
+            <Button
+                size="small"
+                type="primary"
+            >
+                Add a Member
+            </Button>
+        </Toolbar.Action>
+        <Toolbar.Action>
+            <Button
+                size="small"
+                type="default"
+            >
+                Add a Role
+            </Button>
+        </Toolbar.Action>
+    </Toolbar>
+</Playground>
