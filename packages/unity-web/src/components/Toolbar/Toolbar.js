@@ -1,8 +1,7 @@
 import React from 'react';
-
-import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
-
 import styled from '@emotion/styled';
+
+import Box from '../../scaffolding/Box';
 
 const ToolbarWrapper = styled(Box)`
 	> * + * {

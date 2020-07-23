@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Box from '@clarityhub/unity-web/lib/scaffolding/Box';
+import Box from '../../scaffolding/Box';
 
 const ToolbarActions = ({ children, ...props }) => (
 	<Box {...props} direction="row">
