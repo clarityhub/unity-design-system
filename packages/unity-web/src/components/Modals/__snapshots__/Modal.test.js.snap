@@ -131,11 +131,8 @@ exports[`<Modal /> renders a Modal 1`] = `
   margin-top: 1rem;
 }
 
-.emotion-7 button + button,
-.emotion-7 a + a,
-.emotion-7 a + button,
-.emotion-7 button + a {
-  margin-left: 0.4rem;
+.emotion-7 > * + * {
+  margin-left: 0.5rem;
 }
 
 .emotion-3 {
@@ -338,8 +335,8 @@ exports[`<Modal /> renders a Modal 1`] = `
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;

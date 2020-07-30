@@ -1,0 +1,53 @@
+---
+name: Space
+menu: Scaffolding
+---
+
+import { Playground, PropsTable } from 'docz';
+import Space, { SpaceProps } from './Space';
+
+# Space
+
+Space is a primitive that you can use to space out children horizontally or vertically.
+
+## \<Space /\> component
+
+```js
+import Space from '@clarityhub/unity-web/lib/scaffolding/Space';
+```
+
+## Examples
+
+### Vertical Space
+
+<Playground>
+	<Space direction="vertical">
+        <div><button>A</button></div>
+        <div><button>B</button></div>
+        <div><button>C</button></div>
+    </Space>
+</Playground>
+
+### Vertical Space
+
+<Playground>
+	<Space direction="horizontal">
+        <button style={{ display: 'inline-block' }}>A</button>
+        <button style={{ display: 'inline-block' }}>B</button>
+        <button style={{ display: 'inline-block' }}>C</button>
+    </Space>
+</Playground>
+
+### Space Size
+
+<Playground>
+	<Space direction="vertical" size="large">
+        <div><button>A</button></div>
+        <div><button>B</button></div>
+        <div><button>C</button></div>
+    </Space>
+</Playground>
+
+## Prop Types
+
+<PropsTable of={SpaceProps} />

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Space /> renders children 1`] = `
+.emotion-0 > * + * {
+  margin-top: 0.5rem;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  <button>
+    Test
+  </button>
+  <button>
+    Test
+  </button>
+</div>
+`;

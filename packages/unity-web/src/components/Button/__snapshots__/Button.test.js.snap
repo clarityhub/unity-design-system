@@ -201,8 +201,8 @@ exports[`<Button /> renders link buttons 1`] = `
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -447,8 +447,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -689,8 +689,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -931,8 +931,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -1173,8 +1173,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -1419,8 +1419,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -1661,8 +1661,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -1903,8 +1903,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;
@@ -2145,8 +2145,8 @@ Array [
   --outline-text: #FFF;
   --outline-text-active: #566ad2;
   --outline-text-disabled: #C2C2C2;
-  --text-text: #566ad2;
-  --text-text-active: rgb(70,90,197);
+  --text-text: #FFF;
+  --text-text-active: #FFF;
   --text-text-disabled: #C2C2C2;
   --bg: #FFF;
   --bg-active: #FDFDFD;

@@ -2,8 +2,9 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { bool } from 'prop-types';
 import { EmotionButton } from '../Button';
+import Space from '../../scaffolding/Space';
 
-const ButtonSet = styled.div`
+const ButtonSet = styled(Space)`
     ${({ spread }) => spread && css`
         display: flex;
         align-items: center;
@@ -16,12 +17,6 @@ const ButtonSet = styled.div`
         }
     `}
 
-    button + button,
-    a + a,
-    a + button,
-    button + a {
-        margin-left: 0.4rem;
-    }
 `;
 
 /**

@@ -156,8 +156,8 @@ const Button = styled.button(
             --outline-text: ${colors.white.default};
             --outline-text-active: ${colors.primary.default};
             --outline-text-disabled: ${colors.gray.default};
-            --text-text: ${colors.primary.default};
-            --text-text-active: ${desaturate(darken(colors.primary.default))};
+            --text-text: ${colors.white.default};
+            --text-text-active: ${colors.white.default};
             --text-text-disabled: ${colors.gray.default};
             --bg: ${colors.white.default};
             --bg-active: ${colors.dove.default};
