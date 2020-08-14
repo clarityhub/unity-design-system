@@ -17,7 +17,7 @@ export default {
 
 	menu: [
 		'Getting Started',
-		'Standards',
+		{ name: 'Standards', menu: ['Standards'] },
 		'Theme',
 		'Scaffolding',
 		'Contexts',
@@ -27,6 +27,5 @@ export default {
 		'Form Builders',
 		'Templates',
 		'Marketing',
-		'Utilities',
 	],
 };
