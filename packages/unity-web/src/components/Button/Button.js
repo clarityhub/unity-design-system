@@ -399,7 +399,7 @@ const LoadingWrapper = styled.div`
 `;
 
 const renderIcon = (Icon) => {
-	if (typeof Icon === 'function') {
+	if (typeof Icon === 'function' || (typeof Icon && Icon.displayName)) {
 		return <Icon />;
 	}
 

@@ -23,6 +23,12 @@ See [our documentation](https://unity.clarityhub.io) on how to use the Unity Des
 
 You can now develop on each package. Run `npm run docz:dev` to generate the Design System docs.
 
+If you need to run snapshots to update them or generate new ones, you can run the following command:
+
+```sh
+npm run test:watch -- --scope=@clarityhub/unity-web
+```
+
 ### Running unity-email
 
 The unity-email package has a special build that you can run to generate example HTML files:
