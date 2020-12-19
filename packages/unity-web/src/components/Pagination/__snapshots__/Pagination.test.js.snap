@@ -373,6 +373,7 @@ exports[`<Pagination /> uses renderers 1`] = `
 }
 
 .emotion-15 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

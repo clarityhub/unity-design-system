@@ -10,6 +10,7 @@
     "bootstrap": "lerna bootstrap",
     "lerna-clean": "lerna clean -y",
     "lint": "lerna exec --parallel 'eslint src'",
+    "lint:fix": "lerna exec --parallel 'eslint src --fix'",
     "build": "lerna exec --parallel 'babel src --out-dir lib'",
     "emails:watch": "lerna exec --scope=@clarityhub/unity-email 'babel examples --out-dir lib/examples --watch'",
     "emails:run": "lerna exec --scope=@clarityhub/unity-email 'nodemon ./lib/examples/build.js --watch ./lib'",

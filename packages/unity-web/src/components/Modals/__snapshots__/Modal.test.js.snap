@@ -136,6 +136,7 @@ exports[`<Modal /> renders a Modal 1`] = `
 }
 
 .emotion-3 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

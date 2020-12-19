@@ -63,6 +63,7 @@ exports[`<Empty /> renders complex 1`] = `
 }
 
 .emotion-4 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

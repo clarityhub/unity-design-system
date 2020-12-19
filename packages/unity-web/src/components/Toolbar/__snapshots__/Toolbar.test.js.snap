@@ -27,6 +27,7 @@ exports[`<Toolbar /> renders default 1`] = `
 }
 
 .emotion-0 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

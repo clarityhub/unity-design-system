@@ -6,6 +6,7 @@ exports[`<ButtonSet /> renders a set of buttons 1`] = `
 }
 
 .emotion-0 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;
@@ -266,6 +267,7 @@ exports[`<ButtonSet /> renders a set of buttons 1`] = `
 
 exports[`<ButtonSet /> renders a spread of buttons 1`] = `
 .emotion-0 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

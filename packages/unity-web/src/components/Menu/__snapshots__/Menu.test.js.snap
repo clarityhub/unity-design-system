@@ -11,6 +11,7 @@ exports[`<Menu /> renders a button 1`] = `
 }
 
 .emotion-0 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;
@@ -274,6 +275,7 @@ exports[`<Menu /> renders menu items 1`] = `
 }
 
 .emotion-13 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;
@@ -551,6 +553,7 @@ exports[`<Menu /> renders menu items 1`] = `
 }
 
 .emotion-2 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;

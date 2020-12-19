@@ -12,6 +12,7 @@ import Loading from '../svgs/Loading';
 
 const Button = styled.button(
 	css`
+        -webkit-appearance: none;
         overflow: visible;
         display: inline-block;
 

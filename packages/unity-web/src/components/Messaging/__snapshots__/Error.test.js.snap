@@ -158,6 +158,7 @@ exports[`<Error /> renders with message 1`] = `
 }
 
 .emotion-1 {
+  -webkit-appearance: none;
   overflow: visible;
   display: inline-block;
   font-family: 'Open Sans',Arial,sans-serif;
