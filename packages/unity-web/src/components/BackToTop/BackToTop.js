@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { any, bool, number } from 'prop-types';
+import { any, bool, number, object } from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import Icon from '@mdi/react';
@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.1s;
+	z-index: 2;
 
     ${({ isActive }) => isActive && css`
         opacity: 1;
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
     `}
 `;
 
-const BackToTop = ({ icon, inline, scrollRef = window, scrollAmount = 100, alwaysShow = false, ...rest }) => {
+const BackToTop = ({ icon, inline, scrollRef = window, scrollAmount = 100, alwaysShow = false, wrapperProps = {}, ...rest }) => {
 	const [hasScrolled, setHasScrolled] = useState(false);
 	const onClick = useCallback(() => {
 		if ('scrollRestoration' in window.history) {
@@ -50,14 +51,14 @@ const BackToTop = ({ icon, inline, scrollRef = window, scrollAmount = 100, alway
 		};
 	}, [onScroll]);
     
-	const wrapperProps = {
+	const wrapProps = {
 		isActive: hasScrolled || alwaysShow,
 		inline,
+		...wrapperProps,
 	};
 
-
 	return (
-		<Wrapper {...wrapperProps}>
+		<Wrapper {...wrapProps}>
 			<FAB onClick={onClick} {...rest}>
 				<Icon
 					path={icon || mdiArrowUp}
@@ -78,6 +79,7 @@ BackToTop.propTypes = {
 	inline: bool,
 	scrollAmount: number,
 	scrollRef: any,
+	wrapperProps: object,
 };
 
 export default BackToTop;
