@@ -11,7 +11,8 @@ import { lighten, darken, desaturate } from '@clarityhub/unity-core/lib/utilitie
 import Loading from '../svgs/Loading';
 
 const Button = styled.button(
-	css`
+    css`
+        -webkit-appearance: none;
         overflow: visible;
         display: inline-block;
 
