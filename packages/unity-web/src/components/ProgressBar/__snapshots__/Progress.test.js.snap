@@ -44,6 +44,7 @@ exports[`<ProgressBar /> renders progress bar 1`] = `
   text-transform: uppercase;
   color: #566ad2;
   background-color: rgba(86,106,210,0.25);
+  border-color: rgba(86,106,210,0.25);
 }
 
 .emotion-6 {
