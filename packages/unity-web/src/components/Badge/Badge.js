@@ -34,16 +34,19 @@ const Badge = styled('div', {
 			return css`
                     color: ${colors.primary.default};
                     background-color: ${opacify(colors.primary.default, 0.25)};
+                    border-color: ${opacify(colors.primary.default, 0.25)};
                 `;
 		case 'success':
 			return css`
                     color: ${colors.success.default};
                     background-color: ${opacify(colors.success.default, 0.25)};
+                    border-color: ${opacify(colors.success.default, 0.25)};
                 `;
 		case 'danger':
 			return css`
                     color: ${colors.danger.default};
                     background-color: ${opacify(colors.danger.default, 0.25)};
+                    border-color: ${opacify(colors.danger.default, 0.25)};
                 `;
 		case 'notification':
 			return css`
@@ -56,7 +59,7 @@ const Badge = styled('div', {
 			return css`
                     color: ${colors.black.default};
                     background-color: ${colors.muted.default};
-                    border-color: ${colors.muted.default};
+                    border-color: ${colors.gray.default};
                 `;
 		}
 	}}
@@ -76,6 +79,16 @@ const Badge = styled('div', {
         text-transform: none;
         font-weight: 500;
     `}
+
+    ${({ outline, type }) => outline && css`
+        background: transparent;
+        border-width: 1px;
+        border-style: solid;
+
+        ${type === 'notification' && css`
+            color: ${colors.notification.default};
+        `}
+    `}
 `;
 
 /**
@@ -85,6 +98,7 @@ const BadgePropTypes = () => <div />;
 BadgePropTypes.propTypes = {
 	children: node,
 	noTransform: bool,
+	outline: bool,
 	size: oneOf(['default', 'large']),
 	square: bool,
 	type: oneOf(['primary', 'success', 'danger', 'notification', 'default']),
