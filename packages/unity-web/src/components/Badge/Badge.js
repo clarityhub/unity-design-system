@@ -2,7 +2,7 @@ import React from 'react';
 import isPropValid from '@emotion/is-prop-valid';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { node, oneOf } from 'prop-types';
+import { bool, node, oneOf } from 'prop-types';
 import colors from '@clarityhub/unity-core/lib/colors';
 import { opacify } from '@clarityhub/unity-core/lib/utilities/color';
 import { variants } from '@clarityhub/unity-core/lib/typography';
@@ -60,6 +60,22 @@ const Badge = styled('div', {
                 `;
 		}
 	}}
+    
+    ${({ square }) => square && css`
+        cursor: pointer;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 5px;
+    `}
+
+    ${({ size }) => size === 'large' && css`
+        font-size: 1rem;
+    `}
+
+    ${({ noTransform }) => noTransform && css`
+        text-transform: none;
+        font-weight: 500;
+    `}
 `;
 
 /**
@@ -68,6 +84,9 @@ const Badge = styled('div', {
 const BadgePropTypes = () => <div />;
 BadgePropTypes.propTypes = {
 	children: node,
+	noTransform: bool,
+	size: oneOf(['default', 'large']),
+	square: bool,
 	type: oneOf(['primary', 'success', 'danger', 'notification', 'default']),
 };
 Badge.propTypes = BadgePropTypes.propTypes;
