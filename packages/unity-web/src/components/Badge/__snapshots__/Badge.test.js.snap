@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Badge /> renders different badge types 1`] = `
+exports[`<Badge /> renders different badge sizes and outlines 1`] = `
+.emotion-8 {
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #FF6A5C;
+  border-color: #FF6A5C;
+}
+
 .emotion-0 {
   overflow: visible;
   text-transform: none;
@@ -24,7 +50,11 @@ exports[`<Badge /> renders different badge types 1`] = `
   text-transform: uppercase;
   color: #333;
   background-color: #F1F1F1;
-  border-color: #F1F1F1;
+  border-color: #C2C2C2;
+  cursor: pointer;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
 }
 
 .emotion-2 {
@@ -50,6 +80,8 @@ exports[`<Badge /> renders different badge types 1`] = `
   text-transform: uppercase;
   color: #566ad2;
   background-color: rgba(86,106,210,0.25);
+  border-color: rgba(86,106,210,0.25);
+  font-size: 1rem;
 }
 
 .emotion-4 {
@@ -75,6 +107,10 @@ exports[`<Badge /> renders different badge types 1`] = `
   text-transform: uppercase;
   color: #46C161;
   background-color: rgba(70,193,97,0.25);
+  border-color: rgba(70,193,97,0.25);
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .emotion-6 {
@@ -100,6 +136,153 @@ exports[`<Badge /> renders different badge types 1`] = `
   text-transform: uppercase;
   color: #f5365c;
   background-color: rgba(245,54,92,0.25);
+  border-color: rgba(245,54,92,0.25);
+  cursor: pointer;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+}
+
+<div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Default
+  </div>
+   
+  <div
+    className="emotion-2 emotion-1"
+    size="large"
+  >
+    Primary
+  </div>
+   
+  <div
+    className="emotion-4 emotion-1"
+  >
+    Success
+  </div>
+   
+  <div
+    className="emotion-6 emotion-1"
+  >
+    Danger
+  </div>
+   
+  <div
+    className="emotion-8 emotion-1"
+  >
+    Notification
+  </div>
+</div>
+`;
+
+exports[`<Badge /> renders different badge types 1`] = `
+.emotion-0 {
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #F1F1F1;
+  border-color: #C2C2C2;
+}
+
+.emotion-2 {
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  color: #566ad2;
+  background-color: rgba(86,106,210,0.25);
+  border-color: rgba(86,106,210,0.25);
+}
+
+.emotion-4 {
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  color: #46C161;
+  background-color: rgba(70,193,97,0.25);
+  border-color: rgba(70,193,97,0.25);
+}
+
+.emotion-6 {
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.35px;
+  -moz-letter-spacing: 0.35px;
+  -ms-letter-spacing: 0.35px;
+  letter-spacing: 0.35px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  color: #f5365c;
+  background-color: rgba(245,54,92,0.25);
+  border-color: rgba(245,54,92,0.25);
 }
 
 .emotion-8 {
