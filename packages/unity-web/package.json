@@ -1,6 +1,6 @@
 {
   "name": "@clarityhub/unity-web",
-  "version": "1.15.4",
+  "version": "1.15.5",
   "description": "Unity Design System for Clarity Hub",
   "main": "lib/index.js",
   "sideEffects": [
